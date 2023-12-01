@@ -1,0 +1,210 @@
+@font-face {
+    font-family: Pravoslav;
+    src: url('../assets/fonts/Pravosla.ttf');
+}
+:root {
+    --black: 0,0,0;
+    --red: 155,0,0;
+    --full-width: 100%;
+    --site-width: 1080px;
+    --white: 255,255,255;
+    --pravoslav: Pravoslav;
+}
+hr:not(.react-divider) {
+    margin: 20px auto;
+    width: 200px;
+    opacity: 1;
+}
+hr.MuiDivider-vertical {
+    height: auto;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--pravoslav);
+}
+h2 {
+    font-size: 48px;
+}
+body {
+    min-height: 100vh;
+}
+.container {
+    margin: 0 auto;
+    width: var(--site-width);
+}
+span {
+    margin-bottom: 10px;
+    display: block;
+}
+section, footer {
+    display: flex;
+    padding: 2rem 0;
+    flex-direction: column;
+    background: rgb(var(--red));
+    width: var(--full-width);
+    min-height: 600px;
+}
+/*---------------------------------------------------HEADER*/
+header {
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    position: fixed;
+    background: rgb(var(--white));
+    padding: 0 2rem;
+    justify-content: space-between;
+}
+
+.nav-up {
+    top: -140px;
+}
+
+.navigation {
+    padding: 0 2rem;
+    width: 100%;
+}
+#navbar {
+    background: var(--white);
+}
+.nav-link {
+    color: rgb(var(--black));
+    transition: color 0.4s ease 0s;
+}
+.nav-link:hover {
+    color: rgb(var(--red));
+}
+.nav-link.active {
+    background: rgb(var(--red));
+    color: rgb(var(--white));
+}
+/*---------------------------------------------------HERO*/
+#hero {
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+.hero-text {
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    padding: 2rem;
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%, -60%);
+    color: rgb(var(--red));
+    background: rgba(255,255,255, .7);
+}
+.hero-text h1 {
+    font-size: 60px;
+}
+.hero-text h2 {
+    font-size: 48px;
+}
+.container {
+    margin: 0 auto;
+    width: var(--site-width);
+    max-width: var(--full-width);
+}
+.image-slideshow {
+    max-width: var(--full-width);
+    height: 100vh;
+    position: relative;
+    margin: auto;
+}
+img {
+    width: 100%
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 4s;
+}
+
+/*---------------------------------------------------O HRAMU*/
+#o-hramu {
+    text-align: center;
+    color: rgb(var(--white));
+}
+#o-hramu p {
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+}
+/*---------------------------------------------------GALERIJA*/
+
+#galerija {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: rgb(var(--white));
+}
+
+#galerija h2, #galerija hr {
+    color: rgb(var(--red));
+}
+#galerija hr {
+    margin-bottom: 20px;
+}
+/*---------------------------------------------------PRETRAGA PAROHIJA*/
+
+#pretraga-parohija {
+    background: rgb(var(--white));
+    text-align: center;
+}
+#pretraga-parohija .text-box {
+    text-align: left;
+}
+@keyframes fade {
+    0% {opacity: .4}
+    100% {opacity: 1}
+}
+/*---------------------------------------------------RASPORED BOGOSLUZENJA*/
+
+#bogosluzenja {
+    background: rgb(var(--red));
+    text-align: center;
+}
+#bogosluzenja h2, #bogosluzenja hr {
+    color: rgb(var(--white));
+}
+#bogosluzenja .container {
+    display: flex;
+    justify-content: space-around;
+}
+#bogosluzenja .bogosluzenja-container {
+    width: 40%;
+    height: auto;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    background: rgb(var(--white));
+    min-height: 500px;
+}
+.bogosluzenja-tabs .MuiTabs-flexContainer {
+    justify-content: space-around;
+}
+.bogosluzenja-container img {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+.bogosluzenja-container .bogosluzenja-tab-panel {
+    text-align: left;
+}
+
+.bogosluzenja-tab-panel h4 {
+    text-align: center;
+}
+
+.bogosluzenja-tab-panel ul {
+    list-style: none;
+}
+.bogosluzenja-tab-panel li {
+    font-size: 14px
+}
+
+@keyframes fade {
+    0% {opacity: .4}
+    100% {opacity: 1}
+}

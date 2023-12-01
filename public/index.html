@@ -11,7 +11,7 @@
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
-      manifest.json provides metadata used when your web app is installed on a
+      manifest.json provides metadata used when your web pretraga-parohija is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
@@ -24,20 +24,89 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Храм Светог цара Константина и царице Јелене - Вождовачка црква</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/index.css">
   </head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <header>
+      <div class="navigation">
+        <nav id="navbar" class="navbar navbar-light">
+          <a class="navbar-brand" href="#">
+            <img src="./assets/images/logo.png" width="80" height="80" alt="">
+          </a>
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Почетна</a>
+            </li>
+            <li class="nav-item">
+              <a href="#o-hramu" class="nav-link">О Храму</a>
+            </li>
+            <li class="nav-item">
+              <a href="#galerija" class="nav-link">Галерија</a>
+            </li>
+            <li class="nav-item">
+              <a href="#bogosluzenja" class="nav-link">Распоред Богослужења</a>
+            </li>
+            <li class="nav-item">
+              <a href="#pretraga-parohija" class="nav-link">Парохија</a>
+            </li>
+            <li class="nav-item">
+              <a href="#footer" class="nav-link">Локација</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+      <section id="hero">
+        <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/images/stare/vozdovacka-crkva.jpg" alt="" class="w-100 d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/images/stare/heavenly-enlighment.jpg" alt="" class="w-100 d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/images/stare/fire-on-christmas-eve.jpg" alt="" class="w-100 d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/images/stare/pocetak-litije.jpg" alt="" class="w-100 d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/images/stare/paljenje-badnjaka.jpg" alt="" class="w-100 d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/images/stare/litija-na-badnje-vece.jpg" alt="" class="w-100 d-block">
+            </div>
+          </div>
+        </div>
+        <div class="hero-text">
+          <h1>Храм Светог цара Константина и царице Јелене</h1>
+          <h2>- Вождовачка црква -</h2>
+        </div>
+      </section>
+      <section id="o-hramu">
+        <div class="container">
+          <h2>О Храму</h2>
+          <hr/>
+          <p>
+            <span>Црква Светог цара Константина и царице Јелене (или Вождовачка црква) је православни саборни храм насеља Вождовац у Београду. Добио је свој назив почетком 20. века, тачније од 1903, након доласка на престо краља Петра I Карађорђевића. На овом месту је вожд Карађорђе са својим устаницима у току 1806. логоровао, окупљао војску и са овог предграђа полазио на Београдску тврђаву приликом њеног освајања.</span>
+            <span>Храм је сазидан 1911. године на данашњем месту, након извесног застоја у градњи услед неспоразума око одабира места градње. Нажалост, храм је у периоду од 1912–1919. делио судбину свог народа. Био је опљачкан, однесено је једно звоно, кров је брзо попустио, зидови су се размакли, а мало кубе на средини крова је утонуло и претило да се сруши.</span>
+            <span>Обновом цркве је руководио архитекта Драгомир Тадић. Цркву је живописао академски сликар Милић од Мачве, по благослову патријарха Германа. Историчари уметности су овај рад окарактерисали као увод у ренесансу управо зато што су Милићеве фигуре ослобођене било каквог шематизма и школе. У потпуности је негирао традицију иконописа.</span>
+            <span>Живопис парохијског дома осликао је Војислав Луковић, дипл. сликар из Београда, а освештао Патријарх Иринеј на стогодишњицу храма, 2011. године.</span>
+            <span>Црква Светог Константина и Јелене слави 27. септембра Крстовдан као преславу храмовне славе светитеља захваљујући чијој ревности је и пронађен часни крст на ком је распет Господ Исус Христос, јер чува велику светињу-частицу Часног и Животворног Крста која је уграђена у повећи Крст. Патријарх Герман је након обиласка Свете Земље у току Страсне седмице и Ускрса 1959. године даровао Вождовачку цркву овом драгоценошћу</p></span>
+        </div>
+      </section>
+      <section id="galerija"></section>
+      <section id="bogosluzenja"></section>
+      <section id="pretraga-parohija">
+        <div class="container"></div>
+      </section>
+      <footer id="footer"></footer>
   </body>
+  <script src="./js/script.js"></script>
 </html>

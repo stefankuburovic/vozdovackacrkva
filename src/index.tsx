@@ -1,19 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import PretragaParohija from './pretraga-parohija/components/pretraga-parohija/PretragaParohija';
+import Galerija from "./pretraga-parohija/components/galerija/Galerija";
+
+import {roots} from "./pretraga-parohija/const";
+
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import "yet-another-react-lightbox/styles.css";
+import Bogosluzenja from "./pretraga-parohija/components/bogosluzenja/Bogosluzenja";
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const wrappers:React.JSX.Element[] = [<PretragaParohija/>, <Galerija/>, <Bogosluzenja/>]
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+roots.map((root: ReactDOM.Root, index: number) => root.render(
+    <React.StrictMode>
+        {wrappers[index]}
+    </React.StrictMode>
+));
