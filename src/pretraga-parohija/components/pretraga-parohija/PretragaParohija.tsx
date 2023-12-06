@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import './PretragaParohija.css';
 import {Autocomplete, Button, Container, Divider, TextField, Tooltip} from "@mui/material";
 import {uliceRS, uliceRSCyr} from "../../const/pretragaparohija/ulice";
 import {NEPARNI, PARNI, Parohija, parohije} from "../../const/pretragaparohija/const";
@@ -12,6 +11,7 @@ function PretragaParohija() {
     const [error, setError] = useState<{ error: boolean; errorText: string }>({error: false, errorText: ''});
     const [izabraneOpcije, postaviIzabranuOpciju] = useState<{ value: string; label: string; }[]>(sortUliceRS);
     const [izabraneParohije, postaviIzabraneParohije] = useState<Array<Parohija> | null>(null);
+    const [ostaleParohije, postaviOstaleParohije] = useState<Array<Parohija> | null>(null);
     const [parohijeAutoKomplit, postaviParohijeAutokomplit] = useState<Array<Parohija> | null>(null);
     const [broj, upisiBroj] = useState<number | null>(null);
     const setOptions = (keyboardValue: string | null): void => {
@@ -55,16 +55,23 @@ function PretragaParohija() {
     const handleAutocompleteChange = (autocompleteValue: { value: string; label: string; } | null) => {
         const selectedValue = autocompleteValue?.value;
         let izabranaParohija: Parohija[];
+        let ostaleParohije: Parohija[];
         postaviIzabraneParohije(null);
         if (selectedValue !== undefined) {
             if (CYR_PATTERN.test(selectedValue)) {
                 izabranaParohija = parohije.filter((parohija: Parohija) => parohija.ime.cyr === selectedValue);
+                ostaleParohije = parohije.filter((parohija: Parohija) => parohija.ime.cyr !== selectedValue);
+                console.log(ostaleParohije);
             } else {
                 izabranaParohija = parohije.filter((parohija: Parohija) => (Array.isArray(parohija.ime.lat) && parohija.ime.lat.includes(selectedValue)) || (typeof parohija.ime.lat === "string" && parohija.ime.lat === selectedValue));
+                ostaleParohije = parohije.filter((parohija: Parohija) => (Array.isArray(parohija.ime.lat) && parohija.ime.lat.includes(selectedValue)) || (typeof parohija.ime.lat === "string" && parohija.ime.lat !== selectedValue));
+
+                console.log(ostaleParohije);
             }
             console.log(izabranaParohija);
             upisiBroj(null);
             postaviIzabraneParohije(izabranaParohija);
+            postaviOstaleParohije(ostaleParohije)
             postaviParohijeAutokomplit(izabranaParohija);
         }
     }
@@ -124,7 +131,22 @@ function PretragaParohija() {
                             <Divider orientation="vertical" className="react-divider"/>
                             <Container sx={{display: "flex", flexDirection: "column"}}>
                                 <h2>{izabraneParohije[0].paroh.ime}</h2>
-                                <p>{izabraneParohije[0].paroh.telefon}</p>
+                                <a href={`tel:${izabraneParohije[0].paroh.telefon}`}>{izabraneParohije[0].paroh.telefon}</a>
+                                <p>Остале адресе на којима је парох {izabraneParohije[0].paroh.ime}</p>
+                                <ul>
+                                    {
+                                        ostaleParohije && ostaleParohije.map(parohije => {
+                                            if(parohije.paroh.ime === izabraneParohije[0].paroh.ime) {
+                                                return (
+                                                    <li>{parohije.ime.cyr}</li>
+                                                );
+                                            } else {
+                                                return '';
+
+                                            }
+                                        })
+                                    }
+                                </ul>
                             </Container>
                         </>
                     }

@@ -12,4 +12,8 @@ const bogosluzenja = ReactDOM.createRoot(
     document.getElementById('bogosluzenja') as HTMLElement
 );
 
-export const roots: ReactDOM.Root[] = [parohije, galerija, bogosluzenja];
+// const footer = ReactDOM.createRoot(
+//     document.getElementById('instagram-feed') as HTMLElement
+// );
+
+export const roots: ReactDOM.Root[] = [parohije, galerija, bogosluzenja, /*footer*/];

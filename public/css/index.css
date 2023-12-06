@@ -8,6 +8,7 @@
     --full-width: 100%;
     --site-width: 1080px;
     --white: 255,255,255;
+    --gold: 201,171,0;
     --pravoslav: Pravoslav;
 }
 hr:not(.react-divider) {
@@ -23,6 +24,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 h2 {
     font-size: 48px;
+}
+a {
+    color: rgb(var(--gold));
+    font-size: 14px;
+    transition: color .3s;
+}
+a:hover {
+    color: rgba(var(--gold), .7);
+
 }
 body {
     min-height: 100vh;
@@ -170,10 +180,60 @@ img {
 }
 #bogosluzenja .container {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
 }
+#bogosluzenja .container-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#bogosluzenja .kalendar-praznika {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 2rem 0;
+}
+#bogosluzenja .kalendar-praznika-inner {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    max-width: var(--site-width);
+    justify-content: space-between;
+}
+#bogosluzenja .kalendar,
+#bogosluzenja .danasnji-praznik {
+    max-width: 500px;
+    background: rgb(var(--white));
+    height: fit-content;
+}
+#bogosluzenja .danasnji-praznik {
+    font-size: 14px;
+}
+
+.kalendar td {
+ padding: 5px;
+    font-size: 14px;
+}
+.kalendar span {
+    display: inline;
+}
+.kalendar tr[align="center"] {
+    display: none;
+}
+.danasnji-praznik img {
+    max-width: 200px;
+    height: auto;
+}
+.danasnji-praznik h4 {
+    margin-top: 1rem;
+}
+.danasnji-praznik div {
+    padding: 0.5rem;
+}
 #bogosluzenja .bogosluzenja-container {
-    width: 40%;
+    width: 50%;
     height: auto;
     display: flex;
     padding: 1rem;
@@ -203,7 +263,52 @@ img {
 .bogosluzenja-tab-panel li {
     font-size: 14px
 }
-
+/*--------------------------------------------------- PRETRAGA PAROHIJA*/
+#pretraga-parohija a {
+    font-size: 16px;
+}
+/*--------------------------------------------------- Footer*/
+footer {
+    display: flex;
+    padding: 2rem 5rem;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+footer .boxes {
+    width: 50vw;
+}
+footer .boxes.lokacija {
+    padding-left: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+footer h2, footer h3 {
+    color: rgb(var(--white));
+}
+footer .drustvene-mreze ul {
+    display: flex;
+}
+footer .drustvene-mreze img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+footer .drustvene-mreze a {
+    transition: opacity .3s;
+}
+footer .drustvene-mreze a:hover {
+    opacity: .7;
+}
+.boxes.lokacija .lokacija-wrapper {
+    margin-top: 2rem;
+}
+footer .lokacija-information {
+    display: flex;
+}
 @keyframes fade {
     0% {opacity: .4}
     100% {opacity: 1}
