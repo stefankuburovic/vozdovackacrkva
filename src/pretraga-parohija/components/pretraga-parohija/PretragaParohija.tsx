@@ -10,30 +10,24 @@ import {
     TextField,
     Tooltip
 } from "@mui/material";
-import {uliceRS, uliceRSCyr} from "../../const/pretragaparohija/ulice";
+import {uliceRSCyr} from "../../const/pretragaparohija/ulice";
 import {NEPARNI, PARNI, Parohija, parohije} from "../../const/pretragaparohija/const";
+import {latToCyr} from "../../../util/functions";
 
 const CYR_PATTERN = /^[абвгдђежзијклљмнњопрстћуфхцчџшАБВГДЂЕЖЗИЈКЛЉМНЊОПРСТЋУФХЦЧЏШ ]*$/
 
 function PretragaParohija() {
-    const sortUliceRS = uliceRS.sort((a, b) => a.value > b.value ? 1 : -1);
     const sortUliceRSCyr = uliceRSCyr.sort((a, b) => a.value > b.value ? 1 : -1);
+
     const [error, setError] = useState<{ error: boolean; errorText: string }>({error: false, errorText: ''});
-    const [izabraneOpcije, postaviIzabranuOpciju] = useState<{ value: string; label: string; }[]>(sortUliceRS);
+    const [cyrillicValue, setCyrillicValue] = useState<string>('');
     const [izabraneParohije, postaviIzabraneParohije] = useState<Array<Parohija> | null>(null);
     const [ostaleParohije, postaviOstaleParohije] = useState<Array<Parohija> | null>(null);
     const [parohijeAutoKomplit, postaviParohijeAutokomplit] = useState<Array<Parohija> | null>(null);
     const [broj, upisiBroj] = useState<number | null>(null);
-    const setOptions = (keyboardValue: string | null): void => {
-        if (keyboardValue && CYR_PATTERN.test(keyboardValue)) {
-            postaviIzabranuOpciju(sortUliceRSCyr);
-        } else {
-            postaviIzabranuOpciju(sortUliceRS);
-        }
-    }
 
     const handleTextInputChange = (event: any) => {
-        setOptions(event.target.value);
+        setCyrillicValue(latToCyr(event.target.value));
     };
     const handleNumberInputChange = (event: any) => {
         upisiBroj(event.target.value);
@@ -70,7 +64,7 @@ function PretragaParohija() {
                 primary: value.ime.cyr,
                 children:
                     <ListItemText primary={value.ime.cyr}
-                                  secondary={value.odredjeniBrojevi ? setSpecificNumbers(value.odredjeniBrojevi) : ""}/>
+                                  secondary={value.odredjeniBrojevi ? setSpecificNumbers(value.odredjeniBrojevi, value.parniIliNeparni && value.parniIliNeparni) : ""}/>
             }),
         );
     }
@@ -78,12 +72,13 @@ function PretragaParohija() {
     function setSpecificNumbers(odredjeniBrojevi: Array<{
         prviBroj: number;
         zadnjiBroj: number;
-    }>): string {
-        if(odredjeniBrojevi.length > 1) {
-            return `Парна страна од броја ${odredjeniBrojevi[0].prviBroj} до броја ${odredjeniBrojevi[0].zadnjiBroj}` +
+    }>, strane?: string | Array<string>): string {
+        if (odredjeniBrojevi.length > 1) {
+            return `Парна страна од броја ${odredjeniBrojevi[0].prviBroj} до броја ${odredjeniBrojevi[0].zadnjiBroj},` +
                 ` и непарна страна од броја ${odredjeniBrojevi[1].prviBroj} до броја ${odredjeniBrojevi[1].zadnjiBroj}`
         } else {
-            return odredjeniBrojevi[0].prviBroj === odredjeniBrojevi[0].zadnjiBroj ? `Број ${odredjeniBrojevi[0].prviBroj}`:`Од броја ${odredjeniBrojevi[0].prviBroj} до броја ${odredjeniBrojevi[0].zadnjiBroj}`;
+            const parnaIliNeparna = strane && typeof strane === "string" ? strane === PARNI ? "Парна страна" : "Непарна страна" : "";
+            return odredjeniBrojevi[0].prviBroj === odredjeniBrojevi[0].zadnjiBroj ? `Број ${odredjeniBrojevi[0].prviBroj}` : `${parnaIliNeparna} од броја ${odredjeniBrojevi[0].prviBroj} до броја ${odredjeniBrojevi[0].zadnjiBroj}`;
         }
     }
 
@@ -91,6 +86,9 @@ function PretragaParohija() {
         const selectedValue = autocompleteValue?.value;
         let izabranaParohija: Parohija[];
         let ostaleParohije: Parohija[];
+        if(selectedValue) {
+            setCyrillicValue(latToCyr(selectedValue));
+        }
         postaviIzabraneParohije(null);
         if (selectedValue !== undefined) {
             if (CYR_PATTERN.test(selectedValue)) {
@@ -119,7 +117,7 @@ function PretragaParohija() {
     return (
         <Container sx={{padding: 5, display: "flex", flexDirection: "column"}}>
             <h2>Пронађите своју парохију</h2>
-            <hr/>
+            <Divider/>
             <div className="text-box">
                 <p>Како да пронађете пароха ваше адресе?</p>
                 <ul>
@@ -136,17 +134,29 @@ function PretragaParohija() {
             <Container sx={{display: "flex"}}>
                 <Container sx={{display: "flex", alignItems: "flex-start"}}>
                     <Autocomplete
+                        value={{value: cyrillicValue, label: cyrillicValue}}
                         disablePortal
                         clearText={"Претражи поново"}
                         id="combo-box-demo"
-                        options={izabraneOpcije}
+                        options={sortUliceRSCyr}
                         isOptionEqualToValue={(option, value) => option.value === value.value}
                         sx={{width: 400}}
+                        onInputChange={(e, v, r) => {
+                            if(r === 'clear') {
+                                setCyrillicValue('');
+                            }
+                        }}
                         onChange={(_, value) => {
                             handleAutocompleteChange(value)
                         }}
-                        renderInput={(params) => <TextField {...params} onChange={handleTextInputChange}
-                                                            label="Име улице"/>}
+                        renderInput={
+                            (params) =>
+                                <TextField
+                                    {...params}
+                                    onChange={handleTextInputChange}
+                                    label="Име улице"
+                                />
+                        }
                     />
                     {
                         (
