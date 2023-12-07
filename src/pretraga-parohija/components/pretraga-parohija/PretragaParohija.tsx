@@ -1,5 +1,15 @@
 import React, {useState} from 'react';
-import {Autocomplete, Button, Container, Divider, TextField, Tooltip} from "@mui/material";
+import {
+    Autocomplete, Box,
+    Button,
+    Container,
+    Divider,
+    List,
+    ListItem,
+    ListItemText,
+    TextField,
+    Tooltip
+} from "@mui/material";
 import {uliceRS, uliceRSCyr} from "../../const/pretragaparohija/ulice";
 import {NEPARNI, PARNI, Parohija, parohije} from "../../const/pretragaparohija/const";
 
@@ -34,7 +44,7 @@ function PretragaParohija() {
         if (broj !== null) {
             strana = broj % 2 ? PARNI : NEPARNI;
             const parohija = parohijeAutoKomplit?.filter(parohije => parohije.odredjeniBrojevi ? parohije.odredjeniBrojevi.some(brojevi => brojevi.prviBroj % 2 === broj % 2 && brojevi.prviBroj <= broj && broj <= brojevi.zadnjiBroj) : parohije.parniIliNeparni === strana);
-            console.log(izabraneParohije);
+
             if (parohija && parohija.length === 1) {
                 postaviIzabraneParohije(parohija);
                 setError({
@@ -52,6 +62,31 @@ function PretragaParohija() {
         }
     }
 
+
+    function generate(mappingArray: Parohija[] | null, element: React.ReactElement) {
+        return mappingArray?.map((value) =>
+            React.cloneElement(element, {
+                key: value.paroh.ime + value.ime.lat,
+                primary: value.ime.cyr,
+                children:
+                    <ListItemText primary={value.ime.cyr}
+                                  secondary={value.odredjeniBrojevi ? setSpecificNumbers(value.odredjeniBrojevi) : ""}/>
+            }),
+        );
+    }
+
+    function setSpecificNumbers(odredjeniBrojevi: Array<{
+        prviBroj: number;
+        zadnjiBroj: number;
+    }>): string {
+        if(odredjeniBrojevi.length > 1) {
+            return `Парна страна од броја ${odredjeniBrojevi[0].prviBroj} до броја ${odredjeniBrojevi[0].zadnjiBroj}` +
+                ` и непарна страна од броја ${odredjeniBrojevi[1].prviBroj} до броја ${odredjeniBrojevi[1].zadnjiBroj}`
+        } else {
+            return odredjeniBrojevi[0].prviBroj === odredjeniBrojevi[0].zadnjiBroj ? `Број ${odredjeniBrojevi[0].prviBroj}`:`Од броја ${odredjeniBrojevi[0].prviBroj} до броја ${odredjeniBrojevi[0].zadnjiBroj}`;
+        }
+    }
+
     const handleAutocompleteChange = (autocompleteValue: { value: string; label: string; } | null) => {
         const selectedValue = autocompleteValue?.value;
         let izabranaParohija: Parohija[];
@@ -60,15 +95,21 @@ function PretragaParohija() {
         if (selectedValue !== undefined) {
             if (CYR_PATTERN.test(selectedValue)) {
                 izabranaParohija = parohije.filter((parohija: Parohija) => parohija.ime.cyr === selectedValue);
-                ostaleParohije = parohije.filter((parohija: Parohija) => parohija.ime.cyr !== selectedValue);
-                console.log(ostaleParohije);
+                ostaleParohije = parohije.filter((parohija: Parohija) => parohija.ime.cyr !== selectedValue && parohija.paroh.ime === izabranaParohija[0].paroh.ime);
             } else {
-                izabranaParohija = parohije.filter((parohija: Parohija) => (Array.isArray(parohija.ime.lat) && parohija.ime.lat.includes(selectedValue)) || (typeof parohija.ime.lat === "string" && parohija.ime.lat === selectedValue));
-                ostaleParohije = parohije.filter((parohija: Parohija) => (Array.isArray(parohija.ime.lat) && parohija.ime.lat.includes(selectedValue)) || (typeof parohija.ime.lat === "string" && parohija.ime.lat !== selectedValue));
-
-                console.log(ostaleParohije);
+                izabranaParohija = parohije.filter(
+                    (parohija: Parohija) =>
+                        (
+                            Array.isArray(parohija.ime.lat) && parohija.ime.lat.includes(selectedValue)
+                        )
+                        || (typeof parohija.ime.lat === "string" && parohija.ime.lat === selectedValue)
+                );
+                ostaleParohije = parohije.filter(
+                    (parohija: Parohija) => {
+                        return parohija.ime.lat !== selectedValue && parohija.paroh.ime === izabranaParohija[0].paroh.ime
+                    }
+                );
             }
-            console.log(izabranaParohija);
             upisiBroj(null);
             postaviIzabraneParohije(izabranaParohija);
             postaviOstaleParohije(ostaleParohije)
@@ -93,7 +134,7 @@ function PretragaParohija() {
             </div>
             <Divider variant="inset" sx={{margin: "20px 0"}} className="react-divider"/>
             <Container sx={{display: "flex"}}>
-                <Container sx={{display: "flex", alignItems: "center"}}>
+                <Container sx={{display: "flex", alignItems: "flex-start"}}>
                     <Autocomplete
                         disablePortal
                         clearText={"Претражи поново"}
@@ -124,7 +165,7 @@ function PretragaParohija() {
                     }
                 </Container>
 
-                <Container sx={{display: "flex", height: 200}}>
+                <Container sx={{display: "flex"}}>
                     {
                         izabraneParohije?.length === 1 &&
                         <>
@@ -132,21 +173,17 @@ function PretragaParohija() {
                             <Container sx={{display: "flex", flexDirection: "column"}}>
                                 <h2>{izabraneParohije[0].paroh.ime}</h2>
                                 <a href={`tel:${izabraneParohije[0].paroh.telefon}`}>{izabraneParohije[0].paroh.telefon}</a>
-                                <p>Остале адресе на којима је парох {izabraneParohije[0].paroh.ime}</p>
-                                <ul>
-                                    {
-                                        ostaleParohije && ostaleParohije.map(parohije => {
-                                            if(parohije.paroh.ime === izabraneParohije[0].paroh.ime) {
-                                                return (
-                                                    <li>{parohije.ime.cyr}</li>
-                                                );
-                                            } else {
-                                                return '';
 
-                                            }
-                                        })
-                                    }
-                                </ul>
+                                <Box sx={{marginTop: "20px"}}>
+                                    <p>Остале адресе на којима је парох {izabraneParohije[0].paroh.ime}:</p>
+                                    <List dense={true}>
+                                        {generate(ostaleParohije,
+                                            <ListItem>
+                                                <ListItemText/>
+                                            </ListItem>,
+                                        )}
+                                    </List>
+                                </Box>
                             </Container>
                         </>
                     }

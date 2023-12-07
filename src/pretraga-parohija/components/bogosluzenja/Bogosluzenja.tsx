@@ -199,7 +199,6 @@ export default function Bogosluzenja() {
                     </Box>
                 </Box>
             </Box>
-
             }
         </div>
     );

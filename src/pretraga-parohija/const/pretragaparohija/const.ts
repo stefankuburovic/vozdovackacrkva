@@ -25,7 +25,7 @@ export interface Parohija {
         lat: Array<string> | string
     };
     parniIliNeparni?: string | Array<string>;
-    paroh: { ime: string; telefon: string; };
+    paroh: {  ime: string; telefon: string; };
     odredjeniBrojevi?: Array<{
         prviBroj: number;
         zadnjiBroj: number;
