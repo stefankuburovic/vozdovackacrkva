@@ -58,14 +58,24 @@ function PretragaParohija() {
 
 
     function generate(mappingArray: Parohija[] | null, element: React.ReactElement) {
-        return mappingArray?.map((value) =>
-            React.cloneElement(element, {
-                key: value.paroh.ime + value.ime.lat,
-                primary: value.ime.cyr,
-                children:
-                    <ListItemText primary={value.ime.cyr}
-                                  secondary={value.odredjeniBrojevi ? setSpecificNumbers(value.odredjeniBrojevi, value.parniIliNeparni && value.parniIliNeparni) : ""}/>
-            }),
+        return mappingArray?.map((value) => {
+                const specificNumbers = value.odredjeniBrojevi && setSpecificNumbers(
+                    value.odredjeniBrojevi,
+                    value.parniIliNeparni && value.parniIliNeparni
+                );
+                return React.cloneElement(element, {
+                    key: value.paroh.ime + value.ime.lat,
+                    primary: value.ime.cyr,
+                    children:
+                            <Tooltip title={specificNumbers} arrow className="ostali-brojevi-tooltip" enterTouchDelay={0}>
+                                <ListItemText
+                                    primary={value.ime.cyr}
+                                    secondary={specificNumbers}
+                                    secondaryTypographyProps={{className: "ostali-brojevi"}}
+                                />
+                            </Tooltip>
+                })
+            }
         );
     }
 
@@ -86,7 +96,7 @@ function PretragaParohija() {
         const selectedValue = autocompleteValue?.value;
         let izabranaParohija: Parohija[];
         let ostaleParohije: Parohija[];
-        if(selectedValue) {
+        if (selectedValue) {
             setCyrillicValue(latToCyr(selectedValue));
         }
         postaviIzabraneParohije(null);
@@ -119,11 +129,11 @@ function PretragaParohija() {
             <h2>Пронађите своју парохију</h2>
             <Divider/>
             <div className="text-box">
-                <p>Како да пронађете пароха ваше адресе?</p>
+                <p>Како да пронађете свештеника ваше адресе?</p>
                 <ul>
                     <li>У поље име улице, упишите или изаберите име улице где живите (можете и ћирилицом и латиницом)
                     </li>
-                    <li>Ако је улица подељена на више пароха, приказаће се поље да унесете број улице</li>
+                    <li>Ако је улица подељена на више свештеника, приказаће се поље да унесете број улице</li>
                     <li>Када унесете број улице, притисните дугме "Прикажи"</li>
                     <li>Са десне стране ће се показати ком пароху припада ваша адреса</li>
                     <li>Ако улица припада само једном пароху, са десне стране ће се показати ко је парох за вашу улицу
@@ -142,7 +152,7 @@ function PretragaParohija() {
                         isOptionEqualToValue={(option, value) => option.value === value.value}
                         sx={{width: 400}}
                         onInputChange={(e, v, r) => {
-                            if(r === 'clear') {
+                            if (r === 'clear') {
                                 setCyrillicValue('');
                             }
                         }}
@@ -183,22 +193,25 @@ function PretragaParohija() {
                             <Container sx={{display: "flex", flexDirection: "column"}}>
                                 <h2>{izabraneParohije[0].paroh.ime}</h2>
                                 <a href={`tel:${izabraneParohije[0].paroh.telefon}`}>{izabraneParohije[0].paroh.telefon}</a>
-
-                                <Box sx={{marginTop: "20px"}}>
-                                    <p>Остале адресе на којима је парох {izabraneParohije[0].paroh.ime}:</p>
-                                    <List dense={true}>
-                                        {generate(ostaleParohije,
-                                            <ListItem>
-                                                <ListItemText/>
-                                            </ListItem>,
-                                        )}
-                                    </List>
-                                </Box>
                             </Container>
                         </>
                     }
                 </Container>
             </Container>
+
+            {
+                izabraneParohije &&
+                <Box sx={{marginTop: "2rem"}}>
+                    <p><strong>Остале адресе на којима је свештеник {izabraneParohije[0].paroh.ime}:</strong></p>
+                    <List className="ostale-parohije" dense={true}>
+                        {generate(ostaleParohije,
+                            <ListItem divider>
+                                <ListItemText/>
+                            </ListItem>,
+                        )}
+                    </List>
+                </Box>
+            }
         </Container>
 
     );
