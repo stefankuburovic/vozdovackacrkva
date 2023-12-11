@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import InstagramFeed from "./pretraga-parohija/components/footer/Footer";
-import Galerija from "./pretraga-parohija/components/galerija/Galerija";
-import Bogosluzenja from "./pretraga-parohija/components/bogosluzenja/Bogosluzenja";
-import PretragaParohija from './pretraga-parohija/components/pretraga-parohija/PretragaParohija';
+// import InstagramFeed from "./vozdovacka-crkva/components/footer/Footer";
+import Galerija from "./vozdovacka-crkva/components/galerija/Galerija";
+import Bogosluzenja from "./vozdovacka-crkva/components/bogosluzenja/Bogosluzenja";
+import PretragaParohija from './vozdovacka-crkva/components/pretraga-parohija/PretragaParohija';
 
-import {roots} from "./pretraga-parohija/const";
+import {roots} from "./vozdovacka-crkva/const";
 
 import './index.css';
 import "yet-another-react-lightbox/styles.css";
-import Kalendar from "./pretraga-parohija/components/kalendar/Kalendar";
+import Kalendar from "./vozdovacka-crkva/components/kalendar/Kalendar";
 
 const wrappers: React.JSX.Element[] = [
     <PretragaParohija/>,

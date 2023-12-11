@@ -1,0 +1,2756 @@
+[
+  {
+    "dan": "utorak",
+    "novi": "1. mart",
+    "datum": "2024-03-01",
+    "stari": "(17.feb)",
+    "praznik": "Sveti velikomučenik Teodor Tiron",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "2. mart",
+    "datum": "2024-03-02",
+    "stari": "(18.feb)",
+    "praznik": "Sveti Lav Rimski; sveti Flavijan Carigradski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "3. mart",
+    "datum": "2024-03-03",
+    "stari": "(19.feb)",
+    "praznik": "Sveti apostoli Arhip, Filimon i Apfija",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "4. mart",
+    "datum": "2024-03-04",
+    "stari": "(20.feb)",
+    "praznik": "Sveti Lav Katanski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "5. mart",
+    "datum": "2024-03-05",
+    "stari": "(21.feb)",
+    "praznik": "Prepodobni Timotej; sveti Evstatije - Velike (zimske) zadušnice",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "6. mart",
+    "datum": "2024-03-06",
+    "stari": "(22.feb)",
+    "praznik": "Sveti mučenici u Evgeniji (Mesne Poklade)",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "7. mart",
+    "datum": "2024-03-07",
+    "stari": "(23.feb)",
+    "praznik": "Sveti sveštenomučenik Polikarp Smirnski;",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "8. mart",
+    "datum": "2024-03-08",
+    "stari": "(24.feb)",
+    "praznik": "Prvo i drugo obretenje glave svetog Jovana Krstitelja",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "9. mart",
+    "datum": "2024-03-09",
+    "stari": "(25.feb)",
+    "praznik": "Sveti Tarasije Carigradski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "10. mart",
+    "datum": "2024-03-10",
+    "stari": "(26.feb)",
+    "praznik": "Sveti Porfirije, episkop Gaski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "11. mart",
+    "datum": "2024-03-11",
+    "stari": "(27.feb)",
+    "praznik": "Prepodobni Prokopije Dekapolit; prepodobni Talalej",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "subota",
+    "novi": "12. mart",
+    "datum": "2024-03-12",
+    "stari": "(28.feb)",
+    "praznik": "Prepodobni Vasilije ispovednik",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "13. mart",
+    "datum": "2024-03-13",
+    "stari": "(29.feb)",
+    "praznik": "Prepodobni Jovan Kasijan; Prepodobni Varsonufije (Bele poklade)",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "14. mart",
+    "datum": "2024-03-14",
+    "stari": "(1.mar)",
+    "praznik": "Sveta prepodobnomučenica Evdokija (Početak posta)",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "utorak",
+    "novi": "15. mart",
+    "datum": "2024-03-15",
+    "stari": "(2.mar)",
+    "praznik": "Sveti svmuč. Teodot Kirinejski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "sreda",
+    "novi": "16. mart",
+    "datum": "2024-03-16",
+    "stari": "(3.mar)",
+    "praznik": "Sveti mučenici Evtropije, Kleonik i Vasilisk",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "17. mart",
+    "datum": "2024-03-17",
+    "stari": "(4.mar)",
+    "praznik": "Prepodobni Gerasim jordanski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "petak",
+    "novi": "18. mart",
+    "datum": "2024-03-18",
+    "stari": "(5.mar)",
+    "praznik": "Sveti mučenik Konon; prepodobni Marko",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "19. mart",
+    "datum": "2024-03-19",
+    "stari": "(6.mar)",
+    "praznik": "Sveta 42 mučenika AmorejskaSv. Teodor Komogovinski - Teodorova Subota",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "neđelja",
+    "novi": "20. mart",
+    "datum": "2024-03-20",
+    "stari": "(7.mar)",
+    "praznik": "Svetih sedam sveštenomučenika hersonskih",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "21. mart",
+    "datum": "2024-03-21",
+    "stari": "(8.mar)",
+    "praznik": "Sveti Teofilakt Ispovednik",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "utorak",
+    "novi": "22. mart",
+    "datum": "2024-03-22",
+    "stari": "(9.mar)",
+    "praznik": "Svetih 40 mučenika Sevastijskih - Mladenci; Sv. 42 mučenika Momišićka",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "sreda",
+    "novi": "23. mart",
+    "datum": "2024-03-23",
+    "stari": "(10.mar)",
+    "praznik": "Sveti mučenik Kodrat Korintski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "24. mart",
+    "datum": "2024-03-24",
+    "stari": "(11.mar)",
+    "praznik": "Sveti Sofronije Jerusalimski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "petak",
+    "novi": "25. mart",
+    "datum": "2024-03-25",
+    "stari": "(12.mar)",
+    "praznik": "Prepodobni Simeon Novi Bogoslov; sveti Grigorije Dvojeslov",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "26. mart",
+    "datum": "2024-03-26",
+    "stari": "(13.mar)",
+    "praznik": "Prenos moštiju svetog Nikifora Carigradskog",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "neđelja",
+    "novi": "27. mart",
+    "datum": "2024-03-27",
+    "stari": "(14.mar)",
+    "praznik": "Prepodobni Benedikt Nursijski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "28. mart",
+    "datum": "2024-03-28",
+    "stari": "(15.mar)",
+    "praznik": "Sveti mučenik Agapije i sedmorica s njim",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "utorak",
+    "novi": "29. mart",
+    "datum": "2024-03-29",
+    "stari": "(16.mar)",
+    "praznik": "Sveti apostol Aristovul; sveti mučenik Savin",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "sreda",
+    "novi": "30. mart",
+    "datum": "2024-03-30",
+    "stari": "(17.mar)",
+    "praznik": "Sveti Aleksije - Čovek Božji",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "31. mart",
+    "datum": "2024-03-31",
+    "stari": "(18.mar)",
+    "praznik": "Sveti Kiril Jerusalimski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "petak",
+    "novi": "1. april",
+    "datum": "2024-04-01",
+    "stari": "(19.mar)",
+    "praznik": "Sveti mučenici Hrizant, Darija i drugi; prepodobni Simon Dajbabski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "2. april",
+    "datum": "2024-04-02",
+    "stari": "(20.mar)",
+    "praznik": "Prepodobni Oci poubijani u manastiru Svetog Save Osvećenog",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "neđelja",
+    "novi": "3. april",
+    "datum": "2024-04-03",
+    "stari": "(21.mar)",
+    "praznik": "Prepodobni Jakov Ispovednik",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "4. april",
+    "datum": "2024-04-04",
+    "stari": "(22.mar)",
+    "praznik": "Sveti sveštenomučenik Vasilije Ankirski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "utorak",
+    "novi": "5. april",
+    "datum": "2024-04-05",
+    "stari": "(23.apr)",
+    "praznik": "Prepodobnomučenik Nikon i drugi",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "sreda",
+    "novi": "6. april",
+    "datum": "2024-04-06",
+    "stari": "(24.mar)",
+    "praznik": "Prepodobni Zaharije (Pretprazništvo Blagovesti)",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "7. april",
+    "datum": "2024-04-07",
+    "stari": "(25.mar)",
+    "praznik": "BLAGOVESTI",
+    "slovo": "crveno",
+    "post": "post"
+  },
+  {
+    "dan": "petak",
+    "novi": "8. april",
+    "datum": "2024-04-08",
+    "stari": "(26.mar)",
+    "praznik": "Sabor svetog arhangela Gavrila (Odanije blagovesti)",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "9. april",
+    "datum": "2024-04-09",
+    "stari": "(27.mar)",
+    "praznik": "Prepodobna Matrona Solunska",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "neđelja",
+    "novi": "10. april",
+    "datum": "2024-04-10",
+    "stari": "(28.mar)",
+    "praznik": "Prepodobni Ilarion Ispovednik",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "11. april",
+    "datum": "2024-04-11",
+    "stari": "(29.mar)",
+    "praznik": "Prepodobni Marko Areutski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "utorak",
+    "novi": "12. april",
+    "datum": "2024-04-12",
+    "stari": "(30.mar)",
+    "praznik": "Prepodobni Jovan Lestvičnik",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "sreda",
+    "novi": "13. april",
+    "datum": "2024-04-13",
+    "stari": "(31.mar)",
+    "praznik": "Sveštenomučenik Ipatije Gangrijski (Prvo bdenije)",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "14. april",
+    "datum": "2024-04-14",
+    "stari": "(1.apr)",
+    "praznik": "Prepodobna Marija Egipćanka",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "petak",
+    "novi": "15. april",
+    "datum": "2024-04-15",
+    "stari": "(2.apr)",
+    "praznik": "Prepodobni Tit Čudotvorac (Drugo bdenije)",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "16. april",
+    "datum": "2024-04-16",
+    "stari": "(3.apr)",
+    "praznik": "Prepodobni Nikita Ispovednik",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "neđelja",
+    "novi": "17. april",
+    "datum": "2024-04-17",
+    "stari": "(4.apr)",
+    "praznik": "Prepodobni Josif Himnograf",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "18. april",
+    "datum": "2024-04-18",
+    "stari": "(5.apr)",
+    "praznik": "Sveti mučenici Agatopod i Teodul",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "utorak",
+    "novi": "19. april",
+    "datum": "2024-04-19",
+    "stari": "(6.apr)",
+    "praznik": "Sveti Evtihije Carigradski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "sreda",
+    "novi": "20. april",
+    "datum": "2024-04-20",
+    "stari": "(7.apr)",
+    "praznik": "Prepodobni Georgije Mitilenski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "21. april",
+    "datum": "2024-04-21",
+    "stari": "(8.apr)",
+    "praznik": "Sveti apostol Irodion, Agav, Ruf i drugi s njima",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "petak",
+    "novi": "22. april",
+    "datum": "2024-04-22",
+    "stari": "(9.apr)",
+    "praznik": "Sveti mučenik Evpsihije",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "23. april",
+    "datum": "2024-04-23",
+    "stari": "(10.apr)",
+    "praznik": "Sveti mučenik Terentije - Lazareva Subota - Vrbica",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "neđelja",
+    "novi": "24. april",
+    "datum": "2024-04-24",
+    "stari": "(11.apr)",
+    "praznik": "ULAZAK GOSPODA ISUSA HRISTA U JERUSALIM - CVETI",
+    "slovo": "crveno",
+    "post": "post"
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "25. april",
+    "datum": "2024-04-25",
+    "stari": "(12.apr)",
+    "praznik": "Prepodobni Vasilije Ispovednik",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "utorak",
+    "novi": "26. april",
+    "datum": "2024-04-26",
+    "stari": "(13.apr)",
+    "praznik": "Sveti sveštenomučenik Artemon Laodikijski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "sreda",
+    "novi": "27. april",
+    "datum": "2024-04-27",
+    "stari": "(14.apr)",
+    "praznik": "Sveti Martin Ispovednik",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "28. april",
+    "datum": "2024-04-28",
+    "stari": "(15.apr)",
+    "praznik": "Veliki Četvrtak (Veliko bdenije)",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "petak",
+    "novi": "29. april",
+    "datum": "2024-04-29",
+    "stari": "(16.apr)",
+    "praznik": "VELIKI PETAK - RASPEĆE HRISTOVO",
+    "slovo": "crveno",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "30. april",
+    "datum": "2024-04-30",
+    "stari": "(17.apr)",
+    "praznik": "VELIKA SUBOTA",
+    "slovo": "crveno",
+    "post": "post"
+  },
+  {
+    "dan": "neđelja",
+    "novi": "1. maj",
+    "datum": "2024-05-01",
+    "stari": "(18.apr)",
+    "praznik": "VASKRSENjE GOSPODA ISUSA HRISTA - V A S K R S",
+    "slovo": "crveno",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "2. maj",
+    "datum": "2024-05-02",
+    "stari": "(19.apr)",
+    "praznik": "VASKRSNI PONEDELjAK",
+    "slovo": "crveno",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "3. maj",
+    "datum": "2024-05-03",
+    "stari": "(20.apr)",
+    "praznik": "VASKRSNI UTORAK; Sveti Nikolaj Žički",
+    "slovo": "crveno",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "4. maj",
+    "datum": "2024-05-04",
+    "stari": "(21.apr)",
+    "praznik": "Sveti sveštenomučenik Januarije",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "5. maj",
+    "datum": "2024-05-05",
+    "stari": "(22.apr)",
+    "praznik": "Pr. Teodor Sikeot; sv. sveštenomučenik Platon Banjalučki",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "6. maj",
+    "datum": "2024-05-06",
+    "stari": "(23.apr)",
+    "praznik": "SVETI VELIKOMUČENIK GEORGIJE - ĐURĐEVDAN (Istočni Petak)",
+    "slovo": "crveno",
+    "post": ""
+  },
+  {
+    "dan": "subota",
+    "novi": "7. maj",
+    "datum": "2024-05-07",
+    "stari": "(24.apr)",
+    "praznik": "Sveti mučenik Sava Stratilat; sveti Sava Erdeljski; sv. sveštenomuč. Branko",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "8. maj",
+    "datum": "2024-05-08",
+    "stari": "(25.apr)",
+    "praznik": "Sveti apostol i jevanđelist Marko - Markovdan",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "9. maj",
+    "datum": "2024-05-09",
+    "stari": "(26.apr)",
+    "praznik": "Sveti sveštenomučenik Vasilije Amasijski (Pobusani Ponedeljak)",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "10. maj",
+    "datum": "2024-05-10",
+    "stari": "(27.apr)",
+    "praznik": "Spaljivanje moštiju Svetog Save na Vračaru",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "11. maj",
+    "datum": "2024-05-11",
+    "stari": "(28.apr)",
+    "praznik": "Sveti apostoli Jason i Sosipatr",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "12. maj",
+    "datum": "2024-05-12",
+    "stari": "(29.apr)",
+    "praznik": "SVETI VASILIJE OSTROŠKI ČUDOTVORAC",
+    "slovo": "crveno",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "13. maj",
+    "datum": "2024-05-13",
+    "stari": "(30.apr)",
+    "praznik": "Sv. apostol Jakov Zavedejev",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "14. maj",
+    "datum": "2024-05-14",
+    "stari": "(1.maj)",
+    "praznik": "Sveti prorok Jeremija",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "15. maj",
+    "datum": "2024-05-15",
+    "stari": "(2.maj)",
+    "praznik": "Sveti Atanasije Veliki; Sveti Mihail",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "16. maj",
+    "datum": "2024-05-16",
+    "stari": "(3.maj)",
+    "praznik": "Sveti mučenici Timotej i Mavra",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "17. maj",
+    "datum": "2024-05-17",
+    "stari": "(4.maj)",
+    "praznik": "Sveta mučenica Pelagija Tarsijska",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "18. maj",
+    "datum": "2024-05-18",
+    "stari": "(5.maj)",
+    "praznik": "Sveta velikomučenica Irina",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "19. maj",
+    "datum": "2024-05-19",
+    "stari": "(6.maj)",
+    "praznik": "Pravedni Jov; prenos moštiju Svetog Save",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "20. maj",
+    "datum": "2024-05-20",
+    "stari": "(7.maj)",
+    "praznik": "Pojava Časnog Krsta u Jerusalimu",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "21. maj",
+    "datum": "2024-05-21",
+    "stari": "(8.maj)",
+    "praznik": "Sveti apostol i jevanđelist Jovan Bogoslov",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "22. maj",
+    "datum": "2024-05-22",
+    "stari": "(9.maj)",
+    "praznik": "Prenos moštiju svetog oca Nikolaja; Pećka ikona Presvete Bogorodice",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "23. maj",
+    "datum": "2024-05-23",
+    "stari": "(10.maj)",
+    "praznik": "Sveti apostol Simon Zilot; prepodobna Isidora",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "24. maj",
+    "datum": "2024-05-24",
+    "stari": "(11.maj)",
+    "praznik": "SVETI ĆIRILO I METODIJE; sveti Nikodim srpski",
+    "slovo": "crveno",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "25. maj",
+    "datum": "2024-05-25",
+    "stari": "(12.maj)",
+    "praznik": "Sveti Epifanije; sveti German Carigradski (Prepolovljenje)",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "26. maj",
+    "datum": "2024-05-26",
+    "stari": "(13.maj)",
+    "praznik": "Sveta mučenica Glikerija",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "27. maj",
+    "datum": "2024-05-27",
+    "stari": "(14.maj)",
+    "praznik": "Sveti mučenik Isidor; Sveti mučenik Maksim",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "28. maj",
+    "datum": "2024-05-28",
+    "stari": "(15.maj)",
+    "praznik": "Prepodobni Pahomije Veliki; Sveti Ahilije",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "29. maj",
+    "datum": "2024-05-29",
+    "stari": "(16.maj)",
+    "praznik": "Prep. Teodor; sveštenomučenik Teodor Vršački; mučenik Vukašin",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "30. maj",
+    "datum": "2024-05-30",
+    "stari": "(17.maj)",
+    "praznik": "Sveti apostol Andronik i Junija",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "31. maj",
+    "datum": "2024-05-31",
+    "stari": "(18.maj)",
+    "praznik": "Sveti mučenik Teodor Ankirski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "1. jun",
+    "datum": "2024-06-01",
+    "stari": "(19.maj)",
+    "praznik": "Sveti sveštenomučenik Patrikije (Odanije Prepolovljenja)",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "2. jun",
+    "datum": "2024-06-02",
+    "stari": "(20.maj)",
+    "praznik": "Sveti mučenik Talalej; prepodobni Stefan Piperski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "3. jun",
+    "datum": "2024-06-03",
+    "stari": "(21.maj)",
+    "praznik": "SVETI CAR KONSTANTIN I CARICA JELENA; prepodobna Jelena Dečanska",
+    "slovo": "crveno",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "4. jun",
+    "datum": "2024-06-04",
+    "stari": "(22.maj)",
+    "praznik": "Sveti mučenik Jovan Vladimir; knez srpski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "5. jun",
+    "datum": "2024-06-05",
+    "stari": "(23.maj)",
+    "praznik": "Prepodobni Mihajlo Ispovednik",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "6. jun",
+    "datum": "2024-06-06",
+    "stari": "(24.maj)",
+    "praznik": "Prepodobni Simeon Divnogorac",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "7. jun",
+    "datum": "2024-06-07",
+    "stari": "(25.maj)",
+    "praznik": "Treće obretenje glave svetog Jovana Krstitelja",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "8. jun",
+    "datum": "2024-06-08",
+    "stari": "(26.maj)",
+    "praznik": "Sveti apostol Karp i Alfej (Odanije Vaskrsa)",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "9. jun",
+    "datum": "2024-06-09",
+    "stari": "(27.maj)",
+    "praznik": "VAZNESENjE GOSPODNjE - SPASOVDAN",
+    "slovo": "crveno",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "10. jun",
+    "datum": "2024-06-10",
+    "stari": "(28.maj)",
+    "praznik": "Prepodobni Nikita Ispovednik",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "11. jun",
+    "datum": "2024-06-11",
+    "stari": "(29.maj)",
+    "praznik": "Prepodobnomučenica Teodosija Tirska",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "12. jun",
+    "datum": "2024-06-12",
+    "stari": "(30.maj)",
+    "praznik": "Prepodobni Isakije Dalmatski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "13. jun",
+    "datum": "2024-06-13",
+    "stari": "(31.maj)",
+    "praznik": "Sveti apostol Jerma; sveti mučenik Ermije",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "14. jun",
+    "datum": "2024-06-14",
+    "stari": "(1.jun)",
+    "praznik": "Sveti mučenik Justin Filosof; Prepodobni Justin Ćelijski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "15. jun",
+    "datum": "2024-06-15",
+    "stari": "(2.jun)",
+    "praznik": "Sveti mučenik Nikifor; Sveštenomučenik Erazmo Ohridski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "16. jun",
+    "datum": "2024-06-16",
+    "stari": "(3.jun)",
+    "praznik": "Sveti mučenik Lukilijan; Sv. muč. Dimitrije carević",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "17. jun",
+    "datum": "2024-06-17",
+    "stari": "(4.jun)",
+    "praznik": "Sveti Mitrofan; Sv.Marta i Marija; Sv.Joanikije Crnogorski (Bogić) (Odanije Vaznesenja)",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "18. jun",
+    "datum": "2024-06-18",
+    "stari": "(5.jun)",
+    "praznik": "Sveti sveštenomučenik Dorotej; prepodobni Petar Koriški - Letnje (duhovske) zadušnice",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "19. jun",
+    "datum": "2024-06-19",
+    "stari": "(6.jun)",
+    "praznik": "SILAZAK SVETOG DUHA NA APOSTOLE - PEDESETNICA - TROJICE",
+    "slovo": "crveno",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "20. jun",
+    "datum": "2024-06-20",
+    "stari": "(7.jun)",
+    "praznik": "DUHOVSKI PONEDELjAK;",
+    "slovo": "crveno",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "21. jun",
+    "datum": "2024-06-21",
+    "stari": "(8.jun)",
+    "praznik": "DUHOVSKI UTORAK",
+    "slovo": "crveno",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "22. jun",
+    "datum": "2024-06-22",
+    "stari": "(9.jun)",
+    "praznik": "Sveti Kirilo Aleksandrijski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "23. jun",
+    "datum": "2024-06-23",
+    "stari": "(10.jun)",
+    "praznik": "Sveti sveštenomučenik Timotej Bruski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "24. jun",
+    "datum": "2024-06-24",
+    "stari": "(11.jun)",
+    "praznik": "Sveti apostoli Vartolomej i Varnava",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "subota",
+    "novi": "25. jun",
+    "datum": "2024-06-25",
+    "stari": "(12.jun)",
+    "praznik": "Prepodobni Onufrije Veliki; prepodobni Petar Atonski (Odanije Pedesetnice)",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "26. jun",
+    "datum": "2024-06-26",
+    "stari": "(13.jun)",
+    "praznik": "Sveta mučenica Akilina; sveti Trifilije Levkusijski (Petrovske Poklade)",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "27. jun",
+    "datum": "2024-06-27",
+    "stari": "(14.jun)",
+    "praznik": "Sveti prorok Jelisej; sveti Metodije Carigradski (Početak posta)",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "utorak",
+    "novi": "28. jun",
+    "datum": "2024-06-28",
+    "stari": "(15.jun)",
+    "praznik": "Sv. Amos; SV. MUČENIK KNEZ LAZAR I SV. SRPSKI MUČENICI - VIDOVDAN",
+    "slovo": "crveno",
+    "post": "post"
+  },
+  {
+    "dan": "sreda",
+    "novi": "29. jun",
+    "datum": "2024-06-29",
+    "stari": "(16.jun)",
+    "praznik": "Sveti Tihon Amatunski Čudotvorac",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "30. jun",
+    "datum": "2024-06-30",
+    "stari": "(17.jun)",
+    "praznik": "Sveti mučenici Manuil, Savel i Ismail",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "petak",
+    "novi": "1. jul",
+    "datum": "2024-07-01",
+    "stari": "(18.jun)",
+    "praznik": "Sveti mučenici Leontije, Ipatije i Teodul",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "2. jul",
+    "datum": "2024-07-02",
+    "stari": "(19.jun)",
+    "praznik": "Sveti apostol Juda; prepodobni Pajsije Veliki; sveti Jovan Šangajski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "neđelja",
+    "novi": "3. jul",
+    "datum": "2024-07-03",
+    "stari": "(20.jun)",
+    "praznik": "Sveti sveštenomučenik Metodije; prepodobni Naum Ohridski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "4. jul",
+    "datum": "2024-07-04",
+    "stari": "(21.jun)",
+    "praznik": "Sveti mučenik Julijan Tarsijski; Prepodobni Julije i Julijan",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "utorak",
+    "novi": "5. jul",
+    "datum": "2024-07-05",
+    "stari": "(22.jun)",
+    "praznik": "Sveti sveštenomučenik Jevsevije; prepodobna Anastasija Srpska",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "sreda",
+    "novi": "6. jul",
+    "datum": "2024-07-06",
+    "stari": "(23.jun)",
+    "praznik": "Sveta mučenica Agripina; vladimirska ikona Majke Božje",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "7. jul",
+    "datum": "2024-07-07",
+    "stari": "(24.jun)",
+    "praznik": "ROĐENjE SVETOG JOVANA PRETEČE - IVANjDAN",
+    "slovo": "crveno",
+    "post": "post"
+  },
+  {
+    "dan": "petak",
+    "novi": "8. jul",
+    "datum": "2024-07-08",
+    "stari": "(25.jun)",
+    "praznik": "Sveta prepodobnomučenica Fevronija",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "9. jul",
+    "datum": "2024-07-09",
+    "stari": "(26.jun)",
+    "praznik": "Prepodobni David Solunski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "neđelja",
+    "novi": "10. jul",
+    "datum": "2024-07-10",
+    "stari": "(27.jun)",
+    "praznik": "Prepodobni Sampson Stranoprimac",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "11. jul",
+    "datum": "2024-07-11",
+    "stari": "(28.jun)",
+    "praznik": "Prenos moštiju sv. besrebrenika Kira i Jovana; sv. muč. Dabrobosan. i Milešev.",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "utorak",
+    "novi": "12. jul",
+    "datum": "2024-07-12",
+    "stari": "(29.jun)",
+    "praznik": "SVETI APOSTOLI PETAR I PAVLE - PETROVDAN",
+    "slovo": "crveno",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "13. jul",
+    "datum": "2024-07-13",
+    "stari": "(30.jun)",
+    "praznik": "Sabor svetih dvanaest apostola - Pavlovdan",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "14. jul",
+    "datum": "2024-07-14",
+    "stari": "(1.jul)",
+    "praznik": "Sveti mučenici i besrebrenici Kozma i Damjan",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "15. jul",
+    "datum": "2024-07-15",
+    "stari": "(2.jul)",
+    "praznik": "Polaganje rize Presvete Bogorodice",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "16. jul",
+    "datum": "2024-07-16",
+    "stari": "(3.jul)",
+    "praznik": "Sveti mučenik Jakint; prepodobni Anatolije",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "17. jul",
+    "datum": "2024-07-17",
+    "stari": "(4.jul)",
+    "praznik": "Sveti Andrej Kritski; sv. sveštenomučenik Sava Gornjokarlovački",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "18. jul",
+    "datum": "2024-07-18",
+    "stari": "(5.jul)",
+    "praznik": "Prepodobni Atanasije Atonski; sveti Sergije Radonješki",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "19. jul",
+    "datum": "2024-07-19",
+    "stari": "(6.jul)",
+    "praznik": "Prepodobni Sisoje Veliki",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "20. jul",
+    "datum": "2024-07-20",
+    "stari": "(7.jul)",
+    "praznik": "Prepodobni Toma Malein; sveta mučenica Nedelja",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "21. jul",
+    "datum": "2024-07-21",
+    "stari": "(8.jul)",
+    "praznik": "Sveti velikomučenik Prokopije",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "22. jul",
+    "datum": "2024-07-22",
+    "stari": "(9.jul)",
+    "praznik": "Sveštenomučenik Pankratije; sveti Teodor; sv. muč. Glamočki i Kulenvakufski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "23. jul",
+    "datum": "2024-07-23",
+    "stari": "(10.jul)",
+    "praznik": "Svetih 45 mučenika iz Nikopolja; prep. Antonije Pečerski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "24. jul",
+    "datum": "2024-07-24",
+    "stari": "(11.jul)",
+    "praznik": "Sveta velikomučenica Efimija; blažena Olga",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "25. jul",
+    "datum": "2024-07-25",
+    "stari": "(12.jul)",
+    "praznik": "Sv. muč. Proklo i Ilarije; ikona Presvete Bogorodice Trojeručice",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "26. jul",
+    "datum": "2024-07-26",
+    "stari": "(13.jul)",
+    "praznik": "Sabor svetog arhangela Gavrila",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "27. jul",
+    "datum": "2024-07-27",
+    "stari": "(14.jul)",
+    "praznik": "Sveti apostol Akila; prepodobni Nikodim",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "28. jul",
+    "datum": "2024-07-28",
+    "stari": "(15.jul)",
+    "praznik": "Sveti mučenici Kirik i Julita; sveti Vladimir, veliki knez ruski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "29. jul",
+    "datum": "2024-07-29",
+    "stari": "(16.jul)",
+    "praznik": "Sveštenomučenik Atinogen; sveta mučenica Julija",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "30. jul",
+    "datum": "2024-07-30",
+    "stari": "(17.jul)",
+    "praznik": "Sveta velikomučenica Marina - Ognjena Marija",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "31. jul",
+    "datum": "2024-07-31",
+    "stari": "(18.jul)",
+    "praznik": "Sveti mučenik Emilijan; sveti mučenik Jakint",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "1. avgust",
+    "datum": "2024-08-01",
+    "stari": "(19.jul)",
+    "praznik": "Prep. Makrina; Sveti Stefan, Despot srpski; prepodobna Evgenija (Lazarević)",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "2. avgust",
+    "datum": "2024-08-02",
+    "stari": "(20.jul)",
+    "praznik": "SVETI PROROK ILIJA - ILINDAN; sv. Ilija Gruzijski",
+    "slovo": "crveno",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "3. avgust",
+    "datum": "2024-08-03",
+    "stari": "(21.jul)",
+    "praznik": "Sveti prorok Jezekilj",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "4. avgust",
+    "datum": "2024-08-04",
+    "stari": "(22.jul)",
+    "praznik": "Sveta Marija Magdalena - Blaga Marija",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "5. avgust",
+    "datum": "2024-08-05",
+    "stari": "(23.jul)",
+    "praznik": "Sveti mučenici Trofim, Teofil i drugi",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "6. avgust",
+    "datum": "2024-08-06",
+    "stari": "(24.jul)",
+    "praznik": "Sveta velikomučenica Hristina; prepodobni Polikarp Pečerski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "7. avgust",
+    "datum": "2024-08-07",
+    "stari": "(25.jul)",
+    "praznik": "Uspenije Svete Ane",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "8. avgust",
+    "datum": "2024-08-08",
+    "stari": "(26.jul)",
+    "praznik": "Prepodobnomučenica Paraskeva - Petka: Sveti Sava Treći, Arh. srpski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "9. avgust",
+    "datum": "2024-08-09",
+    "stari": "(27.jul)",
+    "praznik": "Sveti velikomučenik Pantelejmon; sveti Kliment Ohridski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "10. avgust",
+    "datum": "2024-08-10",
+    "stari": "(28.jul)",
+    "praznik": "Sveti apostoli i đakoni Prohor, Nikanor, Timon i Parmen",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "11. avgust",
+    "datum": "2024-08-11",
+    "stari": "(29.jul)",
+    "praznik": "Sveti mučenik Kalinik; sveta mučenica Serafima",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "12. avgust",
+    "datum": "2024-08-12",
+    "stari": "(30.jul)",
+    "praznik": "Prepodobna mati Angelina srpska",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "13. avgust",
+    "datum": "2024-08-13",
+    "stari": "(31.jul)",
+    "praznik": "Sveti mučenik Evdokim; sveta mučenica Julita (Gospoinske poklade)",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "14. avgust",
+    "datum": "2024-08-14",
+    "stari": "(1.avg)",
+    "praznik": "Iznošenje Časnog Krsta; sv. mučenici Makaveji (Početak posta)",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "15. avgust",
+    "datum": "2024-08-15",
+    "stari": "(2.avg)",
+    "praznik": "Prenos moštiju svetog prvomučenika i arhiđakona Stefana",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "utorak",
+    "novi": "16. avgust",
+    "datum": "2024-08-16",
+    "stari": "(3.avg)",
+    "praznik": "Prepodobni Isakije, Dalmat i Favst",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "sreda",
+    "novi": "17. avgust",
+    "datum": "2024-08-17",
+    "stari": "(4.avg)",
+    "praznik": "Svetih sedam mučenika u Efesu",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "18. avgust",
+    "datum": "2024-08-18",
+    "stari": "(5.avg)",
+    "praznik": "Sveti sveštenomučenik Evsignije (Pretprazništvo Preobraženja)",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "petak",
+    "novi": "19. avgust",
+    "datum": "2024-08-19",
+    "stari": "(6.avg)",
+    "praznik": "PREOBRAŽENjE GOSPODNjE",
+    "slovo": "crveno",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "20. avgust",
+    "datum": "2024-08-20",
+    "stari": "(7.avg)",
+    "praznik": "Prepodobnomučenik Dometije; prepodobni Or",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "neđelja",
+    "novi": "21. avgust",
+    "datum": "2024-08-21",
+    "stari": "(8.avg)",
+    "praznik": "Sveti Emilijan Ispovednik; prepodobni Zosim Tumanski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "22. avgust",
+    "datum": "2024-08-22",
+    "stari": "(9.avg)",
+    "praznik": "Sveti apostol Matija; sveti mučenik Antonije",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "utorak",
+    "novi": "23. avgust",
+    "datum": "2024-08-23",
+    "stari": "(10.avg)",
+    "praznik": "Sveti mučenik i arhiđakon Lavrentije",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "sreda",
+    "novi": "24. avgust",
+    "datum": "2024-08-24",
+    "stari": "(11.avg)",
+    "praznik": "Sveti mučenik i arhiđakon Evplo",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "25. avgust",
+    "datum": "2024-08-25",
+    "stari": "(12.avg)",
+    "praznik": "Sveti mučenici Fotije, Anikita i drugi s njima",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "petak",
+    "novi": "26. avgust",
+    "datum": "2024-08-26",
+    "stari": "(13.avg)",
+    "praznik": "Sveti mučenik Ipolit (Odanije preobraženja)",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "27. avgust",
+    "datum": "2024-08-27",
+    "stari": "(14.avg)",
+    "praznik": "Sveti prorok Mihej (Pretprazništvo Uspenija)",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "neđelja",
+    "novi": "28. avgust",
+    "datum": "2024-08-28",
+    "stari": "(15.avg)",
+    "praznik": "USPENIJE PRESVETE BOGORODICE - VELIKA GOSPOJINA",
+    "slovo": "crveno",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "29. avgust",
+    "datum": "2024-08-29",
+    "stari": "(16.avg)",
+    "praznik": "Sveti Jevstatije, Drugi Arh. srpski; prep. Roman; prep. Rafailo banatski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "30. avgust",
+    "datum": "2024-08-30",
+    "stari": "(17.avg)",
+    "praznik": "Sveti mučenik Patroklo; sveti mučenik Miron",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "31. avgust",
+    "datum": "2024-08-31",
+    "stari": "(18.avg)",
+    "praznik": "Sveti mučenik Flor; prepodobni Jovan Rilski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "1. septembar",
+    "datum": "2024-09-01",
+    "stari": "(19.avg)",
+    "praznik": "Sveti mučenik Andrej Stratilat",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "2. septembar",
+    "datum": "2024-09-02",
+    "stari": "(20.avg)",
+    "praznik": "Sveti prorok Samuilo; sveti sveštenomučenik Filip Iraklijski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "3. septembar",
+    "datum": "2024-09-03",
+    "stari": "(21.avg)",
+    "praznik": "Sv. apostol Tadej; sv. muč. Vasa sa decom; sv. muč. Rafailo Šišatovački",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "4. septembar",
+    "datum": "2024-09-04",
+    "stari": "(22.avg)",
+    "praznik": "Sveti mučenik Agatonik; sveti sveštenomučenik Gorazd Češki",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "5. septembar",
+    "datum": "2024-09-05",
+    "stari": "(23.avg)",
+    "praznik": "Sveti sveštenomučenik Irinej; sveti mučenik Lup (Odanije Uspenija)",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "6. septembar",
+    "datum": "2024-09-06",
+    "stari": "(24.avg)",
+    "praznik": "Sveti sveštenomučenik Evtihije; sveta mučenica Sira",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "7. septembar",
+    "datum": "2024-09-07",
+    "stari": "(25.avg)",
+    "praznik": "Prenos mošt. sv. ap. Vartolomeja; sveti apostol Tit",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "8. septembar",
+    "datum": "2024-09-08",
+    "stari": "(26.avg)",
+    "praznik": "Sveti mučenici Adrijan i Natalija",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "9. septembar",
+    "datum": "2024-09-09",
+    "stari": "(27.avg)",
+    "praznik": "Prepodobni Pimen Veliki",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "10. septembar",
+    "datum": "2024-09-10",
+    "stari": "(28.avg)",
+    "praznik": "Prepodobni Mojsej Murin; prepodobni Sava Pskovski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "11. septembar",
+    "datum": "2024-09-11",
+    "stari": "(29.avg)",
+    "praznik": "USEKOVANjE GLAVE SVETOG JOVANA KRSTITELjA",
+    "slovo": "crveno",
+    "post": "post"
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "12. septembar",
+    "datum": "2024-09-12",
+    "stari": "(30.avg)",
+    "praznik": "Prenos moštiju svetog Aleksandra Nevskog; Sabor srpskih svetitelja",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "13. septembar",
+    "datum": "2024-09-13",
+    "stari": "(31.avg)",
+    "praznik": "Polaganje pojasa Presvete Bogorodice; Sv. mučenici jasenovački",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "14. septembar",
+    "datum": "2024-09-14",
+    "stari": "(1.sep)",
+    "praznik": "Prepodobni Simeon Stolpnik - crkvena Nova godina",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "15. septembar",
+    "datum": "2024-09-15",
+    "stari": "(2.sep)",
+    "praznik": "Sveti mučenik Mamant; sveti Jovan Posnik",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "16. septembar",
+    "datum": "2024-09-16",
+    "stari": "(3.sep)",
+    "praznik": "Sveti sveštmuč. Antim; sveti Joanikije, Prvi Patrijarh srpski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "17. septembar",
+    "datum": "2024-09-17",
+    "stari": "(4.sep)",
+    "praznik": "Sv. svmuč. Vavila; prorok Mojsej Bogovidac; sveti Petar Dabrobosanski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "18. septembar",
+    "datum": "2024-09-18",
+    "stari": "(5.sep)",
+    "praznik": "Sveti prorok Zaharije i pravedna Jelisaveta",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "19. septembar",
+    "datum": "2024-09-19",
+    "stari": "(6.sep)",
+    "praznik": "Čudo svetog arhangela Mihaila; sveti mučenik Evdoksije",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "20. septembar",
+    "datum": "2024-09-20",
+    "stari": "(7.sep)",
+    "praznik": "Sveti mučenik Sozont (Pretprazništvo Rođenja Presvete Bogorodice)",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "21. septembar",
+    "datum": "2024-09-21",
+    "stari": "(8.sep)",
+    "praznik": "ROĐENjE PRESVETE BOGORODICE - MALA GOSPOJINA",
+    "slovo": "crveno",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "22. septembar",
+    "datum": "2024-09-22",
+    "stari": "(9.sep)",
+    "praznik": "Sveti pravedni Joakim i Ana",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "23. septembar",
+    "datum": "2024-09-23",
+    "stari": "(10.sep)",
+    "praznik": "Svete mučenice Minodora, Mitrodora i Nimfodora",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "24. septembar",
+    "datum": "2024-09-24",
+    "stari": "(11.sep)",
+    "praznik": "Prepodobna Teodora; prepodobni Sergije i German",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "25. septembar",
+    "datum": "2024-09-25",
+    "stari": "(12.sep)",
+    "praznik": "Sv. sveštenomučenik Avtonom (Odanije Rođenja Presvete Bogorodice)",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "26. septembar",
+    "datum": "2024-09-26",
+    "stari": "(13.sep)",
+    "praznik": "Sveti sveštenomučenik Kornilije (Pretprazništvo Vozdviženja)",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "27. septembar",
+    "datum": "2024-09-27",
+    "stari": "(14.sep)",
+    "praznik": "VOZDVIŽENjE ČASNOG KRSTA - KRSTOVDAN",
+    "slovo": "crveno",
+    "post": "post"
+  },
+  {
+    "dan": "sreda",
+    "novi": "28. septembar",
+    "datum": "2024-09-28",
+    "stari": "(15.sep)",
+    "praznik": "Sveti velikomučenik Nikita; sveti Josif Temišvarski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "29. septembar",
+    "datum": "2024-09-29",
+    "stari": "(16.sep)",
+    "praznik": "Prepodobni Dorotej; sveti Kiprijan; sv. velikomuč. Jefimija",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "30. septembar",
+    "datum": "2024-09-30",
+    "stari": "(17.sep)",
+    "praznik": "Svete mučenice Vera, Nada i Ljubav i majka im Sofija",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "1. oktobar",
+    "datum": "2024-10-01",
+    "stari": "(18.sep)",
+    "praznik": "Sveti Evmenije Gortinski; sveta mučenica Ariadna",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "2. oktobar",
+    "datum": "2024-10-02",
+    "stari": "(19.sep)",
+    "praznik": "Sveti mučenici Trofim, Savatije i Dorimedont",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "3. oktobar",
+    "datum": "2024-10-03",
+    "stari": "(20.sep)",
+    "praznik": "Sveti velikomučenik Jevstatije",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "4. oktobar",
+    "datum": "2024-10-04",
+    "stari": "(21.sep)",
+    "praznik": "Sveti apostol Kodrat (Odanije Vozdviženja)",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "5. oktobar",
+    "datum": "2024-10-05",
+    "stari": "(22.sep)",
+    "praznik": "Sveti sveštenomučenik Foka; sveti prorok Jona",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "6. oktobar",
+    "datum": "2024-10-06",
+    "stari": "(23.sep)",
+    "praznik": "Začeće svetog Jovana Preteče i Krstitelja",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "7. oktobar",
+    "datum": "2024-10-07",
+    "stari": "(24.sep)",
+    "praznik": "Sveta prvomučenica Tekla; prep. Simon, sv. Kralj Vladislav i prep. David",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "8. oktobar",
+    "datum": "2024-10-08",
+    "stari": "(25.sep)",
+    "praznik": "Prepodobna Efrosinija; sveti Sergije Radonješki - Miholjske zadušnice",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "9. oktobar",
+    "datum": "2024-10-09",
+    "stari": "(26.sep)",
+    "praznik": "Sveti apostol i jevanđelist Jovan Bogoslov",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "10. oktobar",
+    "datum": "2024-10-10",
+    "stari": "(27.sep)",
+    "praznik": "Sveti mučenik Kalistrat",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "11. oktobar",
+    "datum": "2024-10-11",
+    "stari": "(28.sep)",
+    "praznik": "Prepodobni Hariton Ispovednik",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "12. oktobar",
+    "datum": "2024-10-12",
+    "stari": "(29.sep)",
+    "praznik": "Prepodobni Kirijak Otšelnik - Miholjdan",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "13. oktobar",
+    "datum": "2024-10-13",
+    "stari": "(30.sep)",
+    "praznik": "Sveti sveštenomučenik Grigorije; sveti Mihail Kijevski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "14. oktobar",
+    "datum": "2024-10-14",
+    "stari": "(1.okt)",
+    "praznik": "Pokrov Presvete Bogorodice",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "15. oktobar",
+    "datum": "2024-10-15",
+    "stari": "(2.okt)",
+    "praznik": "Sveti sveštenomučenik Kiprijan; prepodobni Andrej",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "16. oktobar",
+    "datum": "2024-10-16",
+    "stari": "(3.okt)",
+    "praznik": "Sveti sveštenomučenik Dionisije Areopagit",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "17. oktobar",
+    "datum": "2024-10-17",
+    "stari": "(4.okt)",
+    "praznik": "Sveti Stefan i Jelena (Štiljanović)",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "18. oktobar",
+    "datum": "2024-10-18",
+    "stari": "(5.okt)",
+    "praznik": "Sveta mučenica Haritina; sveštenomučenik Dionisije",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "19. oktobar",
+    "datum": "2024-10-19",
+    "stari": "(6.okt)",
+    "praznik": "Sveti apostol Toma - Tomindan",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "20. oktobar",
+    "datum": "2024-10-20",
+    "stari": "(7.okt)",
+    "praznik": "Sveti mučenici Sergije i Vakho - Srđevdan",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "21. oktobar",
+    "datum": "2024-10-21",
+    "stari": "(8.okt)",
+    "praznik": "Prepodobna Pelagija; prepodobna Taisa",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "22. oktobar",
+    "datum": "2024-10-22",
+    "stari": "(9.okt)",
+    "praznik": "Sveti apostol Jakov; sveti Stefan, Despot srpski (Slepi)",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "23. oktobar",
+    "datum": "2024-10-23",
+    "stari": "(10.okt)",
+    "praznik": "Sveti mučenici Evlampije i Evlampija",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "24. oktobar",
+    "datum": "2024-10-24",
+    "stari": "(11.okt)",
+    "praznik": "Sveti apostol Filip, đakon; sveti Teofan Načertani",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "25. oktobar",
+    "datum": "2024-10-25",
+    "stari": "(12.okt)",
+    "praznik": "Sveti mučenici Tarah, Prov i Andronik",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "26. oktobar",
+    "datum": "2024-10-26",
+    "stari": "(13.okt)",
+    "praznik": "Sveti mučenik Karp; sveta novomučenica Zlata Meglinska",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "27. oktobar",
+    "datum": "2024-10-27",
+    "stari": "(14.okt)",
+    "praznik": "PREPODOBNA MATI PARASKEVA - SVETA PETKA",
+    "slovo": "crveno",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "28. oktobar",
+    "datum": "2024-10-28",
+    "stari": "(15.okt)",
+    "praznik": "Sveti sveštenomučenik Lukijan; prepodobni Jevtimije",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "29. oktobar",
+    "datum": "2024-10-29",
+    "stari": "(16.okt)",
+    "praznik": "Sveti mučenik Longin Sotnik",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "30. oktobar",
+    "datum": "2024-10-30",
+    "stari": "(17.okt)",
+    "praznik": "Sveti prorok Osija; prepodobnomučenik Andrej Kritski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "31. oktobar",
+    "datum": "2024-10-31",
+    "stari": "(18.okt)",
+    "praznik": "Sveti apostol i jevanđelist Luka; SVETI PETAR CETINjSKI",
+    "slovo": "crveno",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "1. novembar",
+    "datum": "2024-11-01",
+    "stari": "(19.okt)",
+    "praznik": "Sv. prorok Joil; prepodob. Prohor Pčinjski; Jovan Rilski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "2. novembar",
+    "datum": "2024-11-02",
+    "stari": "(20.okt)",
+    "praznik": "Sveti velikomučenik Artemije",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "3. novembar",
+    "datum": "2024-11-03",
+    "stari": "(21.okt)",
+    "praznik": "Prepodobni Ilarion; sveti Ilarion; sveti Ispovednik Visarion",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "4. novembar",
+    "datum": "2024-11-04",
+    "stari": "(22.okt)",
+    "praznik": "Sveti ravnoapostolni Averkije jerapoljski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "5. novembar",
+    "datum": "2024-11-05",
+    "stari": "(23.okt)",
+    "praznik": "Sveti apostol Jakov, prvi episkop Jerusalimski - Mitrovske (zatvorene) zadušnice",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "6. novembar",
+    "datum": "2024-11-06",
+    "stari": "(24.okt)",
+    "praznik": "Sveti mučenik Areta",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "7. novembar",
+    "datum": "2024-11-07",
+    "stari": "(25.okt)",
+    "praznik": "Sveti mučenici Markijan i Martirije",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "8. novembar",
+    "datum": "2024-11-08",
+    "stari": "(26.okt)",
+    "praznik": "SVETI VELIKOMUČENIK DIMITRIJE - MITROVDAN",
+    "slovo": "crveno",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "9. novembar",
+    "datum": "2024-11-09",
+    "stari": "(27.okt)",
+    "praznik": "Sveti mučenik Nestor",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "10. novembar",
+    "datum": "2024-11-10",
+    "stari": "(28.okt)",
+    "praznik": "Sveti mučenik Terentije; sveti Arsenije Sremac, Arhiepiskop srpski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "11. novembar",
+    "datum": "2024-11-11",
+    "stari": "(29.okt)",
+    "praznik": "Sveti Avramije Zatvornik; prepodobnomučenica Anastasija Rimljanka",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "12. novembar",
+    "datum": "2024-11-12",
+    "stari": "(30.okt)",
+    "praznik": "Sv. kralj Milutin; prep. Teoktist i Jelena; sv. Varnava Hvost. Ispovednik",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "13. novembar",
+    "datum": "2024-11-13",
+    "stari": "(31.okt)",
+    "praznik": "Sveti apostoli Stahije, Amplije, Urvan i drugi s njima",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "14. novembar",
+    "datum": "2024-11-14",
+    "stari": "(1.nov)",
+    "praznik": "Sveti Kozma i Damjan - Vračevi",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "15. novembar",
+    "datum": "2024-11-15",
+    "stari": "(2.nov)",
+    "praznik": "Sveti mučenici Akindin, Pigasije i drugi s njima",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "16. novembar",
+    "datum": "2024-11-16",
+    "stari": "(3.nov)",
+    "praznik": "Prenos moštiju Sv. Georgija - ĐURĐIC",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "17. novembar",
+    "datum": "2024-11-17",
+    "stari": "(4.nov)",
+    "praznik": "Prepodobni Joanikije Veliki; sveštenomučenik Nikandar",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "18. novembar",
+    "datum": "2024-11-18",
+    "stari": "(5.nov)",
+    "praznik": "Prepodobnomučenik Galaktion i Epistima",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "19. novembar",
+    "datum": "2024-11-19",
+    "stari": "(6.nov)",
+    "praznik": "Sveti Pavle Ispovednik; prepodobni Varlam Hutinski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "20. novembar",
+    "datum": "2024-11-20",
+    "stari": "(7.nov)",
+    "praznik": "Sveti mučenik Jaron i sv. 33 mučenika u Melitini; prepodobni Lazar",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "21. novembar",
+    "datum": "2024-11-21",
+    "stari": "(8.nov)",
+    "praznik": "SABOR SV. ARHANGELA MIHAILA - ARANĐELOVDAN",
+    "slovo": "crveno",
+    "post": ""
+  },
+  {
+    "dan": "utorak",
+    "novi": "22. novembar",
+    "datum": "2024-11-22",
+    "stari": "(9.nov)",
+    "praznik": "Sveti mučenici Onisifor i Porfirije; sveti Nektarije Eginski",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "sreda",
+    "novi": "23. novembar",
+    "datum": "2024-11-23",
+    "stari": "(10.nov)",
+    "praznik": "Sveti apostoli Olimp, Erast, Rodion i drugi s njima",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "24. novembar",
+    "datum": "2024-11-24",
+    "stari": "(11.nov)",
+    "praznik": "Sveti mučenik Mina; sveti kralj Stefan Dečanski - Mratindan",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "petak",
+    "novi": "25. novembar",
+    "datum": "2024-11-25",
+    "stari": "(12.nov)",
+    "praznik": "Sveti Jovan Milostivi; prepodobni Nil Sinajski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "26. novembar",
+    "datum": "2024-11-26",
+    "stari": "(13.nov)",
+    "praznik": "Sveti Jovan Zlatousti",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "neđelja",
+    "novi": "27. novembar",
+    "datum": "2024-11-27",
+    "stari": "(14.nov)",
+    "praznik": "Sveti apostol Filip (Božićne poklade)",
+    "slovo": "",
+    "post": ""
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "28. novembar",
+    "datum": "2024-11-28",
+    "stari": "(15.nov)",
+    "praznik": "Sveti mučenici Gurije, Samon i Aviv (Početak posta)",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "utorak",
+    "novi": "29. novembar",
+    "datum": "2024-11-29",
+    "stari": "(16.nov)",
+    "praznik": "Sveti apostol i jevanđelist Matej",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "sreda",
+    "novi": "30. novembar",
+    "datum": "2024-11-30",
+    "stari": "(17.nov)",
+    "praznik": "Sveti Grigorije Čudotvorac; Sveti Nikon Radonješki; Sv. Maksim Patrijarh Carigradski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "1. decembar",
+    "datum": "2024-12-01",
+    "stari": "(18.nov)",
+    "praznik": "Sveti mučenik Platon; sveti mučenici Roman i Varul Otrok",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "petak",
+    "novi": "2. decembar",
+    "datum": "2024-12-02",
+    "stari": "(19.nov)",
+    "praznik": "Sveti prorok Avdija; prepodobni Varlaam i Joasaf",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "3. decembar",
+    "datum": "2024-12-03",
+    "stari": "(20.nov)",
+    "praznik": "Prepodobni Grigorije Dekapolit (Pretprazništvo Vavedenja)",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "neđelja",
+    "novi": "4. decembar",
+    "datum": "2024-12-04",
+    "stari": "(21.nov)",
+    "praznik": "VAVEDENjE PRESVETE BOGORODICE",
+    "slovo": "crveno",
+    "post": "post"
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "5. decembar",
+    "datum": "2024-12-05",
+    "stari": "(22.nov)",
+    "praznik": "Sveti apostoli Filimon, Apfija i Arhip; sv. Mučenica Kikilija",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "utorak",
+    "novi": "6. decembar",
+    "datum": "2024-12-06",
+    "stari": "(23.nov)",
+    "praznik": "Sveti Amfilohije Ikonijski; sveti Grigorije; sveti Aleksandar Nevski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "sreda",
+    "novi": "7. decembar",
+    "datum": "2024-12-07",
+    "stari": "(24.nov)",
+    "praznik": "Sveta velikomučenica Ekaterina",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "8. decembar",
+    "datum": "2024-12-08",
+    "stari": "(25.nov)",
+    "praznik": "Sveti sveštenomučenik Kliment (Odanije Vavedenja)",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "petak",
+    "novi": "9. decembar",
+    "datum": "2024-12-09",
+    "stari": "(26.nov)",
+    "praznik": "Prepodobni Alimpije Stolpnik",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "10. decembar",
+    "datum": "2024-12-10",
+    "stari": "(27.nov)",
+    "praznik": "Sveti mučenik Jakov Persijanac; sveti Jakov Rostovski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "neđelja",
+    "novi": "11. decembar",
+    "datum": "2024-12-11",
+    "stari": "(28.nov)",
+    "praznik": "Sv. Prepodobnomučenik Stefan; sveti mučenik Hristo",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "12. decembar",
+    "datum": "2024-12-12",
+    "stari": "(29.nov)",
+    "praznik": "Sveti mučenici Paramon i Filumen",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "utorak",
+    "novi": "13. decembar",
+    "datum": "2024-12-13",
+    "stari": "(30.nov)",
+    "praznik": "Sveti apostol Andrej Prvozvani",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "sreda",
+    "novi": "14. decembar",
+    "datum": "2024-12-14",
+    "stari": "(1.dec)",
+    "praznik": "Sveti prorok Naum; sveti Filaret Milostivi",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "15. decembar",
+    "datum": "2024-12-15",
+    "stari": "(2.dec)",
+    "praznik": "Sveti prorok Avakum; sveti Car Uroš; prepodobni Joanikije Devički",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "petak",
+    "novi": "16. decembar",
+    "datum": "2024-12-16",
+    "stari": "(3.dec)",
+    "praznik": "Sveti prorok Sofonije; prepodobni Jovan Ćutljivi",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "17. decembar",
+    "datum": "2024-12-17",
+    "stari": "(4.dec)",
+    "praznik": "Sveta velikomučenica Varvara; prepodobni Jovan Damaskin",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "neđelja",
+    "novi": "18. decembar",
+    "datum": "2024-12-18",
+    "stari": "(5.dec)",
+    "praznik": "Prepodobni Sava Osvećeni; sveti Nektarije Bitoljski (Detinjci)",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "19. decembar",
+    "datum": "2024-12-19",
+    "stari": "(6.dec)",
+    "praznik": "SVETI NIKOLAJ MIRLIKIJSKI ČUDOTVORAC - NIKOLjDAN",
+    "slovo": "crveno",
+    "post": "post"
+  },
+  {
+    "dan": "utorak",
+    "novi": "20. decembar",
+    "datum": "2024-12-20",
+    "stari": "(7.dec)",
+    "praznik": "Sveti Amvrosije; prepodobni Grigorije Gornjački",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "sreda",
+    "novi": "21. decembar",
+    "datum": "2024-12-21",
+    "stari": "(8.dec)",
+    "praznik": "Prepodobni Patapije; sveti apostoli Sosten, Apolos i drugi s njima",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "22. decembar",
+    "datum": "2024-12-22",
+    "stari": "(9.dec)",
+    "praznik": "Začeće svete Ane",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "petak",
+    "novi": "23. decembar",
+    "datum": "2024-12-23",
+    "stari": "(10.dec)",
+    "praznik": "Sveti mučenici Mina i drugi s njim; sveti Jovan, Despot srpski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "24. decembar",
+    "datum": "2024-12-24",
+    "stari": "(11.dec)",
+    "praznik": "Prepodobni Danilo Stolpnik",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "neđelja",
+    "novi": "25. decembar",
+    "datum": "2024-12-25",
+    "stari": "(12.dec)",
+    "praznik": "Prepodobni Spiridon Čudotvorac, episkop Trimitunski (Materice)",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "ponedeljak",
+    "novi": "26. decembar",
+    "datum": "2024-12-26",
+    "stari": "(13.dec)",
+    "praznik": "Sv. Muč. Evstratije; sv. sveštenomuč. Gavrilo; sv. Nikodim srpski",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "utorak",
+    "novi": "27. decembar",
+    "datum": "2024-12-27",
+    "stari": "(14.dec)",
+    "praznik": "Sveti mučenici Tirs, Levkije, Filimon, Apolonije i drugi s njima",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "sreda",
+    "novi": "28. decembar",
+    "datum": "2024-12-28",
+    "stari": "(15.dec)",
+    "praznik": "Sveti sveštenomučenik Elevterije; prepodobni Pavle",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "četvrtak",
+    "novi": "29. decembar",
+    "datum": "2024-12-29",
+    "stari": "(16.dec)",
+    "praznik": "Sveti prorok Agej; sveta Teofanija carica",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "petak",
+    "novi": "30. decembar",
+    "datum": "2024-12-30",
+    "stari": "(17.dec)",
+    "praznik": "Sveti prorok Danilo; sveti prepodobnomuč. đakon Avakum i iguman Pajsije",
+    "slovo": "",
+    "post": "post"
+  },
+  {
+    "dan": "subota",
+    "novi": "31. decembar",
+    "datum": "2024-12-31",
+    "stari": "(18.dec)",
+    "praznik": "Sveti mučenik Sevastijan; sveti Modest i drugi s njim",
+    "slovo": "",
+    "post": "post"
+  }
+]
