@@ -84,6 +84,14 @@ export default function Bogosluzenja() {
                                         </li>
                                     </ul>
                                     <h5>
+                                        <span>Петак</span>
+                                    </h5>
+                                    <ul>
+                                        <li>
+                                            <p>17:00 - Акатист Часном Крсту или Св. Василију Острошком са читањем имена за здравље.<sup>*</sup></p>
+                                        </li>
+                                    </ul>
+                                    <h5>
                                         <span>Субота</span>
                                     </h5>
                                     <ul>
@@ -105,6 +113,11 @@ export default function Bogosluzenja() {
                                             <p>17:00 - Вечерња</p>
                                         </li>
                                     </ul>
+                                    <ul>
+                                        <li>
+                                            <p style={{fontSize: "10px"}}>*Акатисти се мењају сваке недеље</p>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </CustomTabPanel>
@@ -120,10 +133,18 @@ export default function Bogosluzenja() {
                                     </h5>
                                     <ul>
                                         <li>
-                                            <p>07:30 - Јутрење</p>
+                                            <p>08:00 - Јутрење</p>
                                         </li>
                                         <li>
                                             <p>18:00 - Вечерња</p>
+                                        </li>
+                                    </ul>
+                                    <h5>
+                                        <span>Петак</span>
+                                    </h5>
+                                    <ul>
+                                        <li>
+                                            <p>18:00 - Акатист Часном Крсту или Св. Василију Острошком са читањем имена за здравље.<sup>*</sup></p>
                                         </li>
                                     </ul>
                                     <h5>
@@ -146,6 +167,11 @@ export default function Bogosluzenja() {
                                         </li>
                                         <li>
                                             <p>18:00 - Вечерња</p>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <p style={{fontSize: "10px"}}>*Акатисти се мењају сваке недеље</p>
                                         </li>
                                     </ul>
                                 </div>

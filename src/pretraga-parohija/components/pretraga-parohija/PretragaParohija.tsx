@@ -200,12 +200,13 @@ function PretragaParohija() {
             </Container>
 
             {
-                izabraneParohije &&
-                <Box sx={{marginTop: "2rem"}}>
+                izabraneParohije && izabraneParohije.length === 1 &&
+                <Box sx={{marginTop: "2rem"}} className="ostale-parohije-wrapper">
+                    <Divider className="react-divider"/>
                     <p><strong>Остале адресе на којима је свештеник {izabraneParohije[0].paroh.ime}:</strong></p>
                     <List className="ostale-parohije" dense={true}>
                         {generate(ostaleParohije,
-                            <ListItem divider>
+                            <ListItem divider className="ostale-parohije-list-item">
                                 <ListItemText/>
                             </ListItem>,
                         )}

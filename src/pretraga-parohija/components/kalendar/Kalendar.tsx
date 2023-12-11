@@ -25,24 +25,46 @@ export default function Kalendar() {
                 // this.setState({ error: error });
             });
     };
-
+    const getBuildings = () => {
+        fetch("/Belgrade.json", {
+            mode: 'cors',
+            method: 'GET',
+            headers: {}
+        })
+            .then(response => response.json())
+            .then(data => {
+               const vitanovacka = data.elements.filter((d: any) => d["tags"] && d["tags"]["addr:street"] === "Витановачка");
+               console.log(vitanovacka.sort((a: any, b: any) => a["tags"]["addr:housenumber"].localeCompare(b["tags"]["addr:housenumber"])));
+            })
+            .catch(error => {
+                console.log(error);
+                // this.setState({ error: error });
+            });
+    };
+    getBuildings();
     getDataFromApi();
     return (
-        <div className="container">
-            {success &&
-                <Box className="kalendar-praznika">
-                    <h2>Календар</h2>
-                    <Divider/>
-                    <p>Календар је преузет са <a href="https://www.mikroknjiga.rs" target="_blank" rel="noreferrer" >www.mikroknjiga.rs</a>, стилизован је према потребама сајта</p>
-                    <Box className="kalendar-praznika-inner">
-                        <Box className="kalendar" dangerouslySetInnerHTML={{__html: fetchedHTML}}></Box>
-                        <Box className="danasnji-praznik">
-                            <h4>Данас</h4>
-                            <Box dangerouslySetInnerHTML={{__html: danasnjiPraznik}}></Box>
-                        </Box>
+        <>
+            <div className="white-layout"></div>
+            <div className="container">
+                {success &&
+                    <Box className="kalendar-praznika">
+                        <div className="content">
+                            <h2>Календар</h2>
+                            <Divider/>
+                            <p>Календар је преузет са <a href="https://www.mikroknjiga.rs" target="_blank" rel="noreferrer" >www.mikroknjiga.rs</a>, стилизован је према потребама сајта</p>
+                            <Box className="kalendar-praznika-inner">
+                                <Box className="kalendar" dangerouslySetInnerHTML={{__html: fetchedHTML}}></Box>
+                                <Box className="danasnji-praznik">
+                                    <h4>Данас</h4>
+                                    <Box dangerouslySetInnerHTML={{__html: danasnjiPraznik}}></Box>
+                                </Box>
+                            </Box>
+                        </div>
                     </Box>
-                </Box>
-            }
-        </div>
+                }
+            </div>
+        </>
+
     );
 }

@@ -77,6 +77,7 @@ export function latToCyr(unesenText: string) {;
     unesenText = unesenText.replace(/дж/g,'џ');
     unesenText = unesenText.replace(/Дž/g,'Џ');
     unesenText = unesenText.replace(/ДЖ/g,'џ');
+    unesenText = unesenText.replace(/Дз/g,'Џ');
     unesenText = unesenText.replace(/ДЗ/g,'Џ');
     unesenText = unesenText.replace(/дз/g,'џ');
     unesenText = unesenText.replace(/Дј/g,'Ђ');

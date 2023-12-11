@@ -76,6 +76,7 @@ header {
     background: rgb(var(--white));
     padding: 0 2rem;
     justify-content: space-between;
+    box-shadow: 1px 1px 7px rgba(0,0,0,0.2);
 }
 header .dropdown:hover>.dropdown-menu {
     display: block;
@@ -234,8 +235,23 @@ img {
 /*--------------------------------------------------- Kalendar*/
 
 #kalendar-praznika {
-    background: rgb(var(--white));
+    z-index: 1;
+    overflow: hidden;
     text-align: center;
+    position: relative;
+    background: url("../assets/images/stare/vozdovacka-crkva.jpg") repeat fixed center center;
+}
+#kalendar-praznika .white-layout {
+    z-index: 2;
+    top: -2rem;
+    width: 100%;
+    position: absolute;
+    height: calc(100% + 2rem);
+    background: rgba(var(--white), .6);
+}
+#kalendar-praznika .content {
+    position: relative;
+    z-index: 3;
 }
 #kalendar-praznika h2, #kalendar-praznika hr {
     color: rgb(var(--gold));
@@ -312,7 +328,7 @@ img {
 }
 #pretraga-parohija .ostale-parohije {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap:10px 10px;
     cursor: pointer;
 }
@@ -322,6 +338,12 @@ img {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+.ostale-parohije .ostale-parohije-list-item {
+    height: 52px;
+}
+.ostale-parohije-wrapper .react-divider {
+    margin-bottom: 2rem;
 }
 /*--------------------------------------------------- Footer*/
 footer {
@@ -478,21 +500,21 @@ footer .lokacija-information {
         width: 310px;
     }
     header {
-        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        background: rgb(var(--red));
-        left: 0;
-        top: 0;
         display: none;
+        position: fixed;
+        background: rgb(var(--red));
     }
     #navbar {
-        position: absolute;
-        flex-direction: column;
-        width: 300px;
-        height: auto;
         top: 50%;
         left: 50%;
+        width: 300px;
+        height: auto;
+        position: absolute;
+        flex-direction: column;
         transform: translate3d(-50%, -50%, 0px);
     }
     p, a, li {
