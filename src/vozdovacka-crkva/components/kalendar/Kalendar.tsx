@@ -35,7 +35,7 @@ export default function Kalendar() {
                         <div className="content">
                             <h2>Календар</h2>
                             <Divider/>
-                            <p>Календар је преузет са <a href="https://www.mikroknjiga.rs" target="_blank" rel="noreferrer" >www.mikroknjiga.rs</a>, стилизован је према потребама сајта</p>
+                            <p style={{background: "white"}}>Календар је преузет са <a href="https://www.mikroknjiga.rs" target="_blank" rel="noreferrer" >www.mikroknjiga.rs</a>, стилизован је према потребама сајта</p>
                             <Box className="kalendar-praznika-inner">
                                 <Box className="kalendar" dangerouslySetInnerHTML={{__html: fetchedHTML}}></Box>
                                 <Box className="danasnji-praznik">

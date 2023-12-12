@@ -10,16 +10,16 @@ import {
     TextField,
     Tooltip
 } from "@mui/material";
-import {uliceRSCyr} from "../../const/pretragaparohija/ulice";
-import {NEPARNI, PARNI, Parohija, parohije} from "../../const/pretragaparohija/const";
+import {GeoJsonObject} from "geojson";
 import {latToCyr} from "../../../util/functions";
 import {GeoJSON, MapContainer, TileLayer} from "react-leaflet";
-import 'leaflet/dist/leaflet.css';
-import oAleksandar from "../../const/pretragaparohija/map/o_aleksandar.json";
-import oDjordje from "../../const/pretragaparohija/map/o_djordje.json";
+import {uliceRSCyr} from "../../const/pretragaparohija/ulice";
 import oJovo from "../../const/pretragaparohija/map/o_jovo.json";
+import oDjordje from "../../const/pretragaparohija/map/o_djordje.json";
 import oGligorije from "../../const/pretragaparohija/map/o_gligorije.json";
-import {GeoJsonObject} from "geojson";
+import oAleksandar from "../../const/pretragaparohija/map/o_aleksandar.json";
+import {NEPARNI, PARNI, Parohija, parohije} from "../../const/pretragaparohija/const";
+import 'leaflet/dist/leaflet.css';
 
 
 const CYR_PATTERN = /^[абвгдђежзијклљмнњопрстћуфхцчџшАБВГДЂЕЖЗИЈКЛЉМНЊОПРСТЋУФХЦЧЏШ ]*$/
@@ -227,7 +227,8 @@ function PretragaParohija() {
                     <TileLayer
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
-                    <GeoJSON data={oAleksandar as GeoJsonObject} style={{fillColor:"#7835cc", color: "#7835cc", opacity: 1}} interactive> </GeoJSON>
+                    <GeoJSON data={oAleksandar as GeoJsonObject} style={{fillColor:"#7835cc", color: "#7835cc", opacity: 1}} interactive>
+                    </GeoJSON>
                     <GeoJSON data={oDjordje as GeoJsonObject} style={{fillColor:"#968e0f", color: "#968e0f", opacity: 1}} interactive/>
                     <GeoJSON data={oJovo as GeoJsonObject} style={{fillColor:"#81002b", color: "#81002b", opacity: 1}} interactive/>
                     <GeoJSON data={oGligorije as GeoJsonObject} style={{fillColor:"#00b8c9", color: "#00b8c9", opacity: 1}} interactive/>
