@@ -1,13 +1,8 @@
 //otac Gligorije
 
+import JSON from "./pretragaparohija/map/sve.json";
 
-// const arrayOfNames: string[] = [];
-// ostaleParohije !== null && ostaleParohije.map(parohije => {
-//     arrayOfNames.push(parohije.ime.cyr);
-// });
-// izabraneParohije !== null && arrayOfNames.push(izabraneParohije[0].ime.cyr);
-// let vitanovacka = JSON["features"].filter((d: any) => d["properties"] && (d["properties"]["building"] === "yes" || d["properties"]["building"] === "house" || d["properties"]["building"] === "apartments" || d["properties"]["building"] === "detached") && d["properties"]["addr:street"] && arrayOfNames.includes(d["properties"]["addr:street"]) && d["properties"]["addr:street"] !== "Војводе Степе" && d["properties"]["addr:street"] !== "Кумодрашка" && d["properties"]["addr:street"] !== "Витановачка");
-//
+// let vitanovacka = JSON.features.filter((d: any) => d["properties"] && d["properties"]["building"] && d["properties"]["addr:street"] && arrayOfNames.includes(d["properties"]["addr:street"]) && d["properties"]["addr:street"] !== "Војводе Степе" && d["properties"]["addr:street"] !== "Кумодрашка" && d["properties"]["addr:street"] !== "Витановачка");
 // console.log(vitanovacka);
 // const a = vitanovacka.filter((d: any) => (
 //     ( d["properties"]["addr:street"] === "Војводе Степе" &&
@@ -53,7 +48,6 @@
 //     )
 // ));
 // console.log(a);
-//
 
 
 // //otac Djordje
@@ -63,7 +57,7 @@
 //     arrayOfNames.push(parohije.ime.cyr);
 // });
 // izabraneParohije !== null && arrayOfNames.push(izabraneParohije[0].ime.cyr);
-// let vitanovacka = JSON["features"].filter((d: any) => d["properties"] && (d["properties"]["building"] === "yes" || d["properties"]["building"] === "house" || d["properties"]["building"] === "apartments" || d["properties"]["building"] === "detached) && d["properties"]["addr:street"] && arrayOfNames.includes(d["properties"]["addr:street"]));
+// let vitanovacka = JSON["features"].filter((d: any) => d["properties"] && d["properties"]["building"] && d["properties"]["addr:street"] && arrayOfNames.includes(d["properties"]["addr:street"]) && d["properties"]["addr:street"] !== "Војводе Степе" && d["properties"]["addr:street"] !== "Кумодрашка" && d["properties"]["addr:street"] !== "Никшићка" && d["properties"]["addr:street"] !== "Дарвинова");
 //
 // console.log(vitanovacka);
 // const a = vitanovacka.filter((d: any) => (
@@ -130,28 +124,28 @@
 //     arrayOfNames.push(parohije.ime.cyr);
 // });
 // izabraneParohije !== null && arrayOfNames.push(izabraneParohije[0].ime.cyr);
-// let vitanovacka = JSON["features"].filter((d: any) => d["properties"] && (d["properties"]["building"] === "yes" || d["properties"]["building"] === "house" || d["properties"]["building"] === "apartments" || d["properties"]["building"] === "detached) && d["properties"]["addr:street"] && ostaleParohije !== null && arrayOfNames.includes(d["properties"]["addr:street"]) && d["properties"]["addr:street"] !== "Булевар Ослобођења" && d["properties"]["addr:street"] !== "Војводе Степе");
+// let vitanovacka = JSON["features"].filter((d: any) => d["properties"] && d["properties"]["building"] && d["properties"]["addr:street"] && ostaleParohije !== null && arrayOfNames.includes(d["properties"]["addr:street"]) && d["properties"]["addr:street"] !== "Булевар Ослобођења" && d["properties"]["addr:street"] !== "Војводе Степе");
 // const a = vitanovacka.filter((d: any) => (
 //     ( d["properties"]["addr:street"] === "Војводе Степе" &&
 //         (
 //             (
-//                 Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 === 0
-//                 && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z 0-9.]+/g,'')) >= 8
-//                 && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z]+/g,'')) < 212
+//                 Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 === 0
+//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) >= 8
+//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z]+/g,'')) < 212
 //             ) ||
 //             (
-//                 Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 !== 0
-//                 && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z 0-9.]+/g,'')) >= 51
-//                 && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z]+/g,'')) < 219
+//                 Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 !== 0
+//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) >= 51
+//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z]+/g,'')) < 219
 //             )
 //         )
 //     )
 //     ||
 //     (
 //         d["properties"]["addr:street"] === "Булевар Ослобођења"
-//         && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 !== 0
-//         && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z 0-9.]+/g,'')) >= 75
-//         && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z]+/g,'')) < 210
+//         && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 !== 0
+//         && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) >= 75
+//         && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z]+/g,'')) < 210
 //     )
 // ));
 
@@ -163,7 +157,7 @@
 //     arrayOfNames.push(parohije.ime.cyr);
 // });
 // izabraneParohije !== null && arrayOfNames.push(izabraneParohije[0].ime.cyr);
-// let vitanovacka = JSON["features"].filter((d: any) => d["properties"] && (d["properties"]["building"] === "yes" || d["properties"]["building"] === "house" || d["properties"]["building"] === "apartments" || d["properties"]["building"] === "detached) && d["properties"]["addr:street"] && ostaleParohije !== null && arrayOfNames.includes(d["properties"]["addr:street"]));
+// let vitanovacka = JSON["features"].filter((d: any) => d["properties"] && d["properties"]["building"] && d["properties"]["addr:street"] && ostaleParohije !== null && arrayOfNames.includes(d["properties"]["addr:street"]) && d["properties"]["addr:street"] !== "Кумодрашка" && d["properties"]["addr:street"] !== "Витановачка");
 // const a = vitanovacka.filter((d: any) => (
 //    ( d["properties"]["addr:street"] === "Кумодрашка" &&
 //     (

@@ -10,6 +10,7 @@ import {
     TextField,
     Tooltip
 } from "@mui/material";
+import L from 'leaflet';
 import {GeoJsonObject} from "geojson";
 import {latToCyr} from "../../../util/functions";
 import {GeoJSON, MapContainer, TileLayer} from "react-leaflet";
@@ -20,6 +21,18 @@ import oGligorije from "../../const/pretragaparohija/map/o_gligorije.json";
 import oAleksandar from "../../const/pretragaparohija/map/o_aleksandar.json";
 import {NEPARNI, PARNI, Parohija, parohije} from "../../const/pretragaparohija/const";
 import 'leaflet/dist/leaflet.css';
+
+// @ts-ignore
+import icon from 'leaflet/dist/images/marker-icon.png';
+// @ts-ignore
+import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+
+let DefaultIcon = L.icon({
+    iconUrl: icon,
+    shadowUrl: iconShadow
+});
+
+L.Marker.prototype.options.icon = DefaultIcon;
 
 
 const CYR_PATTERN = /^[абвгдђежзијклљмнњопрстћуфхцчџшАБВГДЂЕЖЗИЈКЛЉМНЊОПРСТЋУФХЦЧЏШ ]*$/
@@ -132,6 +145,7 @@ function PretragaParohija() {
             postaviParohijeAutokomplit(izabranaParohija);
         }
     }
+
     return (
         <Container sx={{padding: 5, display: "flex", flexDirection: "column"}}>
             <h2>Пронађите своју парохију</h2>
