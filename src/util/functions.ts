@@ -87,3 +87,17 @@ export function latToCyr(unesenText: string) {;
     // document.forms[0].cirText.value = unesenText;
     return unesenText;
 }
+
+export const extractNumericPart = (address: string) => {
+    // Use a regular expression to match the numeric part
+    const numericPart = address?.match(/\d+/);
+
+    // Check if a numeric part is found
+    if (numericPart) {
+        // Convert the matched part to a number and return it
+        return parseInt(numericPart[0], 10);
+    } else {
+        // If no numeric part is found, return null or handle it as needed
+        return 0;
+    }
+}

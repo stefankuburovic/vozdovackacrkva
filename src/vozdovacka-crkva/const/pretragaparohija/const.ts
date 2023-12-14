@@ -42,8 +42,29 @@ export const parohije: Array<Parohija> =  [
     },
     {
         ime: {
+            lat: ["Kraljevacka", "Kraljevačka"],
+            cyr: "Краљевачка"
+        },
+        paroh: Paroh.otacAleksandar,
+    },
+    {
+        ime: {
+            lat: ["Bogdana Popovica", "Bogdana Popovića"],
+            cyr: "Богдана Поповића"
+        },
+        paroh: Paroh.otacAleksandar,
+    },
+    {
+        ime: {
+            lat: ["Zikice Jovanovica", "Žikice Jovanovića"],
+            cyr: "Жикице Јовановића"
+        },
+        paroh: Paroh.otacAleksandar,
+    },
+    {
+        ime: {
             lat: "Italijanskih Partizana",
-            cyr: "Италијанских Партизана"
+            cyr: "Италијанских партизана"
         },
         paroh: Paroh.otacAleksandar,
     },
@@ -96,7 +117,7 @@ export const parohije: Array<Parohija> =  [
     {
         ime: {
             lat: ["Esad Pasina", "Esad Pašina"],
-            cyr: "Есад Пашина"
+            cyr: "Есад-пашина"
         },
         paroh: Paroh.otacAleksandar,
     },
@@ -188,7 +209,7 @@ export const parohije: Array<Parohija> =  [
     {
         ime: {
             lat: ["Nestora Zucnog", "Nestora Žučnog"],
-            cyr: "Нестора Жучног"
+            cyr: "Нестора Жучнога"
         },
         paroh: Paroh.otacAleksandar,
     },
@@ -300,7 +321,7 @@ export const parohije: Array<Parohija> =  [
     {
         ime: {
             lat: ["Pukovnika Purica","Pukovnika Purića"],
-            cyr: "Пуковинка Пурића"
+            cyr: "Пуковника Пурића"
         },
         paroh: Paroh.otacJovo,
     },
@@ -308,6 +329,20 @@ export const parohije: Array<Parohija> =  [
         ime: {
             lat: ["Bulevar Oslobodjenja","Bulevar Oslobođenja"],
             cyr: "Булевар Ослобођења"
+        },
+        odredjeniBrojevi: [
+            {
+                prviBroj: 75,
+                zadnjiBroj: 209
+            }
+        ],
+        parniIliNeparni: NEPARNI,
+        paroh: Paroh.otacJovo,
+    },
+    {
+        ime: {
+            lat: ["Bulevar oslobodjenja","Bulevar oslobođenja"],
+            cyr: "Булевар ослобођења"
         },
         odredjeniBrojevi: [
             {
@@ -458,6 +493,14 @@ export const parohije: Array<Parohija> =  [
     },
     {
         ime: {
+            lat: ["Ljubа Vuckovica", "Ljubа Vučkovića"],
+            cyr: "Љуба Вучковића"
+        },
+        parniIliNeparni: PARNI,
+        paroh: Paroh.otacDjordje,
+    },
+    {
+        ime: {
             lat: ["Vorornjeska", "Vorornješka"],
             cyr: "Вороњешка"
         },
@@ -533,8 +576,8 @@ export const parohije: Array<Parohija> =  [
     },
     {
         ime: {
-            lat: "Bjelovarska",
-            cyr: "Бјеловарска",
+            lat: "Bjelovarska (Predraga Milojevića)",
+            cyr: "Бјеловарска (Предрага Милојевића)",
         },
         paroh: Paroh.otacGligorije,
     },
@@ -584,8 +627,8 @@ export const parohije: Array<Parohija> =  [
     },
     {
         ime: {
-            lat: ["Kacarska", "Kačarska"],
-            cyr: "Качарска",
+            lat: ["Kacerska", "Kačerska"],
+            cyr: "Качерска",
         },
         paroh: Paroh.otacGligorije,
     },

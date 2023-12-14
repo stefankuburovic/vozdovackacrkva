@@ -1,21 +1,58 @@
 //otac Gligorije
 
 
+import JSON from "./pretragaparohija/map/map.json";
+import {extractNumericPart} from "../../util/functions";
+//
 // const arrayOfNames: string[] = [];
 // ostaleParohije !== null && ostaleParohije.map(parohije => {
 //     arrayOfNames.push(parohije.ime.cyr);
 // });
 // izabraneParohije !== null && arrayOfNames.push(izabraneParohije[0].ime.cyr);
-// let vitanovacka = JSON["features"].filter((d: any) => d["properties"] && (d["properties"]["building"] === "yes" || d["properties"]["building"] === "house" || d["properties"]["building"] === "apartments" || d["properties"]["building"] === "detached") && d["properties"]["addr:street"] && arrayOfNames.includes(d["properties"]["addr:street"]) && d["properties"]["addr:street"] !== "Војводе Степе" && d["properties"]["addr:street"] !== "Кумодрашка" && d["properties"]["addr:street"] !== "Витановачка");
+// @ts-ignore
+// let vita = JSON["features"].filter(
+//     (d: any) => (
+//             d["properties"]
+//             && d["properties"]["building"]
+//             && d["properties"]["addr:street"]
+//             && arrayOfNames.includes(d["properties"]["addr:street"])
+//         )
+//         || (
+//             d["properties"]["addr:housenumber"]
+//             && arrayOfNames.includes(d["properties"]["addr:street"]
+//             )
+//         )
+// );
+// @ts-ignore
+// let vitanovacka = JSON["features"].filter(
+// (d: any) => (
+//         d["properties"]
+//         && d["properties"]["building"]
+//         && d["properties"]["addr:street"]
+//         && arrayOfNames.includes(d["properties"]["addr:street"])
+//         && d["properties"]["addr:street"] !== "Војводе Степе"
+//         && d["properties"]["addr:street"] !== "Витановачка"
+//         && d["properties"]["addr:street"] !== "Кумодрашка"
+//     )
+//     || (
+//         d["properties"]["addr:housenumber"]
+//         && arrayOfNames.includes(d["properties"]["addr:street"]
+//             && d["properties"]["addr:street"] !== "Војводе Степе"
+//             && d["properties"]["addr:street"] !== "Витановачка"
+//             && d["properties"]["addr:street"] !== "Кумодрашка"
+//         )
+//     )
+// );
 //
 // console.log(vitanovacka);
-// const a = vitanovacka.filter((d: any) => (
+
+// const a = vita.filter((d: any) => (
 //     ( d["properties"]["addr:street"] === "Војводе Степе" &&
 //         (
 //             (
-//                 Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 !== 0
-//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) >= 1
-//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z]+/g,'')) < 51
+//                 extractNumericPart(d["properties"]["addr:housenumber"]) % 2 !== 0
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) >= 1
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) < 51
 //             )
 //         )
 //     )
@@ -24,14 +61,14 @@
 //     ( d["properties"]["addr:street"] === "Витановачка" &&
 //         (
 //             (
-//                 Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 === 0
-//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) >= 2
-//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z]+/g,'')) < 38
+//                 extractNumericPart(d["properties"]["addr:housenumber"]) % 2 === 0
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) >= 2
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) < 38
 //             ) ||
 //             (
-//                 Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 !== 0
-//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) >= 1
-//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z]+/g,'')) < 77
+//                 extractNumericPart(d["properties"]["addr:housenumber"]) % 2 !== 0
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) >= 1
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) < 77
 //             )
 //         )
 //     ) ||
@@ -40,20 +77,14 @@
 //     ( d["properties"]["addr:street"] === "Кумодрашка" &&
 //         (
 //             (
-//                 Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 === 0
-//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) >= 90
-//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z]+/g,'')) < 184
-//             ) ||
-//             (
-//                 Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 !== 0
-//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) >= 183
-//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z]+/g,'')) < 293
+//                 extractNumericPart(d["properties"]["addr:housenumber"]) % 2 === 0
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) >= 90
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) < 185
 //             )
 //         )
 //     )
 // ));
 // console.log(a);
-//
 
 
 // //otac Djordje
@@ -63,21 +94,42 @@
 //     arrayOfNames.push(parohije.ime.cyr);
 // });
 // izabraneParohije !== null && arrayOfNames.push(izabraneParohije[0].ime.cyr);
-// let vitanovacka = JSON["features"].filter((d: any) => d["properties"] && (d["properties"]["building"] === "yes" || d["properties"]["building"] === "house" || d["properties"]["building"] === "apartments" || d["properties"]["building"] === "detached) && d["properties"]["addr:street"] && arrayOfNames.includes(d["properties"]["addr:street"]));
+// let vitanovacka = JSON["features"].filter(
+//     (d: any) => (
+//             d["properties"]
+//             && d["properties"]["building"]
+//             && d["properties"]["addr:street"]
+//             && arrayOfNames.includes(d["properties"]["addr:street"])
+//             && d["properties"]["addr:street"] !== "Војводе Степе"
+//             && d["properties"]["addr:street"] !== "Витановачка"
+//             && d["properties"]["addr:street"] !== "Кумодрашка"
+//             && d["properties"]["addr:street"] !== "Зларинска"
+//             && d["properties"]["addr:street"] !== "Љуба Вучковића"
+//         )
+//         || (
+//             d["properties"]["addr:housenumber"]
+//             && arrayOfNames.includes(d["properties"]["addr:street"]
+//                 && d["properties"]["addr:street"] !== "Војводе Степе"
+//                 && d["properties"]["addr:street"] !== "Витановачка"
+//                 && d["properties"]["addr:street"] !== "Кумодрашка"
+//                 && d["properties"]["addr:street"] !== "Зларинска"
+//                 && d["properties"]["addr:street"] !== "Љуба Вучковића"
+//             )
+//         )
+// );
 //
-// console.log(vitanovacka);
-// const a = vitanovacka.filter((d: any) => (
+// const a = vita.filter((d: any) => (
 //     ( d["properties"]["addr:street"] === "Војводе Степе" &&
 //         (
 //             (
-//                 Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 === 0
-//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) >= 216
-//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z]+/g,'')) < 302
+//                 extractNumericPart(d["properties"]["addr:housenumber"]) % 2 === 0
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) >= 216
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) < 302
 //             ) ||
 //             (
-//                 Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 !== 0
-//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) >= 229
-//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z]+/g,'')) < 293
+//                 extractNumericPart(d["properties"]["addr:housenumber"]) % 2 !== 0
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) >= 229
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) < 293
 //             )
 //         )
 //     )
@@ -86,38 +138,35 @@
 //     ( d["properties"]["addr:street"] === "Никшићка" &&
 //         (
 //             (
-//                 Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 === 0
-//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) >= 8
-//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z]+/g,'')) < 52
+//                 extractNumericPart(d["properties"]["addr:housenumber"]) % 2 === 0
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) >= 8
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) < 52
 //             ) ||
 //             (
-//                 Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 !== 0
-//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) >= 9
-//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z]+/g,'')) < 51
+//                 extractNumericPart(d["properties"]["addr:housenumber"]) % 2 !== 0
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) >= 9
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) < 51
 //             )
 //         )
 //     ) ||
-//
-//
-//     ( d["properties"]["addr:street"] === "Дарвинова" &&
-//         (
-//             (
-//                 Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 === 0
-//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) >= 25
-//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z]+/g,'')) < 33
-//             ) ||
-//             (
-//                 Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 !== 0
-//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z 0-9.]+/g,'')) >= 26
-//                 && Number(d["properties"]["addr:housenumber"]?.replace(/[^a-zA-Z]+/g,'')) < 34
-//             )
-//         )
-//     ) ||
+//     ( d["properties"]["addr:street"] === "Дарвинова" && extractNumericPart(d["properties"]["addr:housenumber"]) > 24 && extractNumericPart(d["properties"]["addr:housenumber"]) < 35)  ||
 //     (
 //         d["properties"]["addr:street"] === "Кумодрашка"
-//         && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 !== 0
-//         && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z 0-9.]+/g,'')) >= 181
-//         && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z]+/g,'')) <= 181
+//         && extractNumericPart(d["properties"]["addr:housenumber"]) % 2 !== 0
+//         && extractNumericPart(d["properties"]["addr:housenumber"]) >= 181
+//         && extractNumericPart(d["properties"]["addr:housenumber"]) <= 181
+//     ) ||
+//     (
+//         d["properties"]["addr:street"] === "Љуба Вучковића"
+//         && extractNumericPart(d["properties"]["addr:housenumber"]) % 2 === 0
+//         && extractNumericPart(d["properties"]["addr:housenumber"]) >= 1
+//         && extractNumericPart(d["properties"]["addr:housenumber"]) <= 100
+//     ) ||
+//     (
+//         d["properties"]["addr:street"] === "Зларинска"
+//         && extractNumericPart(d["properties"]["addr:housenumber"]) % 2 === 0
+//         && extractNumericPart(d["properties"]["addr:housenumber"]) >= 1
+//         && extractNumericPart(d["properties"]["addr:housenumber"]) <= 200
 //     )
 // ));
 
@@ -130,61 +179,105 @@
 //     arrayOfNames.push(parohije.ime.cyr);
 // });
 // izabraneParohije !== null && arrayOfNames.push(izabraneParohije[0].ime.cyr);
-// let vitanovacka = JSON["features"].filter((d: any) => d["properties"] && (d["properties"]["building"] === "yes" || d["properties"]["building"] === "house" || d["properties"]["building"] === "apartments" || d["properties"]["building"] === "detached) && d["properties"]["addr:street"] && ostaleParohije !== null && arrayOfNames.includes(d["properties"]["addr:street"]) && d["properties"]["addr:street"] !== "Булевар Ослобођења" && d["properties"]["addr:street"] !== "Војводе Степе");
+
+// let vitanovacka = JSON["features"].filter(
+//     (d: any) => (
+//             d["properties"]
+//             && d["properties"]["building"]
+//             && d["properties"]["addr:street"]
+//             && arrayOfNames.includes(d["properties"]["addr:street"])
+//             && d["properties"]["addr:street"] !== "Војводе Степе"
+//             && d["properties"]["addr:street"] !== "Булевар Ослобођења"
+//         )
+//         || (
+//             d["properties"]["addr:housenumber"]
+//             && arrayOfNames.includes(d["properties"]["addr:street"]
+//                 && d["properties"]["addr:street"] !== "Војводе Степе"
+//                 && d["properties"]["addr:street"] !== "Булевар Ослобођења"
+//             )
+//         )
+// );
+//
+// console.log(vitanovacka);
 // const a = vitanovacka.filter((d: any) => (
 //     ( d["properties"]["addr:street"] === "Војводе Степе" &&
 //         (
 //             (
-//                 Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 === 0
-//                 && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z 0-9.]+/g,'')) >= 8
-//                 && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z]+/g,'')) < 212
+//                 extractNumericPart(d["properties"]["addr:housenumber"]) % 2 === 0
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) >= 8
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) < 212
 //             ) ||
 //             (
-//                 Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 !== 0
-//                 && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z 0-9.]+/g,'')) >= 51
-//                 && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z]+/g,'')) < 219
+//                 extractNumericPart(d["properties"]["addr:housenumber"]) % 2 !== 0
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) >= 51
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) < 219
 //             )
 //         )
 //     )
 //     ||
 //     (
-//         d["properties"]["addr:street"] === "Булевар Ослобођења"
-//         && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 !== 0
-//         && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z 0-9.]+/g,'')) >= 75
-//         && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z]+/g,'')) < 210
+//         d["properties"]["addr:street"] === "Булевар oслобођења"
+//         && extractNumericPart(d["properties"]["addr:housenumber"]) % 2 !== 0
+//         && extractNumericPart(d["properties"]["addr:housenumber"]) >= 75
+//         && extractNumericPart(d["properties"]["addr:housenumber"]) < 210
 //     )
 // ));
+// console.log(a);
 
 //otac Aleksandar
 
+// @ts-ignore
+// let vitanovacka = JSON["features"].filter(
+//     (d: any) => (
+//             d["properties"]
+//             && d["properties"]["building"]
+//             && d["properties"]["addr:street"]
+//             && arrayOfNames.includes(d["properties"]["addr:street"])
+//             && d["properties"]["addr:street"] !== "Кумодрашка"
+//             && d["properties"]["addr:street"] !== "Витановачка"
+//             && d["properties"]["addr:street"] !== "Буковичка"
+//         )
+//         || (
+//             d["properties"]["addr:housenumber"]
+//             && arrayOfNames.includes(d["properties"]["addr:street"]
+//                 && d["properties"]["addr:street"] !== "Кумодрашка"
+//                 && d["properties"]["addr:street"] !== "Витановачка"
+//                 && d["properties"]["addr:street"] !== "Буковичка"
+//             )
+//         )
+// );
 //
-// const arrayOfNames: string[] = [];
-// ostaleParohije !== null && ostaleParohije.map(parohije => {
-//     arrayOfNames.push(parohije.ime.cyr);
-// });
-// izabraneParohije !== null && arrayOfNames.push(izabraneParohije[0].ime.cyr);
-// let vitanovacka = JSON["features"].filter((d: any) => d["properties"] && (d["properties"]["building"] === "yes" || d["properties"]["building"] === "house" || d["properties"]["building"] === "apartments" || d["properties"]["building"] === "detached) && d["properties"]["addr:street"] && ostaleParohije !== null && arrayOfNames.includes(d["properties"]["addr:street"]));
-// const a = vitanovacka.filter((d: any) => (
-//    ( d["properties"]["addr:street"] === "Кумодрашка" &&
-//     (
+// // @ts-ignore
+//
+// const a = vita.filter((d: any) => (
+//     ( d["properties"]["addr:street"] === "Кумодрашка" &&
 //         (
-//             Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 === 0
-//             && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z 0-9.]+/g,'')) >= 2
-//             && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z]+/g,'')) < 92
-//         ) ||
-//         (
-//             Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 !== 0
-//             && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z 0-9.]+/g,'')) >= 1
-//             && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z]+/g,'')) < 123
+//             (
+//                 extractNumericPart(d["properties"]["addr:housenumber"]) % 2 === 0
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) >= 2
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) < 92
+//             ) ||
+//             (
+//                 extractNumericPart(d["properties"]["addr:housenumber"]) % 2 !== 0
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) >= 1
+//                 && extractNumericPart(d["properties"]["addr:housenumber"]) < 123
+//             )
 //         )
 //     )
-//    )
-//      ||
+//     ||
 //     (
 //         d["properties"]["addr:street"] === "Витановачка"
-//         && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z 0-9.]+/g,'')) % 2 === 0
-//         && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z 0-9.]+/g,'')) >= 38
-//         && Number(d["properties"]["addr:housenumber"].replace(/[^a-zA-Z]+/g,'')) < 44
+//         && extractNumericPart(d["properties"]["addr:housenumber"]) % 2 === 0
+//         && extractNumericPart(d["properties"]["addr:housenumber"]) >= 38
+//         && extractNumericPart(d["properties"]["addr:housenumber"]) < 70
+//     )
+//     ||
+//     (
+//         d["properties"]["addr:street"] === "Буковичка"
+//         && extractNumericPart(d["properties"]["addr:housenumber"]) % 2 === 0
+//         && extractNumericPart(d["properties"]["addr:housenumber"]) >= 2
+//         && extractNumericPart(d["properties"]["addr:housenumber"]) < 70
 //     )
 // ));
+// console.log(a);
 export const aaa = 1;
