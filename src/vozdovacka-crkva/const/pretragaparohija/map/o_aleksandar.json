@@ -36370,65 +36370,6 @@
     },
     {
       "type": "Feature",
-      "id": "way/762609445",
-      "properties": {
-        "timestamp": "2022-11-12T20:26:31Z",
-        "version": "4",
-        "changeset": "128826321",
-        "user": "TXBG",
-        "uid": "5569366",
-        "addr:housenumber": "38A",
-        "addr:postcode": "11000",
-        "addr:street": "Витановачка",
-        "building": "retail",
-        "id": "way/762609445"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.4798438,
-              44.7781702
-            ],
-            [
-              20.4798349,
-              44.7782189
-            ],
-            [
-              20.4798071,
-              44.7782163
-            ],
-            [
-              20.4797997,
-              44.7782564
-            ],
-            [
-              20.4797844,
-              44.778255
-            ],
-            [
-              20.479769,
-              44.7783392
-            ],
-            [
-              20.479534,
-              44.7783175
-            ],
-            [
-              20.4795657,
-              44.7781446
-            ],
-            [
-              20.4798438,
-              44.7781702
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "id": "way/762609447",
       "properties": {
         "timestamp": "2023-06-19T15:47:53Z",
@@ -37192,59 +37133,6 @@
     },
     {
       "type": "Feature",
-      "id": "node/10021353002",
-      "properties": {
-        "timestamp": "2022-09-13T14:31:33Z",
-        "version": "1",
-        "changeset": "126137170",
-        "user": "MarjanF",
-        "uid": "17117917",
-        "addr:city": "Градска општина Вождовац",
-        "addr:housenumber": "38A",
-        "addr:postcode": "11040",
-        "addr:street": "Витановачка",
-        "name": "Aman Plus",
-        "opening_hours": "Mo-Su 07:00-22:00",
-        "shop": "supermarket",
-        "source": "http://www.aman.co.rs/",
-        "id": "node/10021353002"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.4795935,
-          44.7782963
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "node/10021353003",
-      "properties": {
-        "timestamp": "2022-09-13T14:31:33Z",
-        "version": "1",
-        "changeset": "126137170",
-        "user": "MarjanF",
-        "uid": "17117917",
-        "addr:city": "Градска општина Вождовац",
-        "addr:housenumber": "38A",
-        "addr:postcode": "11040",
-        "addr:street": "Витановачка",
-        "name": "Kineska robna kuća",
-        "opening_hours": "Mo-Su 8:30-21:00; Sunday 09:00-17:00",
-        "shop": "supermarket",
-        "id": "node/10021353003"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.4797062,
-          44.7783268
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "id": "node/10021462628",
       "properties": {
         "timestamp": "2022-11-12T20:26:37Z",
@@ -37944,6 +37832,55 @@
             "coordinates": [
               20.4746264,
               44.7846881
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "id": "node/4124647878",
+          "properties": {
+            "timestamp": "2023-06-19T14:58:58Z",
+            "version": "4",
+            "changeset": "137523950",
+            "user": "RGZ AR Import",
+            "uid": "18850960",
+            "addr:housenumber": "33",
+            "addr:street": "Данијелова",
+            "ref:RS:kucni_broj": "3219779",
+            "id": "node/4124647878"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              20.4795881,
+              44.7817774
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "id": "node/4124647879",
+          "properties": {
+            "timestamp": "2023-06-19T14:58:58Z",
+            "version": "5",
+            "changeset": "137523950",
+            "user": "RGZ AR Import",
+            "uid": "18850960",
+            "addr:housenumber": "31",
+            "addr:street": "Данијелова",
+            "ref:RS:kucni_broj": "3219778",
+            "id": "node/4124647879"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              20.4794257,
+              44.7820679
             ]
           }
         }

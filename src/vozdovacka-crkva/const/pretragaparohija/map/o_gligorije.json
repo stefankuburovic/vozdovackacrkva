@@ -20815,6 +20815,59 @@
     },
     {
       "type": "Feature",
+      "id": "node/10021353002",
+      "properties": {
+        "timestamp": "2022-09-13T14:31:33Z",
+        "version": "1",
+        "changeset": "126137170",
+        "user": "MarjanF",
+        "uid": "17117917",
+        "addr:city": "Градска општина Вождовац",
+        "addr:housenumber": "36A",
+        "addr:postcode": "11040",
+        "addr:street": "Витановачка",
+        "name": "Aman Plus",
+        "opening_hours": "Mo-Su 07:00-22:00",
+        "shop": "supermarket",
+        "source": "http://www.aman.co.rs/",
+        "id": "node/10021353002"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4795935,
+          44.7782963
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10021353003",
+      "properties": {
+        "timestamp": "2022-09-13T14:31:33Z",
+        "version": "1",
+        "changeset": "126137170",
+        "user": "MarjanF",
+        "uid": "17117917",
+        "addr:city": "Градска општина Вождовац",
+        "addr:housenumber": "36A",
+        "addr:postcode": "11040",
+        "addr:street": "Витановачка",
+        "name": "Kineska robna kuća",
+        "opening_hours": "Mo-Su 8:30-21:00; Sunday 09:00-17:00",
+        "shop": "supermarket",
+        "id": "node/10021353003"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4797062,
+          44.7783268
+        ]
+      }
+    },
+    {
+      "type": "Feature",
       "id": "way/761185570",
       "properties": {
         "timestamp": "2023-06-19T14:20:43Z",
