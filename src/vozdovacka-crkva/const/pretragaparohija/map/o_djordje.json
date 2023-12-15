@@ -8,7 +8,6 @@
     }
   },
   "features": [
-
     {
       "type": "Feature",
       "id": "node/4046171691",
@@ -18614,6 +18613,3081 @@
         "coordinates": [
           20.4789125,
           44.7690775
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4046081639",
+      "properties": {
+        "timestamp": "2023-06-19T15:01:17Z",
+        "version": "3",
+        "changeset": "137524036",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "15",
+        "addr:street": "Данила Бојовића",
+        "ref:RS:kucni_broj": "3225071",
+        "id": "node/4046081639"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4812175,
+          44.7723379
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4046081640",
+      "properties": {
+        "timestamp": "2023-06-19T15:01:17Z",
+        "version": "3",
+        "changeset": "137524036",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "17",
+        "addr:street": "Данила Бојовића",
+        "ref:RS:kucni_broj": "3225070",
+        "id": "node/4046081640"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4811852,
+          44.7724326
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4046081641",
+      "properties": {
+        "timestamp": "2023-06-19T15:01:17Z",
+        "version": "3",
+        "changeset": "137524036",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "19",
+        "addr:street": "Данила Бојовића",
+        "ref:RS:kucni_broj": "3225068",
+        "id": "node/4046081641"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4811513,
+          44.7725318
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4046081642",
+      "properties": {
+        "timestamp": "2023-06-19T15:01:17Z",
+        "version": "5",
+        "changeset": "137524036",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "21",
+        "addr:street": "Данила Бојовића",
+        "ref:RS:kucni_broj": "3225067",
+        "id": "node/4046081642"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4810663,
+          44.7727852
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4046081643",
+      "properties": {
+        "timestamp": "2023-06-19T15:01:17Z",
+        "version": "6",
+        "changeset": "137524036",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "23",
+        "addr:street": "Данила Бојовића",
+        "ref:RS:kucni_broj": "3225065",
+        "id": "node/4046081643"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4810251,
+          44.7729009
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4046081646",
+      "properties": {
+        "timestamp": "2023-06-19T15:01:17Z",
+        "version": "4",
+        "changeset": "137524036",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "18",
+        "addr:street": "Данила Бојовића",
+        "ref:RS:kucni_broj": "3237785",
+        "id": "node/4046081646"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4809176,
+          44.7724506
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4046081647",
+      "properties": {
+        "timestamp": "2023-06-19T15:01:17Z",
+        "version": "4",
+        "changeset": "137524036",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "20",
+        "addr:street": "Данила Бојовића",
+        "ref:RS:kucni_broj": "3216596",
+        "id": "node/4046081647"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4808738,
+          44.7725594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4046081648",
+      "properties": {
+        "timestamp": "2023-06-19T15:01:17Z",
+        "version": "3",
+        "changeset": "137524036",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "22",
+        "addr:street": "Данила Бојовића",
+        "ref:RS:kucni_broj": "3216477",
+        "id": "node/4046081648"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4804654,
+          44.7725531
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4046081649",
+      "properties": {
+        "timestamp": "2019-03-10T08:56:39Z",
+        "version": "2",
+        "changeset": "67982189",
+        "user": "TXBG",
+        "uid": "5569366",
+        "addr:housenumber": "24",
+        "addr:street": "Калничка",
+        "id": "node/4046081649"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4804675,
+          44.7726964
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4046081650",
+      "properties": {
+        "timestamp": "2023-06-19T15:01:17Z",
+        "version": "4",
+        "changeset": "137524036",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "26",
+        "addr:street": "Данила Бојовића",
+        "ref:RS:kucni_broj": "3225064",
+        "id": "node/4046081650"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4808093,
+          44.7727233
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4046081651",
+      "properties": {
+        "timestamp": "2023-06-19T15:01:17Z",
+        "version": "4",
+        "changeset": "137524036",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "28",
+        "addr:street": "Данила Бојовића",
+        "ref:RS:kucni_broj": "3240463",
+        "id": "node/4046081651"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4807652,
+          44.7728387
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6328462655",
+      "properties": {
+        "timestamp": "2023-06-19T15:01:17Z",
+        "version": "2",
+        "changeset": "137524036",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "23a",
+        "addr:street": "Данила Бојовића",
+        "ref:RS:kucni_broj": "3225066",
+        "id": "node/6328462655"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4810631,
+          44.7730356
+        ]
+      }
+    },
+    {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              20.479418,
+              44.7706947
+            ]
+          },
+          "type": "Feature",
+          "properties": {
+            "addr:housenumber": 60,
+            "addr:street": "Костолачка",
+            "ref:RS:kucni_broj": 3220315
+          }
+        }
+      ]
+    },
+    {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              20.4790708,
+              44.7713701
+            ]
+          },
+          "type": "Feature",
+          "properties": {
+            "addr:housenumber": 58,
+            "addr:street": "Костолачка",
+            "ref:RS:kucni_broj": 3240464
+          }
+        }
+      ]
+    },
+    {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              20.4788095,
+              44.7720244
+            ]
+          },
+          "type": "Feature",
+          "properties": {
+            "addr:housenumber": 50,
+            "addr:street": "Костолачка",
+            "ref:RS:kucni_broj": 3216430
+          }
+        }
+      ]
+    },
+    {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              20.4787685,
+              44.7724781
+            ]
+          },
+          "type": "Feature",
+          "properties": {
+            "addr:housenumber": 39,
+            "addr:street": "Костолачка",
+            "ref:RS:kucni_broj": 3220334
+          }
+        },
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              20.4788316,
+              44.7723697
+            ]
+          },
+          "type": "Feature",
+          "properties": {
+            "addr:housenumber": 41,
+            "addr:street": "Костолачка",
+            "ref:RS:kucni_broj": 3220333
+          }
+        }
+      ]
+    },
+    {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              20.4782506,
+              44.7729028
+            ]
+          },
+          "type": "Feature",
+          "properties": {
+            "addr:housenumber": 31,
+            "addr:street": "Костолачка",
+            "ref:RS:kucni_broj": 3220363
+          }
+        },
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              20.4775949,
+              44.7733778
+            ]
+          },
+          "type": "Feature",
+          "properties": {
+            "addr:housenumber": 22,
+            "addr:street": "Костолачка",
+            "ref:RS:kucni_broj": 3234959
+          }
+        },
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              20.4776326,
+              44.7733287
+            ]
+          },
+          "type": "Feature",
+          "properties": {
+            "addr:housenumber": 24,
+            "addr:street": "Костолачка",
+            "ref:RS:kucni_broj": 3237713
+          }
+        },
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              20.4777454,
+              44.7731946
+            ]
+          },
+          "type": "Feature",
+          "properties": {
+            "addr:housenumber": 26,
+            "addr:street": "Костолачка",
+            "ref:RS:kucni_broj": 3220005
+          }
+        },
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              20.4777828,
+              44.7731454
+            ]
+          },
+          "type": "Feature",
+          "properties": {
+            "addr:housenumber": 28,
+            "addr:street": "Костолачка",
+            "ref:RS:kucni_broj": 3229238
+          }
+        },
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              20.4778865,
+              44.7729992
+            ]
+          },
+          "type": "Feature",
+          "properties": {
+            "addr:housenumber": 30,
+            "addr:street": "Костолачка",
+            "ref:RS:kucni_broj": 3220003
+          }
+        },
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              20.4779244,
+              44.7729489
+            ]
+          },
+          "type": "Feature",
+          "properties": {
+            "addr:housenumber": 32,
+            "addr:street": "Костолачка"
+          }
+        },
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              20.4772727,
+              44.7737148
+            ]
+          },
+          "type": "Feature",
+          "properties": {
+            "addr:housenumber": 16,
+            "addr:street": "Костолачка"
+          }
+        },
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              20.4772149,
+              44.7737765
+            ]
+          },
+          "type": "Feature",
+          "properties": {
+            "addr:housenumber": 14,
+            "addr:street": "Костолачка",
+            "ref:RS:kucni_broj": 3228089
+          }
+        },
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              20.4771447,
+              44.7738931
+            ]
+          },
+          "type": "Feature",
+          "properties": {
+            "addr:housenumber": 12,
+            "addr:street": "Костолачка"
+          }
+        },
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              20.4770422,
+              44.7740041
+            ]
+          },
+          "type": "Feature",
+          "properties": {
+            "addr:housenumber": 10,
+            "addr:street": "Костолачка",
+            "ref:RS:kucni_broj": 3220008
+          }
+        }
+      ]
+    },
+    {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              []
+            ]
+          },
+          "type": "Feature",
+          "properties": {
+            "addr:city": "Београд",
+            "addr:housenumber": 293,
+            "addr:postcode": 11000,
+            "addr:street": "Војводе Степе",
+            "building": "apartments",
+            "building:levels": 8,
+            "ref:RS:kucni_broj": 3225109,
+            "smoking": "no",
+            "wheelchair": "yes"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Feature",
+      "id": "way/271237184",
+      "properties": {
+        "timestamp": "2023-06-19T14:29:54Z",
+        "version": "7",
+        "changeset": "137522649",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "293",
+        "addr:postcode": "11000",
+        "addr:street": "Војводе Степе",
+        "building": "apartments",
+        "building:levels": "8",
+        "ref:RS:kucni_broj": "3225109",
+        "smoking": "no",
+        "wheelchair": "yes",
+        "id": "way/271237184"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4816089,
+              44.7672666
+            ],
+            [
+              20.481655,
+              44.7672012
+            ],
+            [
+              20.4815969,
+              44.7671805
+            ],
+            [
+              20.4816266,
+              44.7671384
+            ],
+            [
+              20.4816636,
+              44.7671516
+            ],
+            [
+              20.4817057,
+              44.7670919
+            ],
+            [
+              20.4817513,
+              44.7670929
+            ],
+            [
+              20.4818653,
+              44.7671367
+            ],
+            [
+              20.4818787,
+              44.7671662
+            ],
+            [
+              20.4818293,
+              44.7672363
+            ],
+            [
+              20.4818739,
+              44.7672521
+            ],
+            [
+              20.4818319,
+              44.7673115
+            ],
+            [
+              20.4818076,
+              44.7673029
+            ],
+            [
+              20.4817882,
+              44.7673304
+            ],
+            [
+              20.4816089,
+              44.7672666
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              20.4807704,
+              44.7696861
+            ]
+          },
+          "type": "Feature",
+          "properties": {
+            "addr:housenumber": 51,
+            "addr:street": "Љубе Шерцера",
+            "ref:RS:kucni_broj": 3226256
+          }
+        },
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              20.4807654,
+              44.7697711
+            ]
+          },
+          "type": "Feature",
+          "properties": {
+            "addr:housenumber": 49,
+            "addr:street": "Љубе Шерцера",
+            "ref:RS:kucni_broj": 3226255
+          }
+        }
+      ]
+    },
+    {
+      "type": "Feature",
+      "id": "way/262581892",
+      "properties": {
+        "timestamp": "2019-12-30T21:31:18Z",
+        "version": "4",
+        "changeset": "79031579",
+        "user": "TXBG",
+        "uid": "5569366",
+        "addr:housenumber": "18",
+        "addr:street": "Љуба Вучковића",
+        "building": "yes",
+        "name": "Mini Market",
+        "shop": "convenience",
+        "id": "way/262581892"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4823079,
+              44.7695076
+            ],
+            [
+              20.4822926,
+              44.7695617
+            ],
+            [
+              20.4821711,
+              44.7695437
+            ],
+            [
+              20.4821874,
+              44.7694896
+            ],
+            [
+              20.4823079,
+              44.7695076
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/262647416",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "7",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "1",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "yes",
+        "building:levels": "9",
+        "ref:RS:kucni_broj": "3225088",
+        "smoking": "no",
+        "wheelchair": "no",
+        "id": "way/262647416"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4829179,
+              44.7716283
+            ],
+            [
+              20.4826758,
+              44.7717285
+            ],
+            [
+              20.4825661,
+              44.7715948
+            ],
+            [
+              20.4828082,
+              44.7714946
+            ],
+            [
+              20.4829179,
+              44.7716283
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/262647423",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "7",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "3",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "brand": "Shop&Go",
+        "brand:wikidata": "Q116269550",
+        "building": "yes",
+        "name": "Shop&Go",
+        "ref:RS:kucni_broj": "3225086",
+        "shop": "convenience",
+        "wheelchair": "yes",
+        "id": "way/262647423"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4826082,
+              44.7713095
+            ],
+            [
+              20.4826115,
+              44.7714969
+            ],
+            [
+              20.4824521,
+              44.7714983
+            ],
+            [
+              20.4824487,
+              44.7713109
+            ],
+            [
+              20.4826082,
+              44.7713095
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/270186165",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "9",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "9",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "6",
+        "ref:RS:kucni_broj": "3222737",
+        "wheelchair": "no",
+        "id": "way/270186165"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.482743,
+              44.7701037
+            ],
+            [
+              20.4827852,
+              44.7701151
+            ],
+            [
+              20.4829201,
+              44.7701516
+            ],
+            [
+              20.4828349,
+              44.7703105
+            ],
+            [
+              20.4827379,
+              44.7702843
+            ],
+            [
+              20.4826578,
+              44.7702627
+            ],
+            [
+              20.482743,
+              44.7701037
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/270186166",
+      "properties": {
+        "timestamp": "2021-08-26T16:16:26Z",
+        "version": "7",
+        "changeset": "110297135",
+        "user": "TXBG",
+        "uid": "5569366",
+        "addr:city": "Београд",
+        "addr:housenumber": "9a",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "6",
+        "wheelchair": "no",
+        "id": "way/270186166"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4828737,
+              44.7699502
+            ],
+            [
+              20.4827852,
+              44.7701151
+            ],
+            [
+              20.482743,
+              44.7701037
+            ],
+            [
+              20.4827201,
+              44.7700975
+            ],
+            [
+              20.4826133,
+              44.7700687
+            ],
+            [
+              20.4827017,
+              44.7699037
+            ],
+            [
+              20.4828737,
+              44.7699502
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271226665",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "8",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "26",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "8",
+        "ref:RS:kucni_broj": "3223274",
+        "smoking": "no",
+        "wheelchair": "yes",
+        "id": "way/271226665"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.482052,
+              44.7680612
+            ],
+            [
+              20.4822387,
+              44.7681301
+            ],
+            [
+              20.4821734,
+              44.7682193
+            ],
+            [
+              20.4822265,
+              44.7682389
+            ],
+            [
+              20.4821905,
+              44.768288
+            ],
+            [
+              20.4821426,
+              44.7682704
+            ],
+            [
+              20.4821027,
+              44.7683249
+            ],
+            [
+              20.4820531,
+              44.7683287
+            ],
+            [
+              20.4819445,
+              44.768284
+            ],
+            [
+              20.4819311,
+              44.7682535
+            ],
+            [
+              20.4819936,
+              44.7681682
+            ],
+            [
+              20.4819559,
+              44.7681543
+            ],
+            [
+              20.4819877,
+              44.7681108
+            ],
+            [
+              20.4820098,
+              44.7681189
+            ],
+            [
+              20.482052,
+              44.7680612
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271226667",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "9",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "30",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "8",
+        "ref:RS:kucni_broj": "3223273",
+        "smoking": "no",
+        "wheelchair": "yes",
+        "id": "way/271226667"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.482218,
+              44.7677451
+            ],
+            [
+              20.4822744,
+              44.7677289
+            ],
+            [
+              20.4823897,
+              44.7677746
+            ],
+            [
+              20.4824125,
+              44.7678108
+            ],
+            [
+              20.4823539,
+              44.767889
+            ],
+            [
+              20.4823999,
+              44.7679063
+            ],
+            [
+              20.4823627,
+              44.7679559
+            ],
+            [
+              20.4823284,
+              44.7679429
+            ],
+            [
+              20.4823108,
+              44.7679731
+            ],
+            [
+              20.4821308,
+              44.7679065
+            ],
+            [
+              20.4821843,
+              44.7678392
+            ],
+            [
+              20.4821299,
+              44.7678186
+            ],
+            [
+              20.4821527,
+              44.7677881
+            ],
+            [
+              20.4821785,
+              44.7677978
+            ],
+            [
+              20.482218,
+              44.7677451
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271226668",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "9",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "28",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "8",
+        "ref:RS:kucni_broj": "3223272",
+        "smoking": "no",
+        "wheelchair": "no",
+        "id": "way/271226668"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4822387,
+              44.7681301
+            ],
+            [
+              20.482052,
+              44.7680612
+            ],
+            [
+              20.482094,
+              44.7680157
+            ],
+            [
+              20.4820339,
+              44.7679934
+            ],
+            [
+              20.4820702,
+              44.767944
+            ],
+            [
+              20.4820962,
+              44.7679537
+            ],
+            [
+              20.4821308,
+              44.7679065
+            ],
+            [
+              20.4823108,
+              44.7679731
+            ],
+            [
+              20.4822516,
+              44.7680536
+            ],
+            [
+              20.48231,
+              44.7680752
+            ],
+            [
+              20.482279,
+              44.7681175
+            ],
+            [
+              20.4822475,
+              44.7681058
+            ],
+            [
+              20.4822387,
+              44.7681301
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271226669",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "9",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "20",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "8",
+        "ref:RS:kucni_broj": "3220346",
+        "smoking": "no",
+        "wheelchair": "yes",
+        "id": "way/271226669"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4818386,
+              44.7691532
+            ],
+            [
+              20.4818241,
+              44.7691133
+            ],
+            [
+              20.4818618,
+              44.769065
+            ],
+            [
+              20.481889,
+              44.7690755
+            ],
+            [
+              20.4819146,
+              44.7690421
+            ],
+            [
+              20.4818504,
+              44.7690173
+            ],
+            [
+              20.4818823,
+              44.7689757
+            ],
+            [
+              20.4819599,
+              44.7690057
+            ],
+            [
+              20.4819989,
+              44.7689549
+            ],
+            [
+              20.4821403,
+              44.7690095
+            ],
+            [
+              20.4820849,
+              44.7690817
+            ],
+            [
+              20.4821354,
+              44.7691012
+            ],
+            [
+              20.4820996,
+              44.7691478
+            ],
+            [
+              20.4820546,
+              44.7691304
+            ],
+            [
+              20.4820156,
+              44.7691844
+            ],
+            [
+              20.4819723,
+              44.769203
+            ],
+            [
+              20.4818386,
+              44.7691532
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271226671",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "9",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "22",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "8",
+        "ref:RS:kucni_broj": "3220347",
+        "smoking": "no",
+        "wheelchair": "yes",
+        "id": "way/271226671"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4819989,
+              44.7689549
+            ],
+            [
+              20.481946,
+              44.7689345
+            ],
+            [
+              20.4819918,
+              44.7688748
+            ],
+            [
+              20.4819453,
+              44.7688568
+            ],
+            [
+              20.4819815,
+              44.7688096
+            ],
+            [
+              20.4820771,
+              44.7688466
+            ],
+            [
+              20.4821157,
+              44.7687963
+            ],
+            [
+              20.4822301,
+              44.7688405
+            ],
+            [
+              20.482179,
+              44.7689071
+            ],
+            [
+              20.4822329,
+              44.7689279
+            ],
+            [
+              20.4821951,
+              44.7689773
+            ],
+            [
+              20.4821718,
+              44.7689683
+            ],
+            [
+              20.4821403,
+              44.7690095
+            ],
+            [
+              20.4819989,
+              44.7689549
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271226672",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "10",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "24",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "8",
+        "ref:RS:kucni_broj": "3226259",
+        "smoking": "no",
+        "wheelchair": "no",
+        "id": "way/271226672"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4821157,
+              44.7687963
+            ],
+            [
+              20.482042,
+              44.7687678
+            ],
+            [
+              20.4820839,
+              44.7687131
+            ],
+            [
+              20.4820353,
+              44.7686943
+            ],
+            [
+              20.4820825,
+              44.7686327
+            ],
+            [
+              20.482123,
+              44.7686484
+            ],
+            [
+              20.4821547,
+              44.7686049
+            ],
+            [
+              20.4822041,
+              44.7685866
+            ],
+            [
+              20.4823363,
+              44.7686378
+            ],
+            [
+              20.4823519,
+              44.7686782
+            ],
+            [
+              20.4823049,
+              44.7687417
+            ],
+            [
+              20.4823349,
+              44.7687533
+            ],
+            [
+              20.4823023,
+              44.7687959
+            ],
+            [
+              20.4822729,
+              44.7687846
+            ],
+            [
+              20.4822301,
+              44.7688405
+            ],
+            [
+              20.4821157,
+              44.7687963
+            ]
+          ]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "id": "way/271240453",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "9",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "5",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "6",
+        "ref:RS:kucni_broj": "3225087",
+        "id": "way/271240453"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4826467,
+              44.7711967
+            ],
+            [
+              20.4825587,
+              44.7711294
+            ],
+            [
+              20.4827213,
+              44.7710221
+            ],
+            [
+              20.4828093,
+              44.7710893
+            ],
+            [
+              20.4827313,
+              44.7711408
+            ],
+            [
+              20.4826467,
+              44.7711967
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271240454",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "9",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "5a",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "ref:RS:kucni_broj": "6766644",
+        "id": "way/271240454"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4829729,
+              44.7709814
+            ],
+            [
+              20.4828877,
+              44.7710376
+            ],
+            [
+              20.4828093,
+              44.7710893
+            ],
+            [
+              20.4827213,
+              44.7710221
+            ],
+            [
+              20.4828849,
+              44.7709142
+            ],
+            [
+              20.4829448,
+              44.77096
+            ],
+            [
+              20.4829729,
+              44.7709814
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271240455",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "9",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "5b",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "6",
+        "ref:RS:kucni_broj": "6766645",
+        "wheelchair": "no",
+        "id": "way/271240455"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4832003,
+              44.770914
+            ],
+            [
+              20.4831155,
+              44.77097
+            ],
+            [
+              20.4830309,
+              44.7710258
+            ],
+            [
+              20.4829729,
+              44.7709814
+            ],
+            [
+              20.4829448,
+              44.77096
+            ],
+            [
+              20.4831142,
+              44.7708482
+            ],
+            [
+              20.4832003,
+              44.770914
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271244247",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "10",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "7",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "6",
+        "ref:RS:kucni_broj": "3227895",
+        "wheelchair": "no",
+        "id": "way/271244247"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4827206,
+              44.7706249
+            ],
+            [
+              20.4828166,
+              44.7706905
+            ],
+            [
+              20.4827367,
+              44.7707495
+            ],
+            [
+              20.4826561,
+              44.770809
+            ],
+            [
+              20.4825601,
+              44.7707434
+            ],
+            [
+              20.4827206,
+              44.7706249
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271244248",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "10",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "7a",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "6",
+        "ref:RS:kucni_broj": "3238995",
+        "wheelchair": "no",
+        "id": "way/271244248"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4828791,
+              44.7705079
+            ],
+            [
+              20.4829519,
+              44.7705577
+            ],
+            [
+              20.4829751,
+              44.7705735
+            ],
+            [
+              20.4828893,
+              44.7706369
+            ],
+            [
+              20.4828166,
+              44.7706905
+            ],
+            [
+              20.4827206,
+              44.7706249
+            ],
+            [
+              20.4828791,
+              44.7705079
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271244249",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "10",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "7b",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "6",
+        "ref:RS:kucni_broj": "3227894",
+        "wheelchair": "no",
+        "id": "way/271244249"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4831057,
+              44.7704442
+            ],
+            [
+              20.4832019,
+              44.7705098
+            ],
+            [
+              20.483118,
+              44.7705717
+            ],
+            [
+              20.4830481,
+              44.7706233
+            ],
+            [
+              20.4829751,
+              44.7705735
+            ],
+            [
+              20.4829519,
+              44.7705577
+            ],
+            [
+              20.4831057,
+              44.7704442
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271244250",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "9",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "11",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "6",
+        "ref:RS:kucni_broj": "3241451",
+        "wheelchair": "no",
+        "id": "way/271244250"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4826394,
+              44.769565
+            ],
+            [
+              20.4828141,
+              44.7694538
+            ],
+            [
+              20.4829234,
+              44.7695404
+            ],
+            [
+              20.4827487,
+              44.7696516
+            ],
+            [
+              20.4826394,
+              44.769565
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271244251",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "9",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "11a",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "6",
+        "ref:RS:kucni_broj": "3228499",
+        "wheelchair": "no",
+        "id": "way/271244251"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4828141,
+              44.7694538
+            ],
+            [
+              20.482993,
+              44.76934
+            ],
+            [
+              20.4830633,
+              44.7693957
+            ],
+            [
+              20.4831023,
+              44.7694265
+            ],
+            [
+              20.4829234,
+              44.7695404
+            ],
+            [
+              20.4828141,
+              44.7694538
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271244252",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "11",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "11b",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "6",
+        "ref:RS:kucni_broj": "3239712",
+        "wheelchair": "no",
+        "id": "way/271244252"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.483233,
+              44.7692877
+            ],
+            [
+              20.4833427,
+              44.7693745
+            ],
+            [
+              20.4831729,
+              44.7694825
+            ],
+            [
+              20.4831023,
+              44.7694265
+            ],
+            [
+              20.4830633,
+              44.7693957
+            ],
+            [
+              20.483233,
+              44.7692877
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271251349",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "8",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "19",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "6",
+        "ref:RS:kucni_broj": "3240415",
+        "wheelchair": "no",
+        "id": "way/271251349"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4828706,
+              44.7687105
+            ],
+            [
+              20.4830051,
+              44.7685819
+            ],
+            [
+              20.483134,
+              44.7686498
+            ],
+            [
+              20.4829994,
+              44.7687784
+            ],
+            [
+              20.4828706,
+              44.7687105
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271251350",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "9",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "21",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "6",
+        "ref:RS:kucni_broj": "3222735",
+        "wheelchair": "no",
+        "id": "way/271251350"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4831448,
+              44.7684484
+            ],
+            [
+              20.4832287,
+              44.7684926
+            ],
+            [
+              20.4832737,
+              44.7685163
+            ],
+            [
+              20.483134,
+              44.7686498
+            ],
+            [
+              20.4830051,
+              44.7685819
+            ],
+            [
+              20.4831448,
+              44.7684484
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271251351",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "9",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "23",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "6",
+        "ref:RS:kucni_broj": "3222736",
+        "wheelchair": "no",
+        "id": "way/271251351"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.483361,
+              44.7683661
+            ],
+            [
+              20.4834882,
+              44.7684331
+            ],
+            [
+              20.4833559,
+              44.7685596
+            ],
+            [
+              20.4832737,
+              44.7685163
+            ],
+            [
+              20.4832287,
+              44.7684926
+            ],
+            [
+              20.483361,
+              44.7683661
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271256632",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "8",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "25",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "6",
+        "ref:RS:kucni_broj": "3240353",
+        "wheelchair": "no",
+        "id": "way/271256632"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4829764,
+              44.768289
+            ],
+            [
+              20.4830799,
+              44.768157
+            ],
+            [
+              20.4832251,
+              44.7682144
+            ],
+            [
+              20.4831215,
+              44.7683464
+            ],
+            [
+              20.4829764,
+              44.768289
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271256634",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "8",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "27",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "ref:RS:kucni_broj": "3222455",
+        "wheelchair": "no",
+        "id": "way/271256634"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4830799,
+              44.768157
+            ],
+            [
+              20.483199,
+              44.7680032
+            ],
+            [
+              20.4832958,
+              44.7680416
+            ],
+            [
+              20.483347,
+              44.7680619
+            ],
+            [
+              20.4832251,
+              44.7682144
+            ],
+            [
+              20.4830799,
+              44.768157
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271256636",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "8",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "29",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "6",
+        "ref:RS:kucni_broj": "3222456",
+        "wheelchair": "no",
+        "id": "way/271256636"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4832958,
+              44.7680416
+            ],
+            [
+              20.4834061,
+              44.7678961
+            ],
+            [
+              20.4835425,
+              44.7679482
+            ],
+            [
+              20.4834327,
+              44.7680932
+            ],
+            [
+              20.4832958,
+              44.7680416
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271259700",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "8",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "13",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "6",
+        "ref:RS:kucni_broj": "3222738",
+        "wheelchair": "no",
+        "id": "way/271259700"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4827615,
+              44.7691463
+            ],
+            [
+              20.4829259,
+              44.7690313
+            ],
+            [
+              20.4830367,
+              44.7691112
+            ],
+            [
+              20.4828723,
+              44.7692262
+            ],
+            [
+              20.4827615,
+              44.7691463
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271259702",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "9",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "15",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "building:levels": "6",
+        "ref:RS:kucni_broj": "3222739",
+        "wheelchair": "no",
+        "id": "way/271259702"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4830948,
+              44.7689132
+            ],
+            [
+              20.4831573,
+              44.7689582
+            ],
+            [
+              20.4832056,
+              44.7689931
+            ],
+            [
+              20.4830367,
+              44.7691112
+            ],
+            [
+              20.4829259,
+              44.7690313
+            ],
+            [
+              20.4830948,
+              44.7689132
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271259704",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "10",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "17",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "apartments",
+        "ref:RS:kucni_broj": "3222740",
+        "wheelchair": "no",
+        "id": "way/271259704"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4831573,
+              44.7689582
+            ],
+            [
+              20.4833213,
+              44.7688436
+            ],
+            [
+              20.4834278,
+              44.7689203
+            ],
+            [
+              20.4832638,
+              44.769035
+            ],
+            [
+              20.4832056,
+              44.7689931
+            ],
+            [
+              20.4831573,
+              44.7689582
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/401252976",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "5",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "2a",
+        "addr:street": "Љуба Вучковића",
+        "building": "retail",
+        "ref:RS:kucni_broj": "3214484",
+        "id": "way/401252976"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4820611,
+              44.7716042
+            ],
+            [
+              20.4821231,
+              44.7713746
+            ],
+            [
+              20.4822496,
+              44.7713918
+            ],
+            [
+              20.4821877,
+              44.7716214
+            ],
+            [
+              20.4820611,
+              44.7716042
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/401693560",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "3",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "19b",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "house",
+        "ref:RS:kucni_broj": "3236045",
+        "id": "way/401693560"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4837934,
+              44.7687637
+            ],
+            [
+              20.4837125,
+              44.7687127
+            ],
+            [
+              20.4837815,
+              44.7686575
+            ],
+            [
+              20.4838624,
+              44.7687085
+            ],
+            [
+              20.4837934,
+              44.7687637
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/401693576",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "5",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "17b",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "house",
+        "ref:RS:kucni_broj": "3236044",
+        "id": "way/401693576"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.483879,
+              44.7689907
+            ],
+            [
+              20.483822,
+              44.7689638
+            ],
+            [
+              20.4838573,
+              44.7689262
+            ],
+            [
+              20.4837926,
+              44.7688956
+            ],
+            [
+              20.4838346,
+              44.7688509
+            ],
+            [
+              20.4839562,
+              44.7689084
+            ],
+            [
+              20.483879,
+              44.7689907
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/413573085",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "4",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "19a",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "house",
+        "ref:RS:kucni_broj": "3237536",
+        "id": "way/413573085"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4836212,
+              44.7686545
+            ],
+            [
+              20.4835323,
+              44.7686024
+            ],
+            [
+              20.4835848,
+              44.7685572
+            ],
+            [
+              20.4836738,
+              44.7686092
+            ],
+            [
+              20.4836212,
+              44.7686545
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/413573088",
+      "properties": {
+        "timestamp": "2023-06-19T13:24:39Z",
+        "version": "3",
+        "changeset": "137519357",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "17a",
+        "addr:postcode": "11000",
+        "addr:street": "Љуба Вучковића",
+        "building": "house",
+        "ref:RS:kucni_broj": "3240065",
+        "id": "way/413573088"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4836911,
+              44.7689505
+            ],
+            [
+              20.4836207,
+              44.7689124
+            ],
+            [
+              20.4836748,
+              44.768862
+            ],
+            [
+              20.4837453,
+              44.7689001
+            ],
+            [
+              20.4836911,
+              44.7689505
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/264129091",
+      "properties": {
+        "timestamp": "2023-06-19T15:03:31Z",
+        "version": "7",
+        "changeset": "137524115",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "18",
+        "addr:postcode": "11000",
+        "addr:street": "Динка Туцаковића",
+        "building": "house",
+        "building:levels": "3",
+        "ref:RS:kucni_broj": "3236051",
+        "wheelchair": "no",
+        "id": "way/264129091"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4820765,
+              44.7697357
+            ],
+            [
+              20.4821901,
+              44.7697644
+            ],
+            [
+              20.4821403,
+              44.7698636
+            ],
+            [
+              20.4820268,
+              44.769835
+            ],
+            [
+              20.4820765,
+              44.7697357
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/271226661",
+      "properties": {
+        "timestamp": "2023-06-19T15:03:31Z",
+        "version": "6",
+        "changeset": "137524115",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "16",
+        "addr:postcode": "11000",
+        "addr:street": "Динка Туцаковића",
+        "building": "detached",
+        "building:levels": "2",
+        "ref:RS:kucni_broj": "3236050",
+        "smoking": "no",
+        "id": "way/271226661"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4821652,
+              44.7699962
+            ],
+            [
+              20.4821091,
+              44.7701032
+            ],
+            [
+              20.4820048,
+              44.7700757
+            ],
+            [
+              20.4819954,
+              44.7700935
+            ],
+            [
+              20.4819329,
+              44.770077
+            ],
+            [
+              20.4819696,
+              44.7700069
+            ],
+            [
+              20.4820292,
+              44.7700226
+            ],
+            [
+              20.482058,
+              44.7699678
+            ],
+            [
+              20.4821652,
+              44.7699962
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/401252979",
+      "properties": {
+        "timestamp": "2023-06-19T15:03:31Z",
+        "version": "4",
+        "changeset": "137524115",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "2",
+        "addr:street": "Динка Туцаковића",
+        "building": "house",
+        "ref:RS:kucni_broj": "3240069",
+        "id": "way/401252979"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4817862,
+              44.7716708
+            ],
+            [
+              20.4818359,
+              44.7715482
+            ],
+            [
+              20.4819129,
+              44.7715639
+            ],
+            [
+              20.4818632,
+              44.7716865
+            ],
+            [
+              20.4817862,
+              44.7716708
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/401692201",
+      "properties": {
+        "timestamp": "2023-06-19T15:03:31Z",
+        "version": "5",
+        "changeset": "137524115",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "14a",
+        "addr:street": "Динка Туцаковића",
+        "building": "house",
+        "ref:RS:kucni_broj": "3241013",
+        "id": "way/401692201"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4819647,
+              44.7702113
+            ],
+            [
+              20.4819876,
+              44.7701702
+            ],
+            [
+              20.4819626,
+              44.7701632
+            ],
+            [
+              20.4819939,
+              44.7701071
+            ],
+            [
+              20.4821554,
+              44.7701526
+            ],
+            [
+              20.4821312,
+              44.7701959
+            ],
+            [
+              20.4821677,
+              44.7702062
+            ],
+            [
+              20.4821377,
+              44.77026
+            ],
+            [
+              20.4819647,
+              44.7702113
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/401692202",
+      "properties": {
+        "timestamp": "2023-06-19T15:03:31Z",
+        "version": "5",
+        "changeset": "137524115",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "14",
+        "addr:street": "Динка Туцаковића",
+        "building": "house",
+        "ref:RS:kucni_broj": "3240068",
+        "id": "way/401692202"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4819552,
+              44.7703446
+            ],
+            [
+              20.4820115,
+              44.7702493
+            ],
+            [
+              20.4821355,
+              44.7702861
+            ],
+            [
+              20.4820792,
+              44.7703815
+            ],
+            [
+              20.4819552,
+              44.7703446
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/401692203",
+      "properties": {
+        "timestamp": "2023-06-19T15:03:31Z",
+        "version": "5",
+        "changeset": "137524115",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "12",
+        "addr:street": "Динка Туцаковића",
+        "building": "house",
+        "ref:RS:kucni_broj": "3236093",
+        "id": "way/401692203"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4820039,
+              44.7705763
+            ],
+            [
+              20.4820312,
+              44.7705164
+            ],
+            [
+              20.482009,
+              44.7705114
+            ],
+            [
+              20.4820413,
+              44.7704404
+            ],
+            [
+              20.4821701,
+              44.7704699
+            ],
+            [
+              20.4821407,
+              44.7705342
+            ],
+            [
+              20.4821639,
+              44.7705395
+            ],
+            [
+              20.4821336,
+              44.770606
+            ],
+            [
+              20.4820039,
+              44.7705763
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/401692204",
+      "properties": {
+        "timestamp": "2023-06-19T15:03:31Z",
+        "version": "5",
+        "changeset": "137524115",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "10",
+        "addr:street": "Динка Туцаковића",
+        "building": "house",
+        "ref:RS:kucni_broj": "3240067",
+        "id": "way/401692204"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4819836,
+              44.7707169
+            ],
+            [
+              20.4820085,
+              44.7706138
+            ],
+            [
+              20.4821504,
+              44.7706311
+            ],
+            [
+              20.4821255,
+              44.770734
+            ],
+            [
+              20.4819836,
+              44.7707169
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/401692205",
+      "properties": {
+        "timestamp": "2023-06-19T15:03:31Z",
+        "version": "5",
+        "changeset": "137524115",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "8",
+        "addr:street": "Динка Туцаковића",
+        "building": "house",
+        "ref:RS:kucni_broj": "3236047",
+        "id": "way/401692205"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4819832,
+              44.7708342
+            ],
+            [
+              20.4820141,
+              44.7707599
+            ],
+            [
+              20.4821788,
+              44.7707944
+            ],
+            [
+              20.482148,
+              44.7708686
+            ],
+            [
+              20.4819832,
+              44.7708342
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/401692206",
+      "properties": {
+        "timestamp": "2023-06-19T15:03:31Z",
+        "version": "5",
+        "changeset": "137524115",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "6",
+        "addr:street": "Динка Туцаковића",
+        "building": "house",
+        "ref:RS:kucni_broj": "3236046",
+        "id": "way/401692206"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4819954,
+              44.7709763
+            ],
+            [
+              20.4820335,
+              44.7708862
+            ],
+            [
+              20.4821907,
+              44.7709199
+            ],
+            [
+              20.4821527,
+              44.7710098
+            ],
+            [
+              20.4819954,
+              44.7709763
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/401692207",
+      "properties": {
+        "timestamp": "2021-01-29T22:50:19Z",
+        "version": "4",
+        "changeset": "98393097",
+        "user": "Aleksa Marinski",
+        "uid": "6225925",
+        "addr:housenumber": "4",
+        "addr:street": "Динка Туцаковића",
+        "building": "house",
+        "id": "way/401692207"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4819741,
+              44.7710814
+            ],
+            [
+              20.4820008,
+              44.7710168
+            ],
+            [
+              20.4821593,
+              44.7710501
+            ],
+            [
+              20.4821325,
+              44.7711146
+            ],
+            [
+              20.4819741,
+              44.7710814
+            ]
+          ]
         ]
       }
     }

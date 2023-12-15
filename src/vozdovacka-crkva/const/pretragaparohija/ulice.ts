@@ -55,7 +55,7 @@ export const uliceRSCyr: { label: string; value: string }[] = [
     { label: "Грузијска", value: "Грузијска" },
     { label: "Данила Бојовића", value: "Данила Бојовића" },
     { label: "Дарвинова", value: "Дарвинова" },
-    { label: "Зларинска", value: "Зларинска" },
+    { label: "Зларинска (Динка Туцаковића)", value: "Зларинска (Динка Туцаковића)" },
     { label: "Калничка", value: "Калничка" },
     { label: "Унска", value: "Унска" },
     { label: "Санска", value: "Санска" },

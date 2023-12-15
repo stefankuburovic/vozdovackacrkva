@@ -10,6 +10,294 @@
   "features": [
     {
       "type": "Feature",
+      "id": "way/390580932",
+      "properties": {
+        "timestamp": "2023-10-07T03:36:25Z",
+        "version": "4",
+        "changeset": "142253891",
+        "user": "GrumpyJohn",
+        "uid": "6877782",
+        "addr:housenumber": "73",
+        "addr:street": "Булевар ослобођења",
+        "building": "yes",
+        "ref:RS:kucni_broj": "3216473",
+        "id": "way/390580932"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4664576,
+              44.7845684
+            ],
+            [
+              20.4664614,
+              44.7845611
+            ],
+            [
+              20.4664692,
+              44.7845463
+            ],
+            [
+              20.4665262,
+              44.7844384
+            ],
+            [
+              20.4667317,
+              44.784493
+            ],
+            [
+              20.4667518,
+              44.7844549
+            ],
+            [
+              20.4669417,
+              44.7845054
+            ],
+            [
+              20.4669287,
+              44.78453
+            ],
+            [
+              20.467142,
+              44.7845867
+            ],
+            [
+              20.4670725,
+              44.7847183
+            ],
+            [
+              20.466962,
+              44.7846889
+            ],
+            [
+              20.466978,
+              44.7846585
+            ],
+            [
+              20.466886,
+              44.784634
+            ],
+            [
+              20.4668485,
+              44.784653
+            ],
+            [
+              20.4668224,
+              44.7847121
+            ],
+            [
+              20.4666619,
+              44.7846764
+            ],
+            [
+              20.4666849,
+              44.7846245
+            ],
+            [
+              20.4666688,
+              44.7845864
+            ],
+            [
+              20.466568,
+              44.7845596
+            ],
+            [
+              20.4665504,
+              44.784593
+            ],
+            [
+              20.4664781,
+              44.7845738
+            ],
+            [
+              20.4664576,
+              44.7845684
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7112618155",
+      "properties": {
+        "timestamp": "2023-06-19T13:22:09Z",
+        "version": "4",
+        "changeset": "137519256",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "85",
+        "addr:postcode": "11000",
+        "addr:street": "Јове Илића",
+        "ref:RS:kucni_broj": "3218001",
+        "id": "node/7112618155"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4720936,
+          44.7794262
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7112618156",
+      "properties": {
+        "timestamp": "2023-06-19T13:22:09Z",
+        "version": "4",
+        "changeset": "137519256",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "87",
+        "addr:postcode": "11000",
+        "addr:street": "Јове Илића",
+        "ref:RS:kucni_broj": "3218002",
+        "id": "node/7112618156"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4722036,
+          44.779253
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7112618157",
+      "properties": {
+        "timestamp": "2023-06-19T13:22:09Z",
+        "version": "4",
+        "changeset": "137519256",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "89",
+        "addr:postcode": "11000",
+        "addr:street": "Јове Илића",
+        "ref:RS:kucni_broj": "3218003",
+        "id": "node/7112618157"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4723028,
+          44.7791045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7112618159",
+      "properties": {
+        "timestamp": "2023-06-19T13:22:09Z",
+        "version": "5",
+        "changeset": "137519256",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "93",
+        "addr:postcode": "11000",
+        "addr:street": "Јове Илића",
+        "ref:RS:kucni_broj": "3218029",
+        "id": "node/7112618159"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4728018,
+          44.7788589
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7112618160",
+      "properties": {
+        "timestamp": "2023-06-19T13:22:09Z",
+        "version": "4",
+        "changeset": "137519256",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "95",
+        "addr:postcode": "11000",
+        "addr:street": "Јове Илића",
+        "ref:RS:kucni_broj": "3218030",
+        "id": "node/7112618160"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.472791,
+          44.7786285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7112618161",
+      "properties": {
+        "timestamp": "2023-06-19T13:22:09Z",
+        "version": "4",
+        "changeset": "137519256",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:city": "Београд",
+        "addr:housenumber": "97",
+        "addr:postcode": "11000",
+        "addr:street": "Јове Илића",
+        "ref:RS:kucni_broj": "3218005",
+        "id": "node/7112618161"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4724718,
+          44.7785561
+        ]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "node/3977974958",
+      "properties": {
+        "timestamp": "2022-11-15T17:03:33Z",
+        "version": "6",
+        "changeset": "128951416",
+        "user": "TXBG",
+        "uid": "5569366",
+        "addr:city": "Београд",
+        "addr:housenumber": "91",
+        "addr:postcode": "11000",
+        "addr:street": "Јове Илића",
+        "government": "local_government",
+        "name": "Месна Канцеларија \"Чиновничка Колонија\"",
+        "name:sr": "Месна Канцеларија \"Чиновничка Колонија\"",
+        "name:sr-Latn": "Mesna Kancelarija \"Činovnička Kolonija\"",
+        "office": "government",
+        "opening_hours": "08:00-16:00",
+        "phone": "+381 11 2469‑844",
+        "smoking": "no",
+        "wheelchair": "yes",
+        "id": "node/3977974958"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4726449,
+          44.7790939
+        ]
+      }
+    },
+    {
+      "type": "Feature",
       "id": "node/4043692854",
       "properties": {
         "timestamp": "2023-06-19T14:49:41Z",
@@ -24401,71 +24689,6 @@
             [
               20.4736923,
               44.779173
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/377744850",
-      "properties": {
-        "timestamp": "2023-10-31T09:16:44Z",
-        "version": "8",
-        "changeset": "143409395",
-        "user": "b-jazz-bot",
-        "uid": "9451067",
-        "addr:city": "Belgrade",
-        "addr:housenumber": "82",
-        "addr:postcode": "11000",
-        "addr:street": "Војводе Степе",
-        "amenity": "school",
-        "barrier": "fence",
-        "ele": "10",
-        "name": "Дванаеста београдска гимназија",
-        "name:sr": "Дванаеста београдска гимназија",
-        "name:sr-Latn": "Dvanaesta beogradska gimnazija",
-        "ref:RS:kucni_broj": "3223926",
-        "website": "https://xiigimnazija.edu.rs/",
-        "wheelchair": "limited",
-        "wikidata": "Q3038255",
-        "id": "way/377744850"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.4708005,
-              44.7809333
-            ],
-            [
-              20.4714801,
-              44.7798435
-            ],
-            [
-              20.4720565,
-              44.7800121
-            ],
-            [
-              20.4719962,
-              44.7801219
-            ],
-            [
-              20.4725379,
-              44.7802851
-            ],
-            [
-              20.4720005,
-              44.7810849
-            ],
-            [
-              20.471962,
-              44.7811454
-            ],
-            [
-              20.4708005,
-              44.7809333
             ]
           ]
         ]

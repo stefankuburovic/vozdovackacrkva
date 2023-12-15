@@ -28455,1775 +28455,6 @@
     },
     {
       "type": "Feature",
-      "id": "way/436891763",
-      "properties": {
-        "timestamp": "2023-07-19T15:05:16Z",
-        "version": "3",
-        "changeset": "138722027",
-        "user": "RGZ AR Import",
-        "uid": "18850960",
-        "addr:housenumber": "35",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "ref:RS:kucni_broj": "3427227",
-        "id": "way/436891763"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.549853,
-              44.7665355
-            ],
-            [
-              20.5497524,
-              44.7664472
-            ],
-            [
-              20.54986,
-              44.7663854
-            ],
-            [
-              20.5499606,
-              44.7664737
-            ],
-            [
-              20.549853,
-              44.7665355
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/437887917",
-      "properties": {
-        "timestamp": "2023-07-19T15:05:16Z",
-        "version": "6",
-        "changeset": "138722027",
-        "user": "RGZ AR Import",
-        "uid": "18850960",
-        "addr:housenumber": "12",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "ref:RS:kucni_broj": "3452691",
-        "id": "way/437887917"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5502815,
-              44.7663166
-            ],
-            [
-              20.550211,
-              44.766243
-            ],
-            [
-              20.5503768,
-              44.7661629
-            ],
-            [
-              20.5504473,
-              44.7662366
-            ],
-            [
-              20.5502815,
-              44.7663166
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/437887920",
-      "properties": {
-        "timestamp": "2023-07-19T15:05:16Z",
-        "version": "4",
-        "changeset": "138722027",
-        "user": "RGZ AR Import",
-        "uid": "18850960",
-        "addr:housenumber": "18",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "ref:RS:kucni_broj": "3434845",
-        "id": "way/437887920"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5505316,
-              44.7664943
-            ],
-            [
-              20.5504573,
-              44.7664153
-            ],
-            [
-              20.550576,
-              44.766359
-            ],
-            [
-              20.5506503,
-              44.766438
-            ],
-            [
-              20.5505316,
-              44.7664943
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/437887922",
-      "properties": {
-        "timestamp": "2016-09-17T11:37:06Z",
-        "version": "2",
-        "changeset": "42225107",
-        "user": "nikicam",
-        "uid": "2886645",
-        "addr:city": "20",
-        "addr:street": "Рибничка",
-        "building": "house",
-        "id": "way/437887922"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5506214,
-              44.7665825
-            ],
-            [
-              20.5505859,
-              44.7665051
-            ],
-            [
-              20.5507236,
-              44.7664732
-            ],
-            [
-              20.5507592,
-              44.7665505
-            ],
-            [
-              20.5506214,
-              44.7665825
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/437887923",
-      "properties": {
-        "timestamp": "2020-06-15T06:01:35Z",
-        "version": "4",
-        "changeset": "86647803",
-        "user": "TXBG",
-        "uid": "5569366",
-        "addr:housenumber": "20",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "id": "way/437887923"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5507943,
-              44.7665397
-            ],
-            [
-              20.5507632,
-              44.7664341
-            ],
-            [
-              20.5509026,
-              44.7664134
-            ],
-            [
-              20.5509337,
-              44.766519
-            ],
-            [
-              20.5507943,
-              44.7665397
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/437888840",
-      "properties": {
-        "timestamp": "2023-07-19T15:05:16Z",
-        "version": "3",
-        "changeset": "138722027",
-        "user": "RGZ AR Import",
-        "uid": "18850960",
-        "addr:housenumber": "31a",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "ref:RS:kucni_broj": "3447194",
-        "id": "way/437888840"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5505219,
-              44.7669225
-            ],
-            [
-              20.5504599,
-              44.7668454
-            ],
-            [
-              20.550625,
-              44.7667785
-            ],
-            [
-              20.550687,
-              44.7668555
-            ],
-            [
-              20.5505219,
-              44.7669225
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438205961",
-      "properties": {
-        "timestamp": "2023-07-19T15:05:16Z",
-        "version": "5",
-        "changeset": "138722027",
-        "user": "RGZ AR Import",
-        "uid": "18850960",
-        "addr:housenumber": "14",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "ref:RS:kucni_broj": "3423974",
-        "id": "way/438205961"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.55014,
-              44.765917
-            ],
-            [
-              20.5500699,
-              44.7658368
-            ],
-            [
-              20.550202,
-              44.7657785
-            ],
-            [
-              20.5502722,
-              44.7658587
-            ],
-            [
-              20.55014,
-              44.765917
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438205963",
-      "properties": {
-        "timestamp": "2023-07-19T15:05:16Z",
-        "version": "4",
-        "changeset": "138722027",
-        "user": "RGZ AR Import",
-        "uid": "18850960",
-        "addr:housenumber": "10v",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "ref:RS:kucni_broj": "3427277",
-        "id": "way/438205963"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.549845,
-              44.765903
-            ],
-            [
-              20.5497693,
-              44.7658127
-            ],
-            [
-              20.5499059,
-              44.7657549
-            ],
-            [
-              20.5499817,
-              44.7658452
-            ],
-            [
-              20.549845,
-              44.765903
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438205964",
-      "properties": {
-        "timestamp": "2023-07-19T15:05:16Z",
-        "version": "5",
-        "changeset": "138722027",
-        "user": "RGZ AR Import",
-        "uid": "18850960",
-        "addr:housenumber": "10b",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "ref:RS:kucni_broj": "3436213",
-        "id": "way/438205964"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5500975,
-              44.7657546
-            ],
-            [
-              20.5500333,
-              44.7656965
-            ],
-            [
-              20.5501478,
-              44.7656328
-            ],
-            [
-              20.5502119,
-              44.765691
-            ],
-            [
-              20.5500975,
-              44.7657546
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438205966",
-      "properties": {
-        "timestamp": "2020-06-15T06:01:37Z",
-        "version": "4",
-        "changeset": "86647803",
-        "user": "TXBG",
-        "uid": "5569366",
-        "addr:housenumber": "2",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "id": "way/438205966"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5496782,
-              44.7657186
-            ],
-            [
-              20.5496231,
-              44.7656809
-            ],
-            [
-              20.5496565,
-              44.7656563
-            ],
-            [
-              20.549621,
-              44.765632
-            ],
-            [
-              20.5496747,
-              44.7655925
-            ],
-            [
-              20.5497653,
-              44.7656546
-            ],
-            [
-              20.5496782,
-              44.7657186
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438205967",
-      "properties": {
-        "timestamp": "2020-06-15T06:01:37Z",
-        "version": "4",
-        "changeset": "86647803",
-        "user": "TXBG",
-        "uid": "5569366",
-        "addr:housenumber": "2a",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "id": "way/438205967"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5498997,
-              44.7655849
-            ],
-            [
-              20.5498216,
-              44.7655129
-            ],
-            [
-              20.5499693,
-              44.7654322
-            ],
-            [
-              20.5500474,
-              44.7655043
-            ],
-            [
-              20.5498997,
-              44.7655849
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438205969",
-      "properties": {
-        "timestamp": "2020-06-15T06:01:37Z",
-        "version": "4",
-        "changeset": "86647803",
-        "user": "TXBG",
-        "uid": "5569366",
-        "addr:housenumber": "8",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "id": "way/438205969"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5503685,
-              44.7654212
-            ],
-            [
-              20.5503466,
-              44.7653234
-            ],
-            [
-              20.5504695,
-              44.7653095
-            ],
-            [
-              20.5504915,
-              44.7654073
-            ],
-            [
-              20.5503685,
-              44.7654212
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438205970",
-      "properties": {
-        "timestamp": "2023-07-19T15:05:16Z",
-        "version": "5",
-        "changeset": "138722027",
-        "user": "RGZ AR Import",
-        "uid": "18850960",
-        "addr:housenumber": "8a",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "ref:RS:kucni_broj": "3425889",
-        "id": "way/438205970"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5503061,
-              44.765183
-            ],
-            [
-              20.5502948,
-              44.7650821
-            ],
-            [
-              20.5504119,
-              44.7650755
-            ],
-            [
-              20.5504233,
-              44.7651763
-            ],
-            [
-              20.5503061,
-              44.765183
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438205972",
-      "properties": {
-        "timestamp": "2020-06-15T06:01:37Z",
-        "version": "4",
-        "changeset": "86647803",
-        "user": "TXBG",
-        "uid": "5569366",
-        "addr:housenumber": "1a",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "id": "way/438205972"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5498906,
-              44.7652852
-            ],
-            [
-              20.5498073,
-              44.7652104
-            ],
-            [
-              20.5499184,
-              44.7651481
-            ],
-            [
-              20.5500016,
-              44.7652229
-            ],
-            [
-              20.5498906,
-              44.7652852
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438205974",
-      "properties": {
-        "timestamp": "2023-07-19T15:05:16Z",
-        "version": "5",
-        "changeset": "138722027",
-        "user": "RGZ AR Import",
-        "uid": "18850960",
-        "addr:housenumber": "1b",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "ref:RS:kucni_broj": "3446391",
-        "id": "way/438205974"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5496424,
-              44.7654564
-            ],
-            [
-              20.549593,
-              44.76541
-            ],
-            [
-              20.5497169,
-              44.7653397
-            ],
-            [
-              20.5497709,
-              44.7653852
-            ],
-            [
-              20.5496424,
-              44.7654564
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438205975",
-      "properties": {
-        "timestamp": "2023-07-19T15:05:16Z",
-        "version": "5",
-        "changeset": "138722027",
-        "user": "RGZ AR Import",
-        "uid": "18850960",
-        "addr:housenumber": "15",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "ref:RS:kucni_broj": "3423975",
-        "id": "way/438205975"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5489332,
-              44.7653669
-            ],
-            [
-              20.5488575,
-              44.765293
-            ],
-            [
-              20.5489987,
-              44.76522
-            ],
-            [
-              20.5490745,
-              44.765294
-            ],
-            [
-              20.5489332,
-              44.7653669
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438207033",
-      "properties": {
-        "timestamp": "2020-06-15T06:01:37Z",
-        "version": "4",
-        "changeset": "86647803",
-        "user": "TXBG",
-        "uid": "5569366",
-        "addr:housenumber": "27",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "id": "way/438207033"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5490266,
-              44.7660088
-            ],
-            [
-              20.5489431,
-              44.7659251
-            ],
-            [
-              20.5490563,
-              44.7658681
-            ],
-            [
-              20.5491398,
-              44.7659517
-            ],
-            [
-              20.5490266,
-              44.7660088
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438207034",
-      "properties": {
-        "timestamp": "2020-06-15T06:01:37Z",
-        "version": "4",
-        "changeset": "86647803",
-        "user": "TXBG",
-        "uid": "5569366",
-        "addr:housenumber": "25",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "id": "way/438207034"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5488039,
-              44.7661312
-            ],
-            [
-              20.5487279,
-              44.7660538
-            ],
-            [
-              20.5488703,
-              44.7659833
-            ],
-            [
-              20.5489463,
-              44.7660606
-            ],
-            [
-              20.5488039,
-              44.7661312
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438207035",
-      "properties": {
-        "timestamp": "2020-06-15T06:01:37Z",
-        "version": "4",
-        "changeset": "86647803",
-        "user": "TXBG",
-        "uid": "5569366",
-        "addr:housenumber": "23",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "id": "way/438207035"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.548622,
-              44.7662356
-            ],
-            [
-              20.5485502,
-              44.7661626
-            ],
-            [
-              20.5486761,
-              44.7661002
-            ],
-            [
-              20.5487479,
-              44.7661732
-            ],
-            [
-              20.548622,
-              44.7662356
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438207036",
-      "properties": {
-        "timestamp": "2020-06-15T06:01:37Z",
-        "version": "4",
-        "changeset": "86647803",
-        "user": "TXBG",
-        "uid": "5569366",
-        "addr:housenumber": "21",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "id": "way/438207036"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5484055,
-              44.7660479
-            ],
-            [
-              20.5483137,
-              44.7659628
-            ],
-            [
-              20.5484726,
-              44.7658764
-            ],
-            [
-              20.5485644,
-              44.7659614
-            ],
-            [
-              20.5484055,
-              44.7660479
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438207038",
-      "properties": {
-        "timestamp": "2020-06-15T06:01:37Z",
-        "version": "4",
-        "changeset": "86647803",
-        "user": "TXBG",
-        "uid": "5569366",
-        "addr:housenumber": "19",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "id": "way/438207038"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5487281,
-              44.7658825
-            ],
-            [
-              20.5486394,
-              44.7657917
-            ],
-            [
-              20.5487626,
-              44.7657311
-            ],
-            [
-              20.5487947,
-              44.7657639
-            ],
-            [
-              20.548828,
-              44.7657475
-            ],
-            [
-              20.5488846,
-              44.7658055
-            ],
-            [
-              20.5487281,
-              44.7658825
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438207039",
-      "properties": {
-        "timestamp": "2020-06-15T06:01:37Z",
-        "version": "4",
-        "changeset": "86647803",
-        "user": "TXBG",
-        "uid": "5569366",
-        "addr:housenumber": "17",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "id": "way/438207039"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5489814,
-              44.7657497
-            ],
-            [
-              20.5488991,
-              44.7656677
-            ],
-            [
-              20.5490109,
-              44.7656111
-            ],
-            [
-              20.5490932,
-              44.7656931
-            ],
-            [
-              20.5489814,
-              44.7657497
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438207040",
-      "properties": {
-        "timestamp": "2023-07-19T15:05:16Z",
-        "version": "6",
-        "changeset": "138722027",
-        "user": "RGZ AR Import",
-        "uid": "18850960",
-        "addr:housenumber": "31",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "ref:RS:kucni_broj": "3432975",
-        "id": "way/438207040"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5491486,
-              44.7656476
-            ],
-            [
-              20.5490801,
-              44.7655761
-            ],
-            [
-              20.5492078,
-              44.7655145
-            ],
-            [
-              20.5492762,
-              44.765586
-            ],
-            [
-              20.5491486,
-              44.7656476
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438207041",
-      "properties": {
-        "timestamp": "2020-06-15T06:01:37Z",
-        "version": "4",
-        "changeset": "86647803",
-        "user": "TXBG",
-        "uid": "5569366",
-        "addr:housenumber": "13",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "id": "way/438207041"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5485203,
-              44.7655775
-            ],
-            [
-              20.5484628,
-              44.7655183
-            ],
-            [
-              20.5486389,
-              44.7654321
-            ],
-            [
-              20.5486948,
-              44.7654897
-            ],
-            [
-              20.5486609,
-              44.7655062
-            ],
-            [
-              20.5487017,
-              44.7655482
-            ],
-            [
-              20.5486063,
-              44.7655949
-            ],
-            [
-              20.5485672,
-              44.7655546
-            ],
-            [
-              20.5485203,
-              44.7655775
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438207042",
-      "properties": {
-        "timestamp": "2020-06-15T06:01:37Z",
-        "version": "4",
-        "changeset": "86647803",
-        "user": "TXBG",
-        "uid": "5569366",
-        "addr:housenumber": "11",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "id": "way/438207042"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5483913,
-              44.7656807
-            ],
-            [
-              20.5483048,
-              44.7655982
-            ],
-            [
-              20.5484277,
-              44.7655333
-            ],
-            [
-              20.5485141,
-              44.7656158
-            ],
-            [
-              20.5483913,
-              44.7656807
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438207043",
-      "properties": {
-        "timestamp": "2020-06-15T06:01:37Z",
-        "version": "4",
-        "changeset": "86647803",
-        "user": "TXBG",
-        "uid": "5569366",
-        "addr:housenumber": "9",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "id": "way/438207043"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5481371,
-              44.765813
-            ],
-            [
-              20.5480519,
-              44.765735
-            ],
-            [
-              20.5481891,
-              44.7656594
-            ],
-            [
-              20.5482744,
-              44.7657374
-            ],
-            [
-              20.5481371,
-              44.765813
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438207044",
-      "properties": {
-        "timestamp": "2020-06-15T06:01:37Z",
-        "version": "4",
-        "changeset": "86647803",
-        "user": "TXBG",
-        "uid": "5569366",
-        "addr:housenumber": "7a",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "id": "way/438207044"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5479483,
-              44.7656196
-            ],
-            [
-              20.5478434,
-              44.7655174
-            ],
-            [
-              20.5479762,
-              44.7654488
-            ],
-            [
-              20.548081,
-              44.765551
-            ],
-            [
-              20.5479483,
-              44.7656196
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438207045",
-      "properties": {
-        "timestamp": "2020-06-15T06:01:37Z",
-        "version": "4",
-        "changeset": "86647803",
-        "user": "TXBG",
-        "uid": "5569366",
-        "addr:housenumber": "7",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "id": "way/438207045"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.548097,
-              44.7655194
-            ],
-            [
-              20.5480089,
-              44.7654297
-            ],
-            [
-              20.5480861,
-              44.7653915
-            ],
-            [
-              20.5481084,
-              44.7654143
-            ],
-            [
-              20.54826,
-              44.7653393
-            ],
-            [
-              20.5483447,
-              44.7654255
-            ],
-            [
-              20.5482557,
-              44.7654696
-            ],
-            [
-              20.5482366,
-              44.7654502
-            ],
-            [
-              20.548097,
-              44.7655194
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438207046",
-      "properties": {
-        "timestamp": "2020-06-15T06:01:37Z",
-        "version": "4",
-        "changeset": "86647803",
-        "user": "TXBG",
-        "uid": "5569366",
-        "addr:housenumber": "5",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "id": "way/438207046"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5483943,
-              44.76537
-            ],
-            [
-              20.5483211,
-              44.7653038
-            ],
-            [
-              20.5484491,
-              44.7652324
-            ],
-            [
-              20.5485224,
-              44.7652986
-            ],
-            [
-              20.5483943,
-              44.76537
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438207047",
-      "properties": {
-        "timestamp": "2020-06-15T06:01:37Z",
-        "version": "4",
-        "changeset": "86647803",
-        "user": "TXBG",
-        "uid": "5569366",
-        "addr:housenumber": "3",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "id": "way/438207047"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5485681,
-              44.7652613
-            ],
-            [
-              20.548484,
-              44.7651804
-            ],
-            [
-              20.5486338,
-              44.7651019
-            ],
-            [
-              20.5487179,
-              44.7651828
-            ],
-            [
-              20.5485681,
-              44.7652613
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438207048",
-      "properties": {
-        "timestamp": "2023-07-19T15:05:16Z",
-        "version": "4",
-        "changeset": "138722027",
-        "user": "RGZ AR Import",
-        "uid": "18850960",
-        "addr:housenumber": "1",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "ref:RS:kucni_broj": "3427324",
-        "id": "way/438207048"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5487704,
-              44.7651611
-            ],
-            [
-              20.548673,
-              44.7650667
-            ],
-            [
-              20.5488139,
-              44.7649934
-            ],
-            [
-              20.5489113,
-              44.7650877
-            ],
-            [
-              20.5487704,
-              44.7651611
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438207072",
-      "properties": {
-        "timestamp": "2023-07-19T15:05:16Z",
-        "version": "4",
-        "changeset": "138722027",
-        "user": "RGZ AR Import",
-        "uid": "18850960",
-        "addr:housenumber": "1c",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "ref:RS:kucni_broj": "3445992",
-        "id": "way/438207072"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.549203,
-              44.7650433
-            ],
-            [
-              20.5491249,
-              44.7649779
-            ],
-            [
-              20.549253,
-              44.7649008
-            ],
-            [
-              20.5493312,
-              44.7649662
-            ],
-            [
-              20.549203,
-              44.7650433
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438413909",
-      "properties": {
-        "timestamp": "2023-07-19T14:45:14Z",
-        "version": "5",
-        "changeset": "138721264",
-        "user": "RGZ AR Import",
-        "uid": "18850960",
-        "addr:housenumber": "1c",
-        "addr:street": "Лимска",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "ref:RS:kucni_broj": "3423940",
-        "id": "way/438413909"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5582655,
-              44.7631741
-            ],
-            [
-              20.5581876,
-              44.7630917
-            ],
-            [
-              20.5582979,
-              44.7630392
-            ],
-            [
-              20.5583758,
-              44.7631215
-            ],
-            [
-              20.5582655,
-              44.7631741
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438414874",
-      "properties": {
-        "timestamp": "2023-07-19T14:45:14Z",
-        "version": "5",
-        "changeset": "138721264",
-        "user": "RGZ AR Import",
-        "uid": "18850960",
-        "addr:housenumber": "3",
-        "addr:street": "Лимска",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "ref:RS:kucni_broj": "3429335",
-        "id": "way/438414874"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5575204,
-              44.7635617
-            ],
-            [
-              20.5574239,
-              44.7634978
-            ],
-            [
-              20.5575516,
-              44.7634006
-            ],
-            [
-              20.5576481,
-              44.7634645
-            ],
-            [
-              20.5575204,
-              44.7635617
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438414875",
-      "properties": {
-        "timestamp": "2023-07-19T14:45:14Z",
-        "version": "6",
-        "changeset": "138721264",
-        "user": "RGZ AR Import",
-        "uid": "18850960",
-        "addr:housenumber": "3a",
-        "addr:street": "Лимска",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "ref:RS:kucni_broj": "3429336",
-        "id": "way/438414875"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5576693,
-              44.7635631
-            ],
-            [
-              20.5576094,
-              44.7635199
-            ],
-            [
-              20.5576788,
-              44.7634714
-            ],
-            [
-              20.5576268,
-              44.7634339
-            ],
-            [
-              20.5576957,
-              44.7633856
-            ],
-            [
-              20.5578077,
-              44.7634663
-            ],
-            [
-              20.5576693,
-              44.7635631
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/438414876",
-      "properties": {
-        "timestamp": "2023-07-19T14:45:14Z",
-        "version": "5",
-        "changeset": "138721264",
-        "user": "RGZ AR Import",
-        "uid": "18850960",
-        "addr:housenumber": "1",
-        "addr:street": "Лимска",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "ref:RS:kucni_broj": "3423937",
-        "id": "way/438414876"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5577233,
-              44.7636462
-            ],
-            [
-              20.5576504,
-              44.7635941
-            ],
-            [
-              20.5577678,
-              44.7635113
-            ],
-            [
-              20.5578407,
-              44.7635634
-            ],
-            [
-              20.5577233,
-              44.7636462
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/664303288",
-      "properties": {
-        "timestamp": "2019-01-18T01:56:29Z",
-        "version": "1",
-        "changeset": "66412820",
-        "user": "TXBG",
-        "uid": "5569366",
-        "addr:city": "Београд",
-        "addr:housenumber": "1",
-        "addr:postcode": "11000",
-        "addr:street": "Љубићка",
-        "building": "house",
-        "id": "way/664303288"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.4810753,
-              44.7849597
-            ],
-            [
-              20.4811028,
-              44.7849324
-            ],
-            [
-              20.4810686,
-              44.784915
-            ],
-            [
-              20.4811039,
-              44.78488
-            ],
-            [
-              20.4812143,
-              44.784936
-            ],
-            [
-              20.4811515,
-              44.7849984
-            ],
-            [
-              20.4810753,
-              44.7849597
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/664303289",
-      "properties": {
-        "timestamp": "2023-06-19T13:26:53Z",
-        "version": "2",
-        "changeset": "137519461",
-        "user": "RGZ AR Import",
-        "uid": "18850960",
-        "addr:city": "Београд",
-        "addr:housenumber": "2",
-        "addr:postcode": "11000",
-        "addr:street": "Љубићка",
-        "building": "house",
-        "ref:RS:kucni_broj": "3220097",
-        "id": "way/664303289"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.4807496,
-              44.7850327
-            ],
-            [
-              20.4807239,
-              44.7849973
-            ],
-            [
-              20.4806667,
-              44.7850183
-            ],
-            [
-              20.4806255,
-              44.7849617
-            ],
-            [
-              20.4807846,
-              44.7849034
-            ],
-            [
-              20.4808515,
-              44.7849953
-            ],
-            [
-              20.4807496,
-              44.7850327
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/684959056",
-      "properties": {
-        "timestamp": "2023-07-19T15:05:16Z",
-        "version": "3",
-        "changeset": "138722027",
-        "user": "RGZ AR Import",
-        "uid": "18850960",
-        "addr:housenumber": "10g",
-        "addr:street": "Рибничка",
-        "addr:suburb": "Калуђерица",
-        "building": "house",
-        "ref:RS:kucni_broj": "3442001",
-        "id": "way/684959056"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.54962,
-              44.76601
-            ],
-            [
-              20.5495443,
-              44.7659197
-            ],
-            [
-              20.5496809,
-              44.7658619
-            ],
-            [
-              20.5497567,
-              44.7659522
-            ],
-            [
-              20.54962,
-              44.76601
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "id": "way/737079861",
       "properties": {
         "timestamp": "2023-06-19T13:24:39Z",
@@ -30774,165 +29005,6 @@
             [
               20.4802966,
               44.7826594
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/975395461",
-      "properties": {
-        "timestamp": "2023-07-19T14:45:14Z",
-        "version": "2",
-        "changeset": "138721264",
-        "user": "RGZ AR Import",
-        "uid": "18850960",
-        "addr:housenumber": "1g",
-        "addr:street": "Лимска",
-        "addr:suburb": "Калуђерица",
-        "building": "yes",
-        "ref:RS:kucni_broj": "3445891",
-        "id": "way/975395461"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5584105,
-              44.7630344
-            ],
-            [
-              20.5584114,
-              44.7630203
-            ],
-            [
-              20.5584227,
-              44.7630147
-            ],
-            [
-              20.558417,
-              44.763009
-            ],
-            [
-              20.5585302,
-              44.7629527
-            ],
-            [
-              20.5586423,
-              44.7630665
-            ],
-            [
-              20.5585668,
-              44.763104
-            ],
-            [
-              20.5585793,
-              44.7631167
-            ],
-            [
-              20.5584807,
-              44.7631657
-            ],
-            [
-              20.5584092,
-              44.7630931
-            ],
-            [
-              20.5584489,
-              44.7630734
-            ],
-            [
-              20.5584105,
-              44.7630344
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/975395462",
-      "properties": {
-        "timestamp": "2023-07-19T14:45:14Z",
-        "version": "2",
-        "changeset": "138721264",
-        "user": "RGZ AR Import",
-        "uid": "18850960",
-        "addr:housenumber": "1a",
-        "addr:street": "Лимска",
-        "addr:suburb": "Калуђерица",
-        "building": "apartments",
-        "ref:RS:kucni_broj": "3423938",
-        "id": "way/975395462"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5578513,
-              44.7634612
-            ],
-            [
-              20.557706,
-              44.7633464
-            ],
-            [
-              20.5579313,
-              44.7632027
-            ],
-            [
-              20.5580766,
-              44.7633175
-            ],
-            [
-              20.5578513,
-              44.7634612
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/975395482",
-      "properties": {
-        "timestamp": "2023-07-19T15:05:16Z",
-        "version": "2",
-        "changeset": "138722027",
-        "user": "RGZ AR Import",
-        "uid": "18850960",
-        "addr:housenumber": "29",
-        "addr:street": "Рибничка",
-        "building": "yes",
-        "ref:RS:kucni_broj": "3428181",
-        "id": "way/975395482"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              20.5492723,
-              44.7657817
-            ],
-            [
-              20.5492227,
-              44.7657151
-            ],
-            [
-              20.5492982,
-              44.7656868
-            ],
-            [
-              20.5493478,
-              44.7657534
-            ],
-            [
-              20.5492723,
-              44.7657817
             ]
           ]
         ]
@@ -38647,34 +36719,6 @@
     },
     {
       "type": "Feature",
-      "id": "node/2677835862",
-      "properties": {
-        "timestamp": "2020-08-14T15:10:02Z",
-        "version": "8",
-        "changeset": "89418447",
-        "user": "TXBG",
-        "uid": "5569366",
-        "addr:city": "Београд",
-        "addr:housenumber": "91",
-        "addr:postcode": "11000",
-        "addr:street": "Кумодрашка",
-        "name": "Новинарница",
-        "name:sr": "Новинарница",
-        "name:sr-Latn": "Novinarnica",
-        "opening_hours": "06:00-22:00",
-        "shop": "kiosk",
-        "id": "node/2677835862"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.4798357,
-          44.7789528
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "id": "node/2678835334",
       "properties": {
         "timestamp": "2023-10-29T11:36:48Z",
@@ -39222,6 +37266,688 @@
           44.7821697
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4044492351",
+      "properties": {
+        "timestamp": "2023-06-19T13:49:11Z",
+        "version": "2",
+        "changeset": "137520541",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "14",
+        "addr:street": "Борисављевићева",
+        "ref:RS:kucni_broj": "3219017",
+        "id": "node/4044492351"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.470551,
+          44.7846861
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4044492352",
+      "properties": {
+        "timestamp": "2023-06-19T13:49:11Z",
+        "version": "2",
+        "changeset": "137520541",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "16",
+        "addr:street": "Борисављевићева",
+        "ref:RS:kucni_broj": "3219018",
+        "id": "node/4044492352"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4706358,
+          44.7846794
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4044492361",
+      "properties": {
+        "timestamp": "2016-03-06T19:38:37Z",
+        "version": "1",
+        "changeset": "37652218",
+        "user": "nikicam",
+        "uid": "2886645",
+        "addr:housenumber": "28",
+        "addr:street": "Борисављевићева",
+        "id": "node/4044492361"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4718769,
+          44.7845732
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4044492362",
+      "properties": {
+        "timestamp": "2023-06-19T13:49:11Z",
+        "version": "2",
+        "changeset": "137520541",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "30",
+        "addr:street": "Борисављевићева",
+        "ref:RS:kucni_broj": "3236073",
+        "id": "node/4044492362"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4719809,
+          44.7845392
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4044492365",
+      "properties": {
+        "timestamp": "2023-06-19T17:22:25Z",
+        "version": "2",
+        "changeset": "137529037",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "4",
+        "addr:street": "Стевана Лилића",
+        "ref:RS:kucni_broj": "3218647",
+        "id": "node/4044492365"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4720267,
+          44.7838243
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4044492366",
+      "properties": {
+        "timestamp": "2023-06-19T17:22:25Z",
+        "version": "2",
+        "changeset": "137529037",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "4a",
+        "addr:street": "Стевана Лилића",
+        "ref:RS:kucni_broj": "3218646",
+        "id": "node/4044492366"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4720525,
+          44.7839165
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9557345950",
+      "properties": {
+        "timestamp": "2023-06-19T17:22:25Z",
+        "version": "2",
+        "changeset": "137529037",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "2a",
+        "addr:street": "Стевана Лилића",
+        "ref:RS:kucni_broj": "3218404",
+        "id": "node/9557345950"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4718968,
+          44.78342
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9557345951",
+      "properties": {
+        "timestamp": "2023-06-19T17:22:25Z",
+        "version": "2",
+        "changeset": "137529037",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "2",
+        "addr:street": "Стевана Лилића",
+        "ref:RS:kucni_broj": "3237124",
+        "id": "node/9557345951"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4718779,
+          44.7833401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9557345954",
+      "properties": {
+        "timestamp": "2023-06-19T13:43:48Z",
+        "version": "3",
+        "changeset": "137520230",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "2",
+        "addr:street": "Боже Јанковића",
+        "ref:RS:kucni_broj": "3217988",
+        "id": "node/9557345954"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4706406,
+          44.7836493
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4044582330",
+      "properties": {
+        "timestamp": "2023-06-19T13:43:48Z",
+        "version": "2",
+        "changeset": "137520230",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "14",
+        "addr:street": "Боже Јанковића",
+        "ref:RS:kucni_broj": "3218605",
+        "id": "node/4044582330"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.472142,
+          44.7835515
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4044582331",
+      "properties": {
+        "timestamp": "2023-06-19T13:43:48Z",
+        "version": "2",
+        "changeset": "137520230",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "16",
+        "addr:street": "Боже Јанковића",
+        "ref:RS:kucni_broj": "3218606",
+        "id": "node/4044582331"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4723267,
+          44.7835302
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9557345949",
+      "properties": {
+        "timestamp": "2023-06-19T17:22:25Z",
+        "version": "2",
+        "changeset": "137529037",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "2b",
+        "addr:street": "Стевана Лилића",
+        "ref:RS:kucni_broj": "3218405",
+        "id": "node/9557345949"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4719198,
+          44.7835171
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4044492343",
+      "properties": {
+        "timestamp": "2023-06-19T16:43:34Z",
+        "version": "2",
+        "changeset": "137527763",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "1",
+        "addr:street": "Пироћанчева",
+        "ref:RS:kucni_broj": "3217982",
+        "id": "node/4044492343"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4707568,
+          44.7839342
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4044492344",
+      "properties": {
+        "timestamp": "2023-06-19T13:43:48Z",
+        "version": "2",
+        "changeset": "137520230",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "3",
+        "addr:street": "Боже Јанковића",
+        "ref:RS:kucni_broj": "3217983",
+        "id": "node/4044492344"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.470646,
+          44.783824
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4044492349",
+      "properties": {
+        "timestamp": "2023-06-19T13:51:24Z",
+        "version": "2",
+        "changeset": "137520665",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "6",
+        "addr:street": "Борисављевићева",
+        "ref:RS:kucni_broj": "3234155",
+        "id": "node/4044492349"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4699137,
+          44.7847396
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4044492350",
+      "properties": {
+        "timestamp": "2023-06-19T13:51:24Z",
+        "version": "2",
+        "changeset": "137520665",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "8",
+        "addr:street": "Борисављевићева",
+        "ref:RS:kucni_broj": "3236067",
+        "id": "node/4044492350"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4700847,
+          44.7845125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4044425060",
+      "properties": {
+        "timestamp": "2023-06-19T13:29:05Z",
+        "version": "2",
+        "changeset": "137519580",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "20",
+        "addr:street": "Адмирала Вуковића",
+        "ref:RS:kucni_broj": "3221767",
+        "id": "node/4044425060"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4707544,
+          44.7853154
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4044786033",
+      "properties": {
+        "timestamp": "2023-06-19T13:29:05Z",
+        "version": "2",
+        "changeset": "137519580",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "45",
+        "addr:street": "Адмирала Вуковића",
+        "ref:RS:kucni_broj": "3218965",
+        "id": "node/4044786033"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4730769,
+          44.7848914
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4055409781",
+      "properties": {
+        "timestamp": "2016-03-11T20:37:05Z",
+        "version": "1",
+        "changeset": "37771952",
+        "user": "nikicam",
+        "uid": "2886645",
+        "addr:housenumber": "1",
+        "addr:street": "Кирила Савића",
+        "id": "node/4055409781"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4730233,
+          44.7819695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4055409782",
+      "properties": {
+        "timestamp": "2023-06-19T15:29:16Z",
+        "version": "2",
+        "changeset": "137524992",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "3",
+        "addr:street": "Кирила Савића",
+        "ref:RS:kucni_broj": "3218391",
+        "id": "node/4055409782"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4730723,
+          44.7820234
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4055409783",
+      "properties": {
+        "timestamp": "2023-06-19T15:29:16Z",
+        "version": "2",
+        "changeset": "137524992",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "5",
+        "addr:street": "Кирила Савића",
+        "ref:RS:kucni_broj": "3216454",
+        "id": "node/4055409783"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4731513,
+          44.7821563
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4055409784",
+      "properties": {
+        "timestamp": "2023-06-19T15:29:16Z",
+        "version": "2",
+        "changeset": "137524992",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "7",
+        "addr:street": "Кирила Савића",
+        "ref:RS:kucni_broj": "3218392",
+        "id": "node/4055409784"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4732556,
+          44.7822712
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4044582336",
+      "properties": {
+        "timestamp": "2016-03-06T20:20:13Z",
+        "version": "1",
+        "changeset": "37652980",
+        "user": "nikicam",
+        "uid": "2886645",
+        "addr:housenumber": "1a",
+        "addr:street": "Исидоре Секулић",
+        "id": "node/4044582336"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4741042,
+          44.7819328
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4044582337",
+      "properties": {
+        "timestamp": "2016-03-06T20:20:13Z",
+        "version": "1",
+        "changeset": "37652980",
+        "user": "nikicam",
+        "uid": "2886645",
+        "addr:housenumber": "3",
+        "addr:street": "Исидоре Секулић",
+        "id": "node/4044582337"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4742511,
+          44.7818444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/400679818",
+      "properties": {
+        "timestamp": "2023-09-22T11:13:33Z",
+        "version": "4",
+        "changeset": "141599829",
+        "user": "pule",
+        "uid": "893229",
+        "addr:city": "Београд",
+        "addr:housenumber": "26",
+        "addr:postcode": "11000",
+        "addr:street": "Есад Пашина",
+        "building": "house",
+        "id": "way/400679818"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4748448,
+              44.7818916
+            ],
+            [
+              20.4747452,
+              44.7817954
+            ],
+            [
+              20.474847,
+              44.7817423
+            ],
+            [
+              20.4749467,
+              44.7818385
+            ],
+            [
+              20.4748448,
+              44.7818916
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4044582332",
+      "properties": {
+        "timestamp": "2023-06-19T13:43:48Z",
+        "version": "2",
+        "changeset": "137520230",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "50",
+        "addr:street": "Боже Јанковића",
+        "ref:RS:kucni_broj": "3218622",
+        "id": "node/4044582332"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4752688,
+          44.7825582
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4044806237",
+      "properties": {
+        "timestamp": "2023-06-19T15:52:42Z",
+        "version": "2",
+        "changeset": "137525830",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "18",
+        "addr:street": "Лимска",
+        "ref:RS:kucni_broj": "3218671",
+        "id": "node/4044806237"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4748142,
+          44.7829537
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4044806238",
+      "properties": {
+        "timestamp": "2023-06-19T13:43:48Z",
+        "version": "2",
+        "changeset": "137520230",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "39",
+        "addr:street": "Боже Јанковића",
+        "ref:RS:kucni_broj": "3218670",
+        "id": "node/4044806238"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4746893,
+          44.7828578
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4044786035",
+      "properties": {
+        "timestamp": "2023-06-19T13:29:05Z",
+        "version": "2",
+        "changeset": "137519580",
+        "user": "RGZ AR Import",
+        "uid": "18850960",
+        "addr:housenumber": "61",
+        "addr:street": "Адмирала Вуковића",
+        "ref:RS:kucni_broj": "3234538",
+        "id": "node/4044786035"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4745825,
+          44.7842787
+        ]
+      }
+    },{
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "id": "node/4044786034",
+          "properties": {
+            "timestamp": "2023-06-19T17:04:13Z",
+            "version": "2",
+            "changeset": "137528538",
+            "user": "RGZ AR Import",
+            "uid": "18850960",
+            "addr:housenumber": "1",
+            "addr:street": "Рибничка",
+            "ref:RS:kucni_broj": "3241985",
+            "id": "node/4044786034"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              20.4746264,
+              44.7846881
+            ]
+          }
+        }
+      ]
     }
   ]
 }

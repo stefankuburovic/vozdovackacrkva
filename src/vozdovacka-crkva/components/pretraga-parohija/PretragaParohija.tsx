@@ -12,14 +12,13 @@ import {
 } from "@mui/material";
 import {GeoJsonObject} from "geojson";
 import L from 'leaflet';
-import {extractNumericPart, latToCyr} from "../../../util/functions";
-import {GeoJSON, MapContainer, Polygon, Popup, TileLayer} from "react-leaflet";
+import {latToCyr} from "../../../util/functions";
+import {GeoJSON, MapContainer, Popup, TileLayer} from "react-leaflet";
 import {uliceRSCyr} from "../../const/pretragaparohija/ulice";
 import oJovo from "../../const/pretragaparohija/map/o_jovo.min.json";
 import oGligorije from "../../const/pretragaparohija/map/o_gligorije.min.json";
-import oDjordje from "../../const/pretragaparohija/map/o_djordje.json";
+import oDjordje from "../../const/pretragaparohija/map/o_djordje.min.json";
 import oAleksandar from "../../const/pretragaparohija/map/o_aleksandar.min.json";
-// import JSON from "../../const/pretragaparohija/map/map.json";
 import {NEPARNI, PARNI, Paroh, Parohija, parohije} from "../../const/pretragaparohija/const";
 import 'leaflet/dist/leaflet.css';
 
@@ -224,7 +223,6 @@ function PretragaParohija() {
     }
 
     function onEachFeature(feature: any, layer: any) {
-        console.log(feature, layer);
         //bind click
         layer.on({
             click: whenClicked
@@ -328,6 +326,7 @@ function PretragaParohija() {
                     />
                     <GeoJSON
                         data={oAleksandar as GeoJsonObject}
+                        onEachFeature={onEachFeature}
                         style={
                             {
                                 fillColor: "#7835cc",
@@ -353,6 +352,7 @@ function PretragaParohija() {
                     </GeoJSON>
                     <GeoJSON
                         data={oDjordje as GeoJsonObject}
+                        onEachFeature={onEachFeature}
                         style={
                             {
                                 fillColor: "#968e0f",

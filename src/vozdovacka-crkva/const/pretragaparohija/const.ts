@@ -540,8 +540,8 @@ export const parohije: Array<Parohija> =  [
     },
     {
         ime: {
-            lat: "Zlarinska",
-            cyr: "Зларинска",
+            lat: ["Zlarinska (Dinka Tucakovica)", "Zlarinska (Dinka Tucakovića)"],
+            cyr: "Зларинска (Динка Туцаковића)",
         },
         parniIliNeparni: PARNI,
         paroh: Paroh.otacDjordje,
