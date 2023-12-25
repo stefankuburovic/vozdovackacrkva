@@ -40,6 +40,11 @@ export const slides = [
         height: 1257
     },
     {
+        src: '/assets/images/nove/IMG_0020.jpg',
+        width: 1797,
+        height: 1257
+    },
+    {
         src: '/assets/images/nove/IMG_1000.jpg',
         width: 1460,
         height: 1257
@@ -47,11 +52,6 @@ export const slides = [
     {
         src: '/assets/images/nove/IMG_1015.jpg',
         width: 1460,
-        height: 1257
-    },
-    {
-        src: '/assets/images/nove/IMG_1047.jpg',
-        width: 955,
         height: 1257
     },
 ];

@@ -15,6 +15,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     window.scrollTo(0, 0);
 
+    // Show the loading screen
+    document.getElementById("loading-screen").style.display = "block";
+
+    // Simulate some asynchronous task (e.g., fetching data)
+    setTimeout(function () {
+        document.getElementById("loading-screen").style.opacity = 0;
+        setTimeout(function () {
+            document.getElementById("loading-screen").style.display = "none";
+        }, 500)
+    }, 2000); // Adjust the time according to your needs
+
     const navbar = new bootstrap.ScrollSpy(document.body, {
         target: '#navbar',
     });

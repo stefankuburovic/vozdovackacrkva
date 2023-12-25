@@ -1,5 +1,5 @@
 import React from 'react'
-import {MapContainer, Polygon, SVGOverlay, TileLayer} from "react-leaflet";
+import {MapContainer, Polygon, TileLayer} from "react-leaflet";
 
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-geosearch/dist/geosearch.css';
@@ -7,15 +7,16 @@ import {hram_bounds, IGeoJSON, mapObject} from "../../../const/pretragaparohija/
 import GeoJSONField from "./GeoJSONField/GeoJSONField";
 import SearchField from "./SearchField/Search";
 import {Box} from "@mui/material";
-import {LatLngBoundsExpression, LatLngExpression} from "leaflet";
+import {LatLngExpression} from "leaflet";
 
 
 function Map() {
 
     return (
         <div style={{width: "100%", overflow: "hidden", marginTop: "100px"}}>
-            <Box>
+            <Box style={{marginBottom: "2rem"}}>
                 <h4>Мапа парохије</h4>
+                <p>Претражите адресу или кликните на зграду да пронађете свештеника који је задужен за вашу адресу</p>
             </Box>
             <MapContainer center={[44.7778196, 20.4749862]} zoom={23} style={{height: "500px", width: "100%"}} >
                 <SearchField  />

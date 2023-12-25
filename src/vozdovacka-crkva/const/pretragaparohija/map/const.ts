@@ -3,6 +3,9 @@ import oJovo from "../../../const/pretragaparohija/map/o_jovo.json";
 import oAleksandar from "../../../const/pretragaparohija/map/o_aleksandar.json";
 import oGligorije from "../../../const/pretragaparohija/map/o_gligorije.json";
 import {GeoJsonObject} from "geojson";
+import {Provider} from "leaflet-geosearch/dist/providers";
+import {Control, ControlPosition, MarkerOptions} from "leaflet";
+import {SearchResult} from "leaflet-geosearch/dist/providers/provider";
 
 export interface IGeoJSON {
     svestenik: GeoJsonObject;
@@ -12,6 +15,53 @@ export interface IGeoJSON {
         color: string;
         opacity: number;
     }
+}
+
+export interface SearchControlProps extends Control {
+    /** the provider to use for searching */
+    provider: Provider;
+    /** the leaflet position to render the element in */
+    position: ControlPosition;
+    /**
+     * the stye of the search element
+     * @default bar
+     **/
+    style: 'button' | 'bar';
+    marker: MarkerOptions;
+    maxMarkers: number;
+    showMarker: boolean;
+    showPopup: boolean;
+    popupFormat<T = any>(args: {
+        query: Selection;
+        result: SearchResult<T>;
+    }): string;
+    resultFormat<T = any>(args: {
+        result: SearchResult<T>;
+    }): string;
+    searchLabel: string;
+    clearSearchLabel: string;
+    notFoundMessage: string;
+    messageHideDelay: number;
+    animateZoom: boolean;
+    zoomLevel: number;
+    retainZoomLevel: boolean;
+    classNames: {
+        container: string;
+        button: string;
+        resetButton: string;
+        msgbox: string;
+        form: string;
+        input: string;
+        resultlist: string;
+        item: string;
+        notfound: string;
+    };
+    autoComplete: boolean;
+    autoCompleteDelay: number;
+    maxSuggestions: number;
+    autoClose: boolean;
+    keepResult: boolean;
+    updateMap: boolean;
 }
 export const mapObject: IGeoJSON[] = [
     {
