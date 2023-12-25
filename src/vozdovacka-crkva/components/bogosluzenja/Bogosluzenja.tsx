@@ -35,7 +35,7 @@ function a11yProps(index: number) {
 }
 
 export default function Bogosluzenja() {
-    const [value, setValue] = React.useState(0);
+    const [value, setValue] = React.useState(2);
 
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
@@ -53,8 +53,10 @@ export default function Bogosluzenja() {
                             value={value}
                             onChange={handleChange}
                             className="bogosluzenja-tabs"
+                            variant="scrollable"
+                            scrollButtons
+                            allowScrollButtonsMobile
                             textColor="inherit"
-                            centered
                             sx={{
                                 '& .MuiTabs-indicator': {
                                     backgroundColor: '#9b0000',
@@ -63,15 +65,15 @@ export default function Bogosluzenja() {
                         >
                             <Tab label="Зимско време" {...a11yProps(0)} disableRipple/>
                             <Tab label="Летње време" {...a11yProps(1)} disableRipple/>
-                            <Tab label="Текућа недеља" {...a11yProps(0)} disableRipple/>
+                            <Tab label="Текућа недеља" {...a11yProps(2)} disableRipple/>
                         </Tabs>
                         <CustomTabPanel index={0} value={value}>
                             <div data-mesh-id="comp-lo6y8a5kinlineContent-gridContainer"
                                  data-testid="mesh-container-content">
                                 <div>
-                                    <h4>
+                                    <h3>
                                         <span>Зимско време (Октобар - Април)</span>
-                                    </h4>
+                                    </h3>
                                     <h5>
                                         <span>Свакодневно</span>
                                     </h5>
@@ -120,9 +122,9 @@ export default function Bogosluzenja() {
                             <div data-mesh-id="comp-lo6y8a5kinlineContent-gridContainer"
                                  data-testid="mesh-container-content">
                                 <div>
-                                    <h4>
+                                    <h3>
                                         <span>Летње време (Мај - Септембар)</span>
-                                    </h4>
+                                    </h3>
                                     <h5>
                                         <span>Свакодневно</span>
                                     </h5>
@@ -168,7 +170,72 @@ export default function Bogosluzenja() {
                             </div>
                         </CustomTabPanel>
                         <CustomTabPanel index={2} value={value}>
-                            <h4>Богослужења у текућој недељи</h4>
+                            <h3>Богослужења у текућој недељи</h3>
+                            <div>
+                                <div className="praznicni-dani">
+                                    <h5>
+                                        <span>Петак, 05.01.2024 у 8:30 ч. - Царски Часови</span>
+                                    </h5>
+                                </div>
+                                <div className="praznicni-dani">
+                                    <h5>
+                                        <span>Субота, 06.01.2024 - Бадњи Дан</span>
+                                    </h5>
+                                    <ul>
+                                        <li>
+                                            <p>9:00 - Света Литургија</p>
+                                        </li>
+                                        <li>
+                                            <p>16:00 - Празнично Бденије</p>
+                                        </li>
+                                        <li>
+                                            <p>17:00 - Паљење бадњака у порти цркве</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className="praznicni-dani">
+                                    <h5>
+                                        <span>Недеља, 07.01.2024 - Божић</span>
+                                    </h5>
+                                    <ul>
+                                        <li>
+                                            <p>00:00 - Прва празнична литургија</p>
+                                        </li>
+                                        <li>
+                                            <p>09:00 - Друга празнична литургија</p>
+                                        </li>
+                                        <li>
+                                            <p>17:00 - Празнично бденије</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className="praznicni-dani">
+                                    <h5>
+                                        <span>Понедељак, 08.01.2024. - Сабор Пресвете Богородице</span>
+                                    </h5>
+                                    <ul>
+                                        <li>
+                                            <p>09:00 - Света Литургија</p>
+                                        </li>
+                                        <li>
+                                            <p>17:00 - Празнично бденије</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className="praznicni-dani">
+                                    <h5>
+                                        <span>Уторак, 09.01.2024. - Св. Првомученик и Архиђакон Стефан</span>
+                                    </h5>
+                                    <ul>
+                                        <li>
+                                            <p>7:00 - 8:00 - Резање славских колача</p>
+                                        </li>
+                                        <li>
+                                            <p>09:00 - Света Литургија</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </CustomTabPanel>
                     </Box>
                 </Box>
