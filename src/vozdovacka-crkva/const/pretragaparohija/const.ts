@@ -341,20 +341,6 @@ export const parohije: Array<Parohija> =  [
     },
     {
         ime: {
-            lat: ["Bulevar oslobodjenja","Bulevar oslobođenja"],
-            cyr: "Булевар ослобођења"
-        },
-        odredjeniBrojevi: [
-            {
-                prviBroj: 75,
-                zadnjiBroj: 209
-            }
-        ],
-        parniIliNeparni: NEPARNI,
-        paroh: Paroh.otacJovo,
-    },
-    {
-        ime: {
             lat: "Vojvode Stepe",
             cyr: "Војводе Степе"
         },

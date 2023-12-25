@@ -1,41 +1,23 @@
 import React, {useState} from 'react';
 import {
-    Autocomplete, Box,
-    Button,
-    Container,
-    Divider,
+    Box,
     List,
+    Button,
+    Divider,
+    Tooltip,
     ListItem,
-    ListItemText,
     TextField,
-    Tooltip
+    Container,
+    ListItemText,
+    Autocomplete,
 } from "@mui/material";
-import {GeoJsonObject} from "geojson";
-import L from 'leaflet';
-import {latToCyr} from "../../../util/functions";
-import {GeoJSON, MapContainer, Popup, TileLayer} from "react-leaflet";
 import {uliceRSCyr} from "../../const/pretragaparohija/ulice";
-import oJovo from "../../const/pretragaparohija/map/o_jovo.min.json";
-import oGligorije from "../../const/pretragaparohija/map/o_gligorije.min.json";
-import oDjordje from "../../const/pretragaparohija/map/o_djordje.min.json";
-import oAleksandar from "../../const/pretragaparohija/map/o_aleksandar.min.json";
-import {NEPARNI, PARNI, Paroh, Parohija, parohije} from "../../const/pretragaparohija/const";
-import 'leaflet/dist/leaflet.css';
+import Map from "./map/Map";
+import {NEPARNI, PARNI, Parohija, parohije} from "../../const/pretragaparohija/const";
 
-// @ts-ignore
-import icon from 'leaflet/dist/images/marker-icon.png';
-// @ts-ignore
-import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+import {CYR_PATTERN} from "../../const";
+import {latToCyr} from "../../../util/functions";
 
-let DefaultIcon = L.icon({
-    iconUrl: icon,
-    shadowUrl: iconShadow
-});
-
-L.Marker.prototype.options.icon = DefaultIcon;
-
-
-const CYR_PATTERN = /^[абвгдђежзијклљмнњопрстћуфхцчџшАБВГДЂЕЖЗИЈКЛЉМНЊОПРСТЋУФХЦЧЏШ ()]*$/
 
 function PretragaParohija() {
     const sortUliceRSCyr = uliceRSCyr.sort((a, b) => a.value > b.value ? 1 : -1);
@@ -62,10 +44,13 @@ function PretragaParohija() {
 
             if (parohija && parohija.length === 1) {
                 postaviIzabraneParohije(parohija);
+                const ostaleParohije = parohije.filter((p: Parohija) => p.ime.cyr !== parohija[0].ime.cyr && p.paroh.ime === parohija[0].paroh.ime);
                 setError({
                     error: false,
                     errorText: ''
                 })
+
+                postaviOstaleParohije(ostaleParohije);
             }
             if (parohija && parohija.length === 0 && broj) {
                 postaviIzabraneParohije(parohija);
@@ -145,90 +130,6 @@ function PretragaParohija() {
             postaviParohijeAutokomplit(izabranaParohija);
         }
     }
-
-//
-// const arrayOfNames: string[] = [];
-// ostaleParohije !== null && ostaleParohije.map(parohije => {
-//     arrayOfNames.push(parohije.ime.cyr);
-// });
-// izabraneParohije !== null && arrayOfNames.push(izabraneParohije[0].ime.cyr);
-//
-//
-// // @ts-ignore
-// let vita = JSON["features"].filter(
-//     (d: any) => (
-//             d["properties"]
-//             && d["properties"]["building"]
-//             && d["properties"]["addr:street"]
-//             && arrayOfNames.includes(d["properties"]["addr:street"])
-//         )
-//         || (
-//             d["properties"]["addr:housenumber"]
-//             && arrayOfNames.includes(d["properties"]["addr:street"]
-//             )
-//         )
-// );
-//
-// // @ts-ignore
-// let vitanovacka = JSON["features"].filter(
-//     (d: any) => (
-//             d["properties"]
-//             && d["properties"]["building"]
-//             && d["properties"]["addr:street"]
-//             && arrayOfNames.includes(d["properties"]["addr:street"])
-//             && d["properties"]["addr:street"] !== "Војводе Степе"
-//             && d["properties"]["addr:street"] !== "Булевар Ослобођења"
-//         )
-//         || (
-//             d["properties"]["addr:housenumber"]
-//             && arrayOfNames.includes(d["properties"]["addr:street"]
-//                 && d["properties"]["addr:street"] !== "Војводе Степе"
-//                 && d["properties"]["addr:street"] !== "Булевар Ослобођења"
-//             )
-//         )
-// );
-//
-// console.log(vitanovacka);
-// const a = vita.filter((d: any) => (
-//     ( d["properties"]["addr:street"] === "Војводе Степе" &&
-//         (
-//             (
-//                 extractNumericPart(d["properties"]["addr:housenumber"]) % 2 === 0
-//                 && extractNumericPart(d["properties"]["addr:housenumber"]) >= 8
-//                 && extractNumericPart(d["properties"]["addr:housenumber"]) < 212
-//             ) ||
-//             (
-//                 extractNumericPart(d["properties"]["addr:housenumber"]) % 2 !== 0
-//                 && extractNumericPart(d["properties"]["addr:housenumber"]) >= 51
-//                 && extractNumericPart(d["properties"]["addr:housenumber"]) < 219
-//             )
-//         )
-//     )
-//     ||
-//     (
-//         d["properties"]["addr:street"] === "Булевар oслобођења"
-//         && extractNumericPart(d["properties"]["addr:housenumber"]) % 2 !== 0
-//         && extractNumericPart(d["properties"]["addr:housenumber"]) >= 75
-//         && extractNumericPart(d["properties"]["addr:housenumber"]) < 210
-//     )
-// ));
-// console.log(a);
-// console.log([...vitanovacka, ...a]);
-//
-    function whenClicked(e: any) {
-        // e = event
-        console.log(e);
-        // You can make your ajax call declaration here
-        //$.ajax(...
-    }
-
-    function onEachFeature(feature: any, layer: any) {
-        //bind click
-        layer.on({
-            click: whenClicked
-        });
-    }
-
     return (
         <Container sx={{padding: 5, display: "flex", flexDirection: "column"}}>
             <h2>Пронађите своју парохију</h2>
@@ -318,150 +219,8 @@ function PretragaParohija() {
                     </List>
                 </Box>
             }
-            <div style={{width: "100%", overflow: "hidden", marginTop: "100px"}}>
-                <p>Мапа (у изради)</p>
-                <MapContainer center={[44.7778196, 20.4749862]} zoom={18} style={{height: "500px", width: "100%"}}>
-                    <TileLayer
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    />
-                    <GeoJSON
-                        data={oAleksandar as GeoJsonObject}
-                        onEachFeature={onEachFeature}
-                        style={
-                            {
-                                fillColor: "#7835cc",
-                                color: "#7835cc",
-                                opacity: 1
-                            }
-                        }
-                        interactive
-                        pointToLayer={
-                            (_, latlng) => {
-                                return L.circleMarker(latlng, {
-                                    radius: 5
-                                });
-                            }
-                        }
-                    >
-                        <Popup>
-                            <div>
-                                <h5>{Paroh.otacAleksandar.ime}</h5>
-                                <a href={`tel:${Paroh.otacAleksandar.telefon}`}>{Paroh.otacAleksandar.telefon}</a>
-                            </div>
-                        </Popup>
-                    </GeoJSON>
-                    <GeoJSON
-                        data={oDjordje as GeoJsonObject}
-                        onEachFeature={onEachFeature}
-                        style={
-                            {
-                                fillColor: "#968e0f",
-                                color: "#968e0f",
-                                opacity: 1
-                            }
-                        }
-                        interactive
-                        pointToLayer={
-                            (_, latlng) => {
-                                return L.circleMarker(latlng, {
-                                    radius: 5
-                                });
-                            }
-                        }
-                    >
-
-                        <Popup>
-                            <div>
-                                <h5>{Paroh.otacDjordje.ime}</h5>
-                                <a href={`tel:${Paroh.otacDjordje.telefon}`}>{Paroh.otacDjordje.telefon}</a>
-                            </div>
-                        </Popup>
-                    </GeoJSON>
-                    <GeoJSON
-                        data={oJovo as GeoJsonObject}
-                        onEachFeature={onEachFeature}
-                        style={{fillColor: "#81002b", color: "#81002b", opacity: 1}}
-                        interactive
-                        pointToLayer={
-                            (_, latlng) => {
-                                return L.circleMarker(latlng, {
-                                    radius: 5
-                                });
-                            }
-                        }
-                    >
-                        <Popup>
-                            <div>
-                                <h5>{Paroh.otacJovo.ime}</h5>
-                                <a href={`tel:${Paroh.otacJovo.telefon}`}>{Paroh.otacJovo.telefon}</a>
-                            </div>
-                        </Popup>
-                    </GeoJSON>
-                    <GeoJSON
-                        data={oGligorije as GeoJsonObject}
-                        onEachFeature={onEachFeature}
-                        style={{fillColor: "#00b8c9", color: "#00b8c9", opacity: 1}}
-                        interactive
-                        pointToLayer={
-                            (_, latlng) => {
-                                return L.circleMarker(latlng, {
-                                    radius: 5
-                                });
-                            }
-                        }
-                    >
-                        <Popup>
-                            <div>
-                                <h5>{Paroh.otacGligorije.ime}</h5>
-                                <a href={`tel:${Paroh.otacGligorije.telefon}`}>{Paroh.otacGligorije.telefon}</a>
-                            </div>
-                        </Popup>
-                    </GeoJSON>
-                    {/*<Polygon positions={*/}
-                    {/*    [*/}
-                    {/*        [*/}
-                    {/*            44.7770072,*/}
-                    {/*            20.4735594*/}
-                    {/*        ],*/}
-                    {/*        [*/}
-                    {/*            44.7771123,*/}
-                    {/*            20.473946*/}
-                    {/*        ],*/}
-                    {/*        [*/}
-                    {/*            44.7771405,*/}
-                    {/*            20.4739283*/}
-                    {/*        ],*/}
-                    {/*        [*/}
-                    {/*            44.7772424,*/}
-                    {/*            20.4744054*/}
-                    {/*        ],*/}
-                    {/*        [44.7775141,*/}
-                    {/*            20.4742892*/}
-                    {/*        ],*/}
-                    {/*        [44.7774829,*/}
-                    {/*            20.4741093*/}
-                    {/*        ],*/}
-                    {/*        [44.7775008,*/}
-                    {/*            20.474092*/}
-                    {/*        ],*/}
-                    {/*        [44.777518,*/}
-                    {/*            20.4740712*/}
-                    {/*        ],*/}
-                    {/*        [44.777426,*/}
-                    {/*            20.4737602*/}
-                    {/*        ],*/}
-                    {/*        [44.7772816,*/}
-                    {/*            20.4733296*/}
-                    {/*        ],*/}
-                    {/*        [44.7770072,*/}
-                    {/*            20.4735594*/}
-                    {/*        ]*/}
-                    {/*    ]*/}
-                    {/*} />*/}
-                </MapContainer>
-            </div>
+            <Map/>
         </Container>
-
     );
 }
 

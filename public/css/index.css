@@ -31,16 +31,13 @@ hr.MuiDivider-vertical {
     height: auto;
 }
 h1 {
-    font-size: 60px;
+    font-size: 48px;
 }
 h2 {
-    font-size: 48px;
+    font-size: 36px;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--pravoslav);
-}
-h2 {
-    font-size: 48px;
 }
 a {
     color: rgb(var(--gold));
@@ -54,6 +51,9 @@ a:hover {
 .container {
     margin: 0 auto;
     width: var(--site-width);
+}
+.menu-container {
+    display: none;
 }
 span {
     margin-bottom: 10px;
@@ -70,7 +70,7 @@ section, footer {
 /*---------------------------------------------------HEADER*/
 header {
     width: 100%;
-    z-index: 3;
+    z-index: 500;
     display: flex;
     position: fixed;
     background: rgb(var(--white));
@@ -360,6 +360,7 @@ footer hr:not(.react-divider) {
 }
 footer ul {
     list-style: none;
+    font-size: 13px;
     padding-left: 0;
 }
 footer .boxes {
@@ -401,21 +402,77 @@ footer .lokacija-information {
     color: rgb(var(--gold));
     margin-bottom: 0;
 }
+/*---------------------------------------------HAMBURGER MENU*/
+
+.dropdown-label {
+    display: none;
+    justify-content: flex-end;
+    position: absolute;
+    right: 10px;
+    top: 17px;
+}
+
+.hamburger {
+    align-self: flex-end;
+}
+
+label {
+    cursor: pointer;
+}
+
+label {
+    .icon-bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: #cccccc;
+        margin: 4px;
+        transition: all 0.2s;
+    }
+    .top-bar {
+        transform: rotate(0);
+    }
+    .middle-bar {
+        opacity: 1;
+    }
+}
+
+/*input[type=checkbox]:checked + label {*/
+/*    .top-bar {*/
+/*        transform: rotate(45deg);*/
+/*        transform-origin: 10% 10%;*/
+/*    }*/
+/*    .middle-bar {*/
+/*        opacity: 0;*/
+/*    }*/
+/*    .bottom-bar {*/
+/*        transform: rotate(-45deg);*/
+/*        transform-origin: 10% 90%;*/
+/*    }*/
+/*}*/
 @keyframes fade {
     0% {opacity: .4}
     100% {opacity: 1}
 }
 
+@media (max-width: 1440px) {
+    footer .lokacija-information {
+        flex-direction: column;
+    }
+    footer ul {
+        font-size: 12px;
+    }
+}
 /* Small screens (phones) */
 @media (max-width: 1080px) {
     :root {
         --site-width: 100%;
     }
     h1 {
-        font-size: 36px;
+        font-size: 24px;
     }
     h2 {
-        font-size: 24px;
+        font-size: 16px;
     }
     #kalendar-praznika .kalendar-praznika table{
         width: 100%;
@@ -444,6 +501,9 @@ footer .lokacija-information {
     }
 }
 @media (max-width: 768px) {
+    #kalendar-praznika {
+        background-size: 50px auto;
+    }
     .navigation {
         padding: 5px;
     }
@@ -497,6 +557,12 @@ footer .lokacija-information {
     }
 }
 @media (max-width: 640px) {
+    .dropdown-label {
+        display: flex;
+    }
+    #dropdown:checked + .nav {
+        display: block;
+    }
     #pretraga-parohija .MuiAutocomplete-root {
         width: 310px;
     }
@@ -510,8 +576,41 @@ footer .lokacija-information {
         background: rgb(var(--white));
         z-index: 2000;
     }
-    #navbar {
+    header .nav {
+        border-top: 1px solid rgba(0,0,0,0.1);
+    }
+    header .dropdown a:after {
+        display: none;
+    }
+    header .dropdown-menu {
+        position: relative;
+        display: block;
+        border: 0;
         padding: 0;
+    }
+    header .dropdown-menu li {
+        height: 34px;
+        display: flex;
+        align-items: center;
+    }
+    header .dropdown-menu li:hover {
+        color: #1e2125;
+        background-color: #e9ecef;
+    }
+    .menu-container {
+        display: block;
+    }
+    .nav-item:hover, header .dropdown-menu li:hover {
+        color: #1e2125;
+        background-color: #e9ecef;
+    }
+    #navbar {
+        position: absolute;
+        padding: 0;
+        top: 3px;
+    }
+    .nav.show {
+        display: block;
     }
     .navbar-brand img {
         width: 40px;
@@ -521,15 +620,11 @@ footer .lokacija-information {
         position: fixed;
         height: auto;
         right: 0;
-        display: block;
+        display: none;
         top: 60px;
         width: 50%;
         max-width: 200px;
         background: rgb(var(--white));
-    }
-    #navbar {
-        width: 100%;
-        height: auto;
     }
     p, a, li {
         font-size: 12px;
@@ -542,7 +637,7 @@ footer .lokacija-information {
     }
 
     #pretraga-parohija .ostale-parohije {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 @media (max-width: 390px) {

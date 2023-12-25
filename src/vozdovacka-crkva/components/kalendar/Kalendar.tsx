@@ -7,7 +7,7 @@ export default function Kalendar() {
     const [fetchedHTML, setFetchedHTML] = useState('');
     const [danasnjiPraznik, setDanasnjiPraznik] = useState('');
     const getDataFromApi = () => {
-        fetch("https://www.pravoslavno.rs/index.php?q=kalendar", {
+        fetch("https://api.allorigins.win/get?url=https://www.pravoslavno.rs/index.php?q=kalendar", {
             mode: 'cors',
             method: 'GET',
             headers: {}

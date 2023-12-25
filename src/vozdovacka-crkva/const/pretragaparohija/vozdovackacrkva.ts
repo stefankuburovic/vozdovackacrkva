@@ -1,4 +1,4 @@
-[
+export const hram =
   {
     "type": "Feature",
     "id": "way/401979456",
@@ -94,48 +94,4 @@
         ]
       ]
     }
-  },
-
-  {
-    "type": "Feature",
-    "id": "way/401979458",
-    "properties": {
-      "timestamp": "2016-03-06T16:33:42Z",
-      "version": "1",
-      "changeset": "37648414",
-      "user": "nikicam",
-      "uid": "2886645",
-      "addr:housenumber": "123a",
-      "addr:street": "Витановачка",
-      "building": "yes",
-      "id": "way/401979458"
-    },
-    "geometry": {
-      "type": "Polygon",
-      "coordinates": [
-        [
-          [
-            20.4735592,
-            44.7771332
-          ],
-          [
-            20.4736118,
-            44.7770393
-          ],
-          [
-            20.4737531,
-            44.7770792
-          ],
-          [
-            20.4737005,
-            44.7771731
-          ],
-          [
-            20.4735592,
-            44.7771332
-          ]
-        ]
-      ]
-    }
   }
-]
