@@ -10,12 +10,15 @@ import {roots} from "./vozdovacka-crkva/const";
 import './index.css';
 import "yet-another-react-lightbox/styles.css";
 import Kalendar from "./vozdovacka-crkva/components/kalendar/Kalendar";
+import Obavestenja from "./vozdovacka-crkva/components/obavestenja/Obavestenja";
 
 const wrappers: React.JSX.Element[] = [
     <PretragaParohija/>,
     <Galerija/>,
     <Bogosluzenja/>,
-    <Kalendar/>/*<InstagramFeed/>*/
+    <Kalendar/>,
+    /*<InstagramFeed/>,*/
+    <Obavestenja/>
 ]
 roots.map((root: ReactDOM.Root, index: number) => root.render(
     <React.StrictMode>

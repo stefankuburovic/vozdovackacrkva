@@ -16,8 +16,8 @@ const SearchField = () => {
         showMarker: true,
         showPopup: false,
 
-        // countries: 'srb',
-        // bbox: [44.907608, 20.634493, 44.70843, 20.234832],
+        countries: 'srb',
+        bbox: [44.907608, 20.634493, 44.70843, 20.234832],
         marker: {
             draggable: false,
         },
@@ -28,11 +28,11 @@ const SearchField = () => {
     });
 
     const map = useMap();
+    map.addControl(searchControl);
     // @ts-ignore
     useEffect(() => {
-        map.addControl(searchControl);
         return () => map.removeControl(searchControl);
-    }, []);
+    });
 
     return null;
 };

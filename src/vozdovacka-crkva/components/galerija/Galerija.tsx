@@ -16,13 +16,13 @@ interface Photo {
 export default function Galerija() {
 const [index, setIndex] = React.useState(-1);
 
-    const slidesWithDescription = (photos: Photo[]): SlideImage[] => {
-        return photos.map(
-               (photo: Photo): SlideImage => {
-                   return {...photo, description: "фото: ипођакон Војислав"}
-               }
-        )
-    }
+    // const slidesWithDescription = (photos: Photo[]): SlideImage[] => {
+    //     return photos.map(photo => ({...photo, description: }))
+    //            // (photo: Photo): SlideImage => {
+    //            //     return {...photo, description: "фото: ипођакон Војислав"}
+    //            // }
+    //     )
+    // }
     return (
         <div>
             <h2>Галерија</h2>
@@ -38,7 +38,7 @@ const [index, setIndex] = React.useState(-1);
                 index={index}
                 open={index >= 0}
                 close={() => setIndex(-1)}
-                slides={slidesWithDescription(slides)}
+                slides={slides}
                 plugins={[Captions]}
             />
         </div>

@@ -21,6 +21,10 @@ const kalendar = ReactDOM.createRoot(
     document.getElementById('kalendar-praznika') as HTMLElement
 );
 
+const obavestenja = ReactDOM.createRoot(
+    document.getElementById('obavestenja') as HTMLElement
+);
+
 let DefaultIcon = L.icon({
     iconUrl: icon,
     shadowUrl: iconShadow
@@ -34,4 +38,4 @@ export const CYR_PATTERN = /^[абвгдђежзијклљмнњопрстћуф
 //     document.getElementById('instagram-feed') as HTMLElement
 // );
 
-export const roots: ReactDOM.Root[] = [parohije, galerija, bogosluzenja, kalendar /*footer*/];
+export const roots: ReactDOM.Root[] = [parohije, galerija, bogosluzenja, kalendar /*footer*/, obavestenja];

@@ -244,6 +244,7 @@ img {
     max-width: 500px;
     background: rgb(var(--white));
     height: fit-content;
+    box-shadow: 1px 1px 12px rgb(128, 128, 128, 0.6);
 }
 #bogosluzenja .bogosluzenja-container {
     width: 50%;
