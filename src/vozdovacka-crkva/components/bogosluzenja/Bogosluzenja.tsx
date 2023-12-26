@@ -72,7 +72,7 @@ export default function Bogosluzenja() {
                                  data-testid="mesh-container-content">
                                 <div>
                                     <h3>
-                                        <span>Зимско време (Октобар - Април)</span>
+                                        <span>Зимско време (Октобар - Март)</span>
                                     </h3>
                                     <h5>
                                         <span>Свакодневно</span>
@@ -123,7 +123,7 @@ export default function Bogosluzenja() {
                                  data-testid="mesh-container-content">
                                 <div>
                                     <h3>
-                                        <span>Летње време (Мај - Септембар)</span>
+                                        <span>Летње време (Април - Септембар)</span>
                                     </h3>
                                     <h5>
                                         <span>Свакодневно</span>
