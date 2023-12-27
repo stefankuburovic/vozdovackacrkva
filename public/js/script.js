@@ -3,6 +3,15 @@ $(document).ready(function () {
     $('.carousel').carousel({
         pause: true
     });
+    $('.carousel').bind('slide.bs.carousel', function (e) {
+        console.log(e);
+        const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+        window.scrollTo({
+            left: 0,
+            top: scrollPosition
+        });
+    });
+
 });
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.navbar-nav a.nav-link');

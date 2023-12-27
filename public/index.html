@@ -31,7 +31,7 @@
     <link rel="preload" href="/assets/fonts/Pravosla.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
 </head>
-<body data-spy="scroll" data-target="#navbar" data-offset="50" id="body">
+<body id="body">
 <noscript>You need to enable JavaScript to run this app.</noscript>
 <!-- Loading Screen -->
 <div id="loading-screen">
@@ -88,39 +88,39 @@
     </div>
 </header>
 <section id="hero">
-    <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="9000">
+    <div class="carousel slide carousel-fade" data-bs-ride="carousel" id="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active" data-bs-interval="9000">
                 <img src="assets/images/stare/vozdovacka-crkva.jpg" alt="" class="w-100 d-block">
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="5000">
                 <img src="assets/images/stare/heavenly-enlighment.jpg" alt="" class="w-100 d-block">
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="5000">
                 <img src="assets/images/stare-optimizovane/fire-on-christmas-eve.jpg" alt="" class="w-100 d-block">
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="5000">
                 <img src="assets/images/stare-optimizovane/pocetak-litije.jpg" alt="" class="w-100 d-block">
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="5000">
                 <img src="assets/images/stare-optimizovane/paljenje-badnjaka.jpg" alt="" class="w-100 d-block">
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="5000">
                 <img src="assets/images/stare-optimizovane/litija-na-badnje-vece.jpg" alt="" class="w-100 d-block">
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="5000">
                 <img src="assets/images/stare-optimizovane/otac-gligorije-propoved.jpg" alt="" class="w-100 d-block">
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="5000">
                 <img src="assets/images/stare-optimizovane/IMG_0738-Under-the-Book.jpg" alt="" class="w-100 d-block">
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="5000">
                 <img src="assets/images/stare-optimizovane/Vomnem-IMG_0104a.jpg" alt="" class="w-100 d-block">
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="5000">
                 <img src="assets/images/stare-optimizovane/Vomnem-IMG_0104a.jpg" alt="" class="w-100 d-block">
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="5000">
                 <img src="assets/images/stare-optimizovane/otac-djordje.jpg" alt="" class="w-100 d-block">
             </div>
         </div>
@@ -224,6 +224,15 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-<script src="./js/script.js"></script>
+<script src="./js/script.js"></script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VNZBMJKEYN"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VNZBMJKEYN');
+</script>
+
 </body>
 </html>

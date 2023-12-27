@@ -1,7 +1,9 @@
 import {GeoSearchControl, MapBoxProvider} from "leaflet-geosearch";
 import {useMap} from "react-leaflet";
-import {useEffect} from "react";
+import {EffectCallback, useEffect} from "react";
+import L from "leaflet";
 import './SearchField.scss';
+import {SearchControlProps} from "../../../../const/pretragaparohija/map/const";
 
 const SearchField = () => {
     const provider = new MapBoxProvider({
@@ -11,13 +13,10 @@ const SearchField = () => {
     });
 
     // @ts-ignore
-    const searchControl = new GeoSearchControl({
+    const searchControl: SearchControlProps = new GeoSearchControl({
         provider: provider,
         showMarker: true,
         showPopup: false,
-
-        countries: 'srb',
-        bbox: [44.907608, 20.634493, 44.70843, 20.234832],
         marker: {
             draggable: false,
         },
@@ -27,12 +26,14 @@ const SearchField = () => {
         updateMap: true,
     });
 
-    const map = useMap();
-    map.addControl(searchControl);
-    // @ts-ignore
-    useEffect(() => {
+    const map: L.Map = useMap();
+
+    const addControlToMap: any = () => {
+        map.addControl(searchControl);
         return () => map.removeControl(searchControl);
-    });
+    };
+
+    useEffect(addControlToMap, [map, searchControl]);
 
     return null;
 };

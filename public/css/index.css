@@ -362,6 +362,11 @@ img {
     background: rgb(var(--white));
     text-align: center;
 }
+#pretraga-parohija .opis-adrese {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: left;
+}
 #pretraga-parohija .text-box {
     text-align: left;
 }
@@ -390,6 +395,13 @@ img {
 }
 .ostale-parohije-wrapper .react-divider {
     margin-bottom: 2rem;
+}
+
+/*---------------------------------------------------Obavestenja*/
+
+#obavestenja {
+    height: 0;
+    min-height: 0;
 }
 /*--------------------------------------------------- Footer*/
 footer {
@@ -481,20 +493,6 @@ label {
         opacity: 1;
     }
 }
-
-/*input[type=checkbox]:checked + label {*/
-/*    .top-bar {*/
-/*        transform: rotate(45deg);*/
-/*        transform-origin: 10% 10%;*/
-/*    }*/
-/*    .middle-bar {*/
-/*        opacity: 0;*/
-/*    }*/
-/*    .bottom-bar {*/
-/*        transform: rotate(-45deg);*/
-/*        transform-origin: 10% 90%;*/
-/*    }*/
-/*}*/
 @keyframes fade {
     0% {opacity: .4}
     100% {opacity: 1}
@@ -541,6 +539,12 @@ label {
         align-items: center;
         padding: 10px;
     }
+
+    #pretraga-parohija .dodavanje-broja {
+        flex-direction: row;
+        justify-content: center;
+        max-width: 498px;
+    }
     #pretraga-parohija .MuiAutocomplete-root {
         margin-bottom: 20px;
     }
@@ -548,10 +552,23 @@ label {
     #pretraga-parohija .ostale-parohije {
         grid-template-columns: repeat(4, 1fr);
     }
+    #kalendar-praznika .kalendar-praznika-inner {
+        justify-content: center;
+    }
 }
+
 @media (max-width: 768px) {
     #kalendar-praznika {
         background-size: 50px auto;
+    }
+    .makeStyles-modalContent-2 {
+        border-image: url(/assets/border-background.png) 60 / 20px / 0 round repeat !important;
+        width: 90%;
+    }
+    #pretraga-parohija .opis-adrese {
+        margin-top: 10px;
+        font-weight: bold;
+        text-align: center;
     }
     .navigation {
         padding: 5px;
@@ -583,7 +600,7 @@ label {
         margin: 20px auto 0 auto;
     }
     .carousel {
-        height: 100%;
+        height: 500px;
     }
     .carousel-inner {
         height: 100vh;
@@ -605,6 +622,7 @@ label {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
 @media (max-width: 640px) {
     hr:not(.react-divider) {
         width: 50px;
@@ -696,6 +714,7 @@ label {
         font-size: 18px;
     }
 }
+
 @media (max-width: 390px) {
     h1 {
         font-size: 18px;

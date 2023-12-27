@@ -12,7 +12,7 @@ import {
     Autocomplete,
 } from "@mui/material";
 import {uliceRSCyr} from "../../const/pretragaparohija/ulice";
-import Map from "./map/Map";
+import Map from "./Map/Map";
 import {NEPARNI, PARNI, Parohija, parohije} from "../../const/pretragaparohija/const";
 
 import {CYR_PATTERN} from "../../const";
@@ -148,47 +148,60 @@ function PretragaParohija() {
             </div>
             <Divider variant="inset" sx={{margin: "20px 0"}} className="react-divider"/>
             <Container sx={{display: "flex"}}>
-                <Container sx={{display: "flex", alignItems: "flex-start"}}>
-                    <Autocomplete
-                        value={{value: cyrillicValue, label: cyrillicValue}}
-                        disablePortal
-                        clearText={"Претражи поново"}
-                        id="combo-box-demo"
-                        options={sortUliceRSCyr}
-                        isOptionEqualToValue={(option, value) => option.value === value.value}
-                        sx={{width: 400}}
-                        onInputChange={(e, v, r) => {
-                            if (r === 'clear') {
-                                setCyrillicValue('');
+                <Container sx={{display: "flex", flexDirection: "column"}}>
+                    <Container sx={{display: "flex", alignItems: "flex-start"}}>
+                        <Autocomplete
+                            value={{value: cyrillicValue, label: cyrillicValue}}
+                            disablePortal
+                            clearText={"Претражи поново"}
+                            id="combo-box-demo"
+                            options={sortUliceRSCyr}
+                            isOptionEqualToValue={(option, value) => option.value === value.value}
+                            sx={{width: 400}}
+                            onInputChange={(e, v, r) => {
+                                if (r === 'clear') {
+                                    setCyrillicValue('');
+                                }
+                            }}
+                            onChange={(_, value) => {
+                                handleAutocompleteChange(value)
+                            }}
+                            renderInput={
+                                (params) =>
+                                    <TextField
+                                        {...params}
+                                        onChange={handleTextInputChange}
+                                        label="Име улице"
+                                    />
                             }
-                        }}
-                        onChange={(_, value) => {
-                            handleAutocompleteChange(value)
-                        }}
-                        renderInput={
-                            (params) =>
-                                <TextField
-                                    {...params}
-                                    onChange={handleTextInputChange}
-                                    label="Име улице"
-                                />
+                        />
+                        {
+                            (
+                                (izabraneParohije && izabraneParohije.length > 1) ||
+                                (izabraneParohije && 1 >= izabraneParohije.length && broj)
+                            ) && <Container sx={{display: "flex"}} className="dodavanje-broja">
+                                <Tooltip
+                                    title={error.error ? error.errorText : "Молимо вас да унесете број улице, слова нису потребна"}
+                                    arrow>
+                                    <TextField label="бр." sx={{width: 70}} onChange={handleNumberInputChange}
+                                               error={error.errorText.length > 0}/>
+                                </Tooltip>
+                                <Button type="button" sx={{marginLeft: "20px"}}
+                                        onClick={pronadjiParohaPoBrojuUlice}>Прикажи</Button>
+                            </Container>
                         }
-                    />
-                    {
-                        (
-                            (izabraneParohije && izabraneParohije.length > 1) ||
-                            (izabraneParohije && 1 >= izabraneParohije.length && broj)
-                        ) && <Container sx={{display: "flex"}}>
-                            <Tooltip
-                                title={error.error ? error.errorText : "Молимо вас да унесете број улице, слова нису потребна"}
-                                arrow>
-                                <TextField label="бр." sx={{width: 70}} onChange={handleNumberInputChange}
-                                           error={error.errorText.length > 0}/>
-                            </Tooltip>
-                            <Button type="button" sx={{marginLeft: "20px"}}
-                                    onClick={pronadjiParohaPoBrojuUlice}>Прикажи</Button>
-                        </Container>
-                    }
+                    </Container>
+                    <p className="opis-adrese">
+                        {
+                            izabraneParohije?.length === 1
+                            && izabraneParohije[0].odredjeniBrojevi
+                            && izabraneParohije[0]?.odredjeniBrojevi[0]?.prviBroj !== izabraneParohije[0]?.odredjeniBrojevi[0]?.zadnjiBroj
+                            && setSpecificNumbers(
+                                izabraneParohije[0]?.odredjeniBrojevi,
+                                izabraneParohije[0].parniIliNeparni
+                            )
+                        }
+                    </p>
                 </Container>
 
                 <Container sx={{display: "flex"}}>
@@ -213,7 +226,7 @@ function PretragaParohija() {
                     <List className="ostale-parohije" dense={true}>
                         {generate(ostaleParohije,
                             <ListItem divider className="ostale-parohije-list-item">
-                                <ListItemText/>
+                            <ListItemText/>
                             </ListItem>,
                         )}
                     </List>

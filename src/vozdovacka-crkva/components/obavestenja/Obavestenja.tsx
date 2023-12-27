@@ -7,25 +7,25 @@ const useStyles = makeStyles((theme) => ({
     modal: {
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'center'
     },
     modalContent: {
         backgroundColor: "white",
-        padding: "20px",
+        padding: "40px 20px",
         borderRadius: '0',
         textAlign: 'left',
-        outline: "none"
+        outline: "none",
+        border: "30px solid",
+        borderImage: `url('/assets/border-background.png') 60 / 30px / 0 round repeat`
     },
     modalTitle: {
-        fontSize: "24px",
+        marginBottom: "20px",
         textAlign: 'center',
-    },
-    modalSignature: {
-        fontSize: "16px",
     },
     button: {
         display: "block",
         margin: '16px 0 0 auto',
+        color: "rgb(155,0,0)"
     },
 }));
 
@@ -35,10 +35,6 @@ interface MyModalProps {
     onCTAClick: () => void;
 }
 
-const handleBackdropClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    // Prevent closing the modal on backdrop click
-    event.stopPropagation();
-};
 const MyModal: React.FC<MyModalProps> = ({ isOpen, onClose, onCTAClick }) => {
     const classes = useStyles();
 
@@ -50,15 +46,17 @@ const MyModal: React.FC<MyModalProps> = ({ isOpen, onClose, onCTAClick }) => {
             aria-describedby="modal-description"
             className={classes.modal}
             BackdropProps={{
-                onClick: handleBackdropClick,
+                onClick: onCTAClick,
             }}
         >
             <div className={classes.modalContent}>
-                <p id="modal-title" className={classes.modalTitle}>Обавештење:</p>
-                <p id="modal-description">Од следеће године почев од датума <b>13. Јануара 2024.</b> године,<br/>
-                    литургије Суботом ће почињати од <b>8:00</b>, уместо досадашњих <b>7:30</b>.</p>
-                <span className={classes.modalSignature}><i>Братство храма</i></span>
-                <Button variant="outlined" color="info" onClick={onCTAClick} className={classes.button}>
+                <h2 id="modal-title" className={classes.modalTitle}>Обавештење:</h2>
+                <p id="modal-description"><i>Браћо и сестре,</i><br/><br/>Од следеће године почев од датума <b>13.
+                    Јануара
+                    2024.</b> године,<br/>
+                    литургије <b>суботом</b> ће почињати од <b>8:00</b>, уместо досадашњих <b>7:30</b>. <br/><br/><i>Братство
+                        храма</i></p>
+                <Button variant="text" color="info" onClick={onCTAClick} className={classes.button}>
                     Затвори
                 </Button>
             </div>
