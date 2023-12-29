@@ -48,7 +48,7 @@ export default function Bogosluzenja() {
             <div className="container">
                 <Box className="container-inner">
                     <Box className="bogosluzenja-container vremena">
-                        <img src="/assets/images/logo-red.png" width={50} height={50} alt="Вождовачка Црква"/>
+                        <img src="/assets/images/logo-red.webp" width={50} height={50} alt="Вождовачка Црква"/>
                         <Tabs
                             value={value}
                             onChange={handleChange}

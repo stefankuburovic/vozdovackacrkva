@@ -1,6 +1,9 @@
 @font-face {
     font-family: Pravoslav;
-    src: url('../assets/fonts/Pravosla.ttf');
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/Pravosla.ttf'), url('../assets/fonts/Pravosla.woff2') format('woff2');
+    font-display: swap;
 }
 :root {
     --black: 0,0,0;
@@ -284,7 +287,7 @@ img {
     overflow: hidden;
     text-align: center;
     position: relative;
-    background: url("../assets/images/logo-red.png") round fixed center center;
+    background: url("../assets/images/logo-red.webp") round fixed center center;
     background-size: 150px 150px;
 }
 #kalendar-praznika .white-layout {

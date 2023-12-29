@@ -117,7 +117,7 @@ export const parohije: Array<Parohija> =  [
     {
         ime: {
             lat: ["Esad Pasina", "Esad Pašina"],
-            cyr: "Есад-пашина"
+            cyr: "Есад Пашина"
         },
         paroh: Paroh.otacAleksandar,
     },

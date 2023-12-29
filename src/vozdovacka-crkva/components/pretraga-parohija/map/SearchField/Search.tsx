@@ -1,6 +1,6 @@
 import {GeoSearchControl, MapBoxProvider} from "leaflet-geosearch";
 import {useMap} from "react-leaflet";
-import {EffectCallback, useEffect} from "react";
+import {useEffect} from "react";
 import L from "leaflet";
 import './SearchField.scss';
 import {SearchControlProps} from "../../../../const/pretragaparohija/map/const";
