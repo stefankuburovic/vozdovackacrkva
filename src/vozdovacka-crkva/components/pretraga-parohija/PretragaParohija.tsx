@@ -12,7 +12,7 @@ import {
     Autocomplete,
 } from "@mui/material";
 import {uliceRSCyr} from "../../const/pretragaparohija/ulice";
-import Map from "./Map/Map";
+import Map from "./map/Map";
 import {NEPARNI, PARNI, Parohija, parohije} from "../../const/pretragaparohija/const";
 
 import {CYR_PATTERN} from "../../const";
