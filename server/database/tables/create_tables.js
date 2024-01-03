@@ -10,13 +10,7 @@ const con = mysql.createConnection({
 con.connect(function(err) {
     if (err) throw err;
     console.log("Connected!");
-    var sql = `CREATE TABLE bogosluzenja (
-                        praznik VARCHAR(2000), 
-                        datum VARCHAR(255), 
-                        vreme VARCHAR(255), 
-                        datum_bdenija VARCHAR(255), 
-                        vreme_bdenija VARCHAR(255)
-                    )`;
+    var sql = "ALTER TABLE bogosluzenja ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY";
     con.query(sql, function (err, result) {
         if (err) throw err;
         console.log("Table created");
