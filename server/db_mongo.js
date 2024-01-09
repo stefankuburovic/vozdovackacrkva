@@ -176,7 +176,7 @@ async function run() {
         console.error(`Something went wrong trying to delete documents: ${err}\n`);
     }
 
-    // Make sure to call close() on your client to perform cleanup operations
+    // Make sure to call close() on your src to perform cleanup operations
     await client.close();
 }
 run().catch(console.dir);

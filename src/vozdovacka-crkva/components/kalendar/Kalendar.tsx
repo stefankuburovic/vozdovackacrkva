@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {Box, Divider} from "@mui/material";
 import {useEffect, useState} from "react";
+import Kal from "./Kal";
 
 export default function Kalendar() {
     const [success, setSuccess] = React.useState(false);
@@ -31,6 +32,7 @@ export default function Kalendar() {
     }, []);
     return (
         <>
+            <Kal />
             <div className="white-layout"></div>
             <div className="container">
                 {success &&
