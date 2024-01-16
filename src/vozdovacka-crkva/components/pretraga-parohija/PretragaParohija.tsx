@@ -202,20 +202,20 @@ function PretragaParohija() {
                             )
                         }
                     </p>
-                    {
-                        izabraneParohije && izabraneParohije.length === 1 &&
-                        <Box sx={{marginTop: "2rem"}} className="ostale-parohije-wrapper">
-                            <Divider className="react-divider"/>
-                            <p><strong>Остале адресе на којима је свештеник {izabraneParohije[0].paroh.ime}:</strong></p>
-                            <List className="ostale-parohije" dense={true}>
-                                {generate(ostaleParohije,
-                                    <ListItem divider className="ostale-parohije-list-item">
-                                        <ListItemText/>
-                                    </ListItem>,
-                                )}
-                            </List>
-                        </Box>
-                    }
+                    {/*{*/}
+                    {/*    izabraneParohije && izabraneParohije.length === 1 &&*/}
+                    {/*    <Box sx={{marginTop: "2rem"}} className="ostale-parohije-wrapper">*/}
+                    {/*        <Divider className="react-divider"/>*/}
+                    {/*        <p><strong>Остале адресе на којима је свештеник {izabraneParohije[0].paroh.ime}:</strong></p>*/}
+                    {/*        <List className="ostale-parohije" dense={true}>*/}
+                    {/*            {generate(ostaleParohije,*/}
+                    {/*                <ListItem divider className="ostale-parohije-list-item">*/}
+                    {/*                    <ListItemText/>*/}
+                    {/*                </ListItem>,*/}
+                    {/*            )}*/}
+                    {/*        </List>*/}
+                    {/*    </Box>*/}
+                    {/*}*/}
                 </Container>
 
                 <Container sx={{display: "flex"}}>
@@ -225,8 +225,8 @@ function PretragaParohija() {
                             <Divider orientation="vertical" className="react-divider"/>
                             <Container sx={{display: "flex", flexDirection: "column"}}>
                                 <Container>
-                                    <img src={`/assets/images/svestenici/${izabraneParohije[0].paroh.ime}.webp`}
-                                         alt={izabraneParohije[0].paroh.ime}/>
+                                    {/*<img src={`/assets/images/svestenici/${izabraneParohije[0].paroh.ime}.webp`}*/}
+                                    {/*     alt={izabraneParohije[0].paroh.ime}/>*/}
                                     <Container>
                                         <h2>{izabraneParohije[0].paroh.ime}</h2>
                                         <a href={`tel:${izabraneParohije[0].paroh.telefon}`}>{izabraneParohije[0].paroh.telefon}</a>
@@ -237,6 +237,20 @@ function PretragaParohija() {
                     }
                 </Container>
             </Container>
+            {
+                izabraneParohije && izabraneParohije.length === 1 &&
+                <Box sx={{marginTop: "2rem"}} className="ostale-parohije-wrapper">
+                    <Divider className="react-divider"/>
+                    <p><strong>Остале адресе на којима је свештеник {izabraneParohije[0].paroh.ime}:</strong></p>
+                    <List className="ostale-parohije" dense={true}>
+                        {generate(ostaleParohije,
+                            <ListItem divider className="ostale-parohije-list-item">
+                                <ListItemText/>
+                            </ListItem>,
+                        )}
+                    </List>
+                </Box>
+            }
             <Map/>
         </Container>
     );
