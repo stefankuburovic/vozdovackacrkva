@@ -1,31 +1,23 @@
 import React, { lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 
-import {roots} from "./vozdovacka-crkva/const";
 
 import './index.css';
 import "yet-another-react-lightbox/styles.css";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
-const PretragaParohija = lazy(() => import('./vozdovacka-crkva/components/pretraga-parohija/PretragaParohija'));
+const Home = lazy(() => import('./vozdovacka-crkva/pages/Home/Home'));
+const Auth = lazy(() => import('./vozdovacka-crkva/pages/Auth/Auth'));
 
-const Galerija = lazy(() => import('./vozdovacka-crkva/components/galerija/Galerija'));
-
-const Bogosluzenja = lazy(() => import('./vozdovacka-crkva/components/bogosluzenja/Bogosluzenja'));
-
-const Kalendar = lazy(() => import('./vozdovacka-crkva/components/kalendar/Kalendar'));
-
-const Obavestenja = lazy(() => import('./vozdovacka-crkva/components/obavestenja/Obavestenja'));
-
-const wrappers: React.JSX.Element[] = [
-    <PretragaParohija/>,
-    <Galerija/>,
-    <Bogosluzenja/>,
-    <Kalendar/>,
-    /*<InstagramFeed/>,*/
-    <Obavestenja/>
-]
-roots.map((root: ReactDOM.Root, index: number) => root.render(
-    <React.StrictMode>
-        {wrappers[index]}
-    </React.StrictMode>
-));
+export default function App() {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />}></Route>
+                <Route path="/auth" element={<Auth/>}></Route>
+            </Routes>
+        </BrowserRouter>
+    );
+}
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+root.render(<App />);
