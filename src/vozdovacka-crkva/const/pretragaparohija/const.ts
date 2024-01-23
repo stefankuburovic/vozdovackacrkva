@@ -4,18 +4,22 @@ export const NEPARNI = 'neparni';
 export const Paroh = {
     otacAleksandar: {
         ime:  "о. Александар Савић",
+        imelat:  "o. Aleksandar Savic",
         telefon: "0641970233"
     },
     otacJovo: {
         ime:  "о. Јово Калинић",
+        imelat:  "o. Jovo Kalinic",
         telefon: "0604009353",
     },
     otacDjordje: {
         ime:  "о. Ђорђе Поповић",
+        imelat:  "o. Djordje Popovic",
         telefon: "063323682",
     },
     otacGligorije: {
         ime:  "о. Глигорије Марковић",
+        imelat:  "o. Gligorije Markovic",
         telefon: "063232398",
     }
 }
@@ -25,7 +29,7 @@ export interface Parohija {
         lat: Array<string> | string
     };
     parniIliNeparni?: string | Array<string>;
-    paroh: {  ime: string; telefon: string; };
+    paroh: {  ime: string; telefon: string; imelat?: string; };
     odredjeniBrojevi?: Array<{
         prviBroj: number;
         zadnjiBroj: number;
@@ -209,7 +213,7 @@ export const parohije: Array<Parohija> =  [
     {
         ime: {
             lat: ["Nestora Zucnog", "Nestora Žučnog"],
-            cyr: "Нестора Жучнога"
+            cyr: "Нестора Жучног"
         },
         paroh: Paroh.otacAleksandar,
     },

@@ -69,19 +69,13 @@ export default function Bogosluzenja() {
                         </Tabs>
                         <CustomTabPanel index={0} value={value}>
                             <h3>Богослужења у текућој недељи</h3>
+                            <h4>Распоред богослужења за празник Св. Саве српског</h4>
                             <div>
                                 <div className="praznicni-dani">
                                     <h5>
-                                        <span>Четвртак, 18.01.2024 - Крстовдан</span>
+                                        <span>Петак, 26.01.2024.</span>
                                     </h5>
                                     <ul>
-                                        <li>
-                                            <p>8:00 - Царски Часови</p>
-                                        </li>
-                                        <li>
-                                            <p>09:00 - Света Литургија. - <i>На крају литургије велико
-                                                водоосвећење</i></p>
-                                        </li>
                                         <li>
                                             <p>17:00 - Празнично бденије</p>
                                         </li>
@@ -89,35 +83,24 @@ export default function Bogosluzenja() {
                                 </div>
                                 <div className="praznicni-dani">
                                     <h5>
-                                        <span>Петак, 19.01.2024 - Богојављење</span>
+                                        <span>Субота, 27.01.2024.</span>
                                     </h5>
                                     <ul>
-                                        <li>
-                                            <p>09:00 - Света Литургија. - <i>На крају литургије велико
-                                                водоосвећење</i></p>
-                                        </li>
-                                        <li>
-                                            <p>17:00 - Празнично бденије</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="praznicni-dani">
-                                    <h5>
-                                        <span>Субота, 20.01.2024. - Св. Јован Крститељ</span>
-                                    </h5>
-                                    <ul>
-                                        <li>
-                                            <p>7:00 - 8:00 - Резање славских колача</p>
-                                        </li>
                                         <li>
                                             <p>09:00 - Света Литургија</p>
+                                        </li>
+                                        <li>
+                                            <p>17:00 - Бденије</p>
+                                        </li>
+                                        <li>
+                                            <p>18:00 - Рецитације и подела пакетића за децу</p>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </CustomTabPanel>
                         <CustomTabPanel index={1} value={value}>
-                            <div data-mesh-id="comp-lo6y8a5kinlineContent-gridContainer"
+                        <div data-mesh-id="comp-lo6y8a5kinlineContent-gridContainer"
                                  data-testid="mesh-container-content">
                                 <div>
                                     <h3>
@@ -147,7 +130,7 @@ export default function Bogosluzenja() {
                                     </h5>
                                     <ul>
                                         <li>
-                                            <p>07:30 - Света Литургија</p>
+                                            <p>08:00 - Света Литургија</p>
                                         </li>
                                         <li>
                                             <p>17:00 - Бденије уочи празника</p>
@@ -198,7 +181,7 @@ export default function Bogosluzenja() {
                                     </h5>
                                     <ul>
                                         <li>
-                                            <p>07:30 - Света Литургија</p>
+                                            <p>08:00 - Света Литургија</p>
                                         </li>
                                         <li>
                                             <p>18:00 - Бденије уочи празника</p>

@@ -1,0 +1,894 @@
+@font-face {
+    font-family: Pravoslav;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/Pravosla.ttf'), url('../assets/fonts/Pravosla.woff2') format('woff2');
+    font-display: swap;
+}
+:root {
+    --black: 0,0,0;
+    --red: 155,0,0;
+    --full-width: 100%;
+    --site-width: 1080px;
+    --white: 255,255,255;
+    --gold: 201,171,0;
+    --pravoslav: Pravoslav;
+}
+* {
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #969696 #EBEBEB;
+
+    /* Chrome, Edge and Safari */
+    &::-webkit-scrollbar {
+        height: 5px;
+        width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+        border-radius: 14px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-track:hover {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-track:active {
+        background-color: #EBEBEB;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: #969696;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #9D1F1F;
+    }
+
+    &::-webkit-scrollbar-thumb:active {
+        background-color: #A30000;
+    }
+
+}
+
+hr {
+    &:not(.react-divider) {
+        margin: 20px auto;
+        width: 200px;
+        opacity: 1;
+    }
+    &.MuiDivider-vertical {
+        height: auto;
+    }
+}
+
+h1 {
+    font-size: 48px;
+}
+h2 {
+    font-size: 36px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--pravoslav);
+}
+a {
+    color: rgb(var(--gold));
+    font-size: 14px;
+    transition: color .3s;
+    &:hover {
+        color: rgba(var(--gold), .7);
+    }
+}
+.container {
+    margin: 0 auto;
+    width: var(--site-width);
+}
+.menu-container {
+    display: none;
+}
+span {
+    margin-bottom: 10px;
+    display: block;
+}
+section, footer {
+    display: flex;
+    padding: 2rem 0;
+    flex-direction: column;
+    background: rgb(var(--red));
+    width: var(--full-width);
+    min-height: 600px;
+}
+
+/* Styles for the loading screen */
+#loading-screen {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: block;
+    position: fixed;
+    text-align: center;
+    transition: opacity .3s;
+    background: rgb(var(--red));
+    h1 {
+        margin-top: 3rem;
+        color: rgb(var(--white));
+    }
+}
+
+.loading-svg {
+    width: 300px;
+    height: auto;
+}
+.loading-screen-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+.loading-inner-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    img {
+        max-width: 40px;
+    }
+}
+/*---------------------------------------------------HEADER*/
+header {
+    width: 100%;
+    z-index: 1001;
+    display: flex;
+    position: fixed;
+    background: rgb(var(--white));
+    padding: 0 2rem;
+    justify-content: space-between;
+    box-shadow: 1px 1px 7px rgba(0,0,0,0.2);
+    .dropdown:hover>.dropdown-menu {
+        display: block;
+    }
+    .dropdown>.dropdown-toggle:active {
+        pointer-events: none;
+    }
+    .dropdown-toggle::after {
+        display: inline-flex;
+    }
+    .dropdown-item.active,
+    .dropdown-item:active {
+        background: rgb(var(--red));
+    }
+}
+.nav-up {
+    top: -140px;
+}
+.navigation {
+    padding: 0 2rem;
+    width: 100%;
+}
+#navbar {
+    background: var(--white);
+}
+.nav-link {
+    color: rgb(var(--black));
+    transition: color 0.4s ease 0s;
+    &:hover {
+        color: rgb(var(--red));
+    }
+    &.active {
+        background: rgb(var(--red));
+        color: rgb(var(--white));
+    }
+}
+/*---------------------------------------------------HERO*/
+#hero {
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+.hero-text {
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    padding: 2rem;
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%, -60%);
+    color: rgb(var(--red));
+    background: rgba(255,255,255, .7);
+}
+.container {
+    margin: 0 auto;
+    width: var(--site-width);
+    max-width: var(--full-width);
+}
+.image-slideshow {
+    max-width: var(--full-width);
+    height: 100vh;
+    position: relative;
+    margin: auto;
+}
+img {
+    width: 100%
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 4s;
+}
+@keyframes fade {
+    0% {opacity: .4}
+    100% {opacity: 1}
+}
+
+/*---------------------------------------------------O HRAMU*/
+#o-hramu {
+    text-align: center;
+    color: rgb(var(--white));
+    p {
+        text-align: left;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}
+/*---------------------------------------------------GALERIJA*/
+
+#galerija {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: rgb(var(--white));
+    h2, hr {
+        color: rgb(var(--red));
+    }
+    hr {
+        margin-bottom: 20px;
+    }
+}
+
+/*---------------------------------------------------RASPORED BOGOSLUZENJA*/
+
+#bogosluzenja {
+    background: rgb(var(--red));
+    text-align: center;
+    h2,
+    hr {
+        color: rgb(var(--white));
+    }
+    h3 {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .praznicni-dani {
+        margin-bottom: 1rem;
+    }
+    .container-inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .kalendar,
+    .danasnji-praznik {
+        max-width: 500px;
+        background: rgb(var(--white));
+        height: fit-content;
+        box-shadow: 1px 1px 12px rgb(128, 128, 128, 0.6);
+    }
+    .bogosluzenja-container {
+        width: 50%;
+        height: auto;
+        display: flex;
+        padding: 1rem;
+        flex-direction: column;
+        background: rgb(var(--white));
+        min-height: 500px;
+        img {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+        }
+        .bogosluzenja-tab-panel {
+            text-align: left;
+        }
+    }
+    .bogosluzenja-tab-panel {
+        h4 {
+            text-align: center;
+        }
+        ul {
+            list-style: none;
+        }
+        li {
+            font-size: 14px
+        }
+    }
+}
+/*--------------------------------------------------- Kalendar*/
+
+#kalendar-praznika {
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    background: url("../assets/images/logo-red.webp") round fixed center center;
+    background-size: 20px 20px;
+
+    .white-layout {
+        z-index: 2;
+        top: -2rem;
+        width: 100%;
+        position: absolute;
+        height: calc(100% + 2rem);
+        background: rgba(var(--white), .6);
+    }
+    .content {
+        position: relative;
+        z-index: 3;
+    }
+    h2,
+    hr {
+        color: rgb(var(--gold));
+        margin-top: 0;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .kalendar,
+    table,
+    .danasnji-praznik {
+        max-width: 500px;
+        background: rgb(var(--white));
+        height: fit-content;
+    }
+    .danasnji-praznik {
+        color: rgb(var(--white));
+        background: rgb(var(--red));
+    }
+    .kalendar-praznika {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 2rem 0;
+    }
+    .kalendar-praznika-inner {
+        width: 100%;
+        display: flex;
+        margin: 0 auto;
+        flex-direction: row;
+        max-width: var(--site-width);
+        justify-content: space-between;
+    }
+    .danasnji-praznik {
+        font-size: 14px;
+        img {
+            max-width: 200px;
+            height: auto;
+        }
+        h4 {
+            margin-top: 1rem;
+        }
+        div {
+            padding: 0.5rem;
+        }
+    }
+    .kalendar {
+        td {
+            padding: 5px;
+            font-size: 14px;
+        }
+        span {
+            display: inline;
+        }
+        tr[align="center"] {
+            display: none;
+        }
+    }
+}
+/*---------------------------------------------------PRETRAGA PAROHIJA*/
+
+#pretraga-parohija {
+    background: rgb(var(--white));
+    text-align: center;
+    a {
+        font-size: 16px;
+    }
+    .opis-adrese {
+        margin-top: 20px;
+        font-weight: bold;
+        text-align: left;
+    }
+    .text-box {
+        text-align: left;
+    }
+    .ostale-parohije {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:5px 5px;
+        cursor: pointer;
+        max-height: 494px;
+        overflow: hidden scroll;
+        padding-right: 40px;
+        .ostali-brojevi {
+            width: 200px;
+            font-size: 12px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .ostale-parohije-list-item {
+            height: 52px;
+        }
+        &-wrapper {
+            .react-divider {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    .informacija-o-adresi {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        padding: 0 !important;
+    }
+
+    .informacije-o-svestenicima {
+        height: 500px;
+        max-height: 500px;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+}
+
+.leaflet-control-attribution {
+    display: none;
+}
+
+/*---------------------------------------------------Obavestenja*/
+
+#obavestenja {
+    height: 0;
+    padding: 0;
+    min-height: 0;
+}
+
+/*--------------------------------------------------- Footer*/
+footer {
+    display: flex;
+    padding: 2rem 5rem;
+    flex-direction: row;
+    justify-content: space-between;
+    hr:not(.react-divider) {
+        margin: 0;
+        width: 165px;
+        background: rgb(var(--white));
+    }
+    ul {
+        list-style: none;
+        font-size: 13px;
+        padding-left: 0;
+    }
+    .boxes {
+        width: 50vw;
+    }
+    .boxes.lokacija {
+        display: flex;
+        padding-left: 5rem;
+        flex-direction: column;
+    }
+    h2,
+    h3 {
+        color: rgb(var(--white));
+    }
+    .drustvene-mreze ul {
+        display: flex;
+    }
+    .drustvene-mreze img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+    .drustvene-mreze a {
+        transition: opacity .3s;
+    }
+    .drustvene-mreze a:hover {
+        opacity: .7;
+    }
+
+    .lokacija-information {
+        display: flex;
+        align-items: flex-start;
+    }
+}
+.boxes.lokacija .lokacija-wrapper {
+    margin-top: 2rem;
+}
+.lokacija-information .lokacija-inline {
+    margin-right: 2rem;
+}
+.lokacija-inline p {
+    color: rgb(var(--gold));
+    margin-bottom: 0;
+}
+/*---------------------------------------------HAMBURGER MENU*/
+
+.dropdown-label {
+    display: none;
+    justify-content: flex-end;
+    position: absolute;
+    right: 10px;
+    top: 17px;
+}
+
+.hamburger {
+    align-self: flex-end;
+}
+
+label {
+    cursor: pointer;
+}
+
+label {
+    .icon-bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: #cccccc;
+        margin: 4px;
+        transition: all 0.2s;
+    }
+    .top-bar {
+        transform: rotate(0);
+    }
+    .middle-bar {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    0% {opacity: .4}
+    100% {opacity: 1}
+}
+@media (min-height: 1025px) {
+    .w-100 {
+        height: auto;
+        min-width: 100%;
+        min-height: 100vh;
+        width: auto !important;
+    }
+}
+
+@media (max-width: 1440px) {
+    footer .lokacija-information {
+        flex-direction: column;
+    }
+    footer ul {
+        font-size: 12px;
+    }
+}
+/* Small screens (phones) */
+@media (max-width: 1080px) {
+    :root {
+        --site-width: 100%;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    header {
+        padding: 0;
+        .nav a {
+            font-size: 12px;
+        }
+    }
+    .hero-text {
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        transform: none;
+        position: absolute;
+        top: calc(100% - 86px);
+        h1 {
+            font-size: 20px;
+        }
+        h2 {
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+    }
+    .loading-svg {
+        width: 200px;
+        height: auto;
+    }
+    #kalendar-praznika {
+        .kalendar-praznika {
+            table {
+                width: 100%;
+                font-size: 10px;
+            }
+        }
+        .danasnji-praznik{
+            display: none;
+        }
+    }
+    #pretraga-parohija {
+        .polja-za-upis {
+            align-items: center;
+        }
+        .MuiContainer-root {
+            padding: 10px;
+            h2 {
+                font-size: 32px;
+            }
+        }
+        .dodavanje-broja {
+            flex-direction: row;
+            justify-content: flex-start;
+            max-width: 498px;
+        }
+        .ostale-parohije {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .lista-adresa {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #pretraga-parohija {
+        .polja-za-upis {
+            justify-content: center;
+            flex-direction: column;
+        }
+        .dodavanje-broja {
+            flex-direction: row;
+            max-width: 310px;
+            justify-content: center;
+            padding-top: 20px;
+        }
+        .opis-adrese {
+            margin-top: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .ostale-parohije {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .informacija-o-adresi {
+            flex-direction: column-reverse;
+        }
+        .informacije-o-svestenicima {
+            display: flex;
+            height: 437px;
+            max-height: 457px;
+            position: relative;
+            padding: 0;
+            flex-direction: column-reverse;
+            img, .ime-i-adresa {
+                width: 100%;
+                height: auto;
+                margin: 0 auto;
+            }
+            .ime-i-adresa {
+                left: 50%;
+                bottom: 0;
+                position: absolute;
+                color: rgb(var(--white));
+                transform: translateX(-50%);
+                background: rgba(var(--red), 0.5);
+            }
+        }
+        .react-divider {
+            display: none;
+        }
+    }
+    .makeStyles-modalContent-2 {
+        border-image: url(/assets/border-background.png) 60 / 20px / 0 round repeat !important;
+        width: 90%;
+    }
+    .navigation {
+        padding: 5px;
+    }
+    .container {
+        padding: 0 10px;
+    }
+    footer {
+        padding: 10px;
+        flex-direction: column;
+        .boxes {
+            width: 100%;
+        }
+        .boxes {
+            &.lokacija {
+                padding-top: 10px;
+                padding-left: 10px;
+            }
+        }
+    }
+    #bogosluzenja {
+        .bogosluzenja-container {
+            width: 90%;
+        }
+    }
+    #kalendar-praznika {
+        background-size: 50px auto;
+        .kalendar, table {
+            max-width: 100%;
+        }
+    }
+    .google-map-canvas {
+        height: 90%;
+        width: 90%;
+        max-width: 92%;
+        margin: 20px auto 0 auto;
+    }
+}
+
+@media (max-width: 640px) {
+
+    hr:not(.react-divider) {
+        width: 50px;
+        margin: 5px auto 10px;
+    }
+    .dropdown-label {
+        display: flex;
+    }
+    #dropdown:checked + .nav {
+        display: block;
+    }
+    #pretraga-parohija .MuiAutocomplete-root {
+        width: 310px;
+    }
+    header {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        display: block;
+        position: fixed;
+        background: rgb(var(--white));
+        z-index: 2000;
+        .nav {
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+        .dropdown a:after {
+            display: none;
+        }
+        .dropdown-menu {
+            position: relative;
+            display: block;
+            border: 0;
+            padding: 0;
+        }
+        .dropdown-menu li {
+            height: 34px;
+            display: flex;
+            align-items: center;
+        }
+        .dropdown-menu li:hover {
+            color: #1e2125;
+            background-color: #e9ecef;
+        }
+    }
+    .menu-container {
+        display: block;
+    }
+    .nav-item:hover,
+    header .dropdown-menu li:hover {
+        color: #1e2125;
+        background-color: #e9ecef;
+    }
+    #navbar {
+        position: absolute;
+        padding: 0;
+        top: 3px;
+    }
+    .nav.show {
+        display: block;
+    }
+    .navbar-brand img {
+        width: 40px;
+        height: auto;
+    }
+    .nav {
+        position: fixed;
+        height: auto;
+        right: 0;
+        display: none;
+        top: 60px;
+        width: 50%;
+        max-width: 200px;
+        background: rgb(var(--white));
+    }
+    p, a, li {
+        font-size: 12px;
+    }
+    .kalendar td {
+        font-size: 12px;
+    }
+    #pretraga-parohija {
+        .MuiTypography-root {
+            font-size: 12px;
+        }
+        .ostale-parohije {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    #bogosluzenja h5 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 390px) {
+    .hero-text {
+        top: calc(100% - 105px);
+    }
+    h1 {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    #hero h2 {
+        font-size: 14px;
+    }
+    footer .lokacija-information {
+        flex-direction: column;
+    }
+    .bogosluzenja-tabs {
+        .MuiTabs-indicator {
+            display: none;
+        }
+       .MuiList-root {
+            padding: 0;
+        }
+    }
+
+    #pretraga-parohija .ostale-parohije {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (orientation: landscape) and (max-width: 1000px) {
+    #hero {
+        min-height: unset;
+        height: 100vh;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 1024px) {
+    .carousel {
+        height: 500px;
+        .carousel-inner {
+            height: 100vh;
+            width: auto;
+        }
+        .carousel-item {
+            height: 100%;
+            width: auto;
+            .w-100 {
+                height: 100%!important;
+                width: auto !important;
+                position: relative;
+                left: -50%;
+                transform: translateX(25%);
+            }
+        }
+    }
+}

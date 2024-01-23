@@ -32,20 +32,20 @@ export default function Kal() {
             });
     };
     getDataFromApi();
-    const fetchData = async () => {
-        try {
-            const response = await fetch(  'https://graph.instagram.com/me/media?&access_token=IGQWRPRG0yeEdJRzE5Y0Q4WGo3MVo0YUdjSzFnaXhLSkMzT0tXc2dkWGUweG1WbEczLXZAwa1VYUkhuNklWbTNjZAkVhTkM1c0JWVFVQUnhMR2RENG9rVXZADdWd6LVY3TEs4R3VtVGJDQWpKYmtUMUhGeDVETXI0RzAZD&fields=media_url,permalink')
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data);
-
-                })
-            // Handle the data and update state
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
-    };
-    fetchData();
+    // const fetchData = async () => {
+    //     try {
+    //         const response = await fetch(  'https://graph.instagram.com/me/media?&access_token=IGQWRPRG0yeEdJRzE5Y0Q4WGo3MVo0YUdjSzFnaXhLSkMzT0tXc2dkWGUweG1WbEczLXZAwa1VYUkhuNklWbTNjZAkVhTkM1c0JWVFVQUnhMR2RENG9rVXZADdWd6LVY3TEs4R3VtVGJDQWpKYmtUMUhGeDVETXI0RzAZD&fields=media_url,permalink')
+    //             .then(response => response.json())
+    //             .then(data => {
+    //                 console.log(data);
+    //
+    //             })
+    //         // Handle the data and update state
+    //     } catch (error) {
+    //         console.error('Error fetching data:', error);
+    //     }
+    // };
+    // fetchData();
 
     return (
         <>

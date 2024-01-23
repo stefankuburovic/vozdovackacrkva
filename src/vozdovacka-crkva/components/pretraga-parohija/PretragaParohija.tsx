@@ -9,15 +9,14 @@ import {
     TextField,
     Container,
     ListItemText,
-    Autocomplete,
+    Autocomplete
 } from "@mui/material";
 import {uliceRSCyr} from "../../const/pretragaparohija/ulice";
 import Map from "./map/Map";
-import {NEPARNI, PARNI, Paroh, Parohija, parohije} from "../../const/pretragaparohija/const";
+import {NEPARNI, PARNI, Parohija, parohije} from "../../const/pretragaparohija/const";
 
 import {CYR_PATTERN} from "../../const";
 import {latToCyr} from "../../../util/functions";
-
 
 function PretragaParohija() {
     const sortUliceRSCyr = uliceRSCyr.sort((a, b) => a.value > b.value ? 1 : -1);
@@ -28,7 +27,6 @@ function PretragaParohija() {
     const [ostaleParohije, postaviOstaleParohije] = useState<Array<Parohija> | null>(null);
     const [parohijeAutoKomplit, postaviParohijeAutokomplit] = useState<Array<Parohija> | null>(null);
     const [broj, upisiBroj] = useState<number | null>(null);
-
     const handleTextInputChange = (event: any) => {
         setCyrillicValue(latToCyr(event.target.value));
     };
@@ -147,9 +145,10 @@ function PretragaParohija() {
                 </ul>
             </div>
             <Divider variant="inset" sx={{margin: "20px 0"}} className="react-divider"/>
-            <Container sx={{display: "flex"}}>
-                <Container sx={{display: "flex", flexDirection: "column"}}>
-                    <Container sx={{display: "flex", alignItems: "flex-start"}}>
+            <Container sx={{display: "flex", marginBottom: "20px"}}>
+                <Container sx={{display: "flex", alignItems: "flex-start", flexDirection: "column"}}
+                           className="lista-adresa">
+                    <Container className="polja-za-upis" sx={{display: "flex", alignItems: "flex-start"}}>
                         <Autocomplete
                             value={{value: cyrillicValue, label: cyrillicValue}}
                             disablePortal
@@ -191,66 +190,59 @@ function PretragaParohija() {
                             </Container>
                         }
                     </Container>
-                    <p className="opis-adrese">
-                        {
-                            izabraneParohije?.length === 1
-                            && izabraneParohije[0].odredjeniBrojevi
-                            && izabraneParohije[0]?.odredjeniBrojevi[0]?.prviBroj !== izabraneParohije[0]?.odredjeniBrojevi[0]?.zadnjiBroj
-                            && setSpecificNumbers(
-                                izabraneParohije[0]?.odredjeniBrojevi,
-                                izabraneParohije[0].parniIliNeparni
-                            )
-                        }
-                    </p>
-                    {/*{*/}
-                    {/*    izabraneParohije && izabraneParohije.length === 1 &&*/}
-                    {/*    <Box sx={{marginTop: "2rem"}} className="ostale-parohije-wrapper">*/}
-                    {/*        <Divider className="react-divider"/>*/}
-                    {/*        <p><strong>Остале адресе на којима је свештеник {izabraneParohije[0].paroh.ime}:</strong></p>*/}
-                    {/*        <List className="ostale-parohije" dense={true}>*/}
-                    {/*            {generate(ostaleParohije,*/}
-                    {/*                <ListItem divider className="ostale-parohije-list-item">*/}
-                    {/*                    <ListItemText/>*/}
-                    {/*                </ListItem>,*/}
-                    {/*            )}*/}
-                    {/*        </List>*/}
-                    {/*    </Box>*/}
-                    {/*}*/}
-                </Container>
-
-                <Container sx={{display: "flex"}}>
-                    {
-                        izabraneParohije?.length === 1 &&
-                        <>
-                            <Divider orientation="vertical" className="react-divider"/>
+                    <Container className="informacija-o-adresi">
+                        <Container>
+                            {
+                                izabraneParohije?.length === 1
+                                && izabraneParohije[0].odredjeniBrojevi
+                                && izabraneParohije[0]?.odredjeniBrojevi[0]?.prviBroj !== izabraneParohije[0]?.odredjeniBrojevi[0]?.zadnjiBroj
+                                && <>
+                                    <p className="opis-adrese">{
+                                        setSpecificNumbers(
+                                            izabraneParohije[0]?.odredjeniBrojevi,
+                                            izabraneParohije[0].parniIliNeparni
+                                        )
+                                    }</p>
+                                    <Divider className="react-divider"/>
+                                </>
+                            }
+                            {
+                                izabraneParohije && izabraneParohije.length === 1 &&
+                                <Box sx={{marginTop: "2rem"}} className="ostale-parohije-wrapper">
+                                    <p><strong>Остале адресе на којима је
+                                        свештеник {izabraneParohije[0].paroh.ime}:</strong></p>
+                                    <List className="ostale-parohije" dense={true}>
+                                        {generate(ostaleParohije,
+                                            <ListItem divider className="ostale-parohije-list-item">
+                                                <ListItemText/>
+                                            </ListItem>,
+                                        )}
+                                    </List>
+                                </Box>
+                            }
+                        </Container>
+                        <Container sx={{display: "flex"}}>
+                            {izabraneParohije?.length === 1 &&
+                                <Divider orientation="vertical" className="react-divider"/>}
                             <Container sx={{display: "flex", flexDirection: "column"}}>
-                                <Container>
-                                    {/*<img src={`/assets/images/svestenici/${izabraneParohije[0].paroh.ime}.webp`}*/}
-                                    {/*     alt={izabraneParohije[0].paroh.ime}/>*/}
-                                    <Container>
-                                        <h2>{izabraneParohije[0].paroh.ime}</h2>
-                                        <a href={`tel:${izabraneParohije[0].paroh.telefon}`}>{izabraneParohije[0].paroh.telefon}</a>
+                                {
+                                    izabraneParohije?.length === 1 &&
+                                    <Container sx={{marginTop: "20px"}} className="informacije-o-svestenicima">
+                                        <>
+                                            <img src={`/assets/images/svestenici/${izabraneParohije[0].paroh.imelat}.webp`}
+                                                 alt={izabraneParohije[0].paroh.ime}/>
+                                            <Container sx={{marginTop: "20px"}} className="ime-i-adresa">
+                                                <h2>{izabraneParohije[0].paroh.ime}</h2>
+                                                <a href={`tel:${izabraneParohije[0].paroh.telefon}`}>{izabraneParohije[0].paroh.telefon}</a>
+                                            </Container>
+                                        </>
                                     </Container>
-                                </Container>
+                                }
                             </Container>
-                        </>
-                    }
+                        </Container>
+                    </Container>
                 </Container>
             </Container>
-            {
-                izabraneParohije && izabraneParohije.length === 1 &&
-                <Box sx={{marginTop: "2rem"}} className="ostale-parohije-wrapper">
-                    <Divider className="react-divider"/>
-                    <p><strong>Остале адресе на којима је свештеник {izabraneParohije[0].paroh.ime}:</strong></p>
-                    <List className="ostale-parohije" dense={true}>
-                        {generate(ostaleParohije,
-                            <ListItem divider className="ostale-parohije-list-item">
-                                <ListItemText/>
-                            </ListItem>,
-                        )}
-                    </List>
-                </Box>
-            }
             <Map/>
         </Container>
     );
