@@ -63,43 +63,43 @@ export default function Bogosluzenja() {
                                 },
                             }}
                         >
-                            <Tab label="Текућа недеља" {...a11yProps(0)} disableRipple/>
-                            <Tab label="Зимско време" {...a11yProps(1)} disableRipple/>
-                            <Tab label="Летње време" {...a11yProps(2)} disableRipple/>
+                            <Tab label="Зимско време" {...a11yProps(0)} disableRipple/>
+                            <Tab label="Летње време" {...a11yProps(1)} disableRipple/>
+                            {/*<Tab label="Текућа недеља" {...a11yProps(2)} disableRipple/>*/}
                         </Tabs>
+                        {/*<CustomTabPanel index={2} value={value}>*/}
+                        {/*    <h3>Богослужења у текућој недељи</h3>*/}
+                        {/*    <h4>Распоред богослужења за празник Св. Саве српског</h4>*/}
+                        {/*    <div>*/}
+                        {/*        <div className="praznicni-dani">*/}
+                        {/*            <h5>*/}
+                        {/*                <span>Петак, 26.01.2024.</span>*/}
+                        {/*            </h5>*/}
+                        {/*            <ul>*/}
+                        {/*                <li>*/}
+                        {/*                    <p>17:00 - Празнично бденије</p>*/}
+                        {/*                </li>*/}
+                        {/*            </ul>*/}
+                        {/*        </div>*/}
+                        {/*        <div className="praznicni-dani">*/}
+                        {/*            <h5>*/}
+                        {/*                <span>Субота, 27.01.2024.</span>*/}
+                        {/*            </h5>*/}
+                        {/*            <ul>*/}
+                        {/*                <li>*/}
+                        {/*                    <p>09:00 - Света Литургија</p>*/}
+                        {/*                </li>*/}
+                        {/*                <li>*/}
+                        {/*                    <p>17:00 - Бденије</p>*/}
+                        {/*                </li>*/}
+                        {/*                <li>*/}
+                        {/*                    <p>18:00 - Рецитације и подела пакетића за децу</p>*/}
+                        {/*                </li>*/}
+                        {/*            </ul>*/}
+                        {/*        </div>*/}
+                        {/*    </div>*/}
+                        {/*</CustomTabPanel>*/}
                         <CustomTabPanel index={0} value={value}>
-                            <h3>Богослужења у текућој недељи</h3>
-                            <h4>Распоред богослужења за празник Св. Саве српског</h4>
-                            <div>
-                                <div className="praznicni-dani">
-                                    <h5>
-                                        <span>Петак, 26.01.2024.</span>
-                                    </h5>
-                                    <ul>
-                                        <li>
-                                            <p>17:00 - Празнично бденије</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="praznicni-dani">
-                                    <h5>
-                                        <span>Субота, 27.01.2024.</span>
-                                    </h5>
-                                    <ul>
-                                        <li>
-                                            <p>09:00 - Света Литургија</p>
-                                        </li>
-                                        <li>
-                                            <p>17:00 - Бденије</p>
-                                        </li>
-                                        <li>
-                                            <p>18:00 - Рецитације и подела пакетића за децу</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </CustomTabPanel>
-                        <CustomTabPanel index={1} value={value}>
                         <div data-mesh-id="comp-lo6y8a5kinlineContent-gridContainer"
                                  data-testid="mesh-container-content">
                                 <div>
@@ -150,7 +150,7 @@ export default function Bogosluzenja() {
                                 </div>
                             </div>
                         </CustomTabPanel>
-                        <CustomTabPanel index={2} value={value}>
+                        <CustomTabPanel index={1} value={value}>
                             <div data-mesh-id="comp-lo6y8a5kinlineContent-gridContainer"
                                  data-testid="mesh-container-content">
                                 <div>
