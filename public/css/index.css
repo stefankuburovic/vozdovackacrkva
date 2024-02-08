@@ -386,8 +386,7 @@ img {
   font-size: 14px;
 }
 #kalendar-praznika .danasnji-praznik img {
-  max-width: 200px;
-  height: auto;
+  display: none;
 }
 #kalendar-praznika .danasnji-praznik h4 {
   margin-top: 1rem;

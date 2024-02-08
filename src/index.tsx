@@ -14,7 +14,7 @@ const Bogosluzenja = lazy(() => import('./vozdovacka-crkva/components/bogosluzen
 
 const Kalendar = lazy(() => import('./vozdovacka-crkva/components/kalendar/Kalendar'));
 
-const Obavestenja = lazy(() => import('./vozdovacka-crkva/components/obavestenja/Obavestenja'));
+// const Obavestenja = lazy(() => import('./vozdovacka-crkva/components/obavestenja/Obavestenja'));
 
 const wrappers: React.JSX.Element[] = [
     <PretragaParohija/>,
@@ -22,7 +22,7 @@ const wrappers: React.JSX.Element[] = [
     <Bogosluzenja/>,
     <Kalendar/>,
     /*<InstagramFeed/>,*/
-    <Obavestenja/>
+    // <Obavestenja/>
 ]
 roots.map((root: ReactDOM.Root, index: number) => root.render(
     <React.StrictMode>
