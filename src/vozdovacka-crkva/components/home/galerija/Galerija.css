@@ -1,0 +1,17 @@
+/*---------------------------------------------------GALERIJA*/
+#galerija {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: rgb(var(--white));
+}
+#galerija h2, #galerija hr {
+  color: rgb(var(--red));
+}
+#galerija hr {
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=Galerija.css.map */

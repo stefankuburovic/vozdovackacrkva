@@ -6,6 +6,7 @@ import './index.css';
 import "yet-another-react-lightbox/styles.css";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
+const Layout = lazy(() => import('./vozdovacka-crkva/pages/Layout'));
 const Home = lazy(() => import('./vozdovacka-crkva/pages/Home/Home'));
 const Auth = lazy(() => import('./vozdovacka-crkva/pages/Auth/Auth'));
 
@@ -13,7 +14,9 @@ export default function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home />}></Route>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<Home />} />
+                </Route>
                 <Route path="/auth" element={<Auth/>}></Route>
             </Routes>
         </BrowserRouter>

@@ -1,22 +1,36 @@
 import * as React from 'react';
 import {lazy} from "react";
 
-const Hero = lazy(() => import('../../components/hero-swiper/Hero'));
-const Riznica = lazy(() => import('../../components/riznica/Riznica'));
-const Galerija = lazy(() => import('../../components/galerija/Galerija'));
-const Kalendar = lazy(() => import('../../components/kalendar/Kalendar'));
-const Obavestenja = lazy(() => import('../../components/obavestenja/Obavestenja'));
-const Bogosluzenja = lazy(() => import('../../components/bogosluzenja/Bogosluzenja'));
-const PretragaParohija = lazy(() => import('../../components/pretraga-parohija/PretragaParohija'));
+import './Home.scss';
+
+const Hero = lazy(() => import('../../components/home/hero-swiper/Hero'));
+const Galerija = lazy(() => import('../../components/home/galerija/Galerija'));
+const Kalendar = lazy(() => import('../../components/home/kalendar/Kalendar'));
+const Bogosluzenja = lazy(() => import('../../components/home/bogosluzenja/Bogosluzenja'));
+const PretragaParohija = lazy(() => import('../../components/home/pretraga-parohija/PretragaParohija'));
 
 export default function Home() {
     return (
         <>
-            <Hero/>
+            <section id="hero">
+                <Hero/>
+            </section>
             <section id="pretraga-parohija">
                 <PretragaParohija/>
             </section>
-            <Riznica/>
+            <section id="o-hramu">
+                <div className="container">
+                    <h2>О Храму</h2>
+                    <hr/>
+                    <p>
+                        <span>Црква Светог цара Константина и царице Јелене (или Вождовачка црква) је православни саборни храм насеља Вождовац у Београду. Добио је свој назив почетком 20. века, тачније од 1903, након доласка на престо краља Петра I Карађорђевића. На овом месту је вожд Карађорђе са својим устаницима у току 1806. логоровао, окупљао војску и са овог предграђа полазио на Београдску тврђаву приликом њеног освајања.</span>
+                        <span>Храм је сазидан 1911. године на данашњем месту, након извесног застоја у градњи услед неспоразума око одабира места градње. Нажалост, храм је у периоду од 1912–1919. делио судбину свог народа. Био је опљачкан, однесено је једно звоно, кров је брзо попустио, зидови су се размакли, а мало кубе на средини крова је утонуло и претило да се сруши.</span>
+                        <span>Обновом цркве је руководио архитекта Драгомир Тадић. Цркву је живописао академски сликар Милић од Мачве, по благослову патријарха Германа. Историчари уметности су овај рад окарактерисали као увод у ренесансу управо зато што су Милићеве фигуре ослобођене било каквог шематизма и школе. У потпуности је негирао традицију иконописа.</span>
+                        <span>Живопис парохијског дома осликао је Војислав Луковић, дипл. сликар из Београда, а освештао Патријарх Иринеј на стогодишњицу храма, 2011. године.</span>
+                        <span>Црква Светог Константина и Јелене слави 27. септембра Крстовдан као преславу храмовне славе светитеља захваљујући чијој ревности је и пронађен часни крст на ком је распет Господ Исус Христос, јер чува велику светињу-частицу Часног и Животворног Крста која је уграђена у повећи Крст. Патријарх Герман је након обиласка Свете Земље у току Страсне седмице и Ускрса 1959. године даровао Вождовачку цркву овом драгоценошћу</span>
+                    </p>
+                </div>
+            </section>
             <section id="galerija">
                 <Galerija/>
             </section>
@@ -25,9 +39,6 @@ export default function Home() {
             </section>
             <section id="kalendar-praznika">
                 <Kalendar/>
-            </section>
-            <section id="obavestenja">
-                <Obavestenja/>
             </section>
         </>
     );

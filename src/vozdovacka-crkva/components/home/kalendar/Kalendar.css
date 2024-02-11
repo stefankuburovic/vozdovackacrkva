@@ -1,0 +1,100 @@
+/*--------------------------------------------------- Kalendar*/
+#kalendar-praznika {
+  z-index: 1;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  background: url("../../../../../public/assets/images/logo-red.webp") white round fixed center center;
+  background-size: 60px 60px;
+}
+#kalendar-praznika .white-layout {
+  z-index: 2;
+  top: -2rem;
+  width: 100%;
+  position: absolute;
+  height: calc(100% + 2rem);
+  background: rgba(var(--white), 0.6);
+}
+#kalendar-praznika .content {
+  position: relative;
+  z-index: 3;
+}
+#kalendar-praznika h2,
+#kalendar-praznika hr {
+  color: rgb(var(--gold));
+  margin-top: 0;
+}
+#kalendar-praznika .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#kalendar-praznika .kalendar,
+#kalendar-praznika table,
+#kalendar-praznika .danasnji-praznik {
+  max-width: 500px;
+  background: rgb(var(--white));
+  height: fit-content;
+}
+#kalendar-praznika .danasnji-praznik {
+  color: rgb(var(--white));
+  background: rgb(var(--red));
+}
+#kalendar-praznika .kalendar-praznika {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 2rem 0;
+}
+#kalendar-praznika .kalendar-praznika-inner {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+  max-width: var(--site-width);
+  justify-content: space-between;
+}
+#kalendar-praznika .danasnji-praznik {
+  font-size: 14px;
+}
+#kalendar-praznika .danasnji-praznik img {
+  display: none;
+}
+#kalendar-praznika .danasnji-praznik h4 {
+  margin-top: 1rem;
+}
+#kalendar-praznika .danasnji-praznik div {
+  padding: 0.5rem;
+}
+#kalendar-praznika .kalendar td {
+  padding: 5px;
+  font-size: 14px;
+}
+#kalendar-praznika .kalendar span {
+  display: inline;
+}
+#kalendar-praznika .kalendar tr[align=center] {
+  display: none;
+}
+@media (max-width: 1080px) {
+  #kalendar-praznika .kalendar-praznika table {
+    width: 100%;
+    font-size: 10px;
+  }
+  #kalendar-praznika .danasnji-praznik {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  #kalendar-praznika {
+    background-size: 50px auto;
+  }
+  #kalendar-praznika .kalendar, #kalendar-praznika table {
+    max-width: 100%;
+  }
+  #kalendar-praznika td {
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=Kalendar.css.map */

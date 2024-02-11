@@ -1,0 +1,46 @@
+/*---------------------------------------------------HEADER*/
+header {
+  width: 100%;
+  z-index: 1001;
+  display: flex;
+  position: fixed;
+  background: rgb(var(--white));
+  padding: 0;
+  justify-content: space-between;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);
+}
+header .appbar, header .toolbar {
+  width: 100vw;
+  display: flex;
+  background: rgb(var(--white));
+  color: rgb(var(--black));
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+header img {
+  width: 60px;
+  height: auto;
+}
+@media screen and (max-width: 640px) {
+  header img {
+    width: 40px;
+  }
+}
+
+.drawer-divider {
+  margin: 0 !important;
+  opacity: 0.2 !important;
+  width: 100% !important;
+}
+.drawer-nav {
+  background: rgb(var(--red));
+}
+.drawer a {
+  margin: 0;
+}
+.drawer img {
+  width: 60px;
+  height: auto;
+}
+
+/*# sourceMappingURL=ResponsiveAppBar.css.map */

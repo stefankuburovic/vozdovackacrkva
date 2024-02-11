@@ -1,0 +1,12 @@
+/*---------------------------------------------------O HRAMU*/
+#o-hramu {
+  text-align: center;
+  color: rgb(var(--white));
+}
+#o-hramu p {
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=Home.css.map */

@@ -1,0 +1,162 @@
+/*---------------------------------------------------PRETRAGA PAROHIJA*/
+
+#pretraga-parohija {
+  background: rgb(var(--white));
+  text-align: center;
+
+  a {
+    font-size: 16px;
+  }
+
+  .opis-adrese {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .text-box {
+    text-align: left;
+  }
+
+  .ostale-parohije {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5px 5px;
+    cursor: pointer;
+    max-height: 494px;
+    overflow: hidden scroll;
+    padding-right: 40px;
+
+    .ostali-brojevi {
+      width: 200px;
+      font-size: 12px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .ostale-parohije-list-item {
+      height: 52px;
+    }
+
+    &-wrapper {
+      .react-divider {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .informacija-o-adresi {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    padding: 0 !important;
+  }
+
+  .informacije-o-svestenicima {
+    height: 500px;
+    max-height: 500px;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  .leaflet-control-attribution {
+    display: none;
+  }
+
+  @media (max-width: 1080px) {
+    .polja-za-upis {
+      align-items: center;
+    }
+    .MuiContainer-root {
+      padding: 10px;
+
+      h2 {
+        font-size: 32px;
+      }
+    }
+    .dodavanje-broja {
+      flex-direction: row;
+      justify-content: flex-start;
+      max-width: 498px;
+    }
+    .ostale-parohije {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .lista-adresa {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .polja-za-upis {
+      justify-content: center;
+      flex-direction: column;
+    }
+    .dodavanje-broja {
+      flex-direction: row;
+      max-width: 310px;
+      justify-content: center;
+      padding-top: 20px;
+    }
+    .opis-adrese {
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .ostale-parohije {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .informacija-o-adresi {
+      flex-direction: column-reverse;
+    }
+    .informacije-o-svestenicima {
+      display: flex;
+      height: 437px;
+      max-height: 457px;
+      position: relative;
+      padding: 0;
+      flex-direction: column-reverse;
+
+      img, .ime-i-adresa {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      .ime-i-adresa {
+        left: 50%;
+        bottom: 0;
+        position: absolute;
+        color: rgb(var(--white));
+        transform: translateX(-50%);
+        background: rgba(var(--red), 0.5);
+      }
+    }
+    .react-divider {
+      display: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .MuiAutocomplete-root {
+      width: 310px;
+    }
+    .MuiTypography-root {
+      font-size: 12px;
+    }
+    .ostale-parohije {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @media (max-width: 390px) {
+    .ostale-parohije {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+}

@@ -1,4 +1,3 @@
-import ReactDOM from "react-dom/client";
 import L from 'leaflet';
 // @ts-ignore
 import icon from 'leaflet/dist/images/marker-icon.png';

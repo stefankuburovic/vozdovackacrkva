@@ -1,0 +1,142 @@
+/*---------------------------------------------------PRETRAGA PAROHIJA*/
+#pretraga-parohija {
+  background: rgb(var(--white));
+  text-align: center;
+}
+#pretraga-parohija a {
+  font-size: 16px;
+}
+#pretraga-parohija .opis-adrese {
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: left;
+}
+#pretraga-parohija .text-box {
+  text-align: left;
+}
+#pretraga-parohija .ostale-parohije {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 5px 5px;
+  cursor: pointer;
+  max-height: 494px;
+  overflow: hidden scroll;
+  padding-right: 40px;
+}
+#pretraga-parohija .ostale-parohije .ostali-brojevi {
+  width: 200px;
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#pretraga-parohija .ostale-parohije .ostale-parohije-list-item {
+  height: 52px;
+}
+#pretraga-parohija .ostale-parohije-wrapper .react-divider {
+  margin-bottom: 2rem;
+}
+#pretraga-parohija .informacija-o-adresi {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  padding: 0 !important;
+}
+#pretraga-parohija .informacije-o-svestenicima {
+  height: 500px;
+  max-height: 500px;
+}
+#pretraga-parohija .informacije-o-svestenicima img {
+  height: 100%;
+  width: auto;
+}
+#pretraga-parohija .leaflet-control-attribution {
+  display: none;
+}
+@media (max-width: 1080px) {
+  #pretraga-parohija .polja-za-upis {
+    align-items: center;
+  }
+  #pretraga-parohija .MuiContainer-root {
+    padding: 10px;
+  }
+  #pretraga-parohija .MuiContainer-root h2 {
+    font-size: 32px;
+  }
+  #pretraga-parohija .dodavanje-broja {
+    flex-direction: row;
+    justify-content: flex-start;
+    max-width: 498px;
+  }
+  #pretraga-parohija .ostale-parohije {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #pretraga-parohija .lista-adresa {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  #pretraga-parohija .polja-za-upis {
+    justify-content: center;
+    flex-direction: column;
+  }
+  #pretraga-parohija .dodavanje-broja {
+    flex-direction: row;
+    max-width: 310px;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  #pretraga-parohija .opis-adrese {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+  #pretraga-parohija .ostale-parohije {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #pretraga-parohija .informacija-o-adresi {
+    flex-direction: column-reverse;
+  }
+  #pretraga-parohija .informacije-o-svestenicima {
+    display: flex;
+    height: 437px;
+    max-height: 457px;
+    position: relative;
+    padding: 0;
+    flex-direction: column-reverse;
+  }
+  #pretraga-parohija .informacije-o-svestenicima img, #pretraga-parohija .informacije-o-svestenicima .ime-i-adresa {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  #pretraga-parohija .informacije-o-svestenicima .ime-i-adresa {
+    left: 50%;
+    bottom: 0;
+    position: absolute;
+    color: rgb(var(--white));
+    transform: translateX(-50%);
+    background: rgba(var(--red), 0.5);
+  }
+  #pretraga-parohija .react-divider {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  #pretraga-parohija .MuiAutocomplete-root {
+    width: 310px;
+  }
+  #pretraga-parohija .MuiTypography-root {
+    font-size: 12px;
+  }
+  #pretraga-parohija .ostale-parohije {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 390px) {
+  #pretraga-parohija .ostale-parohije {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/*# sourceMappingURL=PretragaParohija.css.map */

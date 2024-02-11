@@ -1,0 +1,118 @@
+/*--------------------------------------------------- Kalendar*/
+
+#kalendar-praznika {
+  z-index: 1;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  background: url('../../../../../public/assets/images/logo-red.webp') white round fixed center center;
+  background-size: 60px 60px;
+
+  .white-layout {
+    z-index: 2;
+    top: -2rem;
+    width: 100%;
+    position: absolute;
+    height: calc(100% + 2rem);
+    background: rgba(var(--white), .6);
+  }
+
+  .content {
+    position: relative;
+    z-index: 3;
+  }
+
+  h2,
+  hr {
+    color: rgb(var(--gold));
+    margin-top: 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .kalendar,
+  table,
+  .danasnji-praznik {
+    max-width: 500px;
+    background: rgb(var(--white));
+    height: fit-content;
+  }
+
+  .danasnji-praznik {
+    color: rgb(var(--white));
+    background: rgb(var(--red));
+  }
+
+  .kalendar-praznika {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  .kalendar-praznika-inner {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    max-width: var(--site-width);
+    justify-content: space-between;
+  }
+
+  .danasnji-praznik {
+    font-size: 14px;
+
+    img {
+      display: none;
+    }
+
+    h4 {
+      margin-top: 1rem;
+    }
+
+    div {
+      padding: 0.5rem;
+    }
+  }
+
+  .kalendar {
+    td {
+      padding: 5px;
+      font-size: 14px;
+    }
+
+    span {
+      display: inline;
+    }
+
+    tr[align="center"] {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1080px) {
+    .kalendar-praznika {
+      table {
+        width: 100%;
+        font-size: 10px;
+      }
+    }
+    .danasnji-praznik {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    background-size: 50px auto;
+    .kalendar, table {
+      max-width: 100%;
+    }
+    td {
+      font-size: 12px;
+    }
+  }
+}

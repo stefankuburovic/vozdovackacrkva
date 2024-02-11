@@ -1,0 +1,16 @@
+/*---------------------------------------------------GALERIJA*/
+
+#galerija {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: rgb(var(--white));
+  h2, hr {
+    color: rgb(var(--red));
+  }
+  hr {
+    margin-bottom: 20px;
+  }
+}
