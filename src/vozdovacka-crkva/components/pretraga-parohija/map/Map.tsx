@@ -1,5 +1,5 @@
 import React from 'react'
-import {MapContainer, Marker, Polygon, SVGOverlay, TileLayer} from "react-leaflet";
+import {MapContainer, Polygon, TileLayer} from "react-leaflet";
 
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-geosearch/dist/geosearch.css';
@@ -7,7 +7,7 @@ import {hram_bounds, IGeoJSON, mapObject} from "../../../const/pretragaparohija/
 import GeoJSONField from "./GeoJSONField/GeoJSONField";
 import SearchField from "./SearchField/Search";
 import {Box} from "@mui/material";
-import {LatLngBoundsExpression, LatLngExpression} from "leaflet";
+import {LatLngExpression} from "leaflet";
 
 function Map() {
 

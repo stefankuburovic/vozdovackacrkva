@@ -63,59 +63,59 @@ export default function Bogosluzenja() {
                                 },
                             }}
                         >
-                            <Tab label="Текућа недеља" {...a11yProps(0)} disableRipple/>
-                            <Tab label="Зимско време" {...a11yProps(1)} disableRipple/>
-                            <Tab label="Летње време" {...a11yProps(2)} disableRipple/>
+                            {/*<Tab label="Текућа недеља" {...a11yProps(0)} disableRipple/>*/}
+                            <Tab label="Зимско време" {...a11yProps(0)} disableRipple/>
+                            <Tab label="Летње време" {...a11yProps(1)} disableRipple/>
                         </Tabs>
+                        {/*<CustomTabPanel index={0} value={value}>*/}
+                        {/*    <h3>Света Три јерарха</h3>*/}
+                        {/*    <div>*/}
+                        {/*        <div className="praznicni-dani">*/}
+                        {/*            <h5>*/}
+                        {/*                <span>Недеља, 11.02.2024.</span>*/}
+                        {/*            </h5>*/}
+                        {/*            <ul>*/}
+                        {/*                <li>*/}
+                        {/*                    <p>17:00 - Празнично бденије</p>*/}
+                        {/*                </li>*/}
+                        {/*            </ul>*/}
+                        {/*        </div>*/}
+                        {/*        <div className="praznicni-dani">*/}
+                        {/*            <h5>*/}
+                        {/*                <span>Понедељак, 12.02.2024.</span>*/}
+                        {/*            </h5>*/}
+                        {/*            <ul>*/}
+                        {/*                <li>*/}
+                        {/*                    <p>09:00 - Света Литургија</p>*/}
+                        {/*                </li>*/}
+                        {/*            </ul>*/}
+                        {/*        </div>*/}
+                        {/*    </div>*/}
+                        {/*    <h3>Сретење Господње</h3>*/}
+                        {/*    <div>*/}
+                        {/*        <div className="praznicni-dani">*/}
+                        {/*            <h5>*/}
+                        {/*                <span>Среда, 14.02.2024.</span>*/}
+                        {/*            </h5>*/}
+                        {/*            <ul>*/}
+                        {/*                <li>*/}
+                        {/*                    <p>17:00 - Празнично бденије</p>*/}
+                        {/*                </li>*/}
+                        {/*            </ul>*/}
+                        {/*        </div>*/}
+                        {/*        <div className="praznicni-dani">*/}
+                        {/*            <h5>*/}
+                        {/*                <span>Четвртак, 15.02.2024.</span>*/}
+                        {/*            </h5>*/}
+                        {/*            <ul>*/}
+                        {/*                <li>*/}
+                        {/*                    <p>09:00 - Света Литургија</p>*/}
+                        {/*                </li>*/}
+                        {/*            </ul>*/}
+                        {/*        </div>*/}
+                        {/*    </div>*/}
+                        {/*</CustomTabPanel>*/}
                         <CustomTabPanel index={0} value={value}>
-                            <h3>Света Три јерарха</h3>
-                            <div>
-                                <div className="praznicni-dani">
-                                    <h5>
-                                        <span>Недеља, 11.02.2024.</span>
-                                    </h5>
-                                    <ul>
-                                        <li>
-                                            <p>17:00 - Празнично бденије</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="praznicni-dani">
-                                    <h5>
-                                        <span>Понедељак, 12.02.2024.</span>
-                                    </h5>
-                                    <ul>
-                                        <li>
-                                            <p>09:00 - Света Литургија</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h3>Сретење Господње</h3>
-                            <div>
-                                <div className="praznicni-dani">
-                                    <h5>
-                                        <span>Среда, 14.02.2024.</span>
-                                    </h5>
-                                    <ul>
-                                        <li>
-                                            <p>17:00 - Празнично бденије</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="praznicni-dani">
-                                    <h5>
-                                        <span>Четвртак, 15.02.2024.</span>
-                                    </h5>
-                                    <ul>
-                                        <li>
-                                            <p>09:00 - Света Литургија</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </CustomTabPanel>
-                        <CustomTabPanel index={1} value={value}>
                             <div data-mesh-id="comp-lo6y8a5kinlineContent-gridContainer"
                                  data-testid="mesh-container-content">
                                 <div>
@@ -166,7 +166,7 @@ export default function Bogosluzenja() {
                                 </div>
                             </div>
                         </CustomTabPanel>
-                        <CustomTabPanel index={2} value={value}>
+                        <CustomTabPanel index={1} value={value}>
                             <div data-mesh-id="comp-lo6y8a5kinlineContent-gridContainer"
                                  data-testid="mesh-container-content">
                                 <div>
