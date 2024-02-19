@@ -9,11 +9,13 @@ import SearchField from "./SearchField/Search";
 import {Box} from "@mui/material";
 import {LatLngExpression} from "leaflet";
 
+import './Map.scss';
+
 function Map() {
 
     return (
-        <div style={{width: "100%", overflow: "hidden", marginTop: "20px"}}>
-            <Box style={{marginBottom: "2rem"}}>
+        <div className="map">
+            <Box className="map-box">
                 <h4>Мапа парохије</h4>
                 <p>Претражите адресу или кликните на зграду да пронађете свештеника који је задужен за вашу адресу</p>
             </Box>

@@ -4,11 +4,13 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import './Hero.scss';
 
 // Import Swiper styles
-import "swiper/css";
+import 'swiper/css';
+import 'swiper/css/effect-fade';
 
 import Slide from "./slide/Slide";
 import {HeroSlides} from "../../../const/hero/hero";
 import type {Swiper as SwiperClass} from "swiper/types";
+import { EffectFade, Autoplay } from 'swiper/modules';
 
 export default function Hero() {
 
@@ -21,16 +23,19 @@ export default function Hero() {
             <Swiper
                 spaceBetween={0}
                 slidesPerView={1}
+                effect="fade"
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper: SwiperClass) => console.log(swiper)}
                 autoplay={
                     {
-                        delay: 2500,
-                        disableOnInteraction: true,
+
+                        delay: 5000,
+                        disableOnInteraction: false,
                         pauseOnMouseEnter: true
                     }
                 }
                 loop={true}
+                modules={[EffectFade, Autoplay]}
             >
                 {HeroSlides.map((slide, index) => (
                     <SwiperSlide key={index}>

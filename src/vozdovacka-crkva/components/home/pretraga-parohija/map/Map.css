@@ -1,0 +1,13 @@
+.map {
+  width: 100%;
+  marginTop: 20px;
+  overflow: hidden;
+}
+.map-box {
+  margin-bottom: 2rem;
+}
+.map h4 {
+  font-size: 24px;
+}
+
+/*# sourceMappingURL=Map.css.map */

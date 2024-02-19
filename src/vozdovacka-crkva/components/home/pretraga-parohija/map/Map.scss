@@ -1,0 +1,11 @@
+.map {
+  width: 100%;
+  marginTop: 20px;
+  overflow: hidden;
+  &-box {
+    margin-bottom: 2rem;
+  }
+  h4 {
+    font-size: 24px;
+  }
+}

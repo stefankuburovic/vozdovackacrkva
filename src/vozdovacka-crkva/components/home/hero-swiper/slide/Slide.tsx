@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { SwiperSlide } from 'swiper/react';
 
 import './Slide.scss';
 
