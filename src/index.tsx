@@ -6,11 +6,9 @@ import {BrowserRouter, Route, Routes, useRoutes} from "react-router-dom";
 import {HelmetProvider} from "react-helmet-async";
 import router from "./admin/router";
 import ThemeProvider from "./admin/theme/ThemeProvider";
-import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import {CssBaseline} from "@mui/material";
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider/LocalizationProvider';
-import { AdapterDateFnsBase} from "@mui/x-date-pickers/AdapterDateFnsBase";
-import {MuiPickersAdapter} from "@mui/x-date-pickers";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 
 const Layout = lazy(() => import('./vozdovacka-crkva/pages/Layout/Layout'));
 const Home = lazy(() => import('./vozdovacka-crkva/pages/Layout/Home/Home'));
@@ -21,7 +19,7 @@ const AuthRoutes = () => {
 
     return (
         <ThemeProvider>
-            <LocalizationProvider dateAdapter={AdapterDateFnsBase as unknown as new (...args: any) => MuiPickersAdapter<unknown, unknown>}>
+            <LocalizationProvider dateAdapter={AdapterDateFns}>
                 <CssBaseline />
                 {content}
             </LocalizationProvider>

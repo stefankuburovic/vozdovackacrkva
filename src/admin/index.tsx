@@ -6,11 +6,11 @@ import App from './App';
 import { SidebarProvider } from './contexts/SidebarContext';
 
 ReactDOM.render(
-    <SidebarProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </SidebarProvider>,
+        <SidebarProvider>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </SidebarProvider>,
   document.getElementById('root')
 );
 

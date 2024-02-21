@@ -1,0 +1,40 @@
+.praznik {
+  display: flex;
+  transition: background .3s;
+  padding: 10px 0px;
+  &:hover, &.selected {
+    background: wheat;
+  }
+  em, strong {
+    margin: 0 0 0 5px;
+  }
+  label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  p {
+    margin: 0 5px;
+  }
+  span {
+    margin: 0 5px 0 5px;
+  }
+}
+.sacuvaj-bogosluzenje {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px;
+    background: wheat;
+    .selektovani-praznik {
+        margin: 0 5px;
+    }
+    button {
+        margin: 0 5px;
+    }
+  .informacije {
+    width: 510px;
+    padding: 10px;
+  }
+}

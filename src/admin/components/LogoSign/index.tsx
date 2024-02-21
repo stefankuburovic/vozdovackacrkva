@@ -1,16 +1,11 @@
 import {
-  Box,
-  Tooltip,
-  Badge,
-  TooltipProps,
-  tooltipClasses,
-  styled,
-  useTheme
+    Box,
+    styled
 } from '@mui/material';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const LogoWrapper = styled(Link)(
-  ({ theme }) => `
+    ({theme}) => `
         color: ${theme.palette.text.primary};
         display: flex;
         text-decoration: none;
@@ -20,87 +15,33 @@ const LogoWrapper = styled(Link)(
 `
 );
 
-const LogoSignWrapper = styled(Box)(
-  () => `
-        width: 52px;
-        height: 38px;
-`
-);
-
-const LogoSign = styled(Box)(
-  ({ theme }) => `
-        background: ${theme.general.reactFrameworkColor};
-        width: 18px;
-        height: 18px;
-        border-radius: ${theme.general.borderRadiusSm};
-        position: relative;
-        transform: rotate(45deg);
-        top: 3px;
-        left: 17px;
-
-        &:after, 
-        &:before {
-            content: "";
-            display: block;
-            width: 18px;
-            height: 18px;
-            position: absolute;
-            top: -1px;
-            right: -20px;
-            transform: rotate(0deg);
-            border-radius: ${theme.general.borderRadiusSm};
-        }
-
-        &:before {
-            background: ${theme.palette.primary.main};
-            right: auto;
-            left: 0;
-            top: 20px;
-        }
-
-        &:after {
-            background: ${theme.palette.secondary.main};
-        }
-`
-);
-
-const LogoSignInner = styled(Box)(
-  ({ theme }) => `
-        width: 16px;
-        height: 16px;
-        position: absolute;
-        top: 12px;
-        left: 12px;
-        z-index: 5;
-        border-radius: ${theme.general.borderRadiusSm};
-        background: ${theme.header.background};
-`
-);
 
 function Logo() {
-  const theme = useTheme();
-
-  return (
-      <LogoWrapper to="/auth/bogosluzenja">
-        {/*<Badge*/}
-        {/*  sx={{*/}
-        {/*    '.MuiBadge-badge': {*/}
-        {/*      fontSize: theme.typography.pxToRem(11),*/}
-        {/*      right: -2,*/}
-        {/*      top: 8*/}
-        {/*    }*/}
-        {/*  }}*/}
-        {/*  overlap="circular"*/}
-        {/*  color="success"*/}
-        {/*>*/}
-        {/*  <LogoSignWrapper>*/}
-        {/*    <LogoSign>*/}
-        {/*      <LogoSignInner />*/}
-        {/*    </LogoSign>*/}
-        {/*  </LogoSignWrapper>*/}
-        {/*</Badge>*/}
-      </LogoWrapper>
-  );
+    return (
+        <LogoWrapper to="/auth/bogosluzenja">
+            <Box
+                component="img"
+                src="/assets/images/logo.svg"
+                height={53}
+                width={100}
+                alt="Bogosluzenja"
+                sx={{
+                    display: 'flex',
+                    filter: 'brightness(0) invert(1)',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white'
+                }}
+            >
+            </Box>
+            <p style={{
+                fontSize: '1rem',
+                fontWeight: 'bold',
+                color: 'white',
+                marginLeft: '10px'
+            }}>Администрација</p>
+        </LogoWrapper>
+    );
 }
 
 export default Logo;

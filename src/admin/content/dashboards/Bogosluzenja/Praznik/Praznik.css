@@ -1,0 +1,43 @@
+.praznik {
+  display: flex;
+  transition: background 0.3s;
+  padding: 10px 0px;
+}
+.praznik:hover, .praznik.selected {
+  background: wheat;
+}
+.praznik em, .praznik strong {
+  margin: 0 0 0 5px;
+}
+.praznik label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+}
+.praznik p {
+  margin: 0 5px;
+}
+.praznik span {
+  margin: 0 5px 0 5px;
+}
+
+.sacuvaj-bogosluzenje {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 10px;
+  background: wheat;
+}
+.sacuvaj-bogosluzenje .selektovani-praznik {
+  margin: 0 5px;
+}
+.sacuvaj-bogosluzenje button {
+  margin: 0 5px;
+}
+.sacuvaj-bogosluzenje .informacije {
+  width: 510px;
+  padding: 10px;
+}
+
+/*# sourceMappingURL=Praznik.css.map */

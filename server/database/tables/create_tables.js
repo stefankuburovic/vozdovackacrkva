@@ -8,28 +8,18 @@ const con = mysql.createConnection({
     database: process.env.DB_NAME
 });
 
-con.connect(function(err) {
-    if (err) throw err;
-    console.log("Connected!");
-    var sql = "ALTER TABLE bogosluzenja ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY";
-    con.query(sql, function (err, result) {
-        if (err) throw err;
-        console.log("Table created");
-    });
-});
-
 
 con.connect(function(err) {
     if (err) throw err;
     console.log("Connected!");
-    var sql = `CREATE TABLE IF NOT EXISTS bogosluzenja (
-                        id VARCHAR(2000) INT AUTO_INCREMENT PRIMARY KEY,
+    var sql = `CREATE TABLE bogosluzenja (
+                        id INT AUTO_INCREMENT PRIMARY KEY,
                         praznik VARCHAR(2000), 
                         datum_bogosluzenja VARCHAR(255), 
                         vreme_bogosluzenja VARCHAR(255), 
                         datum_bdenija VARCHAR(255), 
                         vreme_bdenija VARCHAR(255),
-                        dodatne_informacije VARCHAR(2000),
+                        dodatne_informacije VARCHAR(2000)
                     )`;
     con.query(sql, function (err, result) {
         if (err) throw err;
@@ -40,8 +30,8 @@ con.connect(function(err) {
 con.connect(function(err) {
     if (err) throw err;
     console.log("Connected!");
-    var sql = `CREATE TABLE IF NOT EXISTS kalendar (
-                        id VARCHAR(2000) INT AUTO_INCREMENT PRIMARY KEY,
+    var sql = `CREATE TABLE kalendar (
+                        id INT AUTO_INCREMENT PRIMARY KEY,
                         praznik VARCHAR(2000), 
                         stari VARCHAR(255), 
                         novi VARCHAR(255), 
