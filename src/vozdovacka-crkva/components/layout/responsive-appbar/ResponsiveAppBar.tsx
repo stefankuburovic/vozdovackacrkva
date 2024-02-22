@@ -138,7 +138,7 @@ function ResponsiveAppBar(props: Props) {
                                 }}
                             >
                                 {item.subitems.map((subitem) => (
-                                    <MenuItem key={subitem.name}>
+                                    <MenuItem key={subitem.name} className="subitems">
                                         <NavLink to={subitem.url}>{subitem.name}</NavLink>
                                     </MenuItem>
                                 ))}

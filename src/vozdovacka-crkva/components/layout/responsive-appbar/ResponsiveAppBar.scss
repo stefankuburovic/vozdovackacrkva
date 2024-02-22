@@ -17,6 +17,18 @@ header {
     color: rgb(var(--black));
     justify-content: space-between;
     padding: 1rem 2rem;
+    li {
+      &:hover {
+        background: rgb(var(--red));
+        a {
+          color: rgb(var(--white));
+        }
+      }
+    }
+    a {
+      color: rgb(var(--black));
+      text-decoration: none;
+    }
   }
   img {
     width: 60px;
@@ -41,5 +53,28 @@ header {
   img {
     width: 60px;
     height: auto;
+  }
+}
+.list-item {
+  &.active {
+    background: rgb(var(--red)) !important;
+    a {
+      color: rgb(var(--white)) !important;
+    }
+  }
+}
+
+.subitems {
+  width: 150px;
+  a {
+    margin: 5px 0;
+    color: rgb(var(--black));
+    text-decoration: none;
+  }
+  &:hover {
+    background: rgb(var(--red)) !important;
+    a {
+      color: rgb(var(--white));
+    }
   }
 }

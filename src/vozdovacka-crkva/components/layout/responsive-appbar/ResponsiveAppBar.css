@@ -17,6 +17,16 @@ header .appbar, header .toolbar {
   justify-content: space-between;
   padding: 1rem 2rem;
 }
+header .appbar li:hover, header .toolbar li:hover {
+  background: rgb(var(--red));
+}
+header .appbar li:hover a, header .toolbar li:hover a {
+  color: rgb(var(--white));
+}
+header .appbar a, header .toolbar a {
+  color: rgb(var(--black));
+  text-decoration: none;
+}
 header img {
   width: 60px;
   height: auto;
@@ -41,6 +51,28 @@ header img {
 .drawer img {
   width: 60px;
   height: auto;
+}
+
+.list-item.active {
+  background: rgb(var(--red)) !important;
+}
+.list-item.active a {
+  color: rgb(var(--white)) !important;
+}
+
+.subitems {
+  width: 150px;
+}
+.subitems a {
+  margin: 5px 0;
+  color: rgb(var(--black));
+  text-decoration: none;
+}
+.subitems:hover {
+  background: rgb(var(--red)) !important;
+}
+.subitems:hover a {
+  color: rgb(var(--white));
 }
 
 /*# sourceMappingURL=ResponsiveAppBar.css.map */
