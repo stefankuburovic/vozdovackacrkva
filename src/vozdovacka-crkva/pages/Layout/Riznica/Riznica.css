@@ -1,0 +1,23 @@
+#riznica {
+  overflow: hidden;
+  display: block;
+  width: 100vw;
+}
+#riznica .layout {
+  width: 2400px; /* Adjust this value based on your needs */
+  overflow-x: auto;
+}
+
+/*---------------------------------------------------O HRAMU*/
+#o-hramu {
+  text-align: center;
+  color: rgb(var(--white));
+  margin-top: 80px;
+}
+#o-hramu p {
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=Riznica.css.map */
