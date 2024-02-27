@@ -50,7 +50,7 @@ const MyModal: React.FC<MyModalProps> = ({ isOpen, onClose, onCTAClick }) => {
             }}
         >
             <div className={classes.modalContent}>
-                <h2 id="modal-title" className={classes.modalTitle}>Недеља - 02.03.2024. у 10.30</h2>
+                <h2 id="modal-title" className={classes.modalTitle}>Недеља - 03.03.2024. у 10.30</h2>
                 <p id="modal-description">
                     <h3 style={{textAlign: "center"}}>Духовна трибина</h3>
                     <h4 style={{textAlign: "center"}}>- Малигне болести и живот православних хришћана -</h4>

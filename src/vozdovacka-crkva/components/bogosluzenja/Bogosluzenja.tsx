@@ -85,6 +85,7 @@ export default function Bogosluzenja() {
                         </CustomTabPanel>
                         <CustomTabPanel index={1} value={value}>
                             <h3 style={{textAlign: "center"}}>Духовна трибина</h3>
+                            <h3 style={{textAlign: "center"}}>Недеља - 03.03.2024. у 10.30</h3>
                             <h4 style={{textAlign: "center"}}>- Малигне болести и живот православних хришћана -</h4>
                             <h5>Предавачи:</h5>
                             <ul>
