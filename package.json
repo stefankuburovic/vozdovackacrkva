@@ -38,6 +38,7 @@
     "react-helmet-async": "^2.0.4",
     "react-leaflet": "^4.2.1",
     "react-photo-album": "^2.3.0",
+    "react-photo-sphere-viewer": "^4.2.1-psv5.6.0",
     "react-router": "^6.22.0",
     "react-router-dom": "^6.21.3",
     "react-scripts": "5.0.1",
