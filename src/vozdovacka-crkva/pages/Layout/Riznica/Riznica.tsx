@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { WidthProvider, Responsive } from 'react-grid-layout';
 
 import './Riznica.scss';
+import Panorama from "../../../components/riznica/Panorama";
 
 // Assuming you have an array of image names in the directory
 const imageNames = ['IMG_0073.jpg', 'IMG_0075.jpg', 'IMG_0082.jpg', /*...*/];
@@ -39,6 +40,9 @@ export default function Riznica() {
                     </p>
                 </div>
             </section>
+            <div>
+                <Panorama />
+            </div>
             <section id="riznica">
                 <ResponsiveGridLayout className="layout" layouts={{lg: layout}} breakpoints={{lg: 1200}} cols={{lg: 12}}
                                       isDraggable={false}>

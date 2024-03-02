@@ -4,7 +4,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Radio from "@mui/material/Radio";
 import {DatePicker} from "@mui/x-date-pickers/DatePicker";
 import {TimePicker} from "@mui/x-date-pickers";
-import {IconButton, Tooltip} from "@mui/material";
+import {Divider, IconButton, Tooltip} from "@mui/material";
 import SaveIcon from "@mui/icons-material/Save";
 import React from "react";
 import {PraznikProps} from "../Praznik/Praznik";
@@ -51,6 +51,19 @@ export const DodajPraznik = ({data}: PraznikProps): React.JSX.Element => {
                                 checked={index === 0}
                             />
                         ))}
+
+                        <FormControlLabel
+                            key="liturgija-predjeosvecenih-darova"
+                            value="Литургија пређеосвећених дарова"
+                            control={<Radio color="primary"/>}
+                            label={<span>Литургија пређеосвећених дарова</span>}
+                        />
+                        <FormControlLabel
+                            key="carski-casovi"
+                            value="Царски часови"
+                            control={<Radio color="primary"/>}
+                            label={<span>Царски часови</span>}
+                        />
                     </RadioGroup>
                 </div>
                 <div className="inner">

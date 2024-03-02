@@ -58,7 +58,7 @@ app.post('/api/kalendar', (req, res) => {
     });
 });
 
-app.get('/api/kalendar/:prvi_dan/:zadnji_dan', (req, res) => {
+app.get('/api/kalendar/pocetni/:startDate/poslednji/:endDate', (req, res) => {
     const { prvi_dan, zadnji_dan } = req.params;
     console.log(prvi_dan,zadnji_dan);
     con.connect(function(err) {
@@ -71,7 +71,7 @@ app.get('/api/kalendar/:prvi_dan/:zadnji_dan', (req, res) => {
     });
 });
 
-app.get('/api/kalendar/mesec/:mesec', (req, res) => {
+app.get('/api/kalendar/:mesec', (req, res) => {
     const { mesec } = req.params;
 
     con.connect(function(err) {
@@ -103,7 +103,7 @@ app.get([`/api/bogosluzenja/:id`, `/api/bogosluzenja/`], (req, res) => {
     });
 })
 
-app.get('/api/bogosluzenja/:startDate/:endDate', (req, res) => {
+app.get('/api/bogosluzenja/pocetni/:startDate/poslednji/:endDate', (req, res) => {
     const { startDate, endDate } = req.params;
 
     con.connect(function(err) {
@@ -130,12 +130,12 @@ app.get('/api/bogosluzenja/search/:condition', (req, res) => {
 });
 
 //------------------------------------------------DELETE BOGOSLUZENJA------------------------------------------------
-app.delete('/api/bogosluzenja/:id', (req, res) => {
+app.delete('/api/bogosluzenja/datum_bogosluzenja/:datum_bogosluzenja', (req, res) => {
     const { id } = req.params;
 
     con.connect(function(err) {
         if (err) throw err;
-        var sql = `DELETE FROM bogosluzenja WHERE id = ?`;
+        var sql = `DELETE FROM bogosluzenja WHERE datum_bogosluzenja = ?`;
         con.query(sql, [id], function (err, result) {
             if (err) throw err;
             res.json({ message: 'Record deleted', result: result });

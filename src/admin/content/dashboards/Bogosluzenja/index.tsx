@@ -90,7 +90,8 @@ SimpleDialog.propTypes = {
 
 
 function DashboardBogosluzenja() {
-    const [data, setData] = useState([]);
+    const [kalendar, setKalendar] = useState([]);
+    const [bogosluzenja, setBogosluzenja] = useState([]);
     const [open, setOpen] = useState(false);
     const [selectedValue, setSelectedValue] = useState(emails[1]);
 
@@ -103,25 +104,27 @@ function DashboardBogosluzenja() {
         setSelectedValue(value);
     };
 
+    const setDateParams = () => {
+        // Get the current date
+        const currentDate = new Date();
 
+        // Calculate the date of the Monday of this week
+        const day = currentDate.getDay();
+        const diff = currentDate.getDate() - day + (day === 0 ? -7 : 1); // adjust when day is Sunday
+        const sundayOfThisWeek = new Date(currentDate.setDate(diff));
+
+        const first_param = sundayOfThisWeek.toISOString().split('T')[0];
+        const second_param = new Date(sundayOfThisWeek.getTime() + 60 * 60 * 24 * 5 * 1000).toISOString().split('T')[0];
+        return {start_date: first_param, end_date: second_param};
+    }
     useEffect(() => {
+        const{start_date, end_date} = setDateParams();
         const fetchData = async () => {
-
-            // Get the current date
-            const currentDate = new Date();
-
-            // Calculate the date of the Monday of this week
-            const day = currentDate.getDay();
-            const diff = currentDate.getDate() - day + (day === 0 ? -7 : 1); // adjust when day is Sunday
-            const sundayOfThisWeek = new Date(currentDate.setDate(diff));
-
-            const first_param = sundayOfThisWeek.toISOString().split('T')[0];
-            const second_param = new Date(sundayOfThisWeek.getTime() + 60 * 60 * 24 * 6 * 1000).toISOString().split('T')[0];
-
-
             try {
-                const response = await axios.get(`http://localhost:3001/api/kalendar/${first_param}/${second_param}/`);
-                setData(response.data);
+                const dohvatiKalendar = await axios.get(`http://localhost:3001/api/kalendar/${start_date}/${end_date}/`);
+                setKalendar(dohvatiKalendar.data);
+                const dohvatiBogosluzenja = await axios.get(`http://localhost:3001/api/bogosluzenja/${start_date}/${end_date}/`);
+                setBogosluzenja(dohvatiBogosluzenja.data);
             } catch (err) {
                 console.warn(err);
             }
@@ -143,7 +146,7 @@ function DashboardBogosluzenja() {
                 {/*    Попуни календар*/}
                 {/*</Button>*/}
                 <Divider/>
-                {data.map((item: any, index) => (
+                {kalendar.map((item: any, index) => (
                     <div key={index}>
                         <PraznikComponent data={item} />
                     </div>
