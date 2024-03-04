@@ -22,7 +22,7 @@ const wrappers: React.JSX.Element[] = [
     <Bogosluzenja/>,
     <Kalendar/>,
     /*<InstagramFeed/>,*/
-    <Obavestenja/>
+    // <Obavestenja/>
 ]
 roots.map((root: ReactDOM.Root, index: number) => root.render(
     <React.StrictMode>

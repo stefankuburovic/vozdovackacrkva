@@ -64,9 +64,9 @@ export default function Bogosluzenja() {
                             }}
                         >
                             <Tab label="Текућа недеља" {...a11yProps(0)} disableRipple/>
-                            <Tab label="Активности" {...a11yProps(1)} disableRipple/>
-                            <Tab label="Зимско време" {...a11yProps(2)} disableRipple/>
-                            <Tab label="Летње време" {...a11yProps(3)} disableRipple/>
+                            {/*<Tab label="Активности" {...a11yProps(1)} disableRipple/>*/}
+                            <Tab label="Зимско време" {...a11yProps(1)} disableRipple/>
+                            <Tab label="Летње време" {...a11yProps(2)} disableRipple/>
                         </Tabs>
                         <CustomTabPanel index={0} value={value}>
                             <h3>Месопусне задушнице</h3>
@@ -87,19 +87,19 @@ export default function Bogosluzenja() {
                                 </div>
                             </div>
                         </CustomTabPanel>
+                        {/*<CustomTabPanel index={1} value={value}>*/}
+                        {/*    <h2 style={{textAlign: "center"}}>Духовна трибина</h2>*/}
+                        {/*    <h3 style={{textAlign: "center"}}>- Малигне болести и живот православних хришћана -</h3>*/}
+                        {/*    <h4 style={{textAlign: "center"}}>Недеља - 03.03.2024. у 10.30</h4>*/}
+                        {/*    <h5>Предавачи:</h5>*/}
+                        {/*    <ul>*/}
+                        {/*        <li>Протојереј-Ставрофор Др Драгомир Сандо</li>*/}
+                        {/*        <li>Професор Др Тамара Кликовац, клинички психолог и психотерапеут</li>*/}
+                        {/*        <li>Професор Др Вања Ковић, Неуронаучник</li>*/}
+                        {/*    </ul>*/}
+                        {/*    <span style={{fontSize: "14px"}}>Трибину ће водити: Др Бојан Цакић</span>*/}
+                        {/*</CustomTabPanel>*/}
                         <CustomTabPanel index={1} value={value}>
-                            <h2 style={{textAlign: "center"}}>Духовна трибина</h2>
-                            <h3 style={{textAlign: "center"}}>- Малигне болести и живот православних хришћана -</h3>
-                            <h4 style={{textAlign: "center"}}>Недеља - 03.03.2024. у 10.30</h4>
-                            <h5>Предавачи:</h5>
-                            <ul>
-                                <li>Протојереј-Ставрофор Др Драгомир Сандо</li>
-                                <li>Професор Др Тамара Кликовац, клинички психолог и психотерапеут</li>
-                                <li>Професор Др Вања Ковић, Неуронаучник</li>
-                            </ul>
-                            <span style={{fontSize: "14px"}}>Трибину ће водити: Др Бојан Цакић</span>
-                        </CustomTabPanel>
-                        <CustomTabPanel index={2} value={value}>
                             <div data-mesh-id="comp-lo6y8a5kinlineContent-gridContainer"
                                  data-testid="mesh-container-content">
                                 <div>
@@ -150,9 +150,8 @@ export default function Bogosluzenja() {
                                 </div>
                             </div>
                         </CustomTabPanel>
-                        <CustomTabPanel index={3} value={value}>
-                            <div data-mesh-id="comp-lo6y8a5kinlineContent-gridContainer"
-                                 data-testid="mesh-container-content">
+                        <CustomTabPanel index={2} value={value}>
+                            <div>
                                 <div>
                                     <h3>
                                         <span>Летње време (Април - Септембар)</span>
