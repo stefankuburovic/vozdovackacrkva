@@ -1,6 +1,7 @@
 .praznik {
   display: flex;
   transition: background 0.3s;
+  align-items: center;
 }
 .praznik:hover, .praznik.selected {
   background: wheat;

@@ -101,3 +101,16 @@ export const extractNumericPart = (address: string) => {
         return 0;
     }
 }
+
+export const  convertTimeStampToHHMM = (timestamp: number) => {
+    let date = new Date(timestamp);
+    let hours: string | number = date.getHours();
+    let minutes: string | number = date.getMinutes();
+
+// Ensure double digits
+    hours = hours < 10 ? '0' + hours : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+
+    let time = `${hours}:${minutes}`;
+    return time;
+}

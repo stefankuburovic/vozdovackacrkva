@@ -1,39 +1,94 @@
-import  {useCallback, useEffect, useState} from 'react';
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
+import React, {useCallback, useContext, useEffect, useState} from 'react';
+import axios from "axios";
+
 import Radio from "@mui/material/Radio";
-import {DatePicker} from "@mui/x-date-pickers/DatePicker";
 import {TimePicker} from "@mui/x-date-pickers";
-import {Divider, IconButton, Tooltip} from "@mui/material";
+import {IconButton, Tooltip} from "@mui/material";
 import SaveIcon from "@mui/icons-material/Save";
-import React from "react";
+import RadioGroup from "@mui/material/RadioGroup";
+import {DatePicker} from "@mui/x-date-pickers/DatePicker";
+import FormControlLabel from "@mui/material/FormControlLabel"
+
 import {PraznikProps} from "../Praznik/Praznik";
 import Editor from "../../../../components/Editor/Editor";
+import {ApiUrlContext} from "../../../../../index";
+import {convertTimeStampToHHMM} from "../../../../../util/functions";
+import {Bogosluzenje, Praznik} from "../index";
+import {SnackbarContext} from "../../../../contexts/SnackbarContext";
 
 const LETNJI_MESECI = ['Април', 'Мај', 'Јун', 'Јул', 'Август', 'Септембар'];
-export const DodajPraznik = ({data}: PraznikProps): React.JSX.Element => {
-    const [praznik, setPraznik] = useState(data.praznik.split(';')[0].trim());
+
+interface BogosluzenjeData {
+    id: number;
+    praznik: string;
+    datum_bogoosluzenja: string;
+    vreme_bogoosluzenja: string;
+    datum_bdenija: string;
+    vreme_bdenija: string;
+    dodatne_informacije: string;
+}
+
+interface DodajPraznikProps extends PraznikProps {
+    setPostojeceBogosluzenje: (bogosluzenje: Bogosluzenje | undefined) => void;
+}
+
+export const DodajPraznik = ({data, bogosluzenje, setPostojeceBogosluzenje}: DodajPraznikProps): React.JSX.Element => {
+    const apiUrl = useContext(ApiUrlContext);
+    const [praznik, setPraznik] = useState<string | null>(bogosluzenje?.praznik || null);
     const [disabled, setDisabled] = useState(true);
+
     const datumBdenija = new Date(new Date(data.datum).getTime() - 60 * 60 * 24 * 1000);
     const vremeBdenija = LETNJI_MESECI.includes(data.mesec) ? datumBdenija.setHours(18, 0) : datumBdenija.setHours(17, 0);
     const datumLiturgije = new Date(data.datum);
     const vremeLiturgije = new Date(data.datum).setHours(9, 0);
     const [dodatneInformacije, setDodatneInformacije] = useState('');
+    const [bogosluzenjeData, setBogosluzenjeData] = useState<BogosluzenjeData[]>([]);
 
-    const saveData = useCallback(() => {
-        console.log({
-            praznik,
-            datumBdenija,
-            vremeBdenija,
-            datumLiturgije,
-            vremeLiturgije,
-            dodatneInformacije
-        });
-        // Here you can handle the editorContent as you need
-    }, [praznik, datumBdenija, vremeBdenija, datumLiturgije, vremeLiturgije, dodatneInformacije]);
+    const { openSnackbar } = useContext(SnackbarContext);
+
+    const fetchData = useCallback(async () => {
+        try {
+            const response = await axios.get(`${apiUrl}/bogosluzenja/date/${datumLiturgije.toISOString().slice(0, 10)}`);
+            setBogosluzenjeData(response.data);
+            setPostojeceBogosluzenje(response.data[0]);
+        } catch (error) {
+            console.error(error);
+        }
+    }, [datumLiturgije]);
 
     useEffect(() => {
-        if(praznik && datumBdenija && vremeBdenija && datumLiturgije && vremeLiturgije) setDisabled(false);
+        fetchData();
+    }, []);
+    useEffect(() => {
+        setDodatneInformacije(bogosluzenje?.dodatne_informacije || '');
+    }, [bogosluzenje]);
+
+    const saveData = useCallback(async () => {
+        const bogosluzenje = {
+            praznik: praznik,
+            datum_bogosluzenja: datumLiturgije.toISOString().slice(0, 10),
+            vreme_bogosluzenja: convertTimeStampToHHMM(vremeLiturgije),
+            datum_bdenija: datumBdenija.toISOString().slice(0, 10),
+            vreme_bdenija: convertTimeStampToHHMM(vremeBdenija),
+            dodatne_informacije: dodatneInformacije
+        };
+
+        try {
+            if (bogosluzenjeData.length > 0) {
+                await axios.put(`${apiUrl}/bogosluzenja/${bogosluzenjeData[0].id}`, bogosluzenje);
+            } else {
+                await axios.post(`${apiUrl}/bogosluzenja`, bogosluzenje);
+            }
+            fetchData();
+            openSnackbar(`Богослужење за празник ${praznik} је успешно сачувано у распоред`, "success");
+        } catch (error) {
+            console.error(error);
+            openSnackbar('Дошло је до грешке приликом чувања богослужења у распоред', "error");
+        }
+    }, [praznik, datumBdenija, vremeBdenija, datumLiturgije, vremeLiturgije, dodatneInformacije, bogosluzenjeData]);
+
+    useEffect(() => {
+        if (praznik && datumBdenija && vremeBdenija && datumLiturgije && vremeLiturgije) setDisabled(false);
     }, [praznik, datumBdenija, vremeBdenija, datumLiturgije, vremeLiturgije]);
 
     return (
@@ -41,14 +96,14 @@ export const DodajPraznik = ({data}: PraznikProps): React.JSX.Element => {
             <div className="selektovani-praznik">
                 <div className="ime-praznika">
                     <h3>Селектујте назив празника (<i>односно који се Светац слави тај дан</i>)</h3>
-                    <RadioGroup name='praznik' onChange={(e) => setPraznik(e.target.value.trim())}>
+                    <RadioGroup name='praznik' onChange={(e) => setPraznik(e.target.value.trim())}
+                                defaultValue={bogosluzenje?.praznik}>
                         {data.praznik.split(';').map((praznik, index) => (
                             <FormControlLabel
                                 key={index}
                                 value={praznik}
                                 control={<Radio color="primary"/>}
                                 label={<span dangerouslySetInnerHTML={{__html: praznik.trim()}}/>}
-                                checked={index === 0}
                             />
                         ))}
 
@@ -96,15 +151,24 @@ export const DodajPraznik = ({data}: PraznikProps): React.JSX.Element => {
                 </div>
                 <div className="dodatne-informacije">
                     <h3>Додатне информације:</h3>
-                    <Editor setContent={setDodatneInformacije}/>
+                    <Editor setContent={setDodatneInformacije} defaultContent={bogosluzenje?.dodatne_informacije}/>
                 </div>
             </div>
             <div className="akcije">
-                <Tooltip title="Сачувај у распоред">
-                    <IconButton aria-label="Сачувај у распоред" sx={{margin: 1}} color={disabled ? 'secondary' : 'primary'} style={{pointerEvents: disabled ? 'none' : 'auto'}}
-                                onClick={saveData}>
-                        <SaveIcon/>
-                    </IconButton>
+                <Tooltip
+                    title={disabled ? 'Поставите све потребне елементе за чување у распоред' : 'Сачувајте у распоред'}>
+                    <span>
+                        <IconButton
+                            onClick={saveData}
+                            sx={{margin: 1}}
+                            disabled={disabled}
+                            aria-label="Сачувај у распоред"
+                            color={disabled ? 'secondary' : 'primary'}
+                            style={{pointerEvents: disabled ? 'none' : 'auto'}}
+                        >
+                            <SaveIcon/>
+                        </IconButton>
+                    </span>
                 </Tooltip>
             </div>
         </div>

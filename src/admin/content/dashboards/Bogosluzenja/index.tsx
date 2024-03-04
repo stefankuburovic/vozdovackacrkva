@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useContext, useEffect, useState} from 'react';
 import {Helmet} from "react-helmet-async";
 import PageTitleWrapper from "../../../components/PageTitleWrapper";
 import {Avatar, Container, Divider} from "@mui/material";
@@ -18,6 +18,7 @@ import ListItem from "@mui/material/ListItem";
 import AddIcon from "@mui/icons-material/Add";
 import PropTypes from "prop-types";
 import {blue} from "@mui/material/colors";
+import {ApiUrlContext} from "../../../../index";
 
 export interface Praznik {
     crveno_slovo: number;
@@ -30,7 +31,17 @@ export interface Praznik {
     mesec: string;
     ime_sedmice: string;
     godina: string;
-    datum: string;
+    datum: string | Date;
+}
+
+export interface Bogosluzenje {
+    id: number;
+    praznik: string;
+    datum_bogosluzenja: string;
+    vreme_bogosluzenja: string;
+    datum_bdenija: string;
+    vreme_bdenija: string;
+    dodatne_informacije: string;
 }
 
 const emails = ['username@gmail.com', 'user02@gmail.com'];
@@ -104,6 +115,8 @@ function DashboardBogosluzenja() {
         setSelectedValue(value);
     };
 
+    const apiUrl = useContext(ApiUrlContext);
+
     const setDateParams = () => {
         // Get the current date
         const currentDate = new Date();
@@ -114,22 +127,76 @@ function DashboardBogosluzenja() {
         const sundayOfThisWeek = new Date(currentDate.setDate(diff));
 
         const first_param = sundayOfThisWeek.toISOString().split('T')[0];
-        const second_param = new Date(sundayOfThisWeek.getTime() + 60 * 60 * 24 * 5 * 1000).toISOString().split('T')[0];
-        return {start_date: first_param, end_date: second_param};
+        const second_param = new Date(sundayOfThisWeek.getTime() + 60 * 60 * 24 * 6 * 1000).toISOString().split('T')[0];
+        return {startDate: first_param, endDate: second_param};
     }
+    // const popuniKalendar = useCallback(() => {
+    //     const godine = [2024, 2025, 2026];
+    //     const meseci = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
+    //     const imeMeseca = {
+    //         1: 'Јануар',
+    //         2: 'Фебруар',
+    //         3: 'Март',
+    //         4: 'Април',
+    //         5: 'Мај',
+    //         6: 'Јун',
+    //         7: 'Јул',
+    //         8: 'Август',
+    //         9: 'Септембар',
+    //         10: 'Октобар',
+    //         11: 'Новембар',
+    //         12: 'Децембар'
+    //     }
+    //     godine.forEach(godina => {
+    //         meseci.forEach(mesec => {
+    //             axios.get(`https://pravoslavno.rs/v1/kalendar/${godina}-${mesec}`)
+    //                 .then(async (response) => {
+    //                     // @ts-ignore
+    //                     console.log(response, imeMeseca[Number(mesec)]);
+    //                     // @ts-ignore
+    //                     for (const praznik of response.data[imeMeseca[Number(mesec)]]) {
+    //                         const unosUkalendar: Praznik = {} as Praznik;
+    //                         unosUkalendar['crveno_slovo'] = praznik.crveno_slovo && 1 || 0;
+    //                         unosUkalendar['praznik'] = praznik.opis;
+    //                         unosUkalendar['stari'] = praznik.brojDanaStari;
+    //                         unosUkalendar['novi'] = praznik.brojDana;
+    //                         unosUkalendar['post'] = praznik.post;
+    //                         unosUkalendar['ime_dana'] = praznik.imeDana;
+    //                         unosUkalendar['slava'] = praznik.slava;
+    //                         // @ts-ignore
+    //                         unosUkalendar['mesec'] = imeMeseca[Number(mesec)];
+    //                         unosUkalendar['ime_sedmice'] = praznik.imeSedmice;
+    //                         unosUkalendar['godina'] = String(godina);
+    //                         // @ts-ignore
+    //                         unosUkalendar['datum'] =`${godina}-${mesec}-${Number(praznik.brojDana) < 10 ? '0' + praznik.brojDana : praznik.brojDana}`;
+    //                         axios.post(`${apiUrl}/kalendar`, unosUkalendar)
+    //                             .then((response) => {
+    //                                 console.log(response);
+    //                             })
+    //                             .catch((error) => {
+    //                                 console.error(error);
+    //                             });
+    //                     }
+    //                 })
+    //                 .catch((error) => {
+    //                     console.error(error);
+    //                 });
+    //         });
+    //     });
+    //
+    // }, []);
     useEffect(() => {
-        const{start_date, end_date} = setDateParams();
+        const{startDate, endDate} = setDateParams();
         const fetchData = async () => {
             try {
-                const dohvatiKalendar = await axios.get(`http://localhost:3001/api/kalendar/${start_date}/${end_date}/`);
+                const dohvatiKalendar = await axios.get(`${apiUrl}/kalendar/start_date/${startDate}/end_date/${endDate}/`);
                 setKalendar(dohvatiKalendar.data);
-                const dohvatiBogosluzenja = await axios.get(`http://localhost:3001/api/bogosluzenja/${start_date}/${end_date}/`);
+                const dohvatiBogosluzenja = await axios.get(`${apiUrl}/bogosluzenja/start_date/${startDate}/end_date/${endDate}/`);
                 setBogosluzenja(dohvatiBogosluzenja.data);
             } catch (err) {
                 console.warn(err);
             }
         };
-
         fetchData();
     }, []);
 
@@ -142,15 +209,19 @@ function DashboardBogosluzenja() {
                 <PageHeader/>
             </PageTitleWrapper>
             <Container maxWidth="lg">
-                {/*<Button sx={{ margin: 1 }} variant="contained">*/}
+                {/*<Button sx={{ margin: 1 }} variant="contained" onClick={popuniKalendar}>*/}
                 {/*    Попуни календар*/}
                 {/*</Button>*/}
                 <Divider/>
-                {kalendar.map((item: any, index) => (
-                    <div key={index}>
-                        <PraznikComponent data={item} />
-                    </div>
-                ))}
+                {kalendar.map((item: any, index) => {
+                    const bogosluzenje = bogosluzenja.find((bogosluzenje: any) => bogosluzenje.datum_bogosluzenja === item.datum);
+                    console.log(item);
+                    return (
+                        <div key={index}>
+                            <PraznikComponent data={item} bogosluzenje={bogosluzenje}/>
+                        </div>
+                    )
+                })}
                 <Button variant="outlined" onClick={handleClickOpen} sx={{
                     margin: '20px 0',
                 }}>
