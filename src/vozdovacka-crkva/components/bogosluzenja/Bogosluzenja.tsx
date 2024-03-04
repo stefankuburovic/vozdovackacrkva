@@ -63,30 +63,34 @@ export default function Bogosluzenja() {
                                 },
                             }}
                         >
-                            <Tab label="Текућа недеља" {...a11yProps(1)} disableRipple/>
+                            <Tab label="Текућа недеља" {...a11yProps(0)} disableRipple/>
                             <Tab label="Активности" {...a11yProps(1)} disableRipple/>
                             <Tab label="Зимско време" {...a11yProps(2)} disableRipple/>
                             <Tab label="Летње време" {...a11yProps(3)} disableRipple/>
                         </Tabs>
                         <CustomTabPanel index={0} value={value}>
-                            <h3>Свети Симеон Мироточиви</h3>
+                            <h3>Месопусне задушнице</h3>
+                            <h4>
+                                <span>Субота, 9.03.2024.</span>
+                            </h4>
                             <div>
                                 <div className="praznicni-dani">
-                                    <h5>
-                                        <span>Понедељак, 26.02.2024.</span>
-                                    </h5>
                                     <ul>
                                         <li>
                                             <p>08:00 - Света Литургија</p>
+                                        </li>
+                                        <li>
+                                            <p><strong>У наставку парастос - молитва за покојнике (Понети кољиво и
+                                                списак читко исписаних имена покојника) </strong></p>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </CustomTabPanel>
                         <CustomTabPanel index={1} value={value}>
-                            <h3 style={{textAlign: "center"}}>Духовна трибина</h3>
-                            <h3 style={{textAlign: "center"}}>Недеља - 03.03.2024. у 10.30</h3>
-                            <h4 style={{textAlign: "center"}}>- Малигне болести и живот православних хришћана -</h4>
+                            <h2 style={{textAlign: "center"}}>Духовна трибина</h2>
+                            <h3 style={{textAlign: "center"}}>- Малигне болести и живот православних хришћана -</h3>
+                            <h4 style={{textAlign: "center"}}>Недеља - 03.03.2024. у 10.30</h4>
                             <h5>Предавачи:</h5>
                             <ul>
                                 <li>Протојереј-Ставрофор Др Драгомир Сандо</li>

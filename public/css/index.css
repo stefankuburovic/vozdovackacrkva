@@ -308,6 +308,9 @@ img {
   background: rgb(var(--white));
   min-height: 500px;
 }
+#bogosluzenja .bogosluzenja-container h2 {
+  color: rgb(var(--black));
+}
 #bogosluzenja .bogosluzenja-container img {
   width: 50px;
   height: 50px;
