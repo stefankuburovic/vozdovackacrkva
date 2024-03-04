@@ -44,18 +44,16 @@ export default function PraznikComponent({data, bogosluzenje}: PraznikProps): Re
         setIsChecked(!isChecked);
     };
     const deleteBogosluzenje = () => {
-        if (bogosluzenje) {
-            axios.delete(`${apiUrl}/bogosluzenja/${bogosluzenje.id}`)
+            axios.delete(`${apiUrl}/bogosluzenja/${postojeceBogosluzenje?.id ? postojeceBogosluzenje.id : bogosluzenje?.id}`)
                 .then((response) => {
                     setIsChecked(false);
                     setPostojeceBogosluzenje(undefined);
-                    openSnackbar(`Распоред богослужења за празник ${bogosluzenje.praznik} је успешно обрисано из базе`, 'success');
+                    openSnackbar(`Распоред богослужења за празник ${postojeceBogosluzenje?.praznik} је успешно обрисано из базе`, 'success');
                 })
                 .catch((error) => {
                     console.error(error);
-                    openSnackbar(`Дошло је до грешке приликом брисања распореда богослужења за празник ${bogosluzenje.praznik}`, 'error');
+                    openSnackbar(`Дошло је до грешке приликом брисања распореда богослужења за празник ${postojeceBogosluzenje?.praznik}`, 'error');
                 });
-        }
     }
     return (
         <>
