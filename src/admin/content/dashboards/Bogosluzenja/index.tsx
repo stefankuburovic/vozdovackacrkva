@@ -209,9 +209,9 @@ function DashboardBogosluzenja() {
                 <PageHeader/>
             </PageTitleWrapper>
             <Container maxWidth="lg">
-                <Button sx={{ margin: 1 }} variant="contained" onClick={popuniKalendar}>
-                    Попуни календар
-                </Button>
+                {/*<Button sx={{ margin: 1 }} variant="contained" onClick={popuniKalendar}>*/}
+                {/*    Попуни календар*/}
+                {/*</Button>*/}
                 <Divider/>
                 {kalendar.map((item: any, index) => {
                     const bogosluzenje = bogosluzenja.find((bogosluzenje: any) => bogosluzenje.datum_bogosluzenja === item.datum);
@@ -222,11 +222,11 @@ function DashboardBogosluzenja() {
                         </div>
                     )
                 })}
-                {/*<Button variant="outlined" onClick={handleClickOpen} sx={{*/}
-                {/*    margin: '20px 0',*/}
-                {/*}}>*/}
-                {/*    Прикажи ПДФ верзију*/}
-                {/*</Button>*/}
+                <Button variant="outlined" onClick={handleClickOpen} sx={{
+                    margin: '20px 0',
+                }}>
+                    Прикажи ПДФ верзију
+                </Button>
             </Container>
             <SimpleDialog
                 selectedValue={selectedValue}

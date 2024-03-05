@@ -3,11 +3,11 @@ import {lazy} from "react";
 
 import './Home.scss';
 
-const Hero = lazy(() => import('../../../components/home/hero-swiper/Hero'));
-const Galerija = lazy(() => import('../../../components/home/galerija/Galerija'));
-const Kalendar = lazy(() => import('../../../components/home/kalendar/Kalendar'));
-const Bogosluzenja = lazy(() => import('../../../components/home/bogosluzenja/Bogosluzenja'));
-const PretragaParohija = lazy(() => import('../../../components/home/pretraga-parohija/PretragaParohija'));
+const Hero = lazy(() => import('../../components/home/hero-swiper/Hero'));
+const Galerija = lazy(() => import('../../components/home/galerija/Galerija'));
+const Kalendar = lazy(() => import('../../components/home/kalendar/Kalendar'));
+const Bogosluzenja = lazy(() => import('../../components/home/bogosluzenja/Bogosluzenja'));
+const PretragaParohija = lazy(() => import('../../components/home/pretraga-parohija/PretragaParohija'));
 export default function Home() {
     return (
         <>
