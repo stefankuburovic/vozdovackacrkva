@@ -1,7 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import {Button, TextField, Grid, Paper, Typography, Box, InputAdornment, IconButton} from '@mui/material';
-import AuthService from "../../../admin/services/AuthService";
-
 import './Login.scss';
 import {useAuth} from "../../../admin/contexts/AuthProvider";
 import { useNavigate } from 'react-router-dom';
