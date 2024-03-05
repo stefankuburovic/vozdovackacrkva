@@ -1,4 +1,4 @@
-import React, {useCallback, useContext, useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {Helmet} from "react-helmet-async";
 import PageTitleWrapper from "../../../components/PageTitleWrapper";
 import {Avatar, Container, Divider} from "@mui/material";
