@@ -63,7 +63,6 @@ function SimpleDialog(props: any) {
             <List sx={{ pt: 0 }}>
                 {emails.map((email) => (
                     <ListItem
-                        button
                         onClick={() => handleListItemClick(email)}
                         key={email}
                     >
@@ -76,10 +75,7 @@ function SimpleDialog(props: any) {
                     </ListItem>
                 ))}
 
-                <ListItem
-                    autoFocus
-                    button
-                    onClick={() => handleListItemClick('addAccount')}
+                <ListItem onClick={() => handleListItemClick('addAccount')}
                 >
                     <ListItemAvatar>
                         <Avatar>
@@ -198,7 +194,7 @@ function DashboardBogosluzenja() {
             }
         };
         fetchData();
-    }, []);
+    }, [apiUrl]);
 
     return (
         <>
@@ -215,7 +211,6 @@ function DashboardBogosluzenja() {
                 <Divider/>
                 {kalendar.map((item: any, index) => {
                     const bogosluzenje = bogosluzenja.find((bogosluzenje: any) => bogosluzenje.datum_bogosluzenja === item.datum);
-                    console.log(item);
                     return (
                         <div key={index}>
                             <PraznikComponent data={item} bogosluzenje={bogosluzenje}/>

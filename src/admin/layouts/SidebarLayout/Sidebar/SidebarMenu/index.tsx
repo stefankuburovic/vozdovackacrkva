@@ -177,7 +177,7 @@ function SidebarMenu() {
                   disableRipple
                   component={RouterLink}
                   onClick={closeSidebar}
-                  to="/auth/bogosluzenja"
+                  to="/vzdadmin/bogosluzenja"
                 >
                   Богослужења
                 </Button>

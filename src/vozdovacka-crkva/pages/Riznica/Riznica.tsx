@@ -17,7 +17,7 @@ export default function Riznica() {
         setImages(loadedImages);
     }, []);
 
-    const layout = images.map((image, index) => ({
+    const layout = images.map((_, index) => ({
         i: index.toString(),
         x: index % 3 * 4, // Place items in 3 columns
         y: Math.floor(index / 3) * 4, // Place items in rows, each item spans 4 rows

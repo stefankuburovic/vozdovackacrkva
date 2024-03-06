@@ -20,7 +20,7 @@ function GeoJSONField(geoJSON: IGeoJSON) {
     function whenClicked(e: any) {
         setMapObject(e);
     }
-    function onEachFeature(feature: any, layer: any) {
+    function onEachFeature(_: any, layer: any) {
         layer.on({
             click: whenClicked
         });

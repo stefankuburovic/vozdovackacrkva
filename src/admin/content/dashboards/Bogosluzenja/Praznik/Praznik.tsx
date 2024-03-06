@@ -45,7 +45,7 @@ export default function PraznikComponent({data, bogosluzenje}: PraznikProps): Re
     };
     const deleteBogosluzenje = () => {
             axios.delete(`${apiUrl}/bogosluzenja/${postojeceBogosluzenje?.id ? postojeceBogosluzenje.id : bogosluzenje?.id}`)
-                .then((response) => {
+                .then(() => {
                     setIsChecked(false);
                     setPostojeceBogosluzenje(undefined);
                     openSnackbar(`Распоред богослужења за празник ${postojeceBogosluzenje?.praznik} је успешно обрисано из базе`, 'success');
@@ -62,7 +62,7 @@ export default function PraznikComponent({data, bogosluzenje}: PraznikProps): Re
                  style={{color: `${isSunday(data.ime_dana) ? 'red' : 'black'}`}}>
                 {!postojeceBogosluzenje ? <Checkbox id={`praznik-${data.novi}`} onChange={handleCheckboxChange}
                                                    checked={isChecked}/> : isChecked ?
-                    <KeyboardArrowUp fontSize="large" onClick={changeChecked} sx={{marginLeft: "9px"}} /> : <KeyboardArrowDown fontSize="large"onClick={changeChecked} sx={{marginLeft: "9px"}}/>}
+                    <KeyboardArrowUp fontSize="large" onClick={changeChecked} sx={{marginLeft: "9px"}} /> : <KeyboardArrowDown fontSize="large" onClick={changeChecked} sx={{marginLeft: "9px"}}/>}
                 <label htmlFor={`praznik-${data.novi}`}>
                     <span>
                         <strong>{data.ime_dana}</strong>

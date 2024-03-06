@@ -1,4 +1,4 @@
-import React, {useCallback, useContext, useEffect, useState} from 'react';
+import React, {useCallback, useContext, useEffect, useMemo, useState} from 'react';
 import axios from "axios";
 
 import Radio from "@mui/material/Radio";
@@ -13,8 +13,10 @@ import {PraznikProps} from "../Praznik/Praznik";
 import Editor from "../../../../components/Editor/Editor";
 import {ApiUrlContext} from "../../../../../index";
 import {convertTimeStampToHHMM} from "../../../../../util/functions";
-import {Bogosluzenje, Praznik} from "../index";
+import {Bogosluzenje} from "../index";
 import {SnackbarContext} from "../../../../contexts/SnackbarContext";
+import {DodajBogosluzenje} from "../DodajBogosluzenje/DodajBogosluzenje";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const LETNJI_MESECI = ['Април', 'Мај', 'Јун', 'Јул', 'Август', 'Септембар'];
 
@@ -34,17 +36,23 @@ interface DodajPraznikProps extends PraznikProps {
 
 export const DodajPraznik = ({data, bogosluzenje, setPostojeceBogosluzenje}: DodajPraznikProps): React.JSX.Element => {
     const apiUrl = useContext(ApiUrlContext);
-    const [praznik, setPraznik] = useState<string | null>(bogosluzenje?.praznik || null);
-    const [disabled, setDisabled] = useState(true);
 
-    const datumBdenija = new Date(new Date(data.datum).getTime() - 60 * 60 * 24 * 1000);
-    const vremeBdenija = LETNJI_MESECI.includes(data.mesec) ? datumBdenija.setHours(18, 0) : datumBdenija.setHours(17, 0);
-    const datumLiturgije = new Date(data.datum);
+    const datumLiturgije = useMemo(() => new Date(data.datum), [data.datum]);
+    const [disabled, setDisabled] = useState(true);
     const vremeLiturgije = new Date(data.datum).setHours(9, 0);
     const [dodatneInformacije, setDodatneInformacije] = useState('');
     const [bogosluzenjeData, setBogosluzenjeData] = useState<BogosluzenjeData[]>([]);
+    const datumBdenija = useMemo(() => new Date(new Date(data.datum).getTime() - 60 * 60 * 24 * 1000), [data.datum]);
+    const [praznik, setPraznik] = useState<string | null>(bogosluzenje?.praznik || null);
+    const vremeBdenija = LETNJI_MESECI.includes(data.mesec) ? datumBdenija.setHours(18, 0) : datumBdenija.setHours(17, 0);
+    const [bogosluzenja, setBogosluzenja] = useState([<DodajBogosluzenje key={0}/>]);
 
-    const { openSnackbar } = useContext(SnackbarContext);
+    const deleteBogosluzenje = (index: number) => {
+        setBogosluzenja(bogosluzenja.filter((_, i) => i !== index));
+    };
+
+
+    const {openSnackbar} = useContext(SnackbarContext);
 
     const fetchData = useCallback(async () => {
         try {
@@ -54,11 +62,11 @@ export const DodajPraznik = ({data, bogosluzenje, setPostojeceBogosluzenje}: Dod
         } catch (error) {
             console.error(error);
         }
-    }, [datumLiturgije]);
+    }, [apiUrl, datumLiturgije, setPostojeceBogosluzenje]);
 
     useEffect(() => {
         fetchData();
-    }, []);
+    }, [fetchData]);
     useEffect(() => {
         setDodatneInformacije(bogosluzenje?.dodatne_informacije || '');
     }, [bogosluzenje]);
@@ -85,7 +93,7 @@ export const DodajPraznik = ({data, bogosluzenje, setPostojeceBogosluzenje}: Dod
             console.error(error);
             openSnackbar('Дошло је до грешке приликом чувања богослужења у распоред', "error");
         }
-    }, [praznik, datumBdenija, vremeBdenija, datumLiturgije, vremeLiturgije, dodatneInformacije, bogosluzenjeData]);
+    }, [praznik, datumLiturgije, vremeLiturgije, datumBdenija, vremeBdenija, dodatneInformacije, bogosluzenjeData, fetchData, openSnackbar, apiUrl]);
 
     useEffect(() => {
         if (praznik && datumBdenija && vremeBdenija && datumLiturgije && vremeLiturgije) setDisabled(false);
@@ -106,20 +114,20 @@ export const DodajPraznik = ({data, bogosluzenje, setPostojeceBogosluzenje}: Dod
                                 label={<span dangerouslySetInnerHTML={{__html: praznik.trim()}}/>}
                             />
                         ))}
-
-                        <FormControlLabel
-                            key="liturgija-predjeosvecenih-darova"
-                            value="Литургија пређеосвећених дарова"
-                            control={<Radio color="primary"/>}
-                            label={<span>Литургија пређеосвећених дарова</span>}
-                        />
-                        <FormControlLabel
-                            key="carski-casovi"
-                            value="Царски часови"
-                            control={<Radio color="primary"/>}
-                            label={<span>Царски часови</span>}
-                        />
                     </RadioGroup>
+                    {bogosluzenja.map((bogosluzenje, index) => (
+                        <div key={index} style={{display: "flex", alignItems: 'baseline'}}>
+                            {bogosluzenje}
+                            {index !== 0 &&
+                                <IconButton onClick={() => deleteBogosluzenje(index)}
+                                            color={'error'}>
+                                    <DeleteIcon/>
+                                </IconButton>
+                            }
+                        </div>
+                    ))}
+                    {/*<Button onClick={addBogosluzenje} startIcon={<AddIcon />}>Додај ново</Button>*/}
+                    {/* Other code... */}
                 </div>
                 <div className="inner">
                     <h3>Датум и време бденија:</h3>

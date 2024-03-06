@@ -1,4 +1,4 @@
-import { alpha, createTheme, lighten, darken } from '@mui/material';
+import {alpha, createTheme, lighten, darken, Theme} from '@mui/material';
 import '@mui/lab/themeAugmentation';
 
 const themeColors = {
@@ -129,7 +129,7 @@ const colors = {
   }
 };
 
-export const PureLightTheme = createTheme({
+export const PureLightTheme: Theme = createTheme({
   // direction: i18n.dir(),
   colors: {
     gradients: {

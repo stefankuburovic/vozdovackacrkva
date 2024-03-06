@@ -18,7 +18,7 @@ const LogoWrapper = styled(Link)(
 
 function Logo() {
     return (
-        <LogoWrapper to="/auth/bogosluzenja">
+        <LogoWrapper to="/vzdadmin/bogosluzenja">
             <Box
                 component="img"
                 src="/assets/images/logo.svg"
