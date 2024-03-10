@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `vzdcrkva` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `vzdcrkva`;
 -- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
 --
 -- Host: localhost    Database: vzdcrkva
@@ -16,28 +18,14 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `kalendar`
+-- Dumping data for table `bogosluzenja`
 --
 
-DROP TABLE IF EXISTS `kalendar`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `kalendar` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `praznik` varchar(2000) DEFAULT NULL,
-  `stari` varchar(255) DEFAULT NULL,
-  `novi` varchar(255) DEFAULT NULL,
-  `post` varchar(255) DEFAULT NULL,
-  `ime_dana` varchar(255) DEFAULT NULL,
-  `mesec` varchar(255) DEFAULT NULL,
-  `ime_sedmice` varchar(500) DEFAULT NULL,
-  `godina` varchar(45) DEFAULT NULL,
-  `datum` varchar(255) DEFAULT NULL,
-  `crveno_slovo` tinyint NOT NULL DEFAULT '0',
-  `kalendarcol` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1096 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+LOCK TABLES `bogosluzenja` WRITE;
+/*!40000 ALTER TABLE `bogosluzenja` DISABLE KEYS */;
+INSERT INTO `bogosluzenja` VALUES (11,'Свети Лав Катански','2024-03-05','09:00','2024-03-04','17:00','');
+/*!40000 ALTER TABLE `bogosluzenja` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Dumping data for table `kalendar`
@@ -58,4 +46,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-06 21:01:07
+-- Dump completed on 2024-03-10 12:23:27
