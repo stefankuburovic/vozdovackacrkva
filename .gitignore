@@ -6,9 +6,6 @@
 .pnp.js
 /.idea
 
-#Compiled CSS
-/src/**/*.css
-/public/**/*.css
 # testing
 /coverage
 
