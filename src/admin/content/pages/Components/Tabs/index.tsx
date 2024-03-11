@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet-async';
 import PageTitle from '../../../../components/PageTitle';
 import PageTitleWrapper from '../../../../components/PageTitleWrapper';
 import {
@@ -59,9 +58,6 @@ function TabsDemo() {
 
   return (
     <>
-      <Helmet>
-        <title>Tabs - Components</title>
-      </Helmet>
       <PageTitleWrapper>
         <PageTitle
           heading="Tabs"

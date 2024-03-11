@@ -4,7 +4,7 @@ import {
     onAuthStateChanged,
     signOut,
 } from "firebase/auth";
-import { auth } from "../firebase";
+import { auth } from "../../firebase";
 import { User } from "firebase/auth";
 import {UserCredential} from "@firebase/auth";
 

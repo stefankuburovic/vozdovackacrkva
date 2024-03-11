@@ -150,7 +150,7 @@ function DashboardBogosluzenja() {
     //                     // @ts-ignore
     //                     console.log(response, imeMeseca[Number(mesec)]);
     //                     // @ts-ignore
-    //                     for (const praznik of response.data[imeMeseca[Number(mesec)]]) {
+    //                     for (const praznik of response.mock[imeMeseca[Number(mesec)]]) {
     //                         const unosUkalendar: Praznik = {} as Praznik;
     //                         unosUkalendar['crveno_slovo'] = praznik.crveno_slovo && 1 || 0;
     //                         unosUkalendar['praznik'] = praznik.opis;

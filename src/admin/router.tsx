@@ -14,6 +14,7 @@ const Loader = (Component: any) => (props: any) =>
 
 // Dashboards
 
+const Login = Loader(lazy(() => import('./content/pages/Login/Login')));
 const Bogosluzenja = Loader(lazy(() => import('./content/dashboards/Bogosluzenja')));
 
 // Components
@@ -42,6 +43,10 @@ const Forms = Loader(lazy(() => import('./content/pages/Components/Forms')));
 
 
 const routes: RouteObject[] = [
+  {
+    path: 'login',
+    element: <Login/>
+  },
   {
     path: '',
     element: <SidebarLayout />,

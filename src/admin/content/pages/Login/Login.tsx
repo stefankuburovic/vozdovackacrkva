@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Button, TextField, Grid, Paper, Typography, Box, InputAdornment, IconButton} from '@mui/material';
 import './Login.scss';
-import {useAuth} from "../../../admin/contexts/AuthProvider";
+import {useAuth} from "../../../contexts/AuthProvider";
 import { useNavigate } from 'react-router-dom';
 import {Visibility, VisibilityOff} from "@mui/icons-material";
 const Login: React.FC = () => {

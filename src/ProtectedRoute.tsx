@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { useAuth } from "./admin/contexts/AuthProvider";
 import { Navigate } from "react-router-dom";
-import LoadingScreen from "./vozdovacka-crkva/components/layout/loading-screen/LoadingScreen";
+import LoadingScreen from "./client/components/layout/loading-screen/LoadingScreen";
 import * as React from "react";
+import Login from "./admin/content/pages/Login/Login";
+import SuspenseLoader from "./admin/components/SuspenseLoader";
 
 const ProtectedRoute = ({ children }: any) => {
     const { user, isLoading } = useAuth();
@@ -16,9 +18,9 @@ console.log(isLoading, user, isLoaded)
   if (isLoaded && user) {
         child = children;
     } else if (isLoaded && !user) {
-      child = <Navigate to="/login" />;
+      child = <Login />;
     } else if(!isLoaded) {
-      child =  <LoadingScreen />;
+      child =  <SuspenseLoader />;
     }
   return child;
 };

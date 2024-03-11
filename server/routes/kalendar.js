@@ -18,7 +18,7 @@ module.exports = function(app) {
  *  @route GET /api/kalendar
  *  @access Public
  *  @type JSON
- *  @data kalendar
+ *  @mock kalendar
 * */
     app.get('/api/kalendar', (req, res) => {
         con.connect(function(err) {
@@ -35,7 +35,7 @@ module.exports = function(app) {
   *  @route POST /api/kalendar/
   *  @access Public
   *  @type JSON
-  *  @data kalendar
+  *  @mock kalendar
   *  @params praznik, stari, novi, post, ime_dana, mesec, ime_sedmice, godina, datum, crveno_slovo
   *  @type string
   * */
@@ -59,7 +59,7 @@ module.exports = function(app) {
  *  @route GET /api/kalendar/start_date/:startDate/end_date/:endDate
  *  @access Public
  *  @type JSON
- *  @data kalendar
+ *  @mock kalendar
  *  @params startDate, endDate
  *  @type string
  * */
@@ -81,7 +81,7 @@ module.exports = function(app) {
     * @route GET /api/kalendar/date/:date
     * @access Public
      * @type JSON
-     * @data kalendar
+     * @mock kalendar
      * @params mesec
     * */
     app.get('/api/kalendar/:mesec', (req, res) => {
