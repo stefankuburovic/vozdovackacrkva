@@ -22,16 +22,18 @@ const AdminRoutes = () => {
 
     return (
         <AuthProvider>
-            <HelmetProvider>
-                <ProtectedRoute>
-                    <ThemeProvider>
-                        <LocalizationProvider dateAdapter={AdapterDateFns}>
-                            <CssBaseline/>
-                            {content}
-                        </LocalizationProvider>
-                    </ThemeProvider>
-                </ProtectedRoute>
-            </HelmetProvider>
+            <SnackbarProvider>
+                <HelmetProvider>
+                    <ProtectedRoute>
+                        <ThemeProvider>
+                            <LocalizationProvider dateAdapter={AdapterDateFns}>
+                                <CssBaseline/>
+                                {content}
+                            </LocalizationProvider>
+                        </ThemeProvider>
+                    </ProtectedRoute>
+                </HelmetProvider>
+            </SnackbarProvider>
         </AuthProvider>
     );
 }
@@ -39,14 +41,12 @@ const ClientRoutes = () => {
     const content = useRoutes(client_router);
 
     return (
-        <SnackbarProvider>
             <HelmetProvider>
                         {content}
             </HelmetProvider>
-        </SnackbarProvider>
     );
 }
-export default function App() {
+function App() {
     return (
         <ApiUrlContext.Provider value={process.env.REACT_APP_API_URL}>
                     <BrowserRouter>

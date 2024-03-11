@@ -1,12 +1,9 @@
 import React, {useCallback, useContext, useEffect, useMemo, useState} from 'react';
-import axios from "axios";
 
 import Radio from "@mui/material/Radio";
-import {TimePicker} from "@mui/x-date-pickers";
 import {IconButton, Tooltip} from "@mui/material";
 import SaveIcon from "@mui/icons-material/Save";
 import RadioGroup from "@mui/material/RadioGroup";
-import {DatePicker} from "@mui/x-date-pickers/DatePicker";
 import FormControlLabel from "@mui/material/FormControlLabel"
 
 import {PraznikProps} from "../Praznik/Praznik";
@@ -17,18 +14,10 @@ import {Bogosluzenje} from "../index";
 import {SnackbarContext} from "../../../../contexts/SnackbarContext";
 import {DodajBogosluzenje} from "../DodajBogosluzenje/DodajBogosluzenje";
 import DeleteIcon from "@mui/icons-material/Delete";
+import {ChangableDateAndTime} from "./ChangeableDateAndTime/ChangeableDateAndTime";
+import BogosluzenjaService from "../../../../../client/services/bogosluzenja";
 
 const LETNJI_MESECI = ['Април', 'Мај', 'Јун', 'Јул', 'Август', 'Септембар'];
-
-interface BogosluzenjeData {
-    id: number;
-    praznik: string;
-    datum_bogoosluzenja: string;
-    vreme_bogoosluzenja: string;
-    datum_bdenija: string;
-    vreme_bdenija: string;
-    dodatne_informacije: string;
-}
 
 interface DodajPraznikProps extends PraznikProps {
     setPostojeceBogosluzenje: (bogosluzenje: Bogosluzenje | undefined) => void;
@@ -36,16 +25,19 @@ interface DodajPraznikProps extends PraznikProps {
 
 export const DodajPraznik = ({data, bogosluzenje, setPostojeceBogosluzenje}: DodajPraznikProps): React.JSX.Element => {
     const apiUrl = useContext(ApiUrlContext);
+    const bogosluzenjeService = BogosluzenjaService.getInstance();
 
-    const datumLiturgije = useMemo(() => new Date(data.datum), [data.datum]);
     const [disabled, setDisabled] = useState(true);
-    const vremeLiturgije = new Date(data.datum).setHours(9, 0);
     const [dodatneInformacije, setDodatneInformacije] = useState('');
-    const [bogosluzenjeData, setBogosluzenjeData] = useState<BogosluzenjeData[]>([]);
-    const datumBdenija = useMemo(() => new Date(new Date(data.datum).getTime() - 60 * 60 * 24 * 1000), [data.datum]);
     const [praznik, setPraznik] = useState<string | null>(bogosluzenje?.praznik || null);
-    const vremeBdenija = LETNJI_MESECI.includes(data.mesec) ? datumBdenija.setHours(18, 0) : datumBdenija.setHours(17, 0);
     const [bogosluzenja, setBogosluzenja] = useState([<DodajBogosluzenje key={0}/>]);
+    const [bogosluzenjeData, setBogosluzenjeData] = useState<Bogosluzenje[]>([]);
+
+    const [datumBdenija, setDatumBdenija] = useState(useMemo(() => new Date(new Date(data.datum).getTime() - 60 * 60 * 24 * 1000), [data.datum]));
+    const [vremeBdenija, setVremeBdenija] = useState(LETNJI_MESECI.includes(data.mesec) ? datumBdenija.setHours(18, 0) : datumBdenija.setHours(17, 0));
+
+    const vremeLiturgije = new Date(data.datum).setHours(9, 0);
+    const datumLiturgije = useMemo(() => new Date(data.datum), [data.datum]);
 
     const deleteBogosluzenje = (index: number) => {
         setBogosluzenja(bogosluzenja.filter((_, i) => i !== index));
@@ -55,13 +47,7 @@ export const DodajPraznik = ({data, bogosluzenje, setPostojeceBogosluzenje}: Dod
     const {openSnackbar} = useContext(SnackbarContext);
 
     const fetchData = useCallback(async () => {
-        try {
-            const response = await axios.get(`${apiUrl}/bogosluzenja/date/${datumLiturgije.toISOString().slice(0, 10)}`);
-            setBogosluzenjeData(response.data);
-            setPostojeceBogosluzenje(response.data[0]);
-        } catch (error) {
-            console.error(error);
-        }
+        bogosluzenjeService.getBogosluzenja(datumLiturgije, setBogosluzenjeData, setPostojeceBogosluzenje, apiUrl);
     }, [apiUrl, datumLiturgije, setPostojeceBogosluzenje]);
 
     useEffect(() => {
@@ -70,6 +56,7 @@ export const DodajPraznik = ({data, bogosluzenje, setPostojeceBogosluzenje}: Dod
     useEffect(() => {
         setDodatneInformacije(bogosluzenje?.dodatne_informacije || '');
     }, [bogosluzenje]);
+
 
     const saveData = useCallback(async () => {
         const bogosluzenje = {
@@ -80,19 +67,7 @@ export const DodajPraznik = ({data, bogosluzenje, setPostojeceBogosluzenje}: Dod
             vreme_bdenija: convertTimeStampToHHMM(vremeBdenija),
             dodatne_informacije: dodatneInformacije
         };
-
-        try {
-            if (bogosluzenjeData.length > 0) {
-                await axios.put(`${apiUrl}/bogosluzenja/${bogosluzenjeData[0].id}`, bogosluzenje);
-            } else {
-                await axios.post(`${apiUrl}/bogosluzenja`, bogosluzenje);
-            }
-            fetchData();
-            openSnackbar(`Богослужење за празник ${praznik} је успешно сачувано у распоред`, "success");
-        } catch (error) {
-            console.error(error);
-            openSnackbar('Дошло је до грешке приликом чувања богослужења у распоред', "error");
-        }
+        bogosluzenjeService.saveOrUpdateBogosuzenje(bogosluzenje, bogosluzenjeData, fetchData, openSnackbar, apiUrl);
     }, [praznik, datumLiturgije, vremeLiturgije, datumBdenija, vremeBdenija, dodatneInformacije, bogosluzenjeData, fetchData, openSnackbar, apiUrl]);
 
     useEffect(() => {
@@ -127,34 +102,35 @@ export const DodajPraznik = ({data, bogosluzenje, setPostojeceBogosluzenje}: Dod
                         </div>
                     ))}
                     {/*<Button onClick={addBogosluzenje} startIcon={<AddIcon />}>Додај ново</Button>*/}
-                    {/* Other code... */}
                 </div>
                 <div className="inner">
                     <h3>Датум и време бденија:</h3>
-                    <DatePicker
-                        defaultValue={datumBdenija}
-                        sx={{marginRight: 1}}
-                        label='Датум бденија'
-                        readOnly
-                    />
-                    <TimePicker
-                        defaultValue={vremeBdenija}
-                        label='Време бденија'
-                        readOnly
+                    <ChangableDateAndTime
+                        date={datumBdenija}
+                        labels={
+                            {
+                                checkboxLabel: 'Измените време бденија',
+                                datePickerLabel: 'Датум бденија',
+                                timePickerLabel: 'Време бденија'
+                            }
+                        }
+                        setDate={setDatumBdenija} time={vremeBdenija}
+                        setTime={setVremeBdenija}
                     />
                 </div>
                 <div className="inner">
                     <h3>Датум и време богослужења:</h3>
-                    <DatePicker
-                        readOnly
-                        sx={{marginRight: 1}}
-                        defaultValue={datumLiturgije}
-                        label='Датум Свете Литургије'
-                    />
-                    <TimePicker
-                        defaultValue={vremeLiturgije}
-                        label='Време Свете Литургије'
-                        readOnly
+                    <ChangableDateAndTime
+                        date={datumLiturgije}
+                        labels={
+                            {
+                                checkboxLabel: 'Измените време богослужења',
+                                datePickerLabel: 'Датум богослужења',
+                                timePickerLabel: 'Време богослужења'
+                            }
+                        }
+                        setDate={setDatumBdenija} time={vremeLiturgije}
+                        setTime={setVremeBdenija}
                     />
                 </div>
                 <div className="dodatne-informacije">

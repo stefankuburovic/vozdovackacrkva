@@ -4,7 +4,7 @@
   align-items: center;
 }
 .praznik:hover, .praznik.selected {
-  background: wheat;
+  background: aliceblue;
 }
 .praznik em, .praznik strong {
   margin: 0 0 0 5px;
@@ -28,7 +28,7 @@
   justify-content: space-between;
   align-items: flex-end;
   padding: 10px;
-  background: wheat;
+  background: aliceblue;
 }
 .sacuvaj-bogosluzenje .selektovani-praznik {
   margin: 0 5px;
