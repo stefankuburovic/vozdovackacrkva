@@ -25,12 +25,13 @@ interface DodajPraznikProps extends PraznikProps {
 
 //TODO: MORA REFAKTOR, MALO JE NEJASNA KOMPONENTA
 export const DodajPraznik = ({
-                                 praznik,
-                                 bogosluzenje,
-                                 setPostojeceBogosluzenje
-                             }: DodajPraznikProps): React.JSX.Element => {
+     praznik,
+     bogosluzenje,
+     setPostojeceBogosluzenje
+ }: DodajPraznikProps): React.JSX.Element => {
     const {datum, mesec} = praznik;
     const apiUrl = useContext(ApiUrlContext);
+    const {openSnackbar} = useContext(SnackbarContext);
     const bogosluzenjeService = BogosluzenjaService.getInstance();
 
     const [disabled, setDisabled] = useState(true);
@@ -51,15 +52,17 @@ export const DodajPraznik = ({
     };
 
 
-    const {openSnackbar} = useContext(SnackbarContext);
-
     const fetchData = useCallback(async () => {
-        bogosluzenjeService.getBogosluzenja(datumLiturgije, setBogosluzenjeData, setPostojeceBogosluzenje, apiUrl);
+        let ignore = false;
+        if (!ignore) {
+            bogosluzenjeService.getBogosluzenja(datumLiturgije, setBogosluzenjeData, setPostojeceBogosluzenje, apiUrl);
+        }
+
+        return () => {
+            ignore = true;
+        }
     }, [apiUrl, bogosluzenjeService, datumLiturgije, setPostojeceBogosluzenje]);
 
-    useEffect(() => {
-        fetchData();
-    }, [fetchData]);
     useEffect(() => {
         setDodatneInformacije(bogosluzenje?.dodatne_informacije || '');
     }, [bogosluzenje]);

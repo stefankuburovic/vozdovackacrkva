@@ -668,15 +668,18 @@ i.redo {
 }
 
 .icon.large-heading,
-.icon.h1 {
+.icon.h3 {
   background-image: url(/public/assets/icons/type-h1.svg);
 }
 
 .icon.small-heading,
-.icon.h2 {
+.icon.h4 {
   background-image: url(/public/assets/icons/type-h2.svg);
 }
-
+.icon.smallest-heading,
+.icon.h5 {
+  background-image: url(/public/assets/icons/type-h3.svg);
+}
 .icon.bullet-list,
 .icon.ul {
   background-image: url(/public/assets/icons/list-ul.svg);
