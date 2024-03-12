@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
+import Checkbox from "@mui/material/Checkbox";
 import { Autocomplete, Box, TextField } from "@mui/material";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import { DatePicker, TimePicker } from "@mui/x-date-pickers";
+import {ChangableDateAndTime} from "../DodajPraznik/ChangeableDateAndTime/ChangeableDateAndTime";
 
 const bogosluzenja: Array<{naziv: string, tip: string}>= [
     { naziv: 'Вечерња', tip: "Свакодневна" },
@@ -48,21 +48,12 @@ export const DodajBogosluzenje = () => {
             <Box sx={{display: 'flex', marginBottom: '20px'}}>
                 {selectedBogosluzenje && isCheckboxChecked && (
                     <>
-                        <DatePicker
-                            label={`Датум ${selectedBogosluzenje}`}
-                            value={selectedDate}
-                            onChange={(newValue) => {
-                                setSelectedDate(newValue);
-                            }}
-                        />
-                        <TimePicker
-                            sx={{marginLeft: '10px'}}
-                            label={`Време ${selectedBogosluzenje}`}
-                            value={selectedTime}
-                            onChange={(newValue) => {
-                                setSelectedTime(newValue);
-                            }}
-                        />
+                        <ChangableDateAndTime date={selectedDate} time={selectedTime} setDate={setSelectedDate} setTime={setSelectedTime} labels={
+                            {
+                                datePickerLabel: `Датум ${selectedBogosluzenje}`,
+                                timePickerLabel:`Време ${selectedBogosluzenje}`
+                            }
+                        } checkboxManpiulation={false} />
                     </>
                 )}
             </Box>

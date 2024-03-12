@@ -24,6 +24,7 @@ interface BogsluzenjaService {
         openSnackbar: Function,
         apiUrl?: string
     ) => void;
+    deleteBogosluzenje: (id: number, fetchData: Function, openSnackbar: Function, apiUrl?: string) => void;
 }
 class BogosluzenjaService implements BogsluzenjaService {
     private static instance: BogosluzenjaService;
@@ -68,6 +69,22 @@ class BogosluzenjaService implements BogsluzenjaService {
         } catch (error) {
             console.error(error);
             openSnackbar('Дошло је до грешке приликом чувања богослужења у распоред', "error");
+        }
+    }
+
+    public async deleteBogosluzenje(
+        id: number,
+        fetchData: Function,
+        openSnackbar: Function,
+        apiUrl?: string
+    ) {
+        try {
+            await axios.delete(`${apiUrl}/bogosluzenja/${id}`);
+            openSnackbar('Богослужење је успешно обрисано из распореда', "success");
+            fetchData();
+        } catch (error) {
+            console.error(error);
+            openSnackbar('Дошло је до грешке приликом брисања богослужења из распореда', "error");
         }
     }
 }

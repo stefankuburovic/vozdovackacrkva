@@ -4,18 +4,18 @@ import Radio from "@mui/material/Radio";
 import {IconButton, Tooltip} from "@mui/material";
 import SaveIcon from "@mui/icons-material/Save";
 import RadioGroup from "@mui/material/RadioGroup";
+import DeleteIcon from "@mui/icons-material/Delete";
 import FormControlLabel from "@mui/material/FormControlLabel"
 
+import {Bogosluzenje} from "../index";
+import {ApiUrlContext} from "../../../../../index";
 import {PraznikProps} from "../Praznik/Praznik";
 import Editor from "../../../../components/Editor/Editor";
-import {ApiUrlContext} from "../../../../../index";
-import {convertTimeStampToHHMM} from "../../../../../util/functions";
-import {Bogosluzenje} from "../index";
 import {SnackbarContext} from "../../../../contexts/SnackbarContext";
+import {convertTimeStampToHHMM} from "../../../../../util/functions";
+import BogosluzenjaService from "../../../../../shared/services/bogosluzenja";
 import {DodajBogosluzenje} from "../DodajBogosluzenje/DodajBogosluzenje";
-import DeleteIcon from "@mui/icons-material/Delete";
 import {ChangableDateAndTime} from "./ChangeableDateAndTime/ChangeableDateAndTime";
-import BogosluzenjaService from "../../../../../client/services/bogosluzenja";
 
 const LETNJI_MESECI = ['Април', 'Мај', 'Јун', 'Јул', 'Август', 'Септембар'];
 
@@ -23,21 +23,28 @@ interface DodajPraznikProps extends PraznikProps {
     setPostojeceBogosluzenje: (bogosluzenje: Bogosluzenje | undefined) => void;
 }
 
-export const DodajPraznik = ({data, bogosluzenje, setPostojeceBogosluzenje}: DodajPraznikProps): React.JSX.Element => {
+//TODO: MORA REFAKTOR, MALO JE NEJASNA KOMPONENTA
+export const DodajPraznik = ({
+                                 praznik,
+                                 bogosluzenje,
+                                 setPostojeceBogosluzenje
+                             }: DodajPraznikProps): React.JSX.Element => {
+    const {datum, mesec} = praznik;
     const apiUrl = useContext(ApiUrlContext);
     const bogosluzenjeService = BogosluzenjaService.getInstance();
 
     const [disabled, setDisabled] = useState(true);
     const [dodatneInformacije, setDodatneInformacije] = useState('');
-    const [praznik, setPraznik] = useState<string | null>(bogosluzenje?.praznik || null);
-    const [bogosluzenja, setBogosluzenja] = useState([<DodajBogosluzenje key={0}/>]);
     const [bogosluzenjeData, setBogosluzenjeData] = useState<Bogosluzenje[]>([]);
 
-    const [datumBdenija, setDatumBdenija] = useState(useMemo(() => new Date(new Date(data.datum).getTime() - 60 * 60 * 24 * 1000), [data.datum]));
-    const [vremeBdenija, setVremeBdenija] = useState(LETNJI_MESECI.includes(data.mesec) ? datumBdenija.setHours(18, 0) : datumBdenija.setHours(17, 0));
+    const [praznikBogosluzenja, setPraznikBogosluzenja] = useState<string | null>(bogosluzenje?.praznik || null);
+    const [bogosluzenja, setBogosluzenja] = useState([<DodajBogosluzenje key={0}/>]);
 
-    const vremeLiturgije = new Date(data.datum).setHours(9, 0);
-    const datumLiturgije = useMemo(() => new Date(data.datum), [data.datum]);
+    const [datumBdenija, setDatumBdenija] = useState(useMemo(() => new Date(new Date(datum).getTime() - 60 * 60 * 24 * 1000), [datum]));
+    const [vremeBdenija, setVremeBdenija] = useState(LETNJI_MESECI.includes(mesec) ? datumBdenija.setHours(18, 0) : datumBdenija.setHours(17, 0));
+
+    const vremeLiturgije = new Date(datum).setHours(9, 0);
+    const datumLiturgije = useMemo(() => new Date(datum), [datum]);
 
     const deleteBogosluzenje = (index: number) => {
         setBogosluzenja(bogosluzenja.filter((_, i) => i !== index));
@@ -48,7 +55,7 @@ export const DodajPraznik = ({data, bogosluzenje, setPostojeceBogosluzenje}: Dod
 
     const fetchData = useCallback(async () => {
         bogosluzenjeService.getBogosluzenja(datumLiturgije, setBogosluzenjeData, setPostojeceBogosluzenje, apiUrl);
-    }, [apiUrl, datumLiturgije, setPostojeceBogosluzenje]);
+    }, [apiUrl, bogosluzenjeService, datumLiturgije, setPostojeceBogosluzenje]);
 
     useEffect(() => {
         fetchData();
@@ -60,28 +67,59 @@ export const DodajPraznik = ({data, bogosluzenje, setPostojeceBogosluzenje}: Dod
 
     const saveData = useCallback(async () => {
         const bogosluzenje = {
-            praznik: praznik,
+            praznik: praznikBogosluzenja,
             datum_bogosluzenja: datumLiturgije.toISOString().slice(0, 10),
             vreme_bogosluzenja: convertTimeStampToHHMM(vremeLiturgije),
             datum_bdenija: datumBdenija.toISOString().slice(0, 10),
             vreme_bdenija: convertTimeStampToHHMM(vremeBdenija),
             dodatne_informacije: dodatneInformacije
         };
-        bogosluzenjeService.saveOrUpdateBogosuzenje(bogosluzenje, bogosluzenjeData, fetchData, openSnackbar, apiUrl);
-    }, [praznik, datumLiturgije, vremeLiturgije, datumBdenija, vremeBdenija, dodatneInformacije, bogosluzenjeData, fetchData, openSnackbar, apiUrl]);
+        bogosluzenjeService.saveOrUpdateBogosuzenje(
+            bogosluzenje,
+            bogosluzenjeData,
+            fetchData,
+            openSnackbar,
+            apiUrl
+        );
+    }, [
+        praznikBogosluzenja,
+        datumLiturgije,
+        vremeLiturgije,
+        datumBdenija,
+        vremeBdenija,
+        dodatneInformacije,
+        bogosluzenjeService,
+        bogosluzenjeData,
+        fetchData,
+        openSnackbar,
+        apiUrl
+    ]);
 
     useEffect(() => {
-        if (praznik && datumBdenija && vremeBdenija && datumLiturgije && vremeLiturgije) setDisabled(false);
-    }, [praznik, datumBdenija, vremeBdenija, datumLiturgije, vremeLiturgije]);
+        if (praznik
+            && datumBdenija
+            && vremeBdenija
+            && datumLiturgije
+            && vremeLiturgije
+        )
+            setDisabled(false);
+    }, [
+        praznikBogosluzenja,
+        datumBdenija,
+        vremeBdenija,
+        datumLiturgije,
+        vremeLiturgije,
+        praznik
+    ]);
 
     return (
         <div className="sacuvaj-bogosluzenje">
             <div className="selektovani-praznik">
                 <div className="ime-praznika">
                     <h3>Селектујте назив празника (<i>односно који се Светац слави тај дан</i>)</h3>
-                    <RadioGroup name='praznik' onChange={(e) => setPraznik(e.target.value.trim())}
+                    <RadioGroup name='praznik' onChange={(e) => setPraznikBogosluzenja(e.target.value.trim())}
                                 defaultValue={bogosluzenje?.praznik}>
-                        {data.praznik.split(';').map((praznik, index) => (
+                        {praznik.praznik.split(';').map((praznik, index) => (
                             <FormControlLabel
                                 key={index}
                                 value={praznik}
