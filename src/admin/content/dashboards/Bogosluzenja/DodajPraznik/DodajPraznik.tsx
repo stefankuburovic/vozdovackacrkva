@@ -25,17 +25,18 @@ interface DodajPraznikProps extends PraznikProps {
 
 //TODO: MORA REFAKTOR, MALO JE NEJASNA KOMPONENTA
 export const DodajPraznik = ({
-                                 praznik,
-                                 bogosluzenje,
-                                 setPostojeceBogosluzenje
-                             }: DodajPraznikProps): React.JSX.Element => {
+     praznik,
+     bogosluzenje,
+     setPostojeceBogosluzenje
+ }: DodajPraznikProps): React.JSX.Element => {
     const {datum, mesec} = praznik;
     const apiUrl = useContext(ApiUrlContext);
+    const {openSnackbar} = useContext(SnackbarContext);
     const bogosluzenjeService = BogosluzenjaService.getInstance();
 
     const [disabled, setDisabled] = useState(true);
     const [dodatneInformacije, setDodatneInformacije] = useState('');
-    const [bogosluzenjeData, setBogosluzenjeData] = useState<Bogosluzenje[]>([]);
+    const [bogosluzenjeData, setBogosluzenjeData] = useState<Bogosluzenje[]>(bogosluzenje ? [bogosluzenje as Bogosluzenje] : []);
 
     const [praznikBogosluzenja, setPraznikBogosluzenja] = useState<string | null>(bogosluzenje?.praznik || null);
     const [bogosluzenja, setBogosluzenja] = useState([<DodajBogosluzenje key={0}/>]);
@@ -51,15 +52,10 @@ export const DodajPraznik = ({
     };
 
 
-    const {openSnackbar} = useContext(SnackbarContext);
-
     const fetchData = useCallback(async () => {
         bogosluzenjeService.getBogosluzenja(datumLiturgije, setBogosluzenjeData, setPostojeceBogosluzenje, apiUrl);
     }, [apiUrl, bogosluzenjeService, datumLiturgije, setPostojeceBogosluzenje]);
 
-    useEffect(() => {
-        fetchData();
-    }, [fetchData]);
     useEffect(() => {
         setDodatneInformacije(bogosluzenje?.dodatne_informacije || '');
     }, [bogosluzenje]);

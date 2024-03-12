@@ -25,14 +25,16 @@ module.exports = function(app) {
             });
         });
     })
-    app.get(['/api/bogosluzenja/start_date/:startDate/end_date/:endDate', '/api/bogosluzenja/date/:date'], (req, res) => {
-        const { startDate, endDate, date } = req.params;
+    app.get(['/api/bogosluzenja/start_date/:startDate/end_date/:endDate', '/api/bogosluzenja/date/:date', '/api/bogosluzenja'], (req, res) => {
+        console.log(req.query);
+        const { startDate, endDate, date} = req.params;
+        const { start, end } = req.query;
 
         con.connect(function(err) {
             if (err) throw err;
-            if(startDate && endDate) {
+            if((startDate && endDate) || (start && end)) {
                 const sql = `SELECT * FROM bogosluzenja WHERE datum_bogosluzenja BETWEEN ? AND ?`;
-                con.query(sql, [startDate, endDate], function (err, result) {
+                con.query(sql, [startDate || start, endDate || end], function (err, result) {
                     if (err) throw err;
                     res.json(result);
                 });

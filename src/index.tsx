@@ -14,6 +14,7 @@ import ProtectedRoute from "./ProtectedRoute";
 
 import admin_router from "./admin/router";
 import client_router from "./client/router";
+import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 
 export const ApiUrlContext = React.createContext<string | undefined>('');
 
@@ -47,14 +48,18 @@ const ClientRoutes = () => {
     );
 }
 function App() {
+    const queryClient = new QueryClient()
     return (
         <ApiUrlContext.Provider value={process.env.REACT_APP_API_URL}>
+
+            <QueryClientProvider client={queryClient}>
                     <BrowserRouter>
                             <Routes>
                                 <Route path="/*" element={<ClientRoutes />} />
                                 <Route path="/vzdadmin/*" element={<AdminRoutes  />}/>
                             </Routes>
                     </BrowserRouter>
+            </QueryClientProvider>
         </ApiUrlContext.Provider>
     );
 }
