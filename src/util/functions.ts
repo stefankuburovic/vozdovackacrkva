@@ -114,3 +114,15 @@ export const  convertTimeStampToHHMM = (timestamp: number) => {
     let time = `${hours}:${minutes}`;
     return time;
 }
+
+export const getDayName = (date: Date): string => {
+    const days = ['Недеља', 'Понедељак', 'Уторак', 'Среда', 'Четвртак', 'Петак', 'Субота'];
+    return days[date.getDay()];
+}
+export const formatDate = (date: Date): string => {
+    return date.toLocaleDateString('sr', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+    });
+}

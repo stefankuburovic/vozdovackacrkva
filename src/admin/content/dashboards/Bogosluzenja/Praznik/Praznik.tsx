@@ -1,27 +1,28 @@
-import {useContext, useEffect, useState} from 'react';
-import Checkbox from "@mui/material/Checkbox";
-import React from "react";
-import {Bogosluzenje, Praznik} from "../index";
+import React, {useContext, useEffect, useState} from "react";
 
-import './Praznik.scss';
-import {Divider, IconButton, Tooltip} from "@mui/material";
+import Checkbox from "@mui/material/Checkbox";
 import DeleteIcon from "@mui/icons-material/Delete";
-import {DodajPraznik} from "../DodajPraznik/DodajPraznik";
-import axios from "axios";
-import {ApiUrlContext} from "../../../../../index";
-import {SnackbarContext} from "../../../../contexts/SnackbarContext";
+import {Divider, IconButton, Tooltip} from "@mui/material";
 import {KeyboardArrowDown, KeyboardArrowUp} from "@mui/icons-material";
 
+import {Bogosluzenje, Praznik} from "../index";
+import {ApiUrlContext} from "../../../../../index";
+import {DodajPraznik} from "../DodajPraznik/DodajPraznik";
+import {SnackbarContext} from "../../../../contexts/SnackbarContext";
+
+import './Praznik.scss';
+import BogosluzenjaService from "../../../../../shared/services/bogosluzenja";
+
 export interface PraznikProps {
-    data: Praznik;
+    praznik: Praznik;
     bogosluzenje?: Bogosluzenje
 }
 
 const isSunday = (imeDana: string) => {
     return imeDana === 'Недеља';
 }
-export default function PraznikComponent({data, bogosluzenje}: PraznikProps): React.JSX.Element {
-
+export default function PraznikComponent({praznik, bogosluzenje}: PraznikProps): React.JSX.Element {
+    const bogosluzenjeService = BogosluzenjaService.getInstance();
     const apiUrl = useContext(ApiUrlContext);
     const {openSnackbar} = useContext(SnackbarContext);
     const [isChecked, setIsChecked] = useState(false);
@@ -44,37 +45,39 @@ export default function PraznikComponent({data, bogosluzenje}: PraznikProps): Re
         setIsChecked(!isChecked);
     };
     const deleteBogosluzenje = () => {
-            axios.delete(`${apiUrl}/bogosluzenja/${postojeceBogosluzenje?.id ? postojeceBogosluzenje.id : bogosluzenje?.id}`)
-                .then(() => {
-                    setIsChecked(false);
-                    setPostojeceBogosluzenje(undefined);
-                    openSnackbar(`Распоред богослужења за празник ${postojeceBogosluzenje?.praznik} је успешно обрисано из базе`, 'success');
-                })
-                .catch((error) => {
-                    console.error(error);
-                    openSnackbar(`Дошло је до грешке приликом брисања распореда богослужења за празник ${postojeceBogosluzenje?.praznik}`, 'error');
-                });
+        if (postojeceBogosluzenje?.id)
+            bogosluzenjeService.deleteBogosluzenje(postojeceBogosluzenje?.id, setPostojeceBogosluzenje, openSnackbar, apiUrl);
     }
+    const {ime_sedmice, ime_dana, novi, stari, mesec} = praznik;
     return (
         <>
-            {data.ime_sedmice && <h2>{data.ime_sedmice}</h2>}
+            {ime_sedmice && <h2>{ime_sedmice}</h2>}
             <div className={`praznik && ${(isChecked || postojeceBogosluzenje) && 'selected'}`}
-                 style={{color: `${isSunday(data.ime_dana) ? 'red' : 'black'}`}}>
-                {!postojeceBogosluzenje ? <Checkbox id={`praznik-${data.novi}`} onChange={handleCheckboxChange}
-                                                   checked={isChecked}/> : isChecked ?
-                    <KeyboardArrowUp fontSize="large" onClick={changeChecked} sx={{marginLeft: "9px"}} /> : <KeyboardArrowDown fontSize="large" onClick={changeChecked} sx={{marginLeft: "9px"}}/>}
-                <label htmlFor={`praznik-${data.novi}`}>
+                 style={
+                     {
+                         color: `${isSunday(ime_dana) ? 'red' : 'black'}`
+                     }}>
+                {
+                    !postojeceBogosluzenje ?
+                        <Checkbox
+                            id={`praznik-${novi}`}
+                            onChange={handleCheckboxChange}
+                            checked={isChecked}/>
+                        : isChecked ?
+                            <KeyboardArrowUp fontSize="large" onClick={changeChecked} sx={{marginLeft: "9px"}}/> :
+                            <KeyboardArrowDown fontSize="large" onClick={changeChecked} sx={{marginLeft: "9px"}}/>
+                }
+                <label htmlFor={`praznik-${novi}`}>
                     <span>
-                        <strong>{data.ime_dana}</strong>
+                        <strong>{ime_dana}</strong>
                     </span>
                     <p>
-                        {data.novi}.
-                        <i>({data.stari}).</i>
-                        <strong>{data.mesec}</strong>
+                        {novi}.
+                        <i>({stari}).</i>
+                        <strong>{mesec}</strong>
                     </p>
-                    <p dangerouslySetInnerHTML={{__html: data.praznik}}/>
+                    <p dangerouslySetInnerHTML={{__html: praznik.praznik}}/>
                 </label>
-
                 <Tooltip title={!postojeceBogosluzenje ? '' : "Oбриши из распореда"}>
                     <span>
                         <IconButton aria-label="Oбриши из распореда" sx={{margin: 1}} color="error"
@@ -86,7 +89,7 @@ export default function PraznikComponent({data, bogosluzenje}: PraznikProps): Re
             </div>
             {isChecked &&
                 <DodajPraznik
-                    data={data}
+                    praznik={praznik}
                     bogosluzenje={postojeceBogosluzenje}
                     setPostojeceBogosluzenje={setPostojeceBogosluzenje}
                 />}

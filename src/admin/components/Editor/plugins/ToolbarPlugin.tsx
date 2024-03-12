@@ -1,5 +1,5 @@
 import { useLexicalComposerContext } from "@lexical/react/LexicalComposerContext";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   CAN_REDO_COMMAND,
   CAN_UNDO_COMMAND,
@@ -11,7 +11,7 @@ import {
   $getSelection,
   $isRangeSelection,
   $createParagraphNode,
-  $getNodeByKey, BaseSelection, RangeSelection
+  BaseSelection, RangeSelection
 } from "lexical";
 import {$isLinkNode, TOGGLE_LINK_COMMAND} from "@lexical/link";
 import {
@@ -30,15 +30,8 @@ import {
 import {createPortal} from "react-dom";
 import {
   $createHeadingNode,
-  $createQuoteNode,
   $isHeadingNode
 } from "@lexical/rich-text";
-import {
-  $createCodeNode,
-  $isCodeNode,
-  getDefaultCodeLanguage,
-  getCodeLanguages
-} from "@lexical/code";
 
 const LowPriority = 1;
 
@@ -46,23 +39,21 @@ const supportedBlockTypes = new Set([
   "paragraph",
   "quote",
   "code",
-  "h1",
-  "h2",
+  "h3",
+  "h4",
+  "h5",
   "ul",
   "ol"
 ]);
-type BlockType =  'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'ol' | 'paragraph' | 'quote' | 'ul';
+type BlockType =  'h3' | 'h4' | 'h5' | 'ol' | 'paragraph' | 'ul';
 
 const blockTypeToBlockName: Record<BlockType, string> = {
-  h1: "Large Heading",
-  h2: "Small Heading",
-  h3: "Heading",
-  h4: "Heading",
-  h5: "Heading",
-  ol: "Numbered List",
-  paragraph: "Normal",
-  quote: "Quote",
-  ul: "Bulleted List"
+  h3: "Велико Заглавље",
+  h4: "Средње Заглавље",
+  h5: "Мало Заглавље",
+  ol: "Листа са редним бројевима",
+  paragraph: "Пасус",
+  ul: "Листа са такицама"
 };
 function Divider() {
   return <div className="divider"/>;
@@ -305,12 +296,12 @@ function BlockOptionsDropdownList({
   };
 
   const formatLargeHeading = () => {
-    if (blockType !== "h1") {
+    if (blockType !== "h3") {
       editor.update(() => {
         const selection = $getSelection();
 
         if ($isRangeSelection(selection)) {
-          $wrapNodes(selection, () => $createHeadingNode("h1"));
+          $wrapNodes(selection, () => $createHeadingNode("h3"));
         }
       });
     }
@@ -318,18 +309,31 @@ function BlockOptionsDropdownList({
   };
 
   const formatSmallHeading = () => {
-    if (blockType !== "h2") {
+    if (blockType !== "h4") {
       editor.update(() => {
         const selection = $getSelection();
 
         if ($isRangeSelection(selection)) {
-          $wrapNodes(selection, () => $createHeadingNode("h2"));
+          $wrapNodes(selection, () => $createHeadingNode("h4"));
         }
       });
     }
     setShowBlockOptionsDropDown(false);
   };
 
+
+  const formatSmallestHeading = () => {
+    if (blockType !== "h5") {
+      editor.update(() => {
+        const selection = $getSelection();
+
+        if ($isRangeSelection(selection)) {
+          $wrapNodes(selection, () => $createHeadingNode("h5"));
+        }
+      });
+    }
+    setShowBlockOptionsDropDown(false);
+  };
   const formatBulletList = () => {
     if (blockType !== "ul") {
       editor.dispatchCommand(INSERT_UNORDERED_LIST_COMMAND);
@@ -348,65 +352,70 @@ function BlockOptionsDropdownList({
     setShowBlockOptionsDropDown(false);
   };
 
-  const formatQuote = () => {
-    if (blockType !== "quote") {
-      editor.update(() => {
-        const selection = $getSelection();
+  // const formatQuote = () => {
+  //   if (blockType !== "quote") {
+  //     editor.update(() => {
+  //       const selection = $getSelection();
+  //
+  //       if ($isRangeSelection(selection)) {
+  //         $wrapNodes(selection, () => $createQuoteNode());
+  //       }
+  //     });
+  //   }
+  //   setShowBlockOptionsDropDown(false);
+  // };
 
-        if ($isRangeSelection(selection)) {
-          $wrapNodes(selection, () => $createQuoteNode());
-        }
-      });
-    }
-    setShowBlockOptionsDropDown(false);
-  };
-
-  const formatCode = () => {
-    if (blockType !== "code") {
-      editor.update(() => {
-        const selection = $getSelection();
-
-        if ($isRangeSelection(selection)) {
-          $wrapNodes(selection, () => $createCodeNode());
-        }
-      });
-    }
-    setShowBlockOptionsDropDown(false);
-  };
+  // const formatCode = () => {
+  //   if (blockType !== "code") {
+  //     editor.update(() => {
+  //       const selection = $getSelection();
+  //
+  //       if ($isRangeSelection(selection)) {
+  //         $wrapNodes(selection, () => $createCodeNode());
+  //       }
+  //     });
+  //   }
+  //   setShowBlockOptionsDropDown(false);
+  // };
 
   return (
-    <div className="dropdown" ref={dropDownRef}>
-      <button className="item" onClick={formatParagraph}>
-        <span className="icon paragraph" />
-        <span className="text">Normal</span>
-        {blockType === "paragraph" && <span className="active" />}
-      </button>
-      <button className="item" onClick={formatLargeHeading}>
-        <span className="icon large-heading" />
-        <span className="text">Large Heading</span>
-        {blockType === "h1" && <span className="active" />}
-      </button>
-      <button className="item" onClick={formatSmallHeading}>
-        <span className="icon small-heading" />
-        <span className="text">Small Heading</span>
-        {blockType === "h2" && <span className="active" />}
-      </button>
-      <button className="item" onClick={formatBulletList}>
-        <span className="icon bullet-list" />
-        <span className="text">Bullet List</span>
-        {blockType === "ul" && <span className="active" />}
-      </button>
-      <button className="item" onClick={formatNumberedList}>
-        <span className="icon numbered-list" />
-        <span className="text">Numbered List</span>
-        {blockType === "ol" && <span className="active" />}
-      </button>
-      <button className="item" onClick={formatQuote}>
-        <span className="icon quote" />
-        <span className="text">Quote</span>
-        {blockType === "quote" && <span className="active" />}
-      </button>
-    </div>
+      <div className="dropdown" ref={dropDownRef}>
+        <button className="item" onClick={formatParagraph}>
+          <span className="icon paragraph"/>
+          <span className="text">Параграф</span>
+          {blockType === "paragraph" && <span className="active"/>}
+        </button>
+        <button className="item" onClick={formatLargeHeading}>
+          <span className="icon large-heading"/>
+          <span className="text">Велико Заглавље</span>
+          {blockType === "h3" && <span className="active"/>}
+        </button>
+        <button className="item" onClick={formatSmallHeading}>
+          <span className="icon small-heading"/>
+          <span className="text">Средње Заглавље</span>
+          {blockType === "h4" && <span className="active"/>}
+        </button>
+        <button className="item" onClick={formatSmallestHeading}>
+          <span className="icon smallest-heading"/>
+          <span className="text">Мало Заглавље</span>
+          {blockType === "h5" && <span className="active"/>}
+        </button>
+        <button className="item" onClick={formatBulletList}>
+          <span className="icon bullet-list"/>
+          <span className="text">Листа са тачкицама</span>
+          {blockType === "ul" && <span className="active"/>}
+        </button>
+        <button className="item" onClick={formatNumberedList}>
+          <span className="icon numbered-list"/>
+          <span className="text">Листа са редним бројевима</span>
+          {blockType === "ol" && <span className="active"/>}
+        </button>
+        {/*<button className="item" onClick={formatQuote}>*/}
+        {/*  <span className="icon quote"/>*/}
+        {/*  <span className="text">Quote</span>*/}
+        {/*  {blockType === "quote" && <span className="active"/>}*/}
+        {/*</button>*/}
+      </div>
   );
 }
 
@@ -500,20 +509,20 @@ export default function ToolbarPlugin() {
     );
   }, [editor, updateToolbar]);
 
-  const codeLanguges = useMemo(() => getCodeLanguages(), []);
-  const onCodeLanguageSelect = useCallback(
-    (e: { target: { value: string; }; }) => {
-      editor.update(() => {
-        if (selectedElementKey !== null) {
-          const node = $getNodeByKey(selectedElementKey);
-          if ($isCodeNode(node)) {
-            node.setLanguage(e.target.value);
-          }
-        }
-      });
-    },
-    [editor, selectedElementKey]
-  );
+  // const codeLanguges = useMemo(() => getCodeLanguages(), []);
+  // const onCodeLanguageSelect = useCallback(
+  //   (e: { target: { value: string; }; }) => {
+  //     editor.update(() => {
+  //       if (selectedElementKey !== null) {
+  //         const node = $getNodeByKey(selectedElementKey);
+  //         if ($isCodeNode(node)) {
+  //           node.setLanguage(e.target.value);
+  //         }
+  //       }
+  //     });
+  //   },
+  //   [editor, selectedElementKey]
+  // );
 
   const insertLink = useCallback(() => {
     if (!isLink) {

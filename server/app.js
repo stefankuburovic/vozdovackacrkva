@@ -17,5 +17,8 @@ app.use(express.json());
 app.get('/', function(req, res){
     res.sendFile(join(__dirname, '../build', 'index.html'));
 });
+app.get('/riznica', function(req, res){
+    res.sendFile(join(__dirname, '../build', 'riznica.html'));
+});
 
 module.exports = app;

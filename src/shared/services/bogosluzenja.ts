@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export interface Bogosluzenje {
+export interface IBogosluzenje {
     id?: number;
     praznik: string | null;
     datum_bdenija: string | null;
@@ -10,7 +10,7 @@ export interface Bogosluzenje {
     vreme_bogosluzenja: string | null;
 }
 
-interface BogsluzenjaService {
+interface IBogosluzenjaService {
     getBogosluzenja: (
         datumLiturgije: Date,
         setBogosluzenjeData: Function,
@@ -18,14 +18,15 @@ interface BogsluzenjaService {
         apiUrl?: string,
     ) => void;
     saveOrUpdateBogosuzenje: (
-        bogosluzenje: Bogosluzenje,
-        bogosluzenjeData: Bogosluzenje[],
+        bogosluzenje: IBogosluzenje,
+        bogosluzenjeData: IBogosluzenje[],
         fetchData: Function,
         openSnackbar: Function,
         apiUrl?: string
     ) => void;
+    deleteBogosluzenje: (id: number, fetchData: Function, openSnackbar: Function, apiUrl?: string) => void;
 }
-class BogosluzenjaService implements BogsluzenjaService {
+class BogosluzenjaService implements IBogosluzenjaService {
     private static instance: BogosluzenjaService;
 
     private constructor() {
@@ -50,8 +51,8 @@ class BogosluzenjaService implements BogsluzenjaService {
     }
 
     public async saveOrUpdateBogosuzenje (
-        bogosluzenje: Bogosluzenje,
-        bogosluzenjeData: Bogosluzenje[],
+        bogosluzenje: IBogosluzenje,
+        bogosluzenjeData: IBogosluzenje[],
         fetchData: Function,
         openSnackbar: Function,
         apiUrl?: string
@@ -68,6 +69,22 @@ class BogosluzenjaService implements BogsluzenjaService {
         } catch (error) {
             console.error(error);
             openSnackbar('Дошло је до грешке приликом чувања богослужења у распоред', "error");
+        }
+    }
+
+    public async deleteBogosluzenje(
+        id: number,
+        fetchData: Function,
+        openSnackbar: Function,
+        apiUrl?: string
+    ) {
+        try {
+            await axios.delete(`${apiUrl}/bogosluzenja/${id}`);
+            openSnackbar('Богослужење је успешно обрисано из распореда', "success");
+            fetchData();
+        } catch (error) {
+            console.error(error);
+            openSnackbar('Дошло је до грешке приликом брисања богослужења из распореда', "error");
         }
     }
 }

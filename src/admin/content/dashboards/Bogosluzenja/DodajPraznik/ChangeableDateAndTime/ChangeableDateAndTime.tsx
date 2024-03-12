@@ -1,19 +1,20 @@
+import React from "react";
+import {Box, Tooltip} from "@mui/material";
+import {MobileTimePicker, TimePicker} from "@mui/x-date-pickers";
+import Checkbox from "@mui/material/Checkbox";
 import {Dispatch, SetStateAction, useState} from 'react';
 import {DatePicker} from "@mui/x-date-pickers/DatePicker";
-import {TimePicker} from "@mui/x-date-pickers";
-import React from "react";
-import Checkbox from "@mui/material/Checkbox";
-import {Box, Tooltip} from "@mui/material";
 
 interface ChangeableDateAndTime {
-    date: Date | string;
-    time: number | string;
-    setDate: Dispatch<SetStateAction<Date>> ;
-    setTime: Dispatch<SetStateAction<number>>;
+    date: Date | string | null;
+    time: Date | number | string | null;
+    setDate: Dispatch<SetStateAction<Date>> | Dispatch<SetStateAction<Date | null>> ;
+    setTime: Dispatch<SetStateAction<number>> | Dispatch<SetStateAction<Date | null>>;
+    checkboxManpiulation?: boolean;
     labels: {
-        checkboxLabel: string;
-        datePickerLabel: string;
-        timePickerLabel: string;
+        checkboxLabel?: string;
+        datePickerLabel?: string;
+        timePickerLabel?: string;
     };
 }
 export const ChangableDateAndTime = (
@@ -22,6 +23,7 @@ export const ChangableDateAndTime = (
         time,
         setDate,
         setTime,
+        checkboxManpiulation = true,
         labels: {checkboxLabel, datePickerLabel, timePickerLabel}
     }: ChangeableDateAndTime) => {
     const [isChecked, setIsChecked] = useState(false);
@@ -39,13 +41,18 @@ export const ChangableDateAndTime = (
             />
             <TimePicker
                 defaultValue={time}
-                readOnly={!isChecked}
+                format={'HH:mm'}
+                ampm={false}
+                ampmInClock={false}
+                readOnly={!isChecked && checkboxManpiulation}
                 label={timePickerLabel}
-                onChange={(value) =>setTime(value as number)}
+                onChange={(value) =>setTime(value as any)}
             />
-            <Tooltip arrow placement="top" title={checkboxLabel}>
-                <Checkbox  onChange={handleCheckboxChange} checked={isChecked}/>
-            </Tooltip>
+            {
+                checkboxManpiulation && <Tooltip arrow placement="top" title={checkboxLabel}>
+                    <Checkbox  onChange={handleCheckboxChange} checked={isChecked}/>
+                </Tooltip>
+            }
         </Box>
     )
 }
