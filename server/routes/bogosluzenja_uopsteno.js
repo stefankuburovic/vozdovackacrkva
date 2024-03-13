@@ -1,0 +1,77 @@
+const mysql = require("mysql2");
+
+const con = mysql.createConnection({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME
+});
+
+module.exports = function(app) {
+
+// API calls from bogosluzenja_uopsteno.js
+//------------------------------------------------GET BOGOSLUZENJA UOPSTENO------------------------------------------------
+    /*
+    * The dates should be in the 'YYYY-MM-DD' format.
+    * */
+
+    app.get('/api/bogosluzenja_uopsteno', (req, res) => {
+
+        con.connect(function(err) {
+            if (err) throw err;
+            con.query(`SELECT * FROM bogosluzenja_uopsteno`, function (err, result, fields) {
+                if (err) throw err;
+                res.json(result);
+            });
+        });
+    })
+
+//------------------------------------------------DELETE BOGOSLUZENJA UOPSTENO------------------------------------------------
+    app.delete('/api/bogosluzenja_uopsteno/:id', (req, res) => {
+        const { id } = req.params;
+
+        con.connect(function(err) {
+            if (err) throw err;
+            var sql = `DELETE FROM bogosluzenja WHERE id = ?`;
+            con.query(sql, [id], function (err, result) {
+                if (err) throw err;
+                res.json({ message: 'Record deleted', result: result });
+            });
+        });
+    });
+
+//------------------------------------------------INSERT BOGOSLUZENJA UOPSTENO------------------------------------------------
+    app.post('/api/bogosluzenja_uopsteno', (req, res) => {
+        const { opis } = req.body;
+
+        con.connect(function(err) {
+            if (err) throw err;
+            var sql = `INSERT INTO bogosluzenja_uopsteno (opis) VALUES (?)`;
+            con.query(sql, [opis], function (err, result) {
+                if (err) throw err;
+                con.query('SELECT * FROM bogosluzenja WHERE id = ?', [result.insertId], function(err, record) {
+                    if (err) throw err;
+                    res.json({ message: 'Record inserted', record: record[0] });
+                });
+            });
+        });
+    });
+
+//------------------------------------------------UPDATE BOGOSLUZENJA UOPSTENO------------------------------------------------
+    app.put('/api/bogosluzenja_uopsteno/:id', (req, res) => {
+        const { id } = req.params;
+        const { opis } = req.body;
+
+        con.connect(function(err) {
+            if (err) throw err;
+            var sql = `UPDATE bogosluzenja SET opis = ?`;
+            con.query(sql, [opis, id], function (err, result) {
+                if (err) throw err;
+                con.query('SELECT * FROM bogosluzenja WHERE id = ?', [result.insertId], function(err, record) {
+                    if (err) throw err;
+                    res.json({ message: 'Record inserted', record: record[0] });
+                });
+            });
+        });
+    });
+};

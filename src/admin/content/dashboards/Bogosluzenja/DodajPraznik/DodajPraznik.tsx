@@ -53,7 +53,14 @@ export const DodajPraznik = ({
 
 
     const fetchData = useCallback(async () => {
-        bogosluzenjeService.getBogosluzenja(datumLiturgije, setBogosluzenjeData, setPostojeceBogosluzenje, apiUrl);
+        let ignore = false;
+        if (!ignore) {
+            bogosluzenjeService.getBogosluzenja(datumLiturgije, setBogosluzenjeData, setPostojeceBogosluzenje, apiUrl);
+        }
+
+        return () => {
+            ignore = true;
+        }
     }, [apiUrl, bogosluzenjeService, datumLiturgije, setPostojeceBogosluzenje]);
 
     useEffect(() => {

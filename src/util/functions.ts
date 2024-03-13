@@ -10,6 +10,10 @@
 //         return cyrillic[index]
 //     }).join('')
 // }
+import {useCallback} from "react";
+import axios from "axios";
+import {Praznik} from "../admin/content/dashboards/Bogosluzenja";
+
 export function latToCyr(unesenText: string) {;
     unesenText = unesenText.replace(/a/g,'а');
     unesenText = unesenText.replace(/b/g,'б');
@@ -125,4 +129,71 @@ export const formatDate = (date: Date): string => {
         month: '2-digit',
         year: 'numeric',
     });
+}
+
+type ErrorCode = 'auth/user-not-found' | 'auth/wrong-password' | 'auth/invalid-email' | 'auth/email-already-in-use' | 'auth/invalid-credential';
+export const translateFirebaseErrors = (errorCode: ErrorCode) => {
+    const errorMessages: Record<ErrorCode, string> = {
+        'auth/user-not-found': 'Корисник није пронађен.',
+        'auth/wrong-password': 'Погрешна лозинка.',
+        'auth/invalid-email': 'Погрешан формат е-поште.',
+        'auth/email-already-in-use': 'Е-пошта је већ регистрована.',
+        'auth/invalid-credential': 'Емаил или лозинка нису исправни. Покушајте поново.',
+    }
+    return errorMessages[errorCode] || 'Дошло је до грешке. Покушајте поново.';
+}
+
+
+//MOCK UPDATE FUNCTIONS
+export const upucajKalendarUBazu = (apiUrl?: string) => {
+    const godine = [2024];
+    const meseci = ['01', '02'];
+    const imeMeseca = {
+        1: 'Јануар',
+        2: 'Фебруар',
+        3: 'Март',
+        4: 'Април',
+        5: 'Мај',
+        6: 'Јун',
+        7: 'Јул',
+        8: 'Август',
+        9: 'Септембар',
+        10: 'Октобар',
+        11: 'Новембар',
+        12: 'Децембар'
+    }
+
+    axios.get(`https://localhost:3000/mart.json`)
+        .then(async (response) => {
+            // @ts-ignore
+            // console.log(response, imeMeseca[Number(mesec)]);
+            // @ts-ignore
+            for (const praznik of response.data[imeMeseca[3]]) {
+                const unosUkalendar: Praznik = {} as Praznik;
+                unosUkalendar['crveno_slovo'] = praznik.crveno_slovo && 1 || 0;
+                unosUkalendar['praznik'] = praznik.opis;
+                unosUkalendar['stari'] = praznik.brojDanaStari;
+                unosUkalendar['novi'] = praznik.brojDana;
+                unosUkalendar['post'] = praznik.post;
+                unosUkalendar['ime_dana'] = praznik.imeDana;
+                unosUkalendar['slava'] = praznik.slava;
+                // @ts-ignore
+                unosUkalendar['mesec'] = imeMeseca[3];
+                unosUkalendar['ime_sedmice'] = praznik.imeSedmice;
+                unosUkalendar['godina'] = String(2024);
+                // @ts-ignore
+                unosUkalendar['datum'] =`2024-03-${Number(praznik.brojDana) < 10 ? '0' + praznik.brojDana : praznik.brojDana}`;
+                axios.post(`${apiUrl}/kalendar`, unosUkalendar)
+                    .then((response) => {
+                        console.log(response);
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                    });
+            }
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+
 }

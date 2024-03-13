@@ -1,7 +1,7 @@
 import React, {useCallback, useContext, useEffect, useState} from 'react';
 import {Helmet} from "react-helmet-async";
 import PageTitleWrapper from "../../../components/PageTitleWrapper";
-import {Avatar, Container, Divider} from "@mui/material";
+import {Avatar, Box, Container, Divider, IconButton, Tooltip} from "@mui/material";
 import PageHeader from "./PageHeader";
 import Footer from "../../../components/Footer";
 import axios from 'axios';
@@ -19,6 +19,16 @@ import AddIcon from "@mui/icons-material/Add";
 import PropTypes from "prop-types";
 import {blue} from "@mui/material/colors";
 import {ApiUrlContext} from "../../../../index";
+import {upucajKalendarUBazu} from "../../../../util/functions";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import Accordion from "@mui/material/Accordion";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Editor from "../../../components/Editor/Editor";
+
+import './index.scss';
+import DeleteIcon from "@mui/icons-material/Delete";
+import SaveIcon from "@mui/icons-material/Save";
 
 export interface Praznik {
     crveno_slovo: number;
@@ -47,7 +57,7 @@ export interface Bogosluzenje {
 const emails = ['username@gmail.com', 'user02@gmail.com'];
 
 function SimpleDialog(props: any) {
-    const { onClose, selectedValue, open } = props;
+    const {onClose, selectedValue, open} = props;
 
     const handleClose = () => {
         onClose(selectedValue);
@@ -60,18 +70,18 @@ function SimpleDialog(props: any) {
     return (
         <Dialog onClose={handleClose} open={open}>
             <DialogTitle>Set backup account</DialogTitle>
-            <List sx={{ pt: 0 }}>
+            <List sx={{pt: 0}}>
                 {emails.map((email) => (
                     <ListItem
                         onClick={() => handleListItemClick(email)}
                         key={email}
                     >
                         <ListItemAvatar>
-                            <Avatar sx={{ bgcolor: blue[100], color: blue[600] }}>
-                                <PersonIcon />
+                            <Avatar sx={{bgcolor: blue[100], color: blue[600]}}>
+                                <PersonIcon/>
                             </Avatar>
                         </ListItemAvatar>
-                        <ListItemText primary={email} />
+                        <ListItemText primary={email}/>
                     </ListItem>
                 ))}
 
@@ -79,10 +89,10 @@ function SimpleDialog(props: any) {
                 >
                     <ListItemAvatar>
                         <Avatar>
-                            <AddIcon />
+                            <AddIcon/>
                         </Avatar>
                     </ListItemAvatar>
-                    <ListItemText primary="Add account" />
+                    <ListItemText primary="Add account"/>
                 </ListItem>
             </List>
         </Dialog>
@@ -126,60 +136,11 @@ function DashboardBogosluzenja() {
         const second_param = new Date(sundayOfThisWeek.getTime() + 60 * 60 * 24 * 6 * 1000).toISOString().split('T')[0];
         return {startDate: first_param, endDate: second_param};
     }
-    const popuniKalendar = useCallback(() => {
-        const godine = [2024];
-        const meseci = ['01', '02'];
-        const imeMeseca = {
-            1: 'Јануар',
-            2: 'Фебруар',
-            3: 'Март',
-            4: 'Април',
-            5: 'Мај',
-            6: 'Јун',
-            7: 'Јул',
-            8: 'Август',
-            9: 'Септембар',
-            10: 'Октобар',
-            11: 'Новембар',
-            12: 'Децембар'
-        }
-
-        axios.get(`https://localhost:3000/mart.json`)
-            .then(async (response) => {
-                // @ts-ignore
-                // console.log(response, imeMeseca[Number(mesec)]);
-                // @ts-ignore
-                for (const praznik of response.data[imeMeseca[3]]) {
-                    const unosUkalendar: Praznik = {} as Praznik;
-                    unosUkalendar['crveno_slovo'] = praznik.crveno_slovo && 1 || 0;
-                    unosUkalendar['praznik'] = praznik.opis;
-                    unosUkalendar['stari'] = praznik.brojDanaStari;
-                    unosUkalendar['novi'] = praznik.brojDana;
-                    unosUkalendar['post'] = praznik.post;
-                    unosUkalendar['ime_dana'] = praznik.imeDana;
-                    unosUkalendar['slava'] = praznik.slava;
-                    // @ts-ignore
-                    unosUkalendar['mesec'] = imeMeseca[3];
-                    unosUkalendar['ime_sedmice'] = praznik.imeSedmice;
-                    unosUkalendar['godina'] = String(2024);
-                    // @ts-ignore
-                    unosUkalendar['datum'] =`2024-03-${Number(praznik.brojDana) < 10 ? '0' + praznik.brojDana : praznik.brojDana}`;
-                    axios.post(`${apiUrl}/kalendar`, unosUkalendar)
-                        .then((response) => {
-                            console.log(response);
-                        })
-                        .catch((error) => {
-                            console.error(error);
-                        });
-                }
-            })
-            .catch((error) => {
-                console.error(error);
-            });
-
-    }, []);
+    // const popuniKalendar = useCallback(() => {
+    //     upucajKalendarUBazu(apiUrl);
+    // }, []);
     useEffect(() => {
-        const{startDate, endDate} = setDateParams();
+        const {startDate, endDate} = setDateParams();
         const fetchData = async () => {
             try {
                 const dohvatiKalendar = await axios.get(`${apiUrl}/kalendar/start_date/${startDate}/end_date/${endDate}/`);
@@ -201,25 +162,87 @@ function DashboardBogosluzenja() {
             <PageTitleWrapper>
                 <PageHeader/>
             </PageTitleWrapper>
-            <Container maxWidth="lg">
-                <Button sx={{ margin: 1 }} variant="contained" onClick={popuniKalendar}>
-                    Попуни календар
-                </Button>
-                <Divider/>
-                {kalendar.map((item: any, index) => {
-                    const bogosluzenje = bogosluzenja.find((bogosluzenje: any) => bogosluzenje.datum_bogosluzenja === item.datum);
-                    return (
-                        <div key={index}>
-                            <PraznikComponent praznik={item} bogosluzenje={bogosluzenje}/>
+            <div className="admin-bogosluzenja-wrapper">
+                <Accordion expanded={true}>
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon/>}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
+                    >
+                        <h2>Унесите богослужења за текућу недељу - <i>према празнику</i></h2>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Container maxWidth="lg">
+                            {/*<Button sx={{ margin: 1 }} variant="contained" onClick={popuniKalendar}>*/}
+                            {/*    Попуни календар*/}
+                            {/*</Button>*/}
+                            <Divider/>
+                            {kalendar.map((item: any, index) => {
+                                const bogosluzenje = bogosluzenja.find((bogosluzenje: any) => bogosluzenje.datum_bogosluzenja === item.datum);
+                                return (
+                                    <div key={index}>
+                                        <PraznikComponent praznik={item} bogosluzenje={bogosluzenje}/>
+                                    </div>
+                                )
+                            })}
+                        </Container>
+                    </AccordionDetails>
+                </Accordion>
+                <Accordion>
+
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon/>}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
+                    >
+                        <h2>Унесите богослужења за текућу недељу - <i>свеобухватно</i></h2>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <div className="bogosluzenja-uopsteno">
+                            <h3>Додатне информације:</h3>
+                            <Editor setContent={(content) => {
+                            }} placeholder={
+                                <div className="editor-placeholder">
+                                    <h4>Унесите уоштено распоред богослужења за текућу недељу <i>нпр.</i></h4>
+                                    <h5>Понедељак, 19.12.2024. Свети Никола</h5>
+                                    <h6>18.12.2024.</h6>
+                                    <ul>
+                                        <li>17:00 - Света Литургија</li>
+                                    </ul>
+                                    <h6>19.12.2024.</h6>
+                                    <ul>
+                                        <li>8:00 - Света Литургија</li>
+                                    </ul>
+
+                                </div>
+                            }/>
+                            <Box sx={{display: 'flex', justifyContent: 'flex-end'}}>
+
+                                <Tooltip title={"Oбриши богослужења за текућу недељу"}>
+                                <span>
+                                    <IconButton aria-label="Oбриши из распореда" sx={{margin: 1}} color="error">
+                                        <DeleteIcon/>
+                                    </IconButton>
+                                </span>
+                                </Tooltip>
+
+                                <Tooltip title={"Сачувај богослужења за текућу недељу"}>
+                                <span>
+                                    <IconButton aria-label="Сачувај у распоред" sx={{margin: 1}} color="secondary">
+                                        <SaveIcon />
+                                    </IconButton>
+                                </span>
+                                </Tooltip>
+                            </Box>
                         </div>
-                    )
-                })}
-                <Button variant="outlined" onClick={handleClickOpen} sx={{
-                    margin: '20px 0',
-                }}>
-                    Прикажи ПДФ верзију
-                </Button>
-            </Container>
+                    </AccordionDetails>
+                </Accordion>
+            </div>
+            <Button variant="outlined" onClick={handleClickOpen} sx={{
+                margin: '20px 0',
+            }}>
+                Прикажи ПДФ верзију
+            </Button>
             <SimpleDialog
                 selectedValue={selectedValue}
                 open={open}

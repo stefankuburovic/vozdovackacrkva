@@ -1,11 +1,15 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {Button, TextField, Grid, Paper, Typography, Box, InputAdornment, IconButton} from '@mui/material';
 import './Login.scss';
 import {useAuth} from "../../../contexts/AuthProvider";
 import { useNavigate } from 'react-router-dom';
 import {Visibility, VisibilityOff} from "@mui/icons-material";
+import {SnackbarContext} from "../../../contexts/SnackbarContext";
+import firebase from "firebase/compat";
+import {translateFirebaseErrors} from "../../../../util/functions";
 const Login: React.FC = () => {
     const { user, loginFunction } = useAuth();
+    const {openSnackbar} = useContext(SnackbarContext);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -21,10 +25,14 @@ const Login: React.FC = () => {
     const handleLogin = async (e: any) => {
         e.preventDefault();
         try {
-           await loginFunction(username, password);
-            navigate('/vzdadmin/bogosluzenja');
-        } catch (error) {
-            console.error(error);
+           const login = await loginFunction(username, password);
+           if(login) {
+               openSnackbar('Успешно сте се улоговали', 'success');
+               navigate('/vzdadmin/bogosluzenja');
+           }
+        } catch (error: any) {
+            console.log(error.code);
+            openSnackbar(translateFirebaseErrors(error.code), 'error');
         }
     };
 

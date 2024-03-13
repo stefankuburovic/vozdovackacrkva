@@ -25,6 +25,7 @@ module.exports = function(app) {
             });
         });
     })
+
     app.get(['/api/bogosluzenja/start_date/:startDate/end_date/:endDate', '/api/bogosluzenja/date/:date', '/api/bogosluzenja'], (req, res) => {
         console.log(req.query);
         const { startDate, endDate, date} = req.params;
