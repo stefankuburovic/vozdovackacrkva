@@ -46,6 +46,7 @@ h1 {
 }
 
 .editor-inner {
+  padding: 10px;
   background: #fff;
   position: relative;
 }
@@ -58,8 +59,9 @@ h1 {
   position: relative;
   tab-size: 1;
   outline: 0;
-  padding: 15px 10px;
+  padding: 30px;
   caret-color: #444;
+  border: 1px solid #cdcdcd;
 }
 
 .editor-placeholder {
@@ -67,14 +69,18 @@ h1 {
   overflow: hidden;
   position: absolute;
   text-overflow: ellipsis;
-  top: 15px;
-  left: 10px;
+  top: 40px;
+  left: 40px;
+  width: calc(100% - 60px);
   font-size: 15px;
   user-select: none;
   display: inline-block;
   pointer-events: none;
 }
 
+.editor-placeholder h4 {
+  margin: 0;
+}
 .editor-text-bold {
   font-weight: bold;
 }

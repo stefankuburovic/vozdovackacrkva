@@ -1,9 +1,9 @@
 
 
-import {useState, useEffect}  from "react";
+import React, {useState, useEffect} from "react";
 import {useAuth} from "./admin/contexts/AuthProvider";
-import Login from "./admin/content/pages/Login/Login";
 import SuspenseLoader from "./admin/components/SuspenseLoader";
+import Login from "./admin/content/pages/Login/Login";
 
 const ProtectedRoute = ({children}: any) => {
     const {user, isLoading} = useAuth();

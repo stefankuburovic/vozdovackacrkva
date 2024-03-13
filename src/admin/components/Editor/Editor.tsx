@@ -58,18 +58,19 @@ const editorConfig = {
 };
 
 interface EditorProps {
+    placeholder?: React.JSX.Element;
     setContent: (content: string) => void;
     defaultContent?: string;
 }
-export default function Editor({setContent, defaultContent}: EditorProps) {
+export default function Editor({setContent, defaultContent, placeholder}: EditorProps) {
     return (
         <LexicalComposer initialConfig={editorConfig}>
-            <EditorContent setContent={setContent} defaultContent={defaultContent}/>
+            <EditorContent setContent={setContent} defaultContent={defaultContent} placeholder={placeholder}/>
         </LexicalComposer>
     );
 }
 
-function EditorContent({setContent, defaultContent}: EditorProps) {
+function EditorContent({setContent, defaultContent, placeholder}: EditorProps) {
     const [editor] = useLexicalComposerContext();
     useEffect(() => {
         if(defaultContent) {
@@ -95,7 +96,7 @@ function EditorContent({setContent, defaultContent}: EditorProps) {
             <div className="editor-inner">
                 <RichTextPlugin
                     contentEditable={<ContentEditable className="editor-input"  />}
-                    placeholder={<Placeholder/>}
+                    placeholder={placeholder || <Placeholder />}
                     ErrorBoundary={LexicalErrorBoundary}
                 />
                 <HistoryPlugin/>

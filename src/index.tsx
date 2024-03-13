@@ -2,7 +2,7 @@ import React, {lazy} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import "yet-another-react-lightbox/styles.css";
-import {BrowserRouter,  Route, Routes, useRoutes} from "react-router-dom";
+import {BrowserRouter, Route, Routes, useRoutes} from "react-router-dom";
 import {HelmetProvider} from "react-helmet-async";
 import ThemeProvider from "./admin/theme/ThemeProvider";
 import {CssBaseline} from "@mui/material";
@@ -15,6 +15,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import admin_router from "./admin/router";
 import client_router from "./client/router";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
+import Login from "./admin/content/pages/Login/Login";
 
 export const ApiUrlContext = React.createContext<string | undefined>('');
 
@@ -42,27 +43,32 @@ const ClientRoutes = () => {
     const content = useRoutes(client_router);
 
     return (
-            <HelmetProvider>
-                        {content}
-            </HelmetProvider>
+        <HelmetProvider>
+            {content}
+        </HelmetProvider>
     );
 }
+
 function App() {
     const queryClient = new QueryClient()
     return (
         <ApiUrlContext.Provider value={process.env.REACT_APP_API_URL}>
 
             <QueryClientProvider client={queryClient}>
-                    <BrowserRouter>
-                            <Routes>
-                                <Route path="/*" element={<ClientRoutes />} />
-                                <Route path="/vzdadmin/*" element={<AdminRoutes  />}/>
-                            </Routes>
-                    </BrowserRouter>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/*" element={<ClientRoutes/>}/>
+                        <Route path="/vzdadmin/*" element={<AdminRoutes/>}/>
+                    </Routes>
+                </BrowserRouter>
             </QueryClientProvider>
         </ApiUrlContext.Provider>
     );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
-root.render(<App/>);
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
+root.render(
+    <React.StrictMode>
+        <App/>
+    </React.StrictMode>
+);
