@@ -36,7 +36,7 @@ export const DodajPraznik = ({
 
     const [disabled, setDisabled] = useState(true);
     const [dodatneInformacije, setDodatneInformacije] = useState('');
-    const [bogosluzenjeData, setBogosluzenjeData] = useState<Bogosluzenje[]>([]);
+    const [bogosluzenjeData, setBogosluzenjeData] = useState<Bogosluzenje[]>(bogosluzenje ? [bogosluzenje as Bogosluzenje] : []);
 
     const [praznikBogosluzenja, setPraznikBogosluzenja] = useState<string | null>(bogosluzenje?.praznik || null);
     const [bogosluzenja, setBogosluzenja] = useState([<DodajBogosluzenje key={0}/>]);

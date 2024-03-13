@@ -57,7 +57,7 @@ class BogosluzenjaService implements IBogosluzenjaService {
         openSnackbar: Function,
         apiUrl?: string
     ) {
-
+        console.log(bogosluzenjeData, bogosluzenje);
         try {
             if (bogosluzenjeData.length > 0) {
                 await axios.put(`${apiUrl}/bogosluzenja/${bogosluzenjeData[0].id}`, bogosluzenje);

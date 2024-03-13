@@ -196,19 +196,23 @@ export default function Bogosluzenja() {
                         <div key={bogosluzenje.id}>
                             {
                                 !!bogosluzenje.praznik &&
-                                <>
+                                <div className="praznik">
                                     <h4>{
-                                    getDayName(new Date(bogosluzenje.datum_bogosluzenja))}, {formatDate(new Date(bogosluzenje.datum_bogosluzenja))} {bogosluzenje.praznik}</h4>
+                                        getDayName(new Date(bogosluzenje.datum_bogosluzenja))}, {formatDate(new Date(bogosluzenje.datum_bogosluzenja))} {bogosluzenje.praznik}</h4>
 
+                                    <h5>{getDayName(new Date(bogosluzenje.datum_bdenija))}, {formatDate(new Date(bogosluzenje.datum_bdenija))}</h5>
                                     <ul>
-                                        <li>
-                                            <h5>{formatDate(new Date(bogosluzenje.datum_bdenija))}</h5>
-                                        </li>
                                         <li>
                                             <p>{bogosluzenje.vreme_bdenija} - Предпразнично бденије</p>
                                         </li>
                                     </ul>
-                                </>
+                                    <h5>{getDayName(new Date(bogosluzenje.datum_bogosluzenja))}, {formatDate(new Date(bogosluzenje.datum_bogosluzenja))}</h5>
+                                    <ul>
+                                        <li>
+                                            <p>{bogosluzenje.vreme_bogosluzenja} - Света Литургија</p>
+                                        </li>
+                                    </ul>
+                                </div>
                             }
                             <div dangerouslySetInnerHTML={{__html: bogosluzenje.dodatne_informacije}}></div>
                         </div>
