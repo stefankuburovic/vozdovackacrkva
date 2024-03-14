@@ -13,8 +13,8 @@ export interface IBogosluzenje {
 interface IBogosluzenjaService {
     getBogosluzenja: (
         datumLiturgije: Date,
-        setBogosluzenjeData: Function,
-        setPostojeceBogosluzenje: Function,
+        setBogosluzenjeData?: Function,
+        setPostojeceBogosluzenje?: Function,
         apiUrl?: string,
     ) => void;
     saveOrUpdateBogosuzenje: (
@@ -24,7 +24,18 @@ interface IBogosluzenjaService {
         openSnackbar: Function,
         apiUrl?: string
     ) => void;
-    deleteBogosluzenje: (id: number, fetchData: Function, openSnackbar: Function, apiUrl?: string) => void;
+    getRangeBogosluzenja: (
+        startDate: Date | string,
+        endDate: Date | string,
+        setBogosluzenjeData: Function,
+        apiUrl?: string
+    ) => void;
+    deleteBogosluzenje: (
+        id: number,
+        fetchData: Function,
+        openSnackbar: Function,
+        apiUrl?: string
+    ) => void;
 }
 class BogosluzenjaService implements IBogosluzenjaService {
     private static instance: BogosluzenjaService;
@@ -40,11 +51,27 @@ class BogosluzenjaService implements IBogosluzenjaService {
         return BogosluzenjaService.instance;
     }
 
-    public async getBogosluzenja(datumLiturgije: Date, setBogosluzenjeData: Function, setPostojeceBogosluzenje: Function, apiUrl?: string) {
+    public async getBogosluzenja(datumLiturgije: Date, setBogosluzenjeData?: Function, setPostojeceBogosluzenje?: Function, apiUrl?: string) {
         try {
             const response = await axios.get(`${apiUrl}/bogosluzenja/date/${datumLiturgije.toISOString().slice(0, 10)}`);
+            if(setBogosluzenjeData) {
+                setBogosluzenjeData(response.data);
+            }
+            if (setPostojeceBogosluzenje) {
+                setPostojeceBogosluzenje(response.data[0]);
+            }
+            if(!setBogosluzenjeData && !setPostojeceBogosluzenje) {
+                return response.data;
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    public async getRangeBogosluzenja(startDate: Date | string, endDate: Date | string, setBogosluzenjeData: Function, apiUrl?: string) {
+        try {
+            const response = await axios.get(`${apiUrl}/bogosluzenja/start_date/${startDate}/end_date/${endDate}`);
             setBogosluzenjeData(response.data);
-            setPostojeceBogosluzenje(response.data[0]);
         } catch (error) {
             console.error(error);
         }
@@ -88,4 +115,4 @@ class BogosluzenjaService implements IBogosluzenjaService {
         }
     }
 }
-    export default BogosluzenjaService;
+export default BogosluzenjaService;

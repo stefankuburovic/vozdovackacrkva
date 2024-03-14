@@ -6,8 +6,9 @@ import axios from "axios";
 import {useQuery} from "@tanstack/react-query";
 import {ReactElement, useContext} from "react";
 import {ApiUrlContext} from "../../../../index";
-import {formatDate, getDayName} from "../../../../util/functions";
-import {Bogosluzenje} from "../../../../admin/content/dashboards/Bogosluzenja";
+import {IBogosluzenje} from "../../../../shared/services/bogosluzenja";
+import {PraznikPoPraznik} from "./PraznikPoPraznik";
+import {Uopsteno} from "./Uopsteno";
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -22,6 +23,7 @@ function a11yProps(index: number) {
 }
 
 const REACT_QUERY_KEY_BOGOSLUZENJA = 'bogosluzenja';
+const REACT_QUERY_KEY_BOGOSLUZENJA_UOPSTENO = 'bogosluzenja_uopsteno';
 
 async function fetchBogosluzenja(apiUrl?: string) {
     const weekStart = new Date(); // get the current date
@@ -35,6 +37,16 @@ async function fetchBogosluzenja(apiUrl?: string) {
             end: weekEnd.toISOString(),
         },
     });
+
+    if (response.status !== 200) {
+        throw new Error('Failed to fetch bogosluzenja');
+    }
+
+    return response.data;
+}
+async function fetchBogosluzenjaUopsteno(apiUrl?: string) {
+
+    const response = await axios.get(`${apiUrl}/bogosluzenja_uopsteno`);
 
     if (response.status !== 200) {
         throw new Error('Failed to fetch bogosluzenja');
@@ -67,11 +79,25 @@ function CustomTabPanel(props: TabPanelProps) {
 export default function Bogosluzenja() {
     const apiUrl = useContext(ApiUrlContext);
     const [value, setValue] = React.useState(0);
-    const {isLoading, error, data} = useQuery({
+    const {
+        isLoading: bogosluzenjaIsLoading,
+        error: bogosluzenjaError,
+        data: bogosluzenja
+    } = useQuery({
         queryKey: [REACT_QUERY_KEY_BOGOSLUZENJA],
         queryFn: () => fetchBogosluzenja(apiUrl)
     });
-    const isData = data && data.length > 0;
+    const {
+        isLoading: bogosluzenjaUopstenoIsLoading,
+        error: bogosluzenjaUopstenoError,
+        data: bogosluzenjaUopsteno} = useQuery({
+        queryKey: [REACT_QUERY_KEY_BOGOSLUZENJA_UOPSTENO],
+        queryFn: () => fetchBogosluzenjaUopsteno(apiUrl)
+    });
+    console.log(bogosluzenja, bogosluzenjaUopsteno);
+    const isBogosluzenja = bogosluzenja && bogosluzenja.length > 0;
+    const isBogosluzenjaUopsteno = bogosluzenjaUopsteno && bogosluzenjaUopsteno[0]?.opis && bogosluzenjaUopsteno[0]?.opis.length > 0;
+    const isData = isBogosluzenja || isBogosluzenjaUopsteno;
     const handleChange = (_: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
     };
@@ -190,35 +216,12 @@ export default function Bogosluzenja() {
         tabs.unshift(<Tab label="Текућа недеља" key="tekuca" {...a11yProps(0)} disableRipple/>);
         tabsContent.unshift(
             <CustomTabPanel index={0} key="tekuca_content" value={value}>
-                <h3>Богослужења у текућој недељи</h3>
-                {data.map((bogosluzenje: Bogosluzenje) => {
-                    return (
-                        <div key={bogosluzenje.id}>
-                            {
-                                !!bogosluzenje.praznik &&
-                                <div className="praznik">
-                                    <h4>{
-                                        getDayName(new Date(bogosluzenje.datum_bogosluzenja))}, {formatDate(new Date(bogosluzenje.datum_bogosluzenja))} {bogosluzenje.praznik}</h4>
-
-                                    <h5>{getDayName(new Date(bogosluzenje.datum_bdenija))}, {formatDate(new Date(bogosluzenje.datum_bdenija))}</h5>
-                                    <ul>
-                                        <li>
-                                            <p>{bogosluzenje.vreme_bdenija} - Предпразнично бденије</p>
-                                        </li>
-                                    </ul>
-                                    <h5>{getDayName(new Date(bogosluzenje.datum_bogosluzenja))}, {formatDate(new Date(bogosluzenje.datum_bogosluzenja))}</h5>
-                                    <ul>
-                                        <li>
-                                            <p>{bogosluzenje.vreme_bogosluzenja} - Света Литургија</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            }
-                            <div dangerouslySetInnerHTML={{__html: bogosluzenje.dodatne_informacije}}></div>
-                        </div>
-                    )
-                        ;
-                })}
+                <h2>Богослужења у текућој недељи</h2>
+                { !isBogosluzenjaUopsteno ?
+                    bogosluzenja.map(
+                        (bogosluzenje: IBogosluzenje) => <PraznikPoPraznik bogosluzenje={bogosluzenje}/>
+                    ) : <Uopsteno bogosluzenje={bogosluzenjaUopsteno[0]}/>
+                }
             </CustomTabPanel>
         );
     }

@@ -1,34 +1,28 @@
 import React, {useCallback, useContext, useEffect, useState} from 'react';
 import {Helmet} from "react-helmet-async";
-import PageTitleWrapper from "../../../components/PageTitleWrapper";
-import {Avatar, Box, Container, Divider, IconButton, Tooltip} from "@mui/material";
-import PageHeader from "./PageHeader";
-import Footer from "../../../components/Footer";
 import axios from 'axios';
-
-import PraznikComponent from "./Praznik/Praznik";
 import Button from "@mui/material/Button";
-import Dialog from "@mui/material/Dialog";
-import DialogTitle from "@mui/material/DialogTitle";
-import List from "@mui/material/List";
-import ListItemAvatar from "@mui/material/ListItemAvatar";
-import PersonIcon from "@mui/icons-material/Person";
-import ListItemText from "@mui/material/ListItemText";
-import ListItem from "@mui/material/ListItem";
-import AddIcon from "@mui/icons-material/Add";
-import PropTypes from "prop-types";
-import {blue} from "@mui/material/colors";
-import {ApiUrlContext} from "../../../../index";
-import {upucajKalendarUBazu} from "../../../../util/functions";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import Accordion from "@mui/material/Accordion";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AccordionDetails from "@mui/material/AccordionDetails";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import SaveIcon from "@mui/icons-material/Save";
+import DeleteIcon from "@mui/icons-material/Delete";
+
+import PageHeader from "./PageHeader";
+import Footer from "../../../components/Footer";
+import {ApiUrlContext} from "../../../../index";
+import Accordion from "@mui/material/Accordion";
+import PraznikComponent from "./Praznik/Praznik";
 import Editor from "../../../components/Editor/Editor";
+import SimpleDialog from "../../../components/SimpleDialog";
+import PageTitleWrapper from "../../../components/PageTitleWrapper";
+import {Box, Container, Divider, IconButton, Tooltip} from "@mui/material";
 
 import './index.scss';
-import DeleteIcon from "@mui/icons-material/Delete";
-import SaveIcon from "@mui/icons-material/Save";
+import {SnackbarContext} from "../../../contexts/SnackbarContext";
+import BogosluzenjaUopstenoService, {IBogosluzenjeUopsteno} from "../../../../shared/services/bogosluzenja_uopsteno";
+import BogosluzenjaService, {IBogosluzenje} from "../../../../shared/services/bogosluzenja";
+import {setCurrentWeekDateParams} from "../../../../util/functions";
 
 export interface Praznik {
     crveno_slovo: number;
@@ -44,115 +38,139 @@ export interface Praznik {
     datum: string | Date;
 }
 
-export interface Bogosluzenje {
-    id: number;
-    praznik: string;
-    datum_bogosluzenja: string;
-    vreme_bogosluzenja: string;
-    datum_bdenija: string;
-    vreme_bdenija: string;
-    dodatne_informacije: string;
-}
-
-const emails = ['username@gmail.com', 'user02@gmail.com'];
-
-function SimpleDialog(props: any) {
-    const {onClose, selectedValue, open} = props;
-
-    const handleClose = () => {
-        onClose(selectedValue);
-    };
-
-    const handleListItemClick = (value: any) => {
-        onClose(value);
-    };
-
-    return (
-        <Dialog onClose={handleClose} open={open}>
-            <DialogTitle>Set backup account</DialogTitle>
-            <List sx={{pt: 0}}>
-                {emails.map((email) => (
-                    <ListItem
-                        onClick={() => handleListItemClick(email)}
-                        key={email}
-                    >
-                        <ListItemAvatar>
-                            <Avatar sx={{bgcolor: blue[100], color: blue[600]}}>
-                                <PersonIcon/>
-                            </Avatar>
-                        </ListItemAvatar>
-                        <ListItemText primary={email}/>
-                    </ListItem>
-                ))}
-
-                <ListItem onClick={() => handleListItemClick('addAccount')}
-                >
-                    <ListItemAvatar>
-                        <Avatar>
-                            <AddIcon/>
-                        </Avatar>
-                    </ListItemAvatar>
-                    <ListItemText primary="Add account"/>
-                </ListItem>
-            </List>
-        </Dialog>
-    );
-}
-
-SimpleDialog.propTypes = {
-    onClose: PropTypes.func.isRequired,
-    open: PropTypes.bool.isRequired,
-    selectedValue: PropTypes.string.isRequired
-};
-
 
 function DashboardBogosluzenja() {
-    const [kalendar, setKalendar] = useState([]);
-    const [bogosluzenja, setBogosluzenja] = useState([]);
+    /**
+     * Create Context
+     * */
+    const apiUrl = useContext(ApiUrlContext);
+    const {openSnackbar} = useContext(SnackbarContext);
+    /**
+     * Include Services
+     * */
+    const bogosluzenjeUopstenoService = BogosluzenjaUopstenoService.getInstance();
+    const bogosluzenjaService = BogosluzenjaService.getInstance();
+    /**
+     * Create State
+     */
     const [open, setOpen] = useState(false);
-    const [selectedValue, setSelectedValue] = useState(emails[1]);
-
+    const [content, setContent] = useState('');
+    const [kalendar, setKalendar] = useState([]);
+    const [bogosluzenja, setBogosluzenja] = useState<Array<IBogosluzenje>>([]);
+    const [bogosluzenjaUopsteno, setBogosluzenjaUopsteno] = useState<Array<IBogosluzenjeUopsteno>>([]);
+    /**
+     * Create Functions
+     */
     const handleClickOpen = () => {
         setOpen(true);
     };
 
     const handleClose = (value: any) => {
         setOpen(false);
-        setSelectedValue(value);
     };
 
-    const apiUrl = useContext(ApiUrlContext);
-
-    const setDateParams = () => {
-        // Get the current date
-        const currentDate = new Date();
-
-        // Calculate the date of the Monday of this week
-        const day = currentDate.getDay();
-        const diff = currentDate.getDate() - day + (day === 0 ? -7 : 1); // adjust when day is Sunday
-        const sundayOfThisWeek = new Date(currentDate.setDate(diff));
-
-        const first_param = sundayOfThisWeek.toISOString().split('T')[0];
-        const second_param = new Date(sundayOfThisWeek.getTime() + 60 * 60 * 24 * 6 * 1000).toISOString().split('T')[0];
-        return {startDate: first_param, endDate: second_param};
-    }
     // const popuniKalendar = useCallback(() => {
     //     upucajKalendarUBazu(apiUrl);
     // }, []);
-    useEffect(() => {
-        const {startDate, endDate} = setDateParams();
-        const fetchData = async () => {
+    /*
+    * Fetch Data
+     */
+    const fetchBogosluzenjaData = useCallback(async () => {
+        let ignore = false;
+        const {startDate, endDate} = setCurrentWeekDateParams();
+        if (!ignore) {
             try {
                 const dohvatiKalendar = await axios.get(`${apiUrl}/kalendar/start_date/${startDate}/end_date/${endDate}/`);
                 setKalendar(dohvatiKalendar.data);
-                const dohvatiBogosluzenja = await axios.get(`${apiUrl}/bogosluzenja/start_date/${startDate}/end_date/${endDate}/`);
-                setBogosluzenja(dohvatiBogosluzenja.data);
+                await bogosluzenjaService.getRangeBogosluzenja(startDate, endDate, setBogosluzenja, apiUrl);
+                console.log(bogosluzenja);
             } catch (err) {
                 console.warn(err);
             }
+        }
+
+        return () => {
+            ignore = true;
+        }
+    }, [apiUrl, bogosluzenjaService]);
+    const fetchBogosluzenjaUopstenoData = useCallback(async () => {
+        let ignore = false;
+        if (!ignore) {
+            try {
+                bogosluzenjeUopstenoService.getBogosluzenjeUopsteno(apiUrl, setBogosluzenjaUopsteno);
+            } catch (err) {
+                console.warn(err);
+            }
+        }
+
+        return () => {
+            ignore = true;
+        }
+    }, [apiUrl, bogosluzenjeUopstenoService]);
+
+    const deleteData = useCallback(async () => {
+        const bogosluzenje: IBogosluzenjeUopsteno = {
+            opis: content
         };
-        fetchData();
-    }, [apiUrl]);
+        bogosluzenjeUopstenoService.deleteBogosluzenjeUopsteno(fetchBogosluzenjaUopstenoData, openSnackbar, bogosluzenjaUopsteno[0].id, apiUrl);
+    }, [
+        apiUrl,
+        content,
+        openSnackbar,
+        bogosluzenjaUopsteno,
+        bogosluzenjeUopstenoService,
+        fetchBogosluzenjaUopstenoData,
+    ]);
+
+    const saveData = useCallback(async () => {
+        const bogosluzenje: IBogosluzenjeUopsteno = {
+            opis: content
+        };
+        bogosluzenjeUopstenoService.saveOrUpdateBogosuzenjeUopsteno(
+            bogosluzenje,
+            bogosluzenjaUopsteno,
+            fetchBogosluzenjaUopstenoData,
+            openSnackbar,
+            apiUrl
+        );
+    }, [
+        apiUrl,
+        content,
+        openSnackbar,
+        bogosluzenjaUopsteno,
+        bogosluzenjeUopstenoService,
+        fetchBogosluzenjaUopstenoData,
+    ]);
+
+    /*
+    * Use Effects
+     */
+    useEffect(() => {
+        fetchBogosluzenjaData();
+        fetchBogosluzenjaUopstenoData();
+    }, [
+        apiUrl,
+        bogosluzenjaService,
+        fetchBogosluzenjaData,
+        fetchBogosluzenjaUopstenoData
+    ]);
+
+    function Placeholder() {
+        return (
+            <div className="editor-placeholder">
+                <h4>Унесите уоштено распоред богослужења за текућу недељу <i>нпр.</i></h4>
+                <h5>Понедељак, 19.12.2024. Свети Никола</h5>
+                <h6>18.12.2024.</h6>
+                <ul>
+                    <li>17:00 - Света Литургија</li>
+                </ul>
+                <h6>19.12.2024.</h6>
+                <ul>
+                    <li>8:00 - Света Литургија</li>
+                </ul>
+            </div>
+        );
+    }
 
     return (
         <>
@@ -199,28 +217,13 @@ function DashboardBogosluzenja() {
                     </AccordionSummary>
                     <AccordionDetails>
                         <div className="bogosluzenja-uopsteno">
-                            <h3>Додатне информације:</h3>
-                            <Editor setContent={(content) => {
-                            }} placeholder={
-                                <div className="editor-placeholder">
-                                    <h4>Унесите уоштено распоред богослужења за текућу недељу <i>нпр.</i></h4>
-                                    <h5>Понедељак, 19.12.2024. Свети Никола</h5>
-                                    <h6>18.12.2024.</h6>
-                                    <ul>
-                                        <li>17:00 - Света Литургија</li>
-                                    </ul>
-                                    <h6>19.12.2024.</h6>
-                                    <ul>
-                                        <li>8:00 - Света Литургија</li>
-                                    </ul>
-
-                                </div>
-                            }/>
+                            <Editor setContent={setContent} placeholder={<Placeholder/>}/>
                             <Box sx={{display: 'flex', justifyContent: 'flex-end'}}>
 
                                 <Tooltip title={"Oбриши богослужења за текућу недељу"}>
                                 <span>
-                                    <IconButton aria-label="Oбриши из распореда" sx={{margin: 1}} color="error">
+                                    <IconButton aria-label="Oбриши из распореда" sx={{margin: 1}} color="error"
+                                                onClick={deleteData}>
                                         <DeleteIcon/>
                                     </IconButton>
                                 </span>
@@ -228,8 +231,13 @@ function DashboardBogosluzenja() {
 
                                 <Tooltip title={"Сачувај богослужења за текућу недељу"}>
                                 <span>
-                                    <IconButton aria-label="Сачувај у распоред" sx={{margin: 1}} color="secondary">
-                                        <SaveIcon />
+                                    <IconButton
+                                        aria-label="Сачувај у распоред"
+                                        sx={{margin: 1}}
+                                        color="info"
+                                        onClick={saveData}
+                                    >
+                                        <SaveIcon/>
                                     </IconButton>
                                 </span>
                                 </Tooltip>
@@ -244,7 +252,6 @@ function DashboardBogosluzenja() {
                 Прикажи ПДФ верзију
             </Button>
             <SimpleDialog
-                selectedValue={selectedValue}
                 open={open}
                 onClose={handleClose}
             />

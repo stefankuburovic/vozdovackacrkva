@@ -51,7 +51,6 @@ con.connect(function(err) {
     var sql = `CREATE TABLE bogosluzenja_uopsteno (
                         id INT AUTO_INCREMENT PRIMARY KEY,
                         opis VARCHAR(5000) NOT NULL
-                        PRIMARY KEY ('id')
                     )`;
     con.query(sql, function (err, result) {
         if (err) throw err;
