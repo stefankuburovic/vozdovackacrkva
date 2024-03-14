@@ -38,7 +38,6 @@ export interface Praznik {
     datum: string | Date;
 }
 
-
 function DashboardBogosluzenja() {
     /**
      * Create Context

@@ -48,7 +48,6 @@ module.exports = function(app) {
             if (err) throw err;
             var sql = `INSERT INTO bogosluzenja_uopsteno (opis) VALUES (?)`;
             con.query(sql, [opis], function (err, result) {
-                console.log(err);
                 if (err) throw err;
                 con.query('SELECT * FROM bogosluzenja WHERE id = ?', [result.insertId], function(err, record) {
                     if (err) throw err;
