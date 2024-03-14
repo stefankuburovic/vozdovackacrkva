@@ -7,9 +7,27 @@
 #bogosluzenja hr {
   color: rgb(var(--white));
 }
-#bogosluzenja h3 {
-  margin-bottom: 1rem;
+#bogosluzenja h3, #bogosluzenja h4 {
+  margin-bottom: 0.5rem;
   text-align: center;
+  font-weight: normal;
+}
+#bogosluzenja h3 {
+  font-size: 22px;
+}
+#bogosluzenja h4 {
+  font-size: 20px;
+}
+#bogosluzenja h5, #bogosluzenja h6 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+#bogosluzenja .praznik {
+  margin: 1rem 0;
+}
+#bogosluzenja p {
+  font-size: 14px;
+  margin: 5px 0;
 }
 #bogosluzenja .container {
   display: flex;
@@ -32,6 +50,16 @@
   flex-direction: column;
   background: rgb(var(--white));
   min-height: 500px;
+}
+#bogosluzenja .bogosluzenja-container h2 {
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  color: rgb(var(--black));
+}
+#bogosluzenja .bogosluzenja-container h3, #bogosluzenja .bogosluzenja-container h4, #bogosluzenja .bogosluzenja-container h5 {
+  margin-bottom: 0.5rem;
+  font-weight: normal;
 }
 #bogosluzenja .bogosluzenja-container img {
   width: 50px;

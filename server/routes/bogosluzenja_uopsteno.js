@@ -32,7 +32,7 @@ module.exports = function(app) {
 
         con.connect(function(err) {
             if (err) throw err;
-            var sql = `DELETE FROM bogosluzenja WHERE id = ?`;
+            var sql = `DELETE FROM bogosluzenja_uopsteno WHERE id = ?`;
             con.query(sql, [id], function (err, result) {
                 if (err) throw err;
                 res.json({ message: 'Record deleted', result: result });
@@ -64,10 +64,10 @@ module.exports = function(app) {
 
         con.connect(function(err) {
             if (err) throw err;
-            var sql = `UPDATE bogosluzenja SET opis = ?`;
+            var sql = `UPDATE bogosluzenja_uopsteno SET opis = ? WHERE id = ?`;
             con.query(sql, [opis, id], function (err, result) {
                 if (err) throw err;
-                con.query('SELECT * FROM bogosluzenja WHERE id = ?', [result.insertId], function(err, record) {
+                con.query('SELECT * FROM bogosluzenja_uopsteno WHERE id = ?', [result.insertId], function(err, record) {
                     if (err) throw err;
                     res.json({ message: 'Record inserted', record: record[0] });
                 });

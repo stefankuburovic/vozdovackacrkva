@@ -60,7 +60,7 @@ const editorConfig = {
 interface EditorProps {
     placeholder?: React.JSX.Element;
     setContent: (content: string) => void;
-    defaultContent?: string;
+    defaultContent?: string | null;
 }
 export default function Editor({setContent, defaultContent, placeholder}: EditorProps) {
     return (

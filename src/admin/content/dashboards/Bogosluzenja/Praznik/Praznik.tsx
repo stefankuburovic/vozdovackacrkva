@@ -5,17 +5,17 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import {Divider, IconButton, Tooltip} from "@mui/material";
 import {KeyboardArrowDown, KeyboardArrowUp} from "@mui/icons-material";
 
-import {Bogosluzenje, Praznik} from "../index";
+import {Praznik} from "../index";
 import {ApiUrlContext} from "../../../../../index";
 import {DodajPraznik} from "../DodajPraznik/DodajPraznik";
 import {SnackbarContext} from "../../../../contexts/SnackbarContext";
 
 import './Praznik.scss';
-import BogosluzenjaService from "../../../../../shared/services/bogosluzenja";
+import BogosluzenjaService, {IBogosluzenje} from "../../../../../shared/services/bogosluzenja";
 
 export interface PraznikProps {
     praznik: Praznik;
-    bogosluzenje?: Bogosluzenje
+    bogosluzenje?: IBogosluzenje
 }
 
 const isSunday = (imeDana: string) => {
@@ -26,7 +26,7 @@ export default function PraznikComponent({praznik, bogosluzenje}: PraznikProps):
     const apiUrl = useContext(ApiUrlContext);
     const {openSnackbar} = useContext(SnackbarContext);
     const [isChecked, setIsChecked] = useState(false);
-    const [postojeceBogosluzenje, setPostojeceBogosluzenje] = useState<Bogosluzenje | undefined>(undefined);
+    const [postojeceBogosluzenje, setPostojeceBogosluzenje] = useState<IBogosluzenje | undefined>(undefined);
 
     useEffect(() => {
         setPostojeceBogosluzenje(bogosluzenje);
@@ -40,15 +40,23 @@ export default function PraznikComponent({praznik, bogosluzenje}: PraznikProps):
         setIsChecked(event.target.checked);
     };
 
-
     const changeChecked = () => {
         setIsChecked(!isChecked);
     };
+
     const deleteBogosluzenje = () => {
         if (postojeceBogosluzenje?.id)
             bogosluzenjeService.deleteBogosluzenje(postojeceBogosluzenje?.id, setPostojeceBogosluzenje, openSnackbar, apiUrl);
     }
-    const {ime_sedmice, ime_dana, novi, stari, mesec} = praznik;
+
+    const {
+        ime_sedmice,
+        ime_dana,
+        novi,
+        stari,
+        mesec
+    } = praznik;
+
     return (
         <>
             {ime_sedmice && <h2>{ime_sedmice}</h2>}

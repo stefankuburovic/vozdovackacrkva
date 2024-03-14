@@ -55,7 +55,6 @@ h1 {
   min-height: 300px;
   resize: none;
   font-size: 15px;
-  caret-color: rgb(5, 5, 5);
   position: relative;
   tab-size: 1;
   outline: 0;
@@ -76,6 +75,9 @@ h1 {
   user-select: none;
   display: inline-block;
   pointer-events: none;
+}
+.editor-placeholder h4 {
+  margin: 0;
 }
 
 .editor-placeholder h4 {

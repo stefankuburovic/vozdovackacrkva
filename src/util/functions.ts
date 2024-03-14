@@ -195,5 +195,22 @@ export const upucajKalendarUBazu = (apiUrl?: string) => {
         .catch((error) => {
             console.error(error);
         });
+}
+
+
+
+export const setCurrentWeekDateParams = () => {
+    // Get the current date
+    const currentDate = new Date();
+
+    // Calculate the date of the Monday of this week
+    const day = currentDate.getDay();
+    const diff = currentDate.getDate() - day + (day === 0 ? -7 : 1); // adjust when day is Sunday
+    const sundayOfThisWeek = new Date(currentDate.setDate(diff));
+
+    const first_param = sundayOfThisWeek.toISOString().split('T')[0];
+    const second_param = new Date(sundayOfThisWeek.getTime() + 60 * 60 * 24 * 6 * 1000).toISOString().split('T')[0];
+    return {startDate: first_param, endDate: second_param};
+}
 
 }

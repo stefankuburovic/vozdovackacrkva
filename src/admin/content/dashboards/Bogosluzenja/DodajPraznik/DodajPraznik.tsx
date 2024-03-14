@@ -7,20 +7,19 @@ import RadioGroup from "@mui/material/RadioGroup";
 import DeleteIcon from "@mui/icons-material/Delete";
 import FormControlLabel from "@mui/material/FormControlLabel"
 
-import {Bogosluzenje} from "../index";
 import {ApiUrlContext} from "../../../../../index";
 import {PraznikProps} from "../Praznik/Praznik";
 import Editor from "../../../../components/Editor/Editor";
 import {SnackbarContext} from "../../../../contexts/SnackbarContext";
 import {convertTimeStampToHHMM} from "../../../../../util/functions";
-import BogosluzenjaService from "../../../../../shared/services/bogosluzenja";
+import BogosluzenjaService, {IBogosluzenje} from "../../../../../shared/services/bogosluzenja";
 import {DodajBogosluzenje} from "../DodajBogosluzenje/DodajBogosluzenje";
 import {ChangableDateAndTime} from "./ChangeableDateAndTime/ChangeableDateAndTime";
 
 const LETNJI_MESECI = ['Април', 'Мај', 'Јун', 'Јул', 'Август', 'Септембар'];
 
 interface DodajPraznikProps extends PraznikProps {
-    setPostojeceBogosluzenje: (bogosluzenje: Bogosluzenje | undefined) => void;
+    setPostojeceBogosluzenje: (bogosluzenje: IBogosluzenje | undefined) => void;
 }
 
 //TODO: MORA REFAKTOR, MALO JE NEJASNA KOMPONENTA
@@ -29,33 +28,57 @@ export const DodajPraznik = ({
      bogosluzenje,
      setPostojeceBogosluzenje
  }: DodajPraznikProps): React.JSX.Element => {
+    /**
+     * Destructure props
+     * */
     const {datum, mesec} = praznik;
+    /**
+     * Include Context and Services
+     * */
     const apiUrl = useContext(ApiUrlContext);
     const {openSnackbar} = useContext(SnackbarContext);
     const bogosluzenjeService = BogosluzenjaService.getInstance();
-
+    /**
+     * Create State
+     * */
     const [disabled, setDisabled] = useState(true);
     const [dodatneInformacije, setDodatneInformacije] = useState('');
-    const [bogosluzenjeData, setBogosluzenjeData] = useState<Bogosluzenje[]>(bogosluzenje ? [bogosluzenje as Bogosluzenje] : []);
-
+    const [bogosluzenjeData, setBogosluzenjeData] = useState<IBogosluzenje[]>(
+        bogosluzenje ?
+            [bogosluzenje]
+            : []
+    );
     const [praznikBogosluzenja, setPraznikBogosluzenja] = useState<string | null>(bogosluzenje?.praznik || null);
     const [bogosluzenja, setBogosluzenja] = useState([<DodajBogosluzenje key={0}/>]);
-
-    const [datumBdenija, setDatumBdenija] = useState(useMemo(() => new Date(new Date(datum).getTime() - 60 * 60 * 24 * 1000), [datum]));
-    const [vremeBdenija, setVremeBdenija] = useState(LETNJI_MESECI.includes(mesec) ? datumBdenija.setHours(18, 0) : datumBdenija.setHours(17, 0));
-
+    const [datumBdenija, setDatumBdenija] = useState(
+        useMemo(
+            () => new Date(
+                new Date(datum).getTime() - 60 * 60 * 24 * 1000
+            ),
+            [datum]
+        )
+    );
+    const [vremeBdenija, setVremeBdenija] = useState(
+        LETNJI_MESECI.includes(mesec)
+            ? datumBdenija.setHours(18, 0)
+            : datumBdenija.setHours(17, 0)
+    );
     const vremeLiturgije = new Date(datum).setHours(9, 0);
-    const datumLiturgije = useMemo(() => new Date(datum), [datum]);
-
+    const datumLiturgije = useMemo(
+        () => new Date(datum),
+        [datum]
+    );
+    /**
+     *  Create Functions
+     * */
     const deleteBogosluzenje = (index: number) => {
         setBogosluzenja(bogosluzenja.filter((_, i) => i !== index));
     };
 
-
     const fetchData = useCallback(async () => {
         let ignore = false;
         if (!ignore) {
-            bogosluzenjeService.getBogosluzenja(datumLiturgije, setBogosluzenjeData, setPostojeceBogosluzenje, apiUrl);
+            await bogosluzenjeService.getBogosluzenja(datumLiturgije, setBogosluzenjeData, setPostojeceBogosluzenje, apiUrl);
         }
 
         return () => {
@@ -77,7 +100,7 @@ export const DodajPraznik = ({
             vreme_bdenija: convertTimeStampToHHMM(vremeBdenija),
             dodatne_informacije: dodatneInformacije
         };
-        bogosluzenjeService.saveOrUpdateBogosuzenje(
+        await bogosluzenjeService.saveOrUpdateBogosuzenje(
             bogosluzenje,
             bogosluzenjeData,
             fetchData,
