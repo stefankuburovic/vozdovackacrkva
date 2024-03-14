@@ -212,5 +212,3 @@ export const setCurrentWeekDateParams = () => {
     const second_param = new Date(sundayOfThisWeek.getTime() + 60 * 60 * 24 * 6 * 1000).toISOString().split('T')[0];
     return {startDate: first_param, endDate: second_param};
 }
-
-}
