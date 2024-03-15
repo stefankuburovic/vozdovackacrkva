@@ -1,5 +1,8 @@
 import * as React from 'react';
 import {Box, Divider, Tab, Tabs} from "@mui/material";
+
+import "yet-another-react-lightbox/plugins/captions.css";
+
 interface TabPanelProps {
     children?: React.ReactNode;
     index: number;
@@ -37,7 +40,7 @@ function a11yProps(index: number) {
 export default function Bogosluzenja() {
     const [value, setValue] = React.useState(0);
 
-    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    const handleChange = (_: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
     };
 
@@ -48,7 +51,8 @@ export default function Bogosluzenja() {
             <div className="container">
                 <Box className="container-inner">
                     <Box className="bogosluzenja-container vremena">
-                        <img src="/assets/images/logo-red.webp" width={50} height={50} alt="Вождовачка Црква"/>
+                        <img src="/assets/images/logo-red.webp" width={50} height={50} alt="Вождовачка Црква"
+                             className="logo"/>
                         <Tabs
                             value={value}
                             onChange={handleChange}
@@ -64,9 +68,9 @@ export default function Bogosluzenja() {
                             }}
                         >
                             <Tab label="Текућа недеља" {...a11yProps(0)} disableRipple/>
-                            {/*<Tab label="Активности" {...a11yProps(1)} disableRipple/>*/}
-                            <Tab label="Зимско време" {...a11yProps(1)} disableRipple/>
-                            <Tab label="Летње време" {...a11yProps(2)} disableRipple/>
+                            <Tab label="Активности" {...a11yProps(1)} disableRipple/>
+                            <Tab label="Зимско време" {...a11yProps(2)} disableRipple/>
+                            <Tab label="Летње време" {...a11yProps(3)} disableRipple/>
                         </Tabs>
                         <CustomTabPanel index={0} value={value}>
                             <h3>Прва седмица Великог поста</h3>
@@ -158,70 +162,64 @@ export default function Bogosluzenja() {
                                 </div>
                             </div>
                         </CustomTabPanel>
-                        {/*<CustomTabPanel index={1} value={value}>*/}
-                        {/*    <h2 style={{textAlign: "center"}}>Духовна трибина</h2>*/}
-                        {/*    <h3 style={{textAlign: "center"}}>- Малигне болести и живот православних хришћана -</h3>*/}
-                        {/*    <h4 style={{textAlign: "center"}}>Недеља - 03.03.2024. у 10.30</h4>*/}
-                        {/*    <h5>Предавачи:</h5>*/}
-                        {/*    <ul>*/}
-                        {/*        <li>Протојереј-Ставрофор Др Драгомир Сандо</li>*/}
-                        {/*        <li>Професор Др Тамара Кликовац, клинички психолог и психотерапеут</li>*/}
-                        {/*        <li>Професор Др Вања Ковић, Неуронаучник</li>*/}
-                        {/*    </ul>*/}
-                        {/*    <span style={{fontSize: "14px"}}>Трибину ће водити: Др Бојан Цакић</span>*/}
-                        {/*</CustomTabPanel>*/}
                         <CustomTabPanel index={1} value={value}>
-                            <div data-mesh-id="comp-lo6y8a5kinlineContent-gridContainer"
-                                 data-testid="mesh-container-content">
-                                <div>
-                                    <h3>
-                                        <span>Зимско време (Октобар - Март)</span>
-                                    </h3>
-                                    <h5>
-                                        <span>Свакодневно</span>
-                                    </h5>
-                                    <ul>
-                                        <li>
-                                            <p>08:00 - Јутрење</p>
-                                        </li>
-                                        <li>
-                                            <p>17:00 - Вечерња</p>
-                                        </li>
-                                    </ul>
-                                    <h5>
-                                        <span>Петак</span>
-                                    </h5>
-                                    <ul>
-                                        <li>
-                                            <p>17:00 - Акатист Часном Крсту или Св. Василију Острошком са читањем имена за здравље.</p>
-                                        </li>
-                                    </ul>
-                                    <h5>
-                                        <span>Субота</span>
-                                    </h5>
-                                    <ul>
-                                        <li>
-                                            <p>08:00 - Света Литургија</p>
-                                        </li>
-                                        <li>
-                                            <p>17:00 - Бденије уочи празника</p>
-                                        </li>
-                                    </ul>
-                                    <h5>
-                                        <span>Недеља</span>
-                                    </h5>
-                                    <ul>
-                                        <li>
-                                            <p>9:00 - Света Литургија</p>
-                                        </li>
-                                        <li>
-                                            <p>17:00 - Вечерња</p>
-                                        </li>
-                                    </ul>
-                                </div>
+                            <div style={{display: "flex", alignItems: "center", justifyContent: 'center'}}>
+                                <img src=" /assets/images/aktivnosti/aktivnost_31_3.jpg"
+                                     alt="Сведоци светлости из Капернаума - Тумачење Јеванђеља по Марку"
+                                     style={{maxWidth: '400px', maxHeight: '100vh'}}
+                                />
                             </div>
                         </CustomTabPanel>
                         <CustomTabPanel index={2} value={value}>
+                            <div>
+                                <h3>
+                                    <span>Зимско време (Октобар - Март)</span>
+                                </h3>
+                                <h5>
+                                    <span>Свакодневно</span>
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <p>08:00 - Јутрење</p>
+                                    </li>
+                                    <li>
+                                        <p>17:00 - Вечерња</p>
+                                    </li>
+                                </ul>
+                                <h5>
+                                    <span>Петак</span>
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <p>17:00 - Акатист Часном Крсту или Св. Василију Острошком са читањем имена за
+                                            здравље.</p>
+                                    </li>
+                                </ul>
+                                <h5>
+                                    <span>Субота</span>
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <p>08:00 - Света Литургија</p>
+                                    </li>
+                                    <li>
+                                        <p>17:00 - Бденије уочи празника</p>
+                                    </li>
+                                </ul>
+                                <h5>
+                                    <span>Недеља</span>
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <p>9:00 - Света Литургија</p>
+                                    </li>
+                                    <li>
+                                        <p>17:00 - Вечерња</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </CustomTabPanel>
+                        <CustomTabPanel index={3} value={value}>
                             <div>
                                 <div>
                                     <h3>
@@ -243,7 +241,8 @@ export default function Bogosluzenja() {
                                     </h5>
                                     <ul>
                                         <li>
-                                            <p>18:00 - Акатист Часном Крсту или Св. Василију Острошком са читањем имена за здравље.</p>
+                                            <p>18:00 - Акатист Часном Крсту или Св. Василију Острошком са читањем имена
+                                                за здравље.</p>
                                         </li>
                                     </ul>
                                     <h5>

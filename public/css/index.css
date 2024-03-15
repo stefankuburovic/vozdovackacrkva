@@ -150,6 +150,9 @@ header {
   justify-content: space-between;
   box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);
 }
+header img {
+  max-width: 80px;
+}
 header .dropdown:hover > .dropdown-menu {
   display: block;
 }
@@ -311,7 +314,7 @@ img {
 #bogosluzenja .bogosluzenja-container h2 {
   color: rgb(var(--black));
 }
-#bogosluzenja .bogosluzenja-container img {
+#bogosluzenja .bogosluzenja-container .logo {
   width: 50px;
   height: 50px;
   margin: 0 auto;

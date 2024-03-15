@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     },
     modalContent: {
         backgroundColor: "white",
-        padding: "40px 20px",
+        padding: "40px 10px 10px 10px",
         borderRadius: '0',
         textAlign: 'left',
         outline: "none",
@@ -50,19 +50,7 @@ const MyModal: React.FC<MyModalProps> = ({ isOpen, onClose, onCTAClick }) => {
             }}
         >
             <div className={classes.modalContent}>
-                <h2 id="modal-title" className={classes.modalTitle}>Недеља - 03.03.2024. у 10.30</h2>
-                <p id="modal-description">
-                    <h3 style={{textAlign: "center"}}>Духовна трибина</h3>
-                    <h4 style={{textAlign: "center"}}>- Малигне болести и живот православних хришћана -</h4>
-                    <br/>
-                    <h5>Предавачи:</h5>
-                    <ul>
-                        <li>Протојереј-Ставрофор Др Драгомир Сандо</li>
-                        <li>Професор Др Тамара Кликовац, клинички психолог и психотерапеут</li>
-                        <li>Професор Др Вања Ковић, Неуронаучник</li>
-                    </ul>
-                    <span>Трибину ће водити: Др Бојан Цакић</span>
-                </p>
+                <img src=" /assets/images/aktivnosti/aktivnost_31_3.jpg" alt="Сведоци светлости из Капернаума - Тумачење Јеванђеља по Марку" style={{maxWidth: '400px', maxHeight: '100vh'}}/>
                 <Button variant="text" color="info" onClick={onCTAClick} className={classes.button}>
                     Затвори
                 </Button>
@@ -75,7 +63,7 @@ const Obavestenja = () => {
 
     useEffect(() => {
         // Check if the modal has been displayed before
-        const hasModalBeenDisplayed = localStorage.getItem('hasModalFebruary');
+        const hasModalBeenDisplayed = localStorage.getItem('hasModalMarch');
 
         if (!hasModalBeenDisplayed) {
             setIsModalOpen(true);
@@ -85,7 +73,7 @@ const Obavestenja = () => {
     const handleCTAClick = () => {
         // Set a flag in local storage to indicate that the modal has been displayed
         localStorage.clear()
-        localStorage.setItem('hasModalFebruary', 'true');
+        localStorage.setItem('hasModalMarch', 'true');
         setIsModalOpen(false);
     };
 
