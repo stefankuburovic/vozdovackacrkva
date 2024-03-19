@@ -36,6 +36,12 @@ export const slides = [
         loading: "lazy"
     },
     {
+        src: '/assets/images/nove-webp/IMG_1015.webp',
+        width: 1797,
+        height: 1257,
+        loading: "lazy"
+    },
+    {
         src: '/assets/images/nove-webp/IMG_0983.webp',
         width: 1797,
         height: 1257,
@@ -55,12 +61,6 @@ export const slides = [
     },
     {
         src: '/assets/images/nove-webp/IMG_1000.webp',
-        width: 1460,
-        height: 1257,
-        loading: "lazy"
-    },
-    {
-        src: '/assets/images/nove-webp/IMG_1015.webp',
         width: 1460,
         height: 1257,
         loading: "lazy"

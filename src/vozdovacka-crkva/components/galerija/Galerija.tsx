@@ -7,9 +7,14 @@ import Captions from "yet-another-react-lightbox/plugins/captions";
 import {slides} from "../../const/galerija/const";
 
 import "yet-another-react-lightbox/plugins/captions.css";
+import {useWindowWidth} from "../../hooks/useWindowWidth";
 
 export default function Galerija() {
-const [index, setIndex] = React.useState(-1);
+    const [index, setIndex] = React.useState(-1);
+    const windowWidth = useWindowWidth();
+
+    const targetRowHeight = windowWidth <= 768 ? 300 : 150;
+    const columns = windowWidth <= 768 ? 2 : undefined; // Adjust this value as needed
 
     return (
         <div>
@@ -19,7 +24,8 @@ const [index, setIndex] = React.useState(-1);
             <PhotoAlbum
                 layout="columns"
                 photos={slides}
-                targetRowHeight={150}
+                columns={columns}
+                targetRowHeight={targetRowHeight}
                 onClick={({ index: current }) => setIndex(current)}
             />
             <Lightbox

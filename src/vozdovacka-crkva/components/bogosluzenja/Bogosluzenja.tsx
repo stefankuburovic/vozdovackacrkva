@@ -164,7 +164,7 @@ export default function Bogosluzenja() {
                         </CustomTabPanel>
                         <CustomTabPanel index={1} value={value}>
                             <div style={{display: "flex", alignItems: "center", justifyContent: 'center'}}>
-                                <img src=" /assets/images/aktivnosti/aktivnost_31_3.jpg"
+                                <img src=" /assets/images/aktivnosti/aktivnost_31_3.webp"
                                      alt="Сведоци светлости из Капернаума - Тумачење Јеванђеља по Марку"
                                      style={{maxWidth: '400px', maxHeight: '100vh'}}
                                 />

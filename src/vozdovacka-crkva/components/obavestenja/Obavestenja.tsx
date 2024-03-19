@@ -50,7 +50,7 @@ const MyModal: React.FC<MyModalProps> = ({ isOpen, onClose, onCTAClick }) => {
             }}
         >
             <div className={classes.modalContent}>
-                <img src=" /assets/images/aktivnosti/aktivnost_31_3.jpg" alt="Сведоци светлости из Капернаума - Тумачење Јеванђеља по Марку" style={{maxWidth: '400px', maxHeight: '100vh'}}/>
+                <img src=" /assets/images/aktivnosti/aktivnost_31_3.webp" alt="Сведоци светлости из Капернаума - Тумачење Јеванђеља по Марку" style={{maxWidth: '400px', maxHeight: '100vh'}}/>
                 <Button variant="text" color="info" onClick={onCTAClick} className={classes.button}>
                     Затвори
                 </Button>

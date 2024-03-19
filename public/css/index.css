@@ -327,6 +327,7 @@ img {
 }
 #bogosluzenja .bogosluzenja-tab-panel ul {
   list-style: none;
+  padding: 0;
 }
 #bogosluzenja .bogosluzenja-tab-panel li {
   font-size: 14px;
@@ -452,7 +453,7 @@ img {
 #pretraga-parohija .informacija-o-adresi {
   display: flex;
   flex-direction: row;
-  margin-top: 20px;
+  margin-top: 40px;
   padding: 0 !important;
 }
 #pretraga-parohija .informacije-o-svestenicima {
