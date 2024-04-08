@@ -9,8 +9,10 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#9b0000"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Добродошли на званичну веб страницу Вождовачке цркве - Храма Светог цара Константина и царице Јелене.">
-    <meta name="keywords" content="Вождовачка црква, Храм Светог цара Константина и царице Јелене, српска православна црква, историјско место, хришћанска вера, културно наслеђе, Београд">
+    <meta name="description"
+          content="Добродошли на званичну веб страницу Вождовачке цркве - Храма Светог цара Константина и царице Јелене.">
+    <meta name="keywords"
+          content="Вождовачка црква, Храм Светог цара Константина и царице Јелене, српска православна црква, историјско место, хришћанска вера, културно наслеђе, Београд">
     <meta name="author" content="Вождовачка црква - Храм Светог цара Константина и царице Јелене">
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png"/>
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
@@ -21,15 +23,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.min.css">
-    <link rel="preload" href="/assets/fonts/Pravosla.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+    <link rel="preload" href="/assets/fonts/Pravosla.ttf" as="font" type="font/ttf" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css"/>
 </head>
 <body id="body">
 <noscript>You need to enable JavaScript to run this app.</noscript>
 <!-- Loading Screen -->
 <div id="loading-screen">
     <div class="loading-screen-inner">
-        <img src="assets/crkva.svg" class="loading-svg"/>
+        <img src="assets/crkva.svg" class="loading-svg" alt="Вождовачка црква"/>
         <div class="loading-inner-text">
             <h1>Храм Светог цара Константина и царице Јелене</h1>
         </div>
@@ -49,7 +51,8 @@
         </label>
         <nav id="navbar" class="navbar navbar-light">
             <a class="navbar-brand" href="#">
-                <img src="./assets/images/logo.webp" width="80" height="80" alt="">
+                <img src="./assets/images/logo.webp" width="80" height="80"
+                     alt="Вождовачка црква - Храм светог Цара Константина и царице Јелене">
             </a>
             <ul class="nav" id="nav">
                 <li class="nav-item">
@@ -65,13 +68,7 @@
                     <a href="#galerija" class="nav-link">Галерија</a>
                 </li>
                 <li class="nav-item">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Богослужења</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#bogosluzenja">Распоред</a></li>
-                            <li><a class="dropdown-item" href="#kalendar-praznika">Календар</a></li>
-                        </ul>
-                    </li>
+                    <a href="#bogosluzenja" class="nav-link">Богослужења</a>
                 </li>
                 <li class="nav-item">
                     <a href="#footer" class="nav-link">Локација</a>
@@ -83,38 +80,49 @@
 <section id="hero">
     <div class="carousel slide carousel-fade" data-bs-ride="carousel" id="carousel">
         <div class="carousel-inner">
+            <h2 style="color: white; margin-bottom: 12px">Активности</h2>
             <div class="carousel-item active" data-bs-interval="9000">
-                <img src="assets/images/stare-webp/vozdovacka-crkva.webp" alt="" class="w-100 d-block">
+                <img src="assets/images/stare-webp/vozdovacka-crkva.webp" alt="" class="lazyload w-100 d-block">
             </div>
             <div class="carousel-item" data-bs-interval="5000">
-                <img src="assets/images/stare-webp/heavenly-enlighment.webp" alt="" class="w-100 d-block">
+                <img data-src="assets/images/stare-webp/heavenly-enlighment.webp"
+                     src="assets/images/stare-webp/heavenly-enlighment.webp" alt="" class="lazyload w-100 d-block">
             </div>
             <div class="carousel-item" data-bs-interval="5000">
-                <img src="assets/images/stare-webp/fire-on-christmas-eve.webp" alt="" class="w-100 d-block">
+                <img data-src="assets/images/stare-webp/fire-on-christmas-eve.webp"
+                     src="assets/images/stare-webp/fire-on-christmas-eve.webp" alt="" class="lazyload w-100 d-block">
             </div>
             <div class="carousel-item" data-bs-interval="5000">
-                <img src="assets/images/stare-webp/pocetak-litije.webp" alt="" class="w-100 d-block">
+                <img data-src="assets/images/stare-webp/pocetak-litije.webp"
+                     src="assets/images/stare-webp/pocetak-litije.webp" alt="" class="lazyload w-100 d-block">
             </div>
             <div class="carousel-item" data-bs-interval="5000">
-                <img src="assets/images/stare-webp/paljenje-badnjaka.webp" alt="" class="w-100 d-block">
+                <img data-src="assets/images/stare-webp/paljenje-badnjaka.webp"
+                     src="assets/images/stare-webp/paljenje-badnjaka.webp" alt="" class="lazyload w-100 d-block">
             </div>
             <div class="carousel-item" data-bs-interval="5000">
-                <img src="assets/images/stare-webp/litija-na-badnje-vece.webp" alt="" class="w-100 d-block">
+                <img data-src="assets/images/stare-webp/litija-na-badnje-vece.webp"
+                     src="assets/images/stare-webp/litija-na-badnje-vece.webp" alt="" class="lazyload w-100 d-block">
             </div>
             <div class="carousel-item" data-bs-interval="5000">
-                <img src="assets/images/stare-webp/otac-gligorije-propoved.webp" alt="" class="w-100 d-block">
+                <img data-src="assets/images/stare-webp/otac-gligorije-propoved.webp"
+                     src="assets/images/stare-webp/otac-gligorije-propoved.webp" alt="" class="lazyload w-100 d-block">
             </div>
             <div class="carousel-item" data-bs-interval="5000">
-                <img src="assets/images/stare-webp/IMG_0738-Under-the-Book.webp" alt="" class="w-100 d-block">
+                <img data-src="assets/images/stare-webp/IMG_0738-Under-the-Book.webp"
+                     src="assets/images/stare-webp/IMG_0738-Under-the-Book.webp" alt="" class="lazyload w-100 d-block">
             </div>
             <div class="carousel-item" data-bs-interval="5000">
-                <img src="assets/images/stare-webp/Vomnem-IMG_0104a.webp" alt="" class="w-100 d-block">
+                <img data-src="assets/images/stare-webp/Vomnem-IMG_0104a.webp"
+                     src="assets/images/stare-webp/Vomnem-IMG_0104a.webp" alt="" class="lazyload w-100 d-block">
             </div>
             <div class="carousel-item" data-bs-interval="5000">
-                <img src="assets/images/stare-webp/Vomnem-IMG_0104a.webp" alt="" class="w-100 d-block">
+                <img data-src="assets/images/stare-webp/Vomnem-IMG_0104a.webp"
+                     src="assets/images/stare-webp/Vomnem-IMG_0104a.webp" alt="" class="lazyload w-100 d-block">
             </div>
             <div class="carousel-item" data-bs-interval="5000">
-                <img src="assets/images/stare-webp/otac-djordje.webp" alt="" class="w-100 d-block">
+                <img data-src="assets/images/stare-webp/otac-djordje.webp"
+                     src="assets/images/stare-webp/otac-djordje.webp" alt="" class="lazyload w-100 d-block">
             </div>
         </div>
     </div>
@@ -181,10 +189,12 @@
                         <h3>Адреса</h3>
                         <ul>
                             <li>
-                                <a href="https://www.google.com/maps/place/The+Church+of+Holy+Constantine+and+Helen/@44.7773645,20.4739508,20.5z/data=!4m6!3m5!1s0x475a705b8ddbdf4b:0x18500dcc168630ef!8m2!3d44.7772938!4d20.4737809!16s%2Fg%2F1tftpwnz?entry=ttu">Јове Илића 123</a>
+                                <a href="https://www.google.com/maps/place/The+Church+of+Holy+Constantine+and+Helen/@44.7773645,20.4739508,20.5z/data=!4m6!3m5!1s0x475a705b8ddbdf4b:0x18500dcc168630ef!8m2!3d44.7772938!4d20.4737809!16s%2Fg%2F1tftpwnz?entry=ttu">Јове
+                                    Илића 123</a>
                             </li>
                             <li>
-                                <a href="https://www.google.com/maps/place/The+Church+of+Holy+Constantine+and+Helen/@44.7773645,20.4739508,20.5z/data=!4m6!3m5!1s0x475a705b8ddbdf4b:0x18500dcc168630ef!8m2!3d44.7772938!4d20.4737809!16s%2Fg%2F1tftpwnz?entry=ttu">11010 Вождовац, Србија</a></li>
+                                <a href="https://www.google.com/maps/place/The+Church+of+Holy+Constantine+and+Helen/@44.7773645,20.4739508,20.5z/data=!4m6!3m5!1s0x475a705b8ddbdf4b:0x18500dcc168630ef!8m2!3d44.7772938!4d20.4737809!16s%2Fg%2F1tftpwnz?entry=ttu">11010
+                                    Вождовац, Србија</a></li>
                         </ul>
                     </div>
                 </div>
@@ -196,12 +206,16 @@
                         <ul>
                             <li>
                                 <a href="https://www.instagram.com/vozdovacka_crkva" target="_blank">
-                                    <img src="%PUBLIC_URL%/assets/images/instagram-icon.webp" alt="Instagram">
+                                    <img data-src="%PUBLIC_URL%/assets/images/instagram-icon.webp"
+                                         src="%PUBLIC_URL%/assets/images/instagram-icon.webp" class="lazyload"
+                                         alt="Instagram">
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.facebook.com/profile.php?id=100089120393706" target="_blank">
-                                    <img src="%PUBLIC_URL%/assets/images/facebook-icon.webp" alt="Instagram">
+                                    <img data-src="%PUBLIC_URL%/assets/images/facebook-icon.webp"
+                                         src="%PUBLIC_URL%/assets/images/facebook-icon.webp" class="lazyload"
+                                         alt="Instagram">
                                 </a>
                             </li>
                         </ul>
@@ -216,33 +230,21 @@
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+</script>
 <script src="./js/script.min.js"></script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VNZBMJKEYN"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
 
     gtag('config', 'G-VNZBMJKEYN');
 </script>
-<script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId      : '263945556661566',
-            xfbml      : true,
-            version    : 'v18.0'
-        });
-        FB.AppEvents.logPageView();
-    };
-
-    (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
+<script src="js/lazyload.min.js" async></script>
 </body>
 </html>

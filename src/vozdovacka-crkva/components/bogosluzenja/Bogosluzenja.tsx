@@ -69,43 +69,25 @@ export default function Bogosluzenja() {
                         >
                             <Tab label="Текућа недеља" {...a11yProps(0)} disableRipple/>
                             <Tab label="Активности" {...a11yProps(1)} disableRipple/>
-                            <Tab label="Зимско време" {...a11yProps(2)} disableRipple/>
-                            <Tab label="Летње време" {...a11yProps(3)} disableRipple/>
+                            <Tab label="Летње време" {...a11yProps(2)} disableRipple/>
+                            <Tab label="Зимско време" {...a11yProps(3)} disableRipple/>
                         </Tabs>
                         <CustomTabPanel index={0} value={value}>
-                            <h3>Прва седмица Великог поста</h3>
+                            <h3>Четврта седмица Великог поста</h3>
                             <h4>
-                                <span>18.03.2024, Понедељак</span>
+                                <span>06.04.2024. - Среда</span>
                             </h4>
                             <div>
                                 <div className="praznicni-dani">
                                     <ul>
                                         <li>
-                                            <p>08:00 - Јутрење, Часови, Вечерње</p>
-                                        </li>
-                                        <li>
-                                            <p>17:00 - Повечерје са каноном Св. Андреја Критског</p>
+                                            <p>08:00 - Литургија пређеосвећених Дарова</p>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <h4>
-                                <span>19.03.2024, Уторак</span>
-                            </h4>
-                            <div>
-                                <div className="praznicni-dani">
-                                    <ul>
-                                        <li>
-                                            <p>08:00 - Јутрење, Часови, Вечерње</p>
-                                        </li>
-                                        <li>
-                                            <p>17:00 - Повечерје са каноном Св. Андреја Критског</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4>
-                                <span>20.03.2024, Среда</span>
+                                <span>09.04.2024. - Петак</span>
                             </h4>
                             <div>
                                 <div className="praznicni-dani">
@@ -114,113 +96,62 @@ export default function Bogosluzenja() {
                                             <p>08:00 - Литургија пређеосвећених Дарова</p>
                                         </li>
                                         <li>
-                                            <p>17:00 - Повечерје са каноном Св. Андреја Критског</p>
+                                            <p>18:00 - Повечерје са статијом акатиста Благовестима</p>
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                            <h4>
-                                <span>21.03.2024, Четвртак</span>
-                            </h4>
-                            <div>
-                                <div className="praznicni-dani">
-                                    <ul>
-                                        <li>
-                                            <p>08:00 - Јутрење, Часови, Вечерње</p>
-                                        </li>
-                                        <li>
-                                            <p>17:00 - Повечерје са каноном Св. Андреја Критског</p>
-                                        </li>
-                                    </ul>
+                                <h4>
+                                    <span>10.04.2024. - Субота</span>
+                                </h4>
+                                <div>
+                                    <div className="praznicni-dani">
+                                        <ul>
+                                            <li>
+                                                <p>08:00 - Литургија Св. Јована Златоустог</p>
+                                            </li>
+                                            <li>
+                                                <p>18:00 - Света тајна јелеоосвећења, <strong>(понети брашно, уље и списак имена за здравље).</strong></p>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                            <h4>
-                                <span>22.03.2024, Петак</span>
-                            </h4>
-                            <div>
-                                <div className="praznicni-dani">
-                                    <ul>
-                                        <li>
-                                            <p>08:00 - Литургија пређеосвећених Дарова</p>
-                                        </li>
-                                        <li>
-                                            <p>17:00 - Повечерје са статијом акатиста Благовестима</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4>
-                                <span>23.03.2024, Теодорова субота</span>
-                            </h4>
-                            <div>
-                                <div className="praznicni-dani">
-                                    <ul>
-                                        <li>
-                                            <p>08:00 - Света Литургија</p>
-                                        </li>
-                                    </ul>
+                                <h4>
+                                    <span>11.04.2024. - Недеља</span>
+                                </h4>
+                                <div>
+                                    <div className="praznicni-dani">
+                                        <ul>
+                                            <li>
+                                                <p>09:00 - Литургија Св. Василија Великог</p>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </CustomTabPanel>
                         <CustomTabPanel index={1} value={value}>
                             <div style={{display: "flex", alignItems: "center", justifyContent: 'center'}}>
-                                <img src=" /assets/images/aktivnosti/aktivnost_31_3.webp"
-                                     alt="Сведоци светлости из Капернаума - Тумачење Јеванђеља по Марку"
-                                     style={{maxWidth: '400px', maxHeight: '100vh'}}
-                                />
+                                <div className="video" style={{maxWidth: '100%', overflow: 'hidden'}}>
+                                    <h3>Недеља, 31.3.2024.</h3>
+                                    <p>Предавање на тему: <strong>Сведоци светлости из Капернаума, тумачење Јеванђеља по
+                                        Марку <i>2,1-12</i></strong></p>
+                                    <p>Предавач: <strong>Професор Предраг Драгутиновић</strong></p>
+                                    <iframe
+                                        style={{display: 'flex', margin: '0 auto'}}
+                                        width="420"
+                                        height="236"
+                                        src="https://www.youtube.com/embed/8_H7qi6eoN8"
+                                        title="YouTube video player"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerPolicy="strict-origin-when-cross-origin"
+                                        allowFullScreen
+                                    >
+                                    </iframe>
+                                </div>
                             </div>
                         </CustomTabPanel>
                         <CustomTabPanel index={2} value={value}>
-                            <div>
-                                <h3>
-                                    <span>Зимско време (Октобар - Март)</span>
-                                </h3>
-                                <h5>
-                                    <span>Свакодневно</span>
-                                </h5>
-                                <ul>
-                                    <li>
-                                        <p>08:00 - Јутрење</p>
-                                    </li>
-                                    <li>
-                                        <p>17:00 - Вечерња</p>
-                                    </li>
-                                </ul>
-                                <h5>
-                                    <span>Петак</span>
-                                </h5>
-                                <ul>
-                                    <li>
-                                        <p>17:00 - Акатист Часном Крсту или Св. Василију Острошком са читањем имена за
-                                            здравље.</p>
-                                    </li>
-                                </ul>
-                                <h5>
-                                    <span>Субота</span>
-                                </h5>
-                                <ul>
-                                    <li>
-                                        <p>08:00 - Света Литургија</p>
-                                    </li>
-                                    <li>
-                                        <p>17:00 - Бденије уочи празника</p>
-                                    </li>
-                                </ul>
-                                <h5>
-                                    <span>Недеља</span>
-                                </h5>
-                                <ul>
-                                    <li>
-                                        <p>9:00 - Света Литургија</p>
-                                    </li>
-                                    <li>
-                                        <p>17:00 - Вечерња</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </CustomTabPanel>
-                        <CustomTabPanel index={3} value={value}>
-                            <div>
+                        <div>
                                 <div>
                                     <h3>
                                         <span>Летње време (Април - Септембар)</span>
@@ -268,6 +199,55 @@ export default function Bogosluzenja() {
                                         </li>
                                     </ul>
                                 </div>
+                            </div>
+                        </CustomTabPanel>
+                        <CustomTabPanel index={3} value={value}>
+                            <div>
+                                <h3>
+                                    <span>Зимско време (Октобар - Март)</span>
+                                </h3>
+                                <h5>
+                                    <span>Свакодневно</span>
+                                </h5>
+                                <ul>
+                                    <li>
+                                    <p>08:00 - Јутрење</p>
+                                    </li>
+                                    <li>
+                                        <p>17:00 - Вечерња</p>
+                                    </li>
+                                </ul>
+                                <h5>
+                                    <span>Петак</span>
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <p>17:00 - Акатист Часном Крсту или Св. Василију Острошком са читањем имена за
+                                            здравље.</p>
+                                    </li>
+                                </ul>
+                                <h5>
+                                    <span>Субота</span>
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <p>08:00 - Света Литургија</p>
+                                    </li>
+                                    <li>
+                                        <p>17:00 - Бденије уочи празника</p>
+                                    </li>
+                                </ul>
+                                <h5>
+                                    <span>Недеља</span>
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <p>9:00 - Света Литургија</p>
+                                    </li>
+                                    <li>
+                                        <p>17:00 - Вечерња</p>
+                                    </li>
+                                </ul>
                             </div>
                         </CustomTabPanel>
                     </Box>
