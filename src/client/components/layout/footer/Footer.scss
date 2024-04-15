@@ -1,0 +1,109 @@
+/*--------------------------------------------------- Footer*/
+footer {
+  display: flex;
+  padding: 2rem 5rem;
+  flex-direction: row;
+  justify-content: space-between;
+
+  h2 {
+    color: rgb(var(--white));
+    font-size: 32px;
+  }
+
+  h3 {
+    color: rgb(var(--white));
+    font-size: 24px;
+  }
+
+  ul {
+    list-style: none;
+    font-size: 13px;
+    padding-left: 0;
+  }
+
+  hr:not(.react-divider) {
+    margin: 0;
+    width: 165px;
+    background: rgb(var(--white));
+  }
+
+  .boxes {
+    width: 50vw;
+
+    &.lokacija {
+      display: flex;
+      padding-left: 5rem;
+      flex-direction: column;
+
+      .lokacija-wrapper {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .drustvene-mreze {
+    ul {
+      display: flex;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    a {
+      transition: opacity .3s;
+    }
+
+    a:hover {
+      opacity: .7;
+    }
+  }
+
+  .footer-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 800px;
+
+    .lokacija-inline {
+      margin-right: 2rem;
+
+      p {
+        color: rgb(var(--gold));
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (max-width: 1440px) {
+    padding: 2rem 7rem;
+    ul {
+      font-size: 12px;
+    }
+    .footer-info {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 2rem;
+    .boxes {
+      width: 100%;
+    }
+    .boxes {
+      &.lokacija {
+        padding-top: 10px;
+        padding-left: 10px;
+      }
+    }
+  }
+
+  @media (max-width: 390px) {
+    .footer-info {
+      flex-direction: column;
+    }
+  }
+}

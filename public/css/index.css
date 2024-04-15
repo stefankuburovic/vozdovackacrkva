@@ -46,6 +46,10 @@
   background-color: #A30000;
 }
 
+.hidden {
+  display: none !important;
+}
+
 hr:not(.react-divider) {
   margin: 20px auto;
   width: 200px;
@@ -339,8 +343,8 @@ img {
   overflow: hidden;
   text-align: center;
   position: relative;
-  background: url("../assets/images/logo-red.webp") round fixed center center;
-  background-size: 20px 20px;
+  background: url("../assets/images/logo-red.webp") lightgoldenrodyellow round fixed center center;
+  background-size: 40px 40px;
 }
 #kalendar-praznika .white-layout {
   z-index: 2;

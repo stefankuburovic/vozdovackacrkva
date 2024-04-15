@@ -17,14 +17,34 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('dropdown');
     const mainMenu = document.getElementById('nav');
 
-    // Remove hash from URL on page load
-    if (window.location.hash) {
-        history.replaceState(null, null, ' ');
-    }
+
     window.scrollTo(0, 0);
 
     // Show the loading screen
     document.getElementById("loading-screen").style.display = "block";
+
+    // Get the current URL path
+    const path = window.location.pathname;
+
+    // Check if the current URL is '/'
+    if (path !== '/') {
+        // Get all elements with the 'home-page' class
+        const homePages = document.querySelectorAll('.home-page');
+
+        // Loop through each element and add the 'hidden' class
+        homePages.forEach(function(homePage) {
+            homePage.classList.add('hidden');
+        });
+    }
+    if (path !== '/riznica') {
+        // Get all elements with the 'home-page' class
+        const homePages = document.querySelectorAll('.riznica');
+
+        // Loop through each element and add the 'hidden' class
+        homePages.forEach(function(homePage) {
+            homePage.classList.add('hidden');
+        });
+    }
 
     // Simulate some asynchronous task (e.g., fetching data)
     setTimeout(function () {
@@ -32,12 +52,39 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(function () {
             document.getElementById("loading-screen").style.display = "none";
         }, 500)
-    }, 3000); // Adjust the time according to your needs
+    }, 3000);
 
-    const navbar = new bootstrap.ScrollSpy(document.body, {
-        target: '#navbar',
+    // Function to check if element is in viewport
+    function isInViewport(element) {
+        var rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+// Function to activate link based on viewport
+    function activateLink() {
+        var sections = document.querySelectorAll('.nav-link');
+        sections.forEach(function(section) {
+            var link = document.querySelector('a[href="#' + section.id + '"]');
+            if (isInViewport(section)) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }
+
+// Initial activation check
+    activateLink();
+
+// Listen for scroll event and activate link accordingly
+    window.addEventListener('scroll', function() {
+        activateLink();
     });
-
     navLinks.forEach((link) => {
         link.addEventListener('click', function () {
             // Highlight clicked link

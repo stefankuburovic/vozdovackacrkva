@@ -10,7 +10,7 @@
 //         return cyrillic[index]
 //     }).join('')
 // }
-export function latToCyr(unesenText: string) {;
+export function latToCyr(unesenText: string) {
     unesenText = unesenText.replace(/a/g,'а');
     unesenText = unesenText.replace(/b/g,'б');
     unesenText = unesenText.replace(/c/g,'ц');

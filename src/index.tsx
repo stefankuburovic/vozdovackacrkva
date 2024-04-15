@@ -1,31 +1,72 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
-
-import {roots} from "./vozdovacka-crkva/const";
-
 import './index.css';
 import "yet-another-react-lightbox/styles.css";
+import {BrowserRouter, Route, Routes, useRoutes} from "react-router-dom";
+// import {HelmetProvider} from "react-helmet-async";
+// import ThemeProvider from "./admin/theme/ThemeProvider";
+// import {CssBaseline} from "@mui/material";
+// import {LocalizationProvider} from '@mui/x-date-pickers/LocalizationProvider/LocalizationProvider';
+// import {AdapterDateFns} from "@mui/x-date-pickers/AdapterDateFns";
+// import {SnackbarProvider} from "./admin/contexts/SnackbarContext";
+// import {AuthProvider} from "./admin/contexts/AuthProvider";
+// import ProtectedRoute from "./ProtectedRoute";
+// import admin_router from "./admin/router";
+import client_router from "./client/router";
+// import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
+// import Login from "./admin/content/pages/Login/Login";
 
-const PretragaParohija = lazy(() => import('./vozdovacka-crkva/components/pretraga-parohija/PretragaParohija'));
+export const ApiUrlContext = React.createContext<string | undefined>('');
 
-const Galerija = lazy(() => import('./vozdovacka-crkva/components/galerija/Galerija'));
+// const AdminRoutes = () => {
+//     const content = useRoutes(admin_router);
+//
+//     return (
+//         <AuthProvider>
+//             <SnackbarProvider>
+//                 <HelmetProvider>
+//                     <ProtectedRoute>
+//                         <ThemeProvider>
+//                             <LocalizationProvider dateAdapter={AdapterDateFns}>
+//                                 <CssBaseline/>
+//                                 {content}
+//                             </LocalizationProvider>
+//                         </ThemeProvider>
+//                     </ProtectedRoute>
+//                 </HelmetProvider>
+//             </SnackbarProvider>
+//         </AuthProvider>
+//     );
+// }
+const ClientRoutes = () => {
+    // return (
+    //     <HelmetProvider>
+    //         {content}
+    //     </HelmetProvider>
+    // );
+    return useRoutes(client_router);
+}
 
-const Bogosluzenja = lazy(() => import('./vozdovacka-crkva/components/bogosluzenja/Bogosluzenja'));
+function App() {
+    // const queryClient = new QueryClient()
+    return (
+        <ApiUrlContext.Provider value={process.env.REACT_APP_API_URL}>
 
-const Kalendar = lazy(() => import('./vozdovacka-crkva/components/kalendar/Kalendar'));
+            {/*<QueryClientProvider client={queryClient}>*/}
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/*" element={<ClientRoutes/>}/>
+                        {/*<Route path="/vzdadmin/*" element={<AdminRoutes/>}/>*/}
+                    </Routes>
+                </BrowserRouter>
+            {/*</QueryClientProvider>*/}
+        </ApiUrlContext.Provider>
+    );
+}
 
-const Obavestenja = lazy(() => import('./vozdovacka-crkva/components/obavestenja/Obavestenja'));
-
-const wrappers: React.JSX.Element[] = [
-    <PretragaParohija/>,
-    <Galerija/>,
-    <Bogosluzenja/>,
-    <Kalendar/>,
-    /*<InstagramFeed/>,*/
-    <Obavestenja/>
-]
-roots.map((root: ReactDOM.Root, index: number) => root.render(
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
+root.render(
     <React.StrictMode>
-        {wrappers[index]}
+        <App/>
     </React.StrictMode>
-));
+);
