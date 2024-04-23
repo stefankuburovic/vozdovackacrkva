@@ -1,0 +1,94 @@
+/*--------------------------------------------------- Footer*/
+footer {
+  display: flex;
+  padding: 2rem 5rem;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer h2 {
+  color: rgb(var(--white));
+  font-size: 32px;
+}
+footer h3 {
+  color: rgb(var(--white));
+  font-size: 24px;
+}
+footer ul {
+  list-style: none;
+  font-size: 13px;
+  padding-left: 0;
+}
+footer hr:not(.react-divider) {
+  margin: 0;
+  width: 165px;
+  background: rgb(var(--white));
+}
+footer .boxes {
+  width: 50vw;
+}
+footer .boxes.lokacija {
+  display: flex;
+  padding-left: 5rem;
+  flex-direction: column;
+}
+footer .boxes.lokacija .lokacija-wrapper {
+  margin-top: 2rem;
+}
+footer .drustvene-mreze ul {
+  display: flex;
+}
+footer .drustvene-mreze img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+footer .drustvene-mreze a {
+  transition: opacity 0.3s;
+}
+footer .drustvene-mreze a:hover {
+  opacity: 0.7;
+}
+footer .footer-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 800px;
+}
+footer .footer-info .lokacija-inline {
+  margin-right: 2rem;
+}
+footer .footer-info .lokacija-inline p {
+  color: rgb(var(--gold));
+  margin-bottom: 0;
+}
+@media (max-width: 1440px) {
+  footer {
+    padding: 2rem 7rem;
+  }
+  footer ul {
+    font-size: 12px;
+  }
+  footer .footer-info {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  footer .boxes {
+    width: 100%;
+  }
+  footer .boxes.lokacija {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+}
+@media (max-width: 390px) {
+  footer .footer-info {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=Footer.css.map */

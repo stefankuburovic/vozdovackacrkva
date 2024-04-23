@@ -73,9 +73,9 @@ export default function Bogosluzenja() {
                             <Tab label="Зимско време" {...a11yProps(3)} disableRipple/>
                         </Tabs>
                         <CustomTabPanel index={0} value={value}>
-                            <h3>Четврта седмица Великог поста</h3>
+                            <h3>Шеста седмица Великог поста, 22.-28.04.2024.</h3>
                             <h4>
-                                <span>06.04.2024. - Среда</span>
+                                <span>24.04.2024. - Среда</span>
                             </h4>
                             <div>
                                 <div className="praznicni-dani">
@@ -87,7 +87,7 @@ export default function Bogosluzenja() {
                                 </div>
                             </div>
                             <h4>
-                                <span>09.04.2024. - Петак</span>
+                                <span>26.04.2024. - Петак</span>
                             </h4>
                             <div>
                                 <div className="praznicni-dani">
@@ -95,37 +95,34 @@ export default function Bogosluzenja() {
                                         <li>
                                             <p>08:00 - Литургија пређеосвећених Дарова</p>
                                         </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h4>
+                                <span>27.04.2024. - Лазарева Субота</span>
+                            </h4>
+                            <div>
+                                <div className="praznicni-dani">
+                                    <ul>
                                         <li>
-                                            <p>18:00 - Повечерје са статијом акатиста Благовестима</p>
+                                            <p>08:00 - Св. Литургија</p>
+                                        </li>
+                                        <li>
+                                            <p>16:00 - Вечерње, Врбица</p>
                                         </li>
                                     </ul>
                                 </div>
-                                <h4>
-                                    <span>10.04.2024. - Субота</span>
-                                </h4>
-                                <div>
-                                    <div className="praznicni-dani">
-                                        <ul>
-                                            <li>
-                                                <p>08:00 - Литургија Св. Јована Златоустог</p>
-                                            </li>
-                                            <li>
-                                                <p>18:00 - Света тајна јелеоосвећења, <strong>(понети брашно, уље и списак имена за здравље).</strong></p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <h4>
-                                    <span>11.04.2024. - Недеља</span>
-                                </h4>
-                                <div>
-                                    <div className="praznicni-dani">
-                                        <ul>
-                                            <li>
-                                                <p>09:00 - Литургија Св. Василија Великог</p>
-                                            </li>
-                                        </ul>
-                                    </div>
+                            </div>
+                            <h4>
+                                <span>28.04.2024. – Цвети</span>
+                            </h4>
+                            <div>
+                                <div className="praznicni-dani">
+                                    <ul>
+                                        <li>
+                                            <p>09:00 - Св. Литургија</p>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </CustomTabPanel>
