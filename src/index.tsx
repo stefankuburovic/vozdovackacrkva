@@ -13,6 +13,7 @@ import {BrowserRouter, Route, Routes, useRoutes} from "react-router-dom";
 // import ProtectedRoute from "./ProtectedRoute";
 // import admin_router from "./admin/router";
 import client_router from "./client/router";
+import {ParallaxProvider} from "react-scroll-parallax";
 // import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 // import Login from "./admin/content/pages/Login/Login";
 
@@ -51,15 +52,16 @@ function App() {
     // const queryClient = new QueryClient()
     return (
         <ApiUrlContext.Provider value={process.env.REACT_APP_API_URL}>
-
-            {/*<QueryClientProvider client={queryClient}>*/}
+            <ParallaxProvider>
+                {/*<QueryClientProvider client={queryClient}>*/}
                 <BrowserRouter>
                     <Routes>
                         <Route path="/*" element={<ClientRoutes/>}/>
                         {/*<Route path="/vzdadmin/*" element={<AdminRoutes/>}/>*/}
                     </Routes>
                 </BrowserRouter>
-            {/*</QueryClientProvider>*/}
+                {/*</QueryClientProvider>*/}
+            </ParallaxProvider>
         </ApiUrlContext.Provider>
     );
 }
