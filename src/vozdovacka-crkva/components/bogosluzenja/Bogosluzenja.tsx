@@ -67,60 +67,115 @@ export default function Bogosluzenja() {
                                 },
                             }}
                         >
-                            <Tab label="Текућа недеља" {...a11yProps(0)} disableRipple/>
+                            <Tab label="Страсна и Светла седмица" {...a11yProps(0)} disableRipple/>
                             <Tab label="Активности" {...a11yProps(1)} disableRipple/>
                             <Tab label="Летње време" {...a11yProps(2)} disableRipple/>
                             <Tab label="Зимско време" {...a11yProps(3)} disableRipple/>
                         </Tabs>
                         <CustomTabPanel index={0} value={value}>
-                            <h3>Шеста седмица Великог поста, 22.-28.04.2024.</h3>
+                            <h3>Богослужења Страсне и Светле Седмице</h3>
                             <h4>
-                                <span>24.04.2024. - Среда</span>
+                                <span>Понедељак, Уторак, Среда - 29.04, 30.04, 31.04</span>
                             </h4>
                             <div>
                                 <div className="praznicni-dani">
                                     <ul>
                                         <li>
-                                            <p>08:00 - Литургија пређеосвећених Дарова</p>
+                                            <p>08:00 - Литургија Пређеосвећених Дарова</p>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <h4>
-                                <span>26.04.2024. - Петак</span>
-                            </h4>
-                            <div>
-                                <div className="praznicni-dani">
-                                    <ul>
-                                        <li>
-                                            <p>08:00 - Литургија пређеосвећених Дарова</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4>
-                                <span>27.04.2024. - Лазарева Субота</span>
-                            </h4>
-                            <div>
-                                <div className="praznicni-dani">
-                                    <ul>
-                                        <li>
-                                            <p>08:00 - Св. Литургија</p>
-                                        </li>
-                                        <li>
-                                            <p>16:00 - Вечерње, Врбица</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4>
-                                <span>28.04.2024. – Цвети</span>
+                                <span>Велики Четвртак - 02.05.</span>
                             </h4>
                             <div>
                                 <div className="praznicni-dani">
                                     <ul>
                                         <li>
                                             <p>09:00 - Св. Литургија</p>
+                                        </li>
+                                        <li>
+                                            <p>18:00 - Јутрење Великог петка - 12 Страдалних Јеванђеља</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h4>
+                                <span>Велики петак - 03.05.</span>
+                            </h4>
+                            <div>
+                                <div className="praznicni-dani">
+                                    <ul>
+                                        <li>
+                                            <p>08:00 - Царски часови</p>
+                                        </li>
+                                        <li>
+                                            <p>16:00 - Вечерње, изношење плаштанице, у наставку Плач мајке Божије</p>
+                                        </li>
+                                        <li>
+                                            <p>20:00 - Јутрење Велике суботе са
+                                                Статијама</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h4>
+                                <span>Велика субота - 04.05.</span>
+                            </h4>
+                            <div>
+                                <div className="praznicni-dani">
+                                    <ul>
+                                        <li>
+                                            <p>09:00 - Св. Литургија</p>
+                                        </li>
+                                        <li>
+                                            <p>23:00 - Пасхално Јутрење</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h4>
+                                <span>Васкрс - 05.05.</span>
+                            </h4>
+                            <div>
+                                <div className="praznicni-dani">
+                                    <ul>
+                                        <li>
+                                            <p>00:00 - Прва Васкршња Литургија</p>
+                                        </li>
+                                        <li>
+                                            <p>09:00 - Друга Васкршња Литургија</p>
+                                        </li>
+                                        <li>
+                                            <p>18:00 - Пасхално Вечерње</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h4>
+                                <span>Васкршњи понедељак - Св. Георгије - 06.05</span>
+                            </h4>
+                            <div>
+                                <div className="praznicni-dani">
+                                    <ul>
+                                        <li>
+                                            <p>од 07:00 до 08:00 - Резање славксих колача</p>
+                                        </li>
+                                        <li>
+                                            <p>09:00 - Св. Литургија</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h4>
+                                <span>Васкршњи уторак - 07.05</span>
+                            </h4>
+                            <div>
+                                <div className="praznicni-dani">
+                                    <ul>
+                                        <li>
+                                            <p>08:00 - Св. Литургија</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -148,7 +203,7 @@ export default function Bogosluzenja() {
                             </div>
                         </CustomTabPanel>
                         <CustomTabPanel index={2} value={value}>
-                        <div>
+                            <div>
                                 <div>
                                     <h3>
                                         <span>Летње време (Април - Септембар)</span>
@@ -208,7 +263,7 @@ export default function Bogosluzenja() {
                                 </h5>
                                 <ul>
                                     <li>
-                                    <p>08:00 - Јутрење</p>
+                                        <p>08:00 - Јутрење</p>
                                     </li>
                                     <li>
                                         <p>17:00 - Вечерња</p>
