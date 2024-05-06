@@ -1,3 +1,24 @@
-
+.riznica-hero {
+  height: 800px;
+  margin-top: -155px;
+  overflow: hidden;
+  position: relative;
+}
+.riznica-hero #hero-background {
+  margin: 0;
+  padding: 0;
+}
+.riznica-hero #hero-background div {
+  width: 100vw;
+  height: 800px;
+}
+.riznica-hero #headline {
+  position: absolute;
+}
+.riznica-hero #headline h1 {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 1rem 0.5rem;
+  color: rgb(136, 0, 0);
+}
 
 /*# sourceMappingURL=Riznica.css.map */

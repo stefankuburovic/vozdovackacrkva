@@ -28,23 +28,17 @@ export default function Riznica() {
 
     return (
         <>
-            <section style={{height: '800px', marginTop: '-155px', overflow: 'hidden', position: 'relative'}}>
+            <section className="riznica-hero">
                 <Parallax speed={-60}>
-                    <section id="hero-riznica" style={{margin: 0, padding: 0}}>
-                        <div style={{
-                            background: `url(assets/images/riznica/cover.jpg) center/cover`,
-                            width: '100vw',
-                            height: '800px'
+                    <section id="hero-background" style={{margin: 0, padding: 0}}>
+                        <div className="paralax-image" style={{
+                            background: `url(assets/images/riznica/cover.jpg) center/cover`
                         }}>
                         </div>
                     </section>
                 </Parallax>
-                <div id="headline" style={{position: 'absolute'}}>
-                    <h1 style={{
-                        background: 'rgba(255, 255, 255, 0.6)',
-                        padding: '1rem 0.5rem',
-                        color: 'rgb(136,0,0)'
-                    }}>Храм Св. цара Константина и царице Јелене - Ризница</h1>
+                <div id="headline">
+                    <h1>Храм Св. цара Константина и царице Јелене - Ризница</h1>
                 </div>
             </section>
             <section id="o-hramu">
