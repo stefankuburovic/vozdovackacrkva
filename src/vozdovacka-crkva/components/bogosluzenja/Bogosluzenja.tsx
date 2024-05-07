@@ -67,115 +67,38 @@ export default function Bogosluzenja() {
                                 },
                             }}
                         >
-                            <Tab label="Страсна и Светла седмица" {...a11yProps(0)} disableRipple/>
+                            <Tab label="Текућа недеља" {...a11yProps(0)} disableRipple/>
                             <Tab label="Активности" {...a11yProps(1)} disableRipple/>
                             <Tab label="Летње време" {...a11yProps(2)} disableRipple/>
                             <Tab label="Зимско време" {...a11yProps(3)} disableRipple/>
                         </Tabs>
                         <CustomTabPanel index={0} value={value}>
-                            <h3>Богослужења Страсне и Светле Седмице</h3>
+                            <h3>
+                                <span>СВ. Василије Острошки Чудотворац</span>
+                            </h3>
                             <h4>
-                                <span>Понедељак, Уторак, Среда - 29.04, 30.04, 31.04</span>
+                                <span>Субота - 11.05.</span>
                             </h4>
                             <div>
                                 <div className="praznicni-dani">
                                     <ul>
                                         <li>
-                                            <p>08:00 - Литургија Пређеосвећених Дарова</p>
+                                            <p>18:00 - Празнично Бденије</p>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <h4>
-                                <span>Велики Четвртак - 02.05.</span>
+                                <span>Недеља - 12.05.</span>
                             </h4>
                             <div>
                                 <div className="praznicni-dani">
                                     <ul>
                                         <li>
-                                            <p>09:00 - Св. Литургија</p>
+                                            <p>09:00 - Св. Литургија - у наставку Св. Тајна Јелеосвећења</p>
                                         </li>
                                         <li>
-                                            <p>18:00 - Јутрење Великог петка - 12 Страдалних Јеванђеља</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4>
-                                <span>Велики петак - 03.05.</span>
-                            </h4>
-                            <div>
-                                <div className="praznicni-dani">
-                                    <ul>
-                                        <li>
-                                            <p>08:00 - Царски часови</p>
-                                        </li>
-                                        <li>
-                                            <p>16:00 - Вечерње, изношење плаштанице, у наставку Плач мајке Божије</p>
-                                        </li>
-                                        <li>
-                                            <p>20:00 - Јутрење Велике суботе са
-                                                Статијама</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4>
-                                <span>Велика субота - 04.05.</span>
-                            </h4>
-                            <div>
-                                <div className="praznicni-dani">
-                                    <ul>
-                                        <li>
-                                            <p>09:00 - Св. Литургија</p>
-                                        </li>
-                                        <li>
-                                            <p>23:00 - Пасхално Јутрење</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4>
-                                <span>Васкрс - 05.05.</span>
-                            </h4>
-                            <div>
-                                <div className="praznicni-dani">
-                                    <ul>
-                                        <li>
-                                            <p>00:00 - Прва Васкршња Литургија</p>
-                                        </li>
-                                        <li>
-                                            <p>09:00 - Друга Васкршња Литургија</p>
-                                        </li>
-                                        <li>
-                                            <p>18:00 - Пасхално Вечерње</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4>
-                                <span>Васкршњи понедељак - Св. Георгије - 06.05</span>
-                            </h4>
-                            <div>
-                                <div className="praznicni-dani">
-                                    <ul>
-                                        <li>
-                                            <p>од 07:00 до 08:00 - Резање славксих колача</p>
-                                        </li>
-                                        <li>
-                                            <p>09:00 - Св. Литургија</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4>
-                                <span>Васкршњи уторак - 07.05</span>
-                            </h4>
-                            <div>
-                                <div className="praznicni-dani">
-                                    <ul>
-                                        <li>
-                                            <p>08:00 - Св. Литургија</p>
+                                            <p>18:00 - Акатист Св. Василију Острошком</p>
                                         </li>
                                     </ul>
                                 </div>
