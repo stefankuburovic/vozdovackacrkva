@@ -4,6 +4,8 @@ import { WidthProvider, Responsive } from 'react-grid-layout';
 
 import './Riznica.scss';
 import {Parallax} from "react-scroll-parallax";
+import {Canvas} from "react-three-fiber";
+import {Model} from "../../components/riznica/model/Scene";
 // import Panorama from "@client/components/riznica/Panorama";
 
 // Assuming you have an array of image names in the directory
@@ -40,6 +42,11 @@ export default function Riznica() {
                 <div id="headline">
                     <h1>Ризница храма Св. цара Константина и царице Јелене</h1>
                 </div>
+            </section>
+            <section className="3d-model" style={{height: "1500px"}}>
+                <Canvas>
+                    <Model />
+                </Canvas>
             </section>
             <section id="o-hramu">
                 <ResponsiveGridLayout className="layout" layouts={{lg: layout}} breakpoints={{lg: 1200}} cols={{lg: 12}}
