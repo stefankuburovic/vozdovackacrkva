@@ -1,0 +1,383 @@
+<osm version="0.6" generator="CGImap 0.9.2 (596759 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+    <way id="400676961" visible="true" version="3" changeset="146511052" timestamp="2024-01-21T12:37:07Z" user="TXBG" uid="5569366">
+        <nd ref="4032130986"/>
+        <nd ref="4032130987"/>
+        <nd ref="4032130988"/>
+        <nd ref="4032132189"/>
+        <nd ref="4032130986"/>
+        <tag k="addr:housenumber" v="12a"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="house"/>
+        <tag k="ref:RS:kucni_broj" v="3233465"/>
+    </way>
+    <way id="394906135" visible="true" version="2" changeset="137522509" timestamp="2023-06-19T14:27:28Z" user="RGZ AR Import" uid="18850960">
+        <nd ref="3977972384"/>
+        <nd ref="3977972385"/>
+        <nd ref="3977972386"/>
+        <nd ref="3977972387"/>
+        <nd ref="3977972388"/>
+        <nd ref="3977972389"/>
+        <nd ref="3977972390"/>
+        <nd ref="3977972391"/>
+        <nd ref="3977972384"/>
+        <tag k="addr:city" v="Београд"/>
+        <tag k="addr:housenumber" v="2"/>
+        <tag k="addr:postcode" v="11000"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="yes"/>
+        <tag k="ref:RS:kucni_broj" v="3221741"/>
+    </way>
+    <way id="400679783" visible="true" version="2" changeset="146511052" timestamp="2024-01-21T12:37:07Z" user="TXBG" uid="5569366">
+        <nd ref="4032155234"/>
+        <nd ref="4032155235"/>
+        <nd ref="4032155236"/>
+        <nd ref="4032155237"/>
+        <nd ref="4032155234"/>
+        <tag k="addr:housenumber" v="50"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="house"/>
+        <tag k="ref:RS:kucni_broj" v="3222065"/>
+    </way>
+    <way id="1241627102" visible="true" version="1" changeset="146511052" timestamp="2024-01-21T12:37:04Z" user="TXBG" uid="5569366">
+        <nd ref="11536714162"/>
+        <nd ref="11536714161"/>
+        <nd ref="11536714160"/>
+        <nd ref="11536714159"/>
+        <nd ref="11536714162"/>
+        <tag k="addr:housenumber" v="48v"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="yes"/>
+        <tag k="ref:RS:kucni_broj" v="7304051"/>
+    </way>
+    <way id="1266640286" visible="true" version="1" changeset="149199371" timestamp="2024-03-26T23:44:20Z" user="anshanin" uid="20490915">
+        <nd ref="11764939844"/>
+        <nd ref="11764939845"/>
+        <nd ref="3957889074"/>
+        <nd ref="11764939846"/>
+        <nd ref="11764939844"/>
+        <tag k="addr:housenumber" v="37a"/>
+        <tag k="addr:street" v="Јове Илића"/>
+        <tag k="building" v="yes"/>
+        <tag k="ref:RS:kucni_broj" v="3222057"/>
+    </way>
+    <way id="916917546" visible="true" version="3" changeset="149199390" timestamp="2024-03-26T23:45:20Z" user="anshanin" uid="20490915">
+        <nd ref="8516187795"/>
+        <nd ref="8516187796"/>
+        <nd ref="8516187797"/>
+        <nd ref="8516187798"/>
+        <nd ref="8516187795"/>
+        <tag k="addr:housenumber" v="49"/>
+        <tag k="addr:street" v="Јове Илића"/>
+        <tag k="building" v="apartments"/>
+        <tag k="ref:RS:kucni_broj" v="3226921"/>
+    </way>
+    <way id="812881201" visible="true" version="2" changeset="146511052" timestamp="2024-01-21T12:37:08Z" user="TXBG" uid="5569366">
+        <nd ref="7592701624"/>
+        <nd ref="7592701625"/>
+        <nd ref="7592701626"/>
+        <nd ref="7592701627"/>
+        <nd ref="7592701624"/>
+        <tag k="addr:housenumber" v="94g"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="house"/>
+        <tag k="ref:RS:kucni_broj" v="3233890"/>
+    </way>
+    <way id="812881202" visible="true" version="2" changeset="146511052" timestamp="2024-01-21T12:37:08Z" user="TXBG" uid="5569366">
+        <nd ref="7592701628"/>
+        <nd ref="11536719033"/>
+        <nd ref="7592701629"/>
+        <nd ref="7592701630"/>
+        <nd ref="7592701631"/>
+        <nd ref="7592701628"/>
+        <tag k="addr:housenumber" v="94"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="house"/>
+        <tag k="ref:RS:kucni_broj" v="3223927"/>
+    </way>
+    <way id="1241627111" visible="true" version="1" changeset="146511052" timestamp="2024-01-21T12:37:04Z" user="TXBG" uid="5569366">
+        <nd ref="11536719016"/>
+        <nd ref="11536719015"/>
+        <nd ref="11536719014"/>
+        <nd ref="11536719013"/>
+        <nd ref="11536719016"/>
+        <tag k="addr:housenumber" v="94d"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="yes"/>
+        <tag k="ref:RS:kucni_broj" v="3233891"/>
+    </way>
+    <way id="1241627112" visible="true" version="1" changeset="146511052" timestamp="2024-01-21T12:37:04Z" user="TXBG" uid="5569366">
+        <nd ref="11536719020"/>
+        <nd ref="11536719017"/>
+        <nd ref="11536719018"/>
+        <nd ref="11536719019"/>
+        <nd ref="11536719020"/>
+        <tag k="addr:housenumber" v="94b"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="yes"/>
+        <tag k="ref:RS:kucni_broj" v="3233746"/>
+    </way>
+    <way id="1241627110" visible="true" version="1" changeset="146511052" timestamp="2024-01-21T12:37:04Z" user="TXBG" uid="5569366">
+        <nd ref="11536719012"/>
+        <nd ref="11536719009"/>
+        <nd ref="11536719010"/>
+        <nd ref="11536719011"/>
+        <nd ref="11536719012"/>
+        <tag k="addr:housenumber" v="94v"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="yes"/>
+        <tag k="ref:RS:kucni_broj" v="3240259"/>
+    </way>
+    <way id="1241627107" visible="true" version="1" changeset="146511052" timestamp="2024-01-21T12:37:04Z" user="TXBG" uid="5569366">
+        <nd ref="11536719000"/>
+        <nd ref="11536718997"/>
+        <nd ref="11536718998"/>
+        <nd ref="11536718999"/>
+        <nd ref="11536719000"/>
+        <tag k="addr:housenumber" v="94ž"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="yes"/>
+        <tag k="ref:RS:kucni_broj" v="3233889"/>
+    </way>
+    <node id="11416913715" visible="true" version="2" changeset="149412287" timestamp="2024-04-01T00:39:16Z" user="anshanin" uid="20490915" lat="44.7791748" lon="20.4725777">
+        <tag k="addr:city" v="Belgrade"/>
+        <tag k="addr:housenumber" v="91"/>
+        <tag k="addr:postcode" v="11000"/>
+        <tag k="addr:street" v="Јове Илића"/>
+        <tag k="ref:RS:kucni_broj" v="3218004"/>
+    </node>
+    <way id="392592050" visible="true" version="3" changeset="150800705" timestamp="2024-05-02T16:01:03Z" user="RGZ AR Import" uid="18850960">
+        <nd ref="3958033701"/>
+        <nd ref="3958033702"/>
+        <nd ref="3958087938"/>
+        <nd ref="3958033703"/>
+        <nd ref="3958033704"/>
+        <nd ref="3958033705"/>
+        <nd ref="3958033706"/>
+        <nd ref="3958033701"/>
+        <tag k="addr:housenumber" v="158"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="apartments"/>
+        <tag k="ref:RS:kucni_broj" v="3238332"/>
+    </way>
+    <way id="392599561" visible="true" version="5" changeset="146511052" timestamp="2024-01-21T12:37:07Z" user="TXBG" uid="5569366">
+        <nd ref="11536719189"/>
+        <nd ref="3958088022"/>
+        <nd ref="3958088015"/>
+        <nd ref="3958088016"/>
+        <nd ref="3958088017"/>
+        <nd ref="11536719190"/>
+        <nd ref="11536719189"/>
+        <tag k="addr:housenumber" v="198a"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="apartments"/>
+        <tag k="ref:RS:kucni_broj" v="3227189"/>
+    </way>
+    <way id="1241627141" visible="true" version="1" changeset="146511052" timestamp="2024-01-21T12:37:04Z" user="TXBG" uid="5569366">
+        <nd ref="11536719188"/>
+        <nd ref="11536719187"/>
+        <nd ref="11536719186"/>
+        <nd ref="11536719185"/>
+        <nd ref="11536719188"/>
+        <tag k="addr:housenumber" v="200a"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="yes"/>
+        <tag k="ref:RS:kucni_broj" v="3217187"/>
+    </way>
+    <way id="1241627142" visible="true" version="1" changeset="146511052" timestamp="2024-01-21T12:37:04Z" user="TXBG" uid="5569366">
+        <nd ref="11536719190"/>
+        <nd ref="3958088018"/>
+        <nd ref="3958088019"/>
+        <nd ref="3958088020"/>
+        <nd ref="3958088021"/>
+        <nd ref="11536719189"/>
+        <nd ref="11536719190"/>
+        <tag k="addr:housenumber" v="198"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="apartments"/>
+        <tag k="ref:RS:kucni_broj" v="3227188"/>
+    </way>
+    <way id="1266642223" visible="true" version="1" changeset="149199537" timestamp="2024-03-26T23:53:40Z" user="anshanin" uid="20490915">
+        <nd ref="11764837555"/>
+        <nd ref="11764837556"/>
+        <nd ref="11764837557"/>
+        <nd ref="11764837558"/>
+        <nd ref="11764837555"/>
+        <tag k="addr:housenumber" v="187"/>
+        <tag k="addr:street" v="Јове Илића"/>
+        <tag k="building" v="yes"/>
+        <tag k="ref:RS:kucni_broj" v="3235815"/>
+    </way>
+    <way id="401996372" visible="true" version="4" changeset="149199537" timestamp="2024-03-26T23:53:40Z" user="anshanin" uid="20490915">
+        <nd ref="4044184060"/>
+        <nd ref="4044184061"/>
+        <nd ref="4044184062"/>
+        <nd ref="4044184063"/>
+        <nd ref="4044184060"/>
+        <tag k="addr:housenumber" v="195a"/>
+        <tag k="addr:street" v="Јове Илића"/>
+        <tag k="building" v="house"/>
+        <tag k="building:levels" v="1"/>
+        <tag k="ref:RS:kucni_broj" v="3227892"/>
+        <tag k="roof:levels" v="1"/>
+    </way>
+    <way id="400942499" visible="true" version="2" changeset="146511052" timestamp="2024-01-21T12:37:07Z" user="TXBG" uid="5569366">
+        <nd ref="4034334489"/>
+        <nd ref="4034334490"/>
+        <nd ref="4034334491"/>
+        <nd ref="4034334492"/>
+        <nd ref="4034334489"/>
+        <tag k="addr:housenumber" v="183"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="house"/>
+        <tag k="ref:RS:kucni_broj" v="3219094"/>
+    </way>
+    <node id="11536696458" visible="true" version="1" changeset="146511052" timestamp="2024-01-21T12:37:04Z" user="TXBG" uid="5569366" lat="44.7750960" lon="20.4757560">
+        <tag k="addr:housenumber" v="177"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="ref:RS:kucni_broj" v="3219090"/>
+    </node>
+    <way id="1241627137" visible="true" version="1" changeset="146511052" timestamp="2024-01-21T12:37:04Z" user="TXBG" uid="5569366">
+        <nd ref="11536719171"/>
+        <nd ref="11536667268"/>
+        <nd ref="4034332241"/>
+        <nd ref="11536719170"/>
+        <nd ref="11536719171"/>
+        <tag k="addr:housenumber" v="163a"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="yes"/>
+        <tag k="ref:RS:kucni_broj" v="3218886"/>
+    </way>
+    <node id="11536696459" visible="true" version="1" changeset="146511052" timestamp="2024-01-21T12:37:04Z" user="TXBG" uid="5569366" lat="44.7767840" lon="20.4749330">
+        <tag k="addr:housenumber" v="151"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="ref:RS:kucni_broj" v="3218881"/>
+    </node>
+    <way id="1241627119" visible="true" version="1" changeset="146511052" timestamp="2024-01-21T12:37:04Z" user="TXBG" uid="5569366">
+        <nd ref="11536719045"/>
+        <nd ref="11536719044"/>
+        <nd ref="11536719043"/>
+        <nd ref="11536719042"/>
+        <nd ref="11536719045"/>
+        <tag k="addr:housenumber" v="28a"/>
+        <tag k="addr:street" v="Гостиварска"/>
+        <tag k="building" v="house"/>
+    </way>
+    <node id="11536696436" visible="true" version="1" changeset="146511052" timestamp="2024-01-21T12:37:04Z" user="TXBG" uid="5569366" lat="44.7784160" lon="20.4744680">
+        <tag k="addr:housenumber" v="129a"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="ref:RS:kucni_broj" v="3242032"/>
+    </node>
+    <way id="400904434" visible="true" version="5" changeset="146511052" timestamp="2024-01-21T12:37:07Z" user="TXBG" uid="5569366">
+        <nd ref="4034009920"/>
+        <nd ref="4034009923"/>
+        <nd ref="4034009924"/>
+        <nd ref="11536719082"/>
+        <nd ref="4034009920"/>
+        <tag k="addr:housenumber" v="95"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="apartments"/>
+        <tag k="building:levels" v="2"/>
+        <tag k="ref:RS:kucni_broj" v="3218105"/>
+    </way>
+    <way id="1213749378" visible="true" version="3" changeset="150800680" timestamp="2024-05-02T16:00:33Z" user="RGZ AR Import" uid="18850960">
+        <nd ref="11245010174"/>
+        <nd ref="11245010175"/>
+        <nd ref="11536717534"/>
+        <nd ref="11536717532"/>
+        <nd ref="11536717531"/>
+        <nd ref="11536717533"/>
+        <nd ref="11245010176"/>
+        <nd ref="11536717535"/>
+        <nd ref="11536717536"/>
+        <nd ref="11536717530"/>
+        <nd ref="11536717529"/>
+        <nd ref="11245010178"/>
+        <nd ref="11245010179"/>
+        <nd ref="11245010174"/>
+        <tag k="addr:housenumber" v="93"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="apartments"/>
+        <tag k="ref:RS:kucni_broj" v="6880050"/>
+    </way>
+    <way id="1213749379" visible="true" version="3" changeset="150911221" timestamp="2024-05-05T09:28:39Z" user="RGZ AR Import" uid="18850960">
+        <nd ref="11245010181"/>
+        <nd ref="11245010182"/>
+        <nd ref="11245010183"/>
+        <nd ref="11536717528"/>
+        <nd ref="11536717527"/>
+        <nd ref="11536717526"/>
+        <nd ref="11245010181"/>
+        <tag k="addr:housenumber" v="91"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="house"/>
+        <tag k="ref:RS:kucni_broj" v="7350659"/>
+    </way>
+    <way id="402037976" visible="true" version="4" changeset="150800721" timestamp="2024-05-02T16:01:34Z" user="RGZ AR Import" uid="18850960">
+        <nd ref="4044670286"/>
+        <nd ref="4044670287"/>
+        <nd ref="4044670288"/>
+        <nd ref="4044671189"/>
+        <nd ref="4044671190"/>
+        <nd ref="11536719081"/>
+        <nd ref="11536719080"/>
+        <nd ref="11536719079"/>
+        <nd ref="4044671196"/>
+        <nd ref="4044670286"/>
+        <tag k="addr:housenumber" v="85"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="apartments"/>
+        <tag k="building:levels" v="3"/>
+        <tag k="ref:RS:kucni_broj" v="3218363"/>
+    </way>
+    <way id="1241627125" visible="true" version="1" changeset="146511052" timestamp="2024-01-21T12:37:04Z" user="TXBG" uid="5569366">
+        <nd ref="11536717540"/>
+        <nd ref="3957150800"/>
+        <nd ref="11536717539"/>
+        <nd ref="11536717538"/>
+        <nd ref="4044671197"/>
+        <nd ref="11536717537"/>
+        <nd ref="11536717540"/>
+        <tag k="addr:housenumber" v="83a"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="yes"/>
+        <tag k="ref:RS:kucni_broj" v="3239022"/>
+    </way>
+    <way id="402037978" visible="true" version="2" changeset="146511052" timestamp="2024-01-21T12:37:07Z" user="TXBG" uid="5569366">
+        <nd ref="4044671199"/>
+        <nd ref="3957150799"/>
+        <nd ref="4044671200"/>
+        <nd ref="4044671201"/>
+        <nd ref="4044671202"/>
+        <nd ref="4044671203"/>
+        <nd ref="4044671204"/>
+        <nd ref="4044671199"/>
+        <tag k="addr:housenumber" v="83b"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="house"/>
+        <tag k="ref:RS:kucni_broj" v="3236629"/>
+    </way>
+    <way id="400383626" visible="true" version="3" changeset="146511052" timestamp="2024-01-21T12:37:07Z" user="TXBG" uid="5569366">
+        <nd ref="4029497224"/>
+        <nd ref="4029497225"/>
+        <nd ref="4029497226"/>
+        <nd ref="4029497227"/>
+        <nd ref="4029497224"/>
+        <tag k="addr:housenumber" v="225a"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="house"/>
+        <tag k="ref:RS:kucni_broj" v="3227466"/>
+    </way>
+    <way id="400383625" visible="true" version="3" changeset="137522509" timestamp="2023-06-19T14:27:28Z" user="RGZ AR Import" uid="18850960">
+        <nd ref="4029497218"/>
+        <nd ref="4029497219"/>
+        <nd ref="4029497220"/>
+        <nd ref="4029497221"/>
+        <nd ref="4029497222"/>
+        <nd ref="4029497223"/>
+        <nd ref="4029497218"/>
+        <tag k="addr:housenumber" v="227"/>
+        <tag k="addr:street" v="Војводе Степе"/>
+        <tag k="building" v="house"/>
+        <tag k="ref:RS:kucni_broj" v="3219439"/>
+    </way>
+</osm>
