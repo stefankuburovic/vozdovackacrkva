@@ -13,7 +13,7 @@ function Map() {
 
     return (
         <div style={{width: "90%", overflow: "hidden", margin: "25px auto 0 auto"}}>
-            <Box style={{marginBottom: "2rem"}}>
+            <Box component="div" style={{marginBottom: "2rem"}}>
                 <h4>Мапа парохије</h4>
                 <p>Претражите адресу или кликните на зграду да пронађете свештеника који је задужен за вашу адресу</p>
             </Box>

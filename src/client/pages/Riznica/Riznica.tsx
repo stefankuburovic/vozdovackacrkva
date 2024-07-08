@@ -1,32 +1,15 @@
 import * as React from 'react';
-import { useEffect, useState } from 'react';
-import { WidthProvider, Responsive } from 'react-grid-layout';
-
 import './Riznica.scss';
 import {Parallax} from "react-scroll-parallax";
-import {Canvas} from "react-three-fiber";
-import {Model} from "../../components/riznica/model/Scene";
-// import Panorama from "@client/components/riznica/Panorama";
+import ModelCrkve from "../../components/riznica/ModelCrkve/ModelCrkve";
+import {Box, Divider} from "@mui/material";
+import {ipodjakon_galerija, riznica_slides} from "client/const/galerija/const";
+import Galerija from "client/components/layout/galerija/Galerija";
+import Panorama from "client/components/riznica/Panorama/Panorama";
 
 // Assuming you have an array of image names in the directory
-const imageNames = ['IMG_0073.jpg', 'IMG_0075.jpg', 'IMG_0082.jpg', "BOGORODICA.jpg", "BOGORODICAMLEKOPITATELJICA.jpg"];
-const ResponsiveGridLayout = WidthProvider(Responsive);
 
 export default function Riznica() {
-    const [images, setImages] = useState<string[]>([]);
-
-    useEffect(() => {
-        const loadedImages = imageNames.map(name => `assets/images/riznica/${name}`);
-        setImages(loadedImages);
-    }, []);
-
-    const layout = images.map((_, index) => ({
-        i: index.toString(),
-        x: index % 3 * 4, // Place items in 3 columns
-        y: Math.floor(index / 3) * 4, // Place items in rows, each item spans 4 rows
-        w: 4, // Each item spans 4 columns
-        h: 6, // Each item spans 4 rows
-    }));
 
     return (
         <>
@@ -43,18 +26,142 @@ export default function Riznica() {
                     <h1>Ризница храма Св. цара Константина и царице Јелене</h1>
                 </div>
             </section>
-            <section className="3d-model" style={{height: "1500px"}}>
-                <Canvas>
-                    <Model />
-                </Canvas>
+            <section className="three-d-model" style={{height: "800px"}}>
+                <h2>Архитектура и историја цркве</h2>
+                <Divider/>
+                <Box component="div" sx={{display: 'flex', height: '100%'}}>
+                    <div className="grid-item">
+                        <ModelCrkve/>
+                    </div>
+                    <div className="grid-item">
+                        <p>
+                            Камено здање Вождовачке цркве неупадљиве величине и архитектуре, какво се често виђа код
+                            нас, сакривено је на малој парцели окруженој високим зградама. Осим оних којима је то
+                            парохијска црква, осталим Београђанима она углавном служи као оријентир у дугачким улицама
+                            Војводе Степе и Јове Илића.
+                        </p>
+                        <p>
+                            О њој би се могло писати као о просечној српској цркви ХХ века, само да није једног
+                            изузетног детаља, који је чини једном од најзанимљивијих богомоља Србије, чуварем ремек-дела
+                            уметности претходног столећа.
+                        </p>
+                        <p>
+                            Данашње црквено здање друго је на овом месту. Прва црква изграђена је 1911. године, на
+                            тадашњој далекој периферији Београда, тако забаченој да још наредне две деценије неће
+                            доспети у планове града. Сиротиња која је ту живела – фијакеристи, ковачи, млекаџије,
+                            радници и ситне занатлије - свакако себи не би могла приуштити грађење цркве, па се на тај
+                            богоугодан потез одлучио трговац Јова Јовановић, који је цркви поклонио своје земљиште. Када
+                            се, поведена његовим примером, овоме прикључила и Београдска општина са својим плацем,
+                            добијено је довољно простора за храм и малу порту око њега, па се почело са зидањем.
+                        </p>
+                        <p>
+                            Парохијани су издвајали од својих скромних примања, а додавали су они који су имали и више
+                            него довољно, попут индустријалаца Ђорђа Вајферта и Јована Вшетечке, док је велико звоно за
+                            још увек дрвену звонару купио извесни Пјетро Казагранде.
+                            Када је завршено, било је то једнобродно здање сведених линија, са непропорционално малом
+                            куполом права сеоска црквица, у складу са својим окружењем.
+                        </p>
+                        <p>Четири године по освећењу, црква је у рату девастирана, а њен скромни мобилијар опљачкан. У
+                            послератном Београду, у којем је ваљало поправити много тога, обнова Вождовачке цркве дошла
+                            је на ред тек 1926. године. Мала црква је после живела свој скромни живот све до 1970. Након
+                            постепеног отопљавања односа цркве и државног руководства, приступа се обнови храмова, али и
+                            изградњи нових тамо где их није било, или где су у Другом светском рату порушени.</p>
+                        <p>Овај покрет водио је патријарх српски Герман, који је покренуо иницијативу да се и
+                            Вождовачкој цркви, чија се парохија знатно увећала, да нови изглед. Током лета 1970. године
+                            стара црква је корак по корак рушена, а нова је, према плановима архитекте Драгомира Тадића,
+                            расла из старе. Иако на потпуно истој локацији, нови храм је знатно већи од свог
+                            претходника, продужен за читавих седам метара ка западу. Нова грађевина је типична за радове
+                            архитекте Тадића, који је сличне цркве подигао широм Југославије: ослањајући се на искуства
+                            међуратних градитеља, Тадић се служио модернизованим речником средњовековних мајстора, са
+                            доста лукова, бифора и обаве зном розетом над улазом. Главни украс цркве је звоник над
+                            улазом, са завршетком у облику кубета. Све радове надгледао је и саветом помагао патријарх
+                            лично.</p>
+                        <p>По завршетку грађевинских радова прешло се на декорацију унутрашњости храма, па је под
+                            поплочан студеничким мермером, а иконостас, рад охридских дрворезаца, осликао је академски
+                            сликар Милосав Младеновић, који се водио средњовеков- ним узорима. Најлепши утисак оставља
+                            мозаик у лунети над улазним вратима: по одабиру патријарха Германа, узет је предложак из
+                            Цркве Светог Ахилија у Ариљу, па је по нацртима сликара Живка Стоисављевића ово вредно
+                            уметничко дело израдио професор Антонио Орсини из Венеције.</p>
+                        <p>Остало је још да се црква живопише. На ово се чекало до 1987. године, када је патријарх
+                            Герман за то благословио Милића Станковића, познатијег као Милић од Мачве. Овај академски
+                            сликар се до тог времена већ прочуо својим надреалистичким призорима, који су се храбро, и
+                            за то доба врло неуобичајено, бавили темама из српске прошлости на врло директан начин.
+                            Неконвенционалан у свему што је чинио, Милић од Мачве одлучио је да и у православни живопис
+                            овог храма унесе новине тако што ће му дати свој особени печат. Тако на Тајној вечери лете
+                            балвани, тај неизоставни мотив његових слика, а ликови живих вождовачких парохијана
+                            подарени</p>
+                    </div>
+                </Box>
             </section>
-            <section id="o-hramu">
-                <ResponsiveGridLayout className="layout" layouts={{lg: layout}} breakpoints={{lg: 1200}} cols={{lg: 12}}
-                                      isDraggable={false}>
-                    {images.map((src, index) => (
-                        <div key={index} style={{background: `url(${src}) center/cover`}}/>
-                    ))}
-                </ResponsiveGridLayout>
+            <section id="o-hramu" className="riznica-galerija">
+                <section id="galerija-inovacija">
+                    <ul className="results">
+                        <li className="result">
+                            <a href="#"><img
+                                src="/assets/images/riznica_webp/celivajuca_ikona.webp"
+                                width="500" height="500" alt=""/></a>
+                        </li>
+                        <li className="result">
+                            <a href="#"><img
+                                src="/assets/images/riznica_webp/IMG_0082.webp"
+                                width="500" height="500" alt=""/></a>
+                        </li>
+                        <li className="result">
+                            <a href="#"><img
+                                src="/assets/images/riznica_webp/ISHS.webp"
+                                width="500" height="500" alt=""/></a>
+                        </li>
+                        <li className="result">
+                            <a href="#"><img
+                                src="/assets/images/riznica_webp/Омофор_СВЕТОГ_ВАСИЛИЈА.webp"
+                                width="500" height="500" alt=""/></a>
+                        </li>
+                        <li className="result">
+                            <a href="#"><img
+                                src="/assets/images/riznica_webp/ЧЕСНИЦА_ЧАСНОГ_КРСТА.webp"
+                                width="500" height="500" alt=""/></a>
+                        </li>
+                        <li className="result">
+                            <a href="#"><img
+                                src="/assets/images/riznica_webp/БОГОРОДИЦА.webp"
+                                width="500" height="500" alt=""/></a>
+                        </li>
+                        <li className="result">
+                            <a href="#"><img
+                                src="/assets/images/riznica_webp/БОГОРОДИЦА_КУРСКАЈА.webp"
+                                width="500" height="500" alt=""/></a>
+                        </li>
+                        <li className="result">
+                            <a href="#"><img
+                                src="/assets/images/riznica_webp/БОГОРОДИЦА_МЛЕКОПИТАТЕЛЈИЦА.webp"
+                                width="500" height="500" alt=""/></a>
+                        </li>
+                        <li className="result">
+                            <a href="#"><img
+                                src="/assets/images/riznica_webp/СВЕТИ_ВАСИЛИЈЕ_ОСТРОШКИ.webp"
+                                width="500" height="500" alt=""/></a>
+                        </li>
+                        <li className="result">
+                            <a href="#"><img
+                                src="/assets/images/riznica_webp/ОМОФОР.webp"
+                                width="500" height="500" alt=""/></a>
+                        </li>
+                        <li className="result">
+                            <a href="#"><img
+                                src="/assets/images/riznica_webp/ВОЖДОВАЧКА_ЦРКВА_ЕНТЕРИЈЕР.webp"
+                                width="500" height="500" alt=""/></a>
+                        </li>
+                        <li className="result">
+                            <a href="#"><img
+                                src="/assets/images/riznica_webp/enterijer_sa_proskinitarom.webp"
+                                width="500" height="500" alt=""/></a>
+                        </li>
+                    </ul>
+                </section>
+                {/*<Galerija slides={riznica_slides} heading="Ризница"/>*/}
+                <Box component="div" sx={{width: "50%", height: 500}}>
+                    <Galerija slides={ipodjakon_galerija}/>
+                </Box>
                 {/*<div className="container">*/}
                 {/*    <h2>О Храму</h2>*/}
                 {/*    <hr/>*/}
@@ -67,9 +174,9 @@ export default function Riznica() {
                 {/*    </p>*/}
                 {/*</div>*/}
             </section>
-            {/*<div>*/}
-            {/*    <Panorama />*/}
-            {/*</div>*/}
+            <div>
+                <Panorama/>
+            </div>
             {/*<section id="riznica">*/}
             {/*    <ResponsiveGridLayout className="layout" layouts={{lg: layout}} breakpoints={{lg: 1200}} cols={{lg: 12}}*/}
             {/*                          isDraggable={false}>*/}

@@ -207,7 +207,7 @@ function PretragaParohija() {
                             }
                             {
                                 izabraneParohije && izabraneParohije.length === 1 &&
-                                <Box sx={{marginTop: "2rem"}} className="ostale-parohije-wrapper">
+                                <Box component="div" sx={{marginTop: "2rem"}} className="ostale-parohije-wrapper">
                                     <p><strong>Остале адресе на којима је
                                         свештеник {izabraneParohije[0].paroh.ime}:</strong></p>
                                     <List className="ostale-parohije" dense={true}>

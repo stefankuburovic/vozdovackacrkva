@@ -23,7 +23,7 @@ function CustomTabPanel(props: TabPanelProps) {
             {...other}
         >
             {value === index && (
-                <Box sx={{p: 3}}>
+                <Box component="div" sx={{p: 3}}>
                     {children}
                 </Box>
             )}
@@ -49,8 +49,8 @@ export default function Bogosluzenja() {
             <h2>Распоред Богослужења</h2>
             <Divider/>
             <div className="container">
-                <Box className="container-inner">
-                    <Box className="bogosluzenja-container vremena">
+                <Box component="div" className="container-inner">
+                    <Box component="div" className="bogosluzenja-container vremena">
                         <img src="/assets/images/logo-red.webp" width={50} height={50} alt="Вождовачка Црква"
                              className="logo"/>
                         <Tabs

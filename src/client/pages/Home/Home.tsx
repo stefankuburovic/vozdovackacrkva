@@ -3,8 +3,10 @@ import {lazy} from "react";
 
 import './Home.scss';
 
+import {riznica_slides, slides} from "client/const/galerija/const";
+
 const Hero = lazy(() => import('../../components/home/hero-swiper/Hero'));
-const Galerija = lazy(() => import('../../components/home/galerija/Galerija'));
+const Galerija = lazy(() => import('../../components/layout/galerija/Galerija'));
 const Kalendar = lazy(() => import('../../components/home/kalendar/Kalendar'));
 const Bogosluzenja = lazy(() => import('../../components/home/bogosluzenja/Bogosluzenja'));
 const PretragaParohija = lazy(() => import('../../components/home/pretraga-parohija/PretragaParohija'));
@@ -18,7 +20,7 @@ export default function Home() {
                 <PretragaParohija/>
             </section>
             <section id="galerija">
-                <Galerija/>
+                <Galerija slides={slides} heading="Галерија"/>
             </section>
             <section id="bogosluzenja">
                 <Bogosluzenja/>
