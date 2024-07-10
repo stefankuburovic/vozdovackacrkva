@@ -4,7 +4,7 @@ $(document).ready(function () {
         pause: true
     });
     $('.carousel').bind('slide.bs.carousel', function (e) {
-        const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop - 200;
         window.scrollTo({
             left: 0,
             top: scrollPosition
