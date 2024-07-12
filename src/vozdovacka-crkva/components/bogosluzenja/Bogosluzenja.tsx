@@ -223,6 +223,11 @@ export default function Bogosluzenja() {
                         {/*    </div>*/}
                         {/*</CustomTabPanel>*/}
                         <span style={{fontSize: '14px'}}><i>Црква је отворена од јутрења до вечерње службе.</i></span>
+
+                        <span style={{fontSize: '14px'}}><i>За више информација о богослужењима и активностима цркве,
+                            придурижите се нашој <a style={{fontSize: 'inherit'}}
+                                                    href="https://invite.viber.com/?g2=AQB8CsQuus0jbFMoM045RUGpzeYHc7XB5NrBo%2F6eKHT%2FdHJ0dKu2IzYVydrB4RTx"
+                                                    target="_blank"><strong>вибер</strong></a> заједници</i></span>
                     </Box>
                 </Box>
             </div>

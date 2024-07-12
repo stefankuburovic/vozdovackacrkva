@@ -9,18 +9,19 @@ export default function Kalendar() {
     const [danasnjiPraznik, setDanasnjiPraznik] = useState('');
     const getDataFromApi = () => {
         fetch("https://api.allorigins.win/get?url=https://www.pravoslavno.rs/index.php?q=kalendar", {
-            mode: 'cors',
             method: 'GET',
             headers: {}
         })
-            .then(response => response.text())
             .then(data => {
-                let parser = new DOMParser(),
-                    dom = parser.parseFromString(data, "text/html");
-                setSuccess(true);
-                (dom.querySelectorAll("tr[bgcolor='#fff9aa']")[0] as unknown as HTMLElement).style.display = "none";
-                setDanasnjiPraznik(dom.querySelectorAll("tr[bgcolor='#fff9aa']")[0].outerHTML.replaceAll("href", "target='_blank' href").replace(/\\t|\\n|\/r|\\(?=")/g, '').replace(/\\[rn]/g, '').replaceAll("index.php", "https://www.pravoslavno.rs/index.php"));
-                setFetchedHTML(dom.getElementsByTagName('table')[3].outerHTML.replaceAll("href", "target='_blank' href").replaceAll(`/index.php`, "https://www.pravoslavno.rs/index.php").replace(/\\t|\\n|\\(?=")/g, '').replace(/\\[rn]/g, '').replace(danasnjiPraznik, ''));
+                console.log(data.json().then(data => {
+                    let parser = new DOMParser(),
+                    dom = parser.parseFromString(data.contents, "text/html");
+                    setSuccess(true);
+                    (dom.querySelectorAll("tr[bgcolor='#fff9cc']")[0] as unknown as HTMLElement).style.display = "none";
+                    setDanasnjiPraznik(dom.querySelectorAll("tr[bgcolor='#fff9cc']")[0].outerHTML.replaceAll("href", "target='_blank' href").replace(/\\t|\\n|\/r|\\(?=")/g, '').replace(/\\[rn]/g, '').replaceAll("index.php", "https://www.pravoslavno.rs/index.php"));
+                    setFetchedHTML(dom.getElementsByTagName('table')[3].outerHTML.replaceAll("href", "target='_blank' href").replaceAll(`/index.php`, "https://www.pravoslavno.rs/index.php").replace(/\\t|\\n|\\(?=")/g, '').replace(/\\[rn]/g, '').replace(danasnjiPraznik, ''));
+
+                }));
             })
             .catch(error => {
                 console.log(error);
@@ -32,7 +33,7 @@ export default function Kalendar() {
     }, []);
     return (
         <>
-            <Kal />
+            {/*<Kal />*/}
             <div className="white-layout"></div>
             <div className="container">
                 {success &&

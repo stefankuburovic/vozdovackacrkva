@@ -302,6 +302,10 @@ img {
   height: fit-content;
   box-shadow: 1px 1px 12px rgba(128, 128, 128, 0.6);
 }
+#bogosluzenja .kalendar td[valign=top],
+#bogosluzenja .danasnji-praznik td[valign=top] {
+  display: none;
+}
 #bogosluzenja .bogosluzenja-container {
   width: 50%;
   height: auto;
@@ -404,6 +408,9 @@ img {
 #kalendar-praznika .kalendar td {
   padding: 5px;
   font-size: 14px;
+}
+#kalendar-praznika .kalendar td[valign=top] {
+  display: none;
 }
 #kalendar-praznika .kalendar span {
   display: inline;
@@ -509,9 +516,11 @@ footer .drustvene-mreze ul {
   display: flex;
 }
 footer .drustvene-mreze img {
+  border: 0;
   width: 40px;
   height: 40px;
   margin-right: 10px;
+  border-radius: 8px;
 }
 footer .drustvene-mreze a {
   transition: opacity 0.3s;
