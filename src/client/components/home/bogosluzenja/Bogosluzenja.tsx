@@ -68,16 +68,16 @@ export default function Bogosluzenja() {
                             }}
                         >
                             <Tab label="Текућа недеља" {...a11yProps(0)} disableRipple/>
-                            <Tab label="Активности" {...a11yProps(1)} disableRipple/>
-                            <Tab label="Летње време" {...a11yProps(2)} disableRipple/>
-                            <Tab label="Зимско време" {...a11yProps(3)} disableRipple/>
+                            <Tab label="Летње време" {...a11yProps(1)} disableRipple/>
+                            <Tab label="Зимско време" {...a11yProps(2)} disableRipple/>
+                            {/*<Tab label="Активности" {...a11yProps(3)} disableRipple/>*/}
                         </Tabs>
                         <CustomTabPanel index={0} value={value}>
                             <h3>
-                                <span>СВ. Василије Острошки Чудотворац</span>
+                                <span>Петровдан</span>
                             </h3>
                             <h4>
-                                <span>Субота - 11.05.</span>
+                                <span>Четвртак - 11.06.</span>
                             </h4>
                             <div>
                                 <div className="praznicni-dani">
@@ -89,43 +89,19 @@ export default function Bogosluzenja() {
                                 </div>
                             </div>
                             <h4>
-                                <span>Недеља - 12.05.</span>
+                                <span>Петак - 12.07.</span>
                             </h4>
                             <div>
                                 <div className="praznicni-dani">
                                     <ul>
                                         <li>
-                                            <p>09:00 - Св. Литургија - у наставку Св. Тајна Јелеосвећења</p>
-                                        </li>
-                                        <li>
-                                            <p>18:00 - Акатист Св. Василију Острошком</p>
+                                            <p>09:00 - Св. Литургија</p>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </CustomTabPanel>
                         <CustomTabPanel index={1} value={value}>
-                            <div style={{display: "flex", alignItems: "center", justifyContent: 'center'}}>
-                                <div className="video" style={{maxWidth: '100%', overflow: 'hidden'}}>
-                                    <h3>Недеља, 31.3.2024.</h3>
-                                    <p>Предавање на тему: <strong>Сведоци светлости из Капернаума, тумачење Јеванђеља по
-                                        Марку <i>2,1-12</i></strong></p>
-                                    <p>Предавач: <strong>Професор Предраг Драгутиновић</strong></p>
-                                    <iframe
-                                        style={{display: 'flex', margin: '0 auto'}}
-                                        width="420"
-                                        height="236"
-                                        src="https://www.youtube.com/embed/8_H7qi6eoN8"
-                                        title="YouTube video player"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerPolicy="strict-origin-when-cross-origin"
-                                        allowFullScreen
-                                    >
-                                    </iframe>
-                                </div>
-                            </div>
-                        </CustomTabPanel>
-                        <CustomTabPanel index={2} value={value}>
                             <div>
                                 <div>
                                     <h3>
@@ -176,7 +152,7 @@ export default function Bogosluzenja() {
                                 </div>
                             </div>
                         </CustomTabPanel>
-                        <CustomTabPanel index={3} value={value}>
+                        <CustomTabPanel index={2} value={value}>
                             <div>
                                 <h3>
                                     <span>Зимско време (Октобар - Март)</span>
@@ -225,6 +201,33 @@ export default function Bogosluzenja() {
                                 </ul>
                             </div>
                         </CustomTabPanel>
+                        {/*<CustomTabPanel index={3} value={value}>*/}
+                        {/*    <div style={{display: "flex", alignItems: "center", justifyContent: 'center'}}>*/}
+                        {/*        <div className="video" style={{maxWidth: '100%', overflow: 'hidden'}}>*/}
+                        {/*            <h3>Недеља, 31.3.2024.</h3>*/}
+                        {/*            <p>Предавање на тему: <strong>Сведоци светлости из Капернаума, тумачење Јеванђеља по*/}
+                        {/*                Марку <i>2,1-12</i></strong></p>*/}
+                        {/*            <p>Предавач: <strong>Професор Предраг Драгутиновић</strong></p>*/}
+                        {/*            <iframe*/}
+                        {/*                style={{display: 'flex', margin: '0 auto'}}*/}
+                        {/*                width="420"*/}
+                        {/*                height="236"*/}
+                        {/*                src="https://www.youtube.com/embed/8_H7qi6eoN8"*/}
+                        {/*                title="YouTube video player"*/}
+                        {/*                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"*/}
+                        {/*                referrerPolicy="strict-origin-when-cross-origin"*/}
+                        {/*                allowFullScreen*/}
+                        {/*            >*/}
+                        {/*            </iframe>*/}
+                        {/*        </div>*/}
+                        {/*    </div>*/}
+                        {/*</CustomTabPanel>*/}
+                        <span style={{fontSize: '14px'}}><i>Црква је отворена од јутрења до вечерње службе.</i></span>
+
+                        <span style={{fontSize: '14px'}}><i>За више информација о богослужењима и активностима цркве,
+                            придурижите се нашој <a style={{fontSize: 'inherit'}}
+                                                    href="https://invite.viber.com/?g2=AQB8CsQuus0jbFMoM045RUGpzeYHc7XB5NrBo%2F6eKHT%2FdHJ0dKu2IzYVydrB4RTx"
+                                                    target="_blank"><strong>вибер</strong></a> заједници</i></span>
                     </Box>
                 </Box>
             </div>
