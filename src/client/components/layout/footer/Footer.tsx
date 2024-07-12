@@ -70,13 +70,21 @@ export default function Footer() {
                                 <h3>Друштвене мреже</h3>
                                 <ul>
                                     <li>
-                                        <a href="https://www.instagram.com/vozdovacka_crkva" rel="noreferrer" target="_blank">
-                                            <img src="/assets/images/instagram-icon.webp" alt="Instagram" />
+                                        <a href="https://www.instagram.com/vozdovacka_crkva" rel="noreferrer"
+                                           target="_blank">
+                                            <img src="/assets/images/instagram-icon.webp" alt="Instagram"/>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.facebook.com/profile.php?id=100089120393706" rel="noreferrer" target="_blank">
-                                            <img src="/assets/images/facebook-icon.webp" alt="Facebook" />
+                                        <a href="https://www.facebook.com/profile.php?id=100089120393706"
+                                           rel="noreferrer" target="_blank">
+                                            <img src="/assets/images/facebook-icon.webp" alt="Facebook"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://invite.viber.com/?g2=AQB8CsQuus0jbFMoM045RUGpzeYHc7XB5NrBo%2F6eKHT%2FdHJ0dKu2IzYVydrB4RTx"
+                                           rel="noreferrer" target="_blank">
+                                            <img src="/assets/images/viber-icon.webp" alt="Viber"/>
                                         </a>
                                     </li>
                                 </ul>
