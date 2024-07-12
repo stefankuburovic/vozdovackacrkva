@@ -62,7 +62,9 @@ hr {
         height: auto;
     }
 }
-
+.hidden {
+    display: none;
+}
 h1 {
     font-size: 48px;
 }
@@ -328,6 +330,7 @@ img {
     position: relative;
     background: url("../assets/images/logo-red.webp") round fixed center center;
     background-size: 20px 20px;
+    background-color: white;
 
     .white-layout {
         z-index: 2;

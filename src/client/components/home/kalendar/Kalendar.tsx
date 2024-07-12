@@ -18,15 +18,16 @@ export default function Kalendar() {
                     let parser = new DOMParser(),
                     dom = parser.parseFromString(data.contents, "text/html");
                     setSuccess(true);
-                    (dom.querySelectorAll("tr[bgcolor='#fff9cc']")[0] as unknown as HTMLElement).style.display = "none";
-                    setDanasnjiPraznik(dom.querySelectorAll("tr[bgcolor='#fff9cc']")[0].outerHTML.replaceAll("href", "target='_blank' href").replace(/\\t|\\n|\/r|\\(?=")/g, '').replace(/\\[rn]/g, '').replaceAll("index.php", "https://www.pravoslavno.rs/index.php"));
-                    setFetchedHTML(dom.getElementsByTagName('table')[3].outerHTML.replaceAll("href", "target='_blank' href").replaceAll(`/index.php`, "https://www.pravoslavno.rs/index.php").replace(/\\t|\\n|\\(?=")/g, '').replace(/\\[rn]/g, '').replace(danasnjiPraznik, ''));
+                    if(success) {
+                        // (dom.querySelectorAll("tr[bgcolor='#fff9аа']")[0] as unknown as HTMLElement).style.display = "none";
+                        setDanasnjiPraznik(dom.querySelectorAll("tr[bgcolor='#fff9cc']")[0]?.outerHTML.replaceAll("href", "target='_blank' href").replace(/\\t|\\n|\/r|\\(?=")/g, '').replace(/\\[rn]/g, '').replaceAll("index.php", "https://www.pravoslavno.rs/index.php"));
+                        setFetchedHTML(dom.getElementsByTagName('table')[3]?.outerHTML.replaceAll("href", "target='_blank' href").replaceAll(`/index.php`, "https://www.pravoslavno.rs/index.php").replace(/\\t|\\n|\\(?=")/g, '').replace(/\\[rn]/g, '').replace(danasnjiPraznik, ''));
+                    }
 
                 }));
             })
             .catch(error => {
                 console.log(error);
-                // this.setState({ error: error });
             });
     };
     useEffect(() => {
@@ -34,7 +35,6 @@ export default function Kalendar() {
     }, [getDataFromApi]);
     return (
         <>
-            {/*<Kal />*/}
             <div className="white-layout"></div>
             <div className="container">
                 {success &&

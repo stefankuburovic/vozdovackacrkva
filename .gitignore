@@ -8,6 +8,10 @@
 /.pnp
 .pnp.js
 
+/public/assets/3dm/*
+/public/assets/vozdckrva.glb
+/public/assets/vozdckrva.glb.rcInfo
+
 ./.idea
 .env
 # testing

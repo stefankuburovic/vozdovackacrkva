@@ -250,9 +250,9 @@ export default function Riznica() {
                 <div className="grid-item">
                 </div>
             </Box>
-            <div>
-                <Panorama/>
-            </div>
+            {/*<div>*/}
+            {/*    <Panorama/>*/}
+            {/*</div>*/}
         </>
     )
         ;

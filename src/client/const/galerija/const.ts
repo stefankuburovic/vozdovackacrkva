@@ -88,49 +88,49 @@ export const riznica_slides = [
         loading: "lazy"
     },
     {
-        src: '/assets/images/riznica_webp/Омофор_СВЕТОГ_ВАСИЛИЈА.webp',
+        src: '/assets/images/riznica_webp/Omofor_SVETOG_VASILIJA.webp',
         width: 2620,
         height: 3931,
         loading: "lazy"
     },
     {
-        src: '/assets/images/riznica_webp/ЧЕСНИЦА_ЧАСНОГ_КРСТА.webp',
+        src: '/assets/images/riznica_webp/CESNICA_CASNOG_KRSTA.webp',
         width: 3542,
         height: 2385,
         loading: "lazy"
     },
     {
-        src: '/assets/images/riznica_webp/БОГОРОДИЦА.webp',
+        src: '/assets/images/riznica_webp/BOGORODICA.webp',
         width: 1645,
         height: 1854,
         loading: "lazy"
     },
     {
-        src: '/assets/images/riznica_webp/БОГОРОДИЦА_КУРСКАЈА.webp',
+        src: '/assets/images/riznica_webp/BOGORODICA_KURSKAJA.webp',
         width: 2708,
         height: 3416,
         loading: "lazy"
     },
     {
-        src: '/assets/images/riznica_webp/БОГОРОДИЦА_МЛЕКОПИТАТЕЛЈИЦА.webp',
+        src: '/assets/images/riznica_webp/BOGORODICA_MLEKOPITATELJNICA.webp',
         width: 1738,
         height: 2190,
         loading: "lazy"
     },
     {
-        src: '/assets/images/riznica_webp/СВЕТИ_ВАСИЛИЈЕ_ОСТРОШКИ.webp',
+        src: '/assets/images/riznica_webp/SVETI_VASILIJE_OSTROSKI.webp',
         width: 1858,
         height: 2100,
         loading: "lazy"
     },
     {
-        src: '/assets/images/riznica_webp/ОМОФОР.webp',
+        src: '/assets/images/riznica_webp/OMOFOR.webp',
         width: 1608,
         height: 1745,
         loading: "lazy"
     },
     {
-        src: '/assets/images/riznica_webp/ВОЖДОВАЧКА_ЦРКВА_ЕНТЕРИЈЕР.webp',
+        src: '/assets/images/riznica_webp/VOZDOVACKA_CRKVA_ENTERIJER.webp',
         width: 1859,
         height: 1240,
         loading: "lazy"
@@ -145,7 +145,7 @@ export const riznica_slides = [
 
 export const ipodjakon_galerija = [
     {
-        src: '/assets/images/riznica_webp/СВЕТИ_ЦАР_КОНСТАНТИН.webp',
+        src: '/assets/images/riznica_webp/SVETI_CAR_KONSTANTIN.webp',
         width: 790,
         height: 800,
         loading: "lazy"
@@ -157,37 +157,44 @@ export const ipodjakon_galerija = [
         loading: "lazy"
     },
     {
-        src: '/assets/images/riznica_webp/ВОЖДОВАЧКИ_ДОМ.webp',
+        src: '/assets/images/riznica_webp/VOZDOVACKI_DOM.webp',
         width: 1575,
         height: 1417,
         loading: "lazy"
     },
     {
-        src: '/assets/images/riznica_webp/СВЕТА_ЈЕЛЕНА.webp',
+        src: '/assets/images/riznica_webp/SVETA_JELENA.webp',
         width: 790,
         height: 800,
         loading: "lazy"
     },
     {
-        src: '/assets/images/riznica_webp/ВАСКРС.webp',
+        src: '/assets/images/riznica_webp/SRBI_SVETITELJI.webp',
+        width: 630,
+        height: 937,
+        loading: "lazy",
+        description: "",
+    },
+    {
+        src: '/assets/images/riznica_webp/VASKRS.webp',
         width: 611,
         height: 841,
         loading: "lazy"
     },
     {
-        src: '/assets/images/riznica_webp/ВОЗВИЗДЕЊЕ_ЧАСНОГ_КРСТА.webp',
+        src: '/assets/images/riznica_webp/VOZVIZDENJE_CASNOG_KRSTA.webp',
         width: 807,
         height: 1050,
         loading: "lazy"
     },
     {
-        src: '/assets/images/riznica_webp/СВЕТИ_ДИМИТРИЈЕ.webp',
+        src: '/assets/images/riznica_webp/SVETI_DIMITRIJE.webp',
         width: 709,
         height: 921,
         loading: "lazy"
     },
     {
-        src: '/assets/images/riznica_webp/ПРЕОБРАЖЕЊЕ.webp',
+        src: '/assets/images/riznica_webp/PREOBRAZENJE.webp',
         width: 709,
         height: 921,
         loading: "lazy"
@@ -220,7 +227,7 @@ export const horizontalna_galerija = [
         title: 'Икона Исуса Христа',
     },
     {
-        src: '/assets/images/riznica_webp/Омофор_СВЕТОГ_ВАСИЛИЈА.webp',
+        src: '/assets/images/riznica_webp/Omofor_SVETOG_VASILIJA.webp',
         width: 2620,
         height: 3931,
         loading: "lazy",
@@ -228,7 +235,7 @@ export const horizontalna_galerija = [
         title: 'Омофор Светог Василија - Вождовачка црква',
     },
     {
-        src: '/assets/images/riznica_webp/ЧЕСНИЦА_ЧАСНОГ_КРСТА.webp',
+        src: '/assets/images/riznica_webp/CESNICA_CASNOG_KRSTA.webp',
         width: 3542,
         height: 2385,
         loading: "lazy",
@@ -236,7 +243,7 @@ export const horizontalna_galerija = [
         title: 'Чесница Часног Крста - Вождовачка црква',
     },
     {
-        src: '/assets/images/riznica_webp/БОГОРОДИЦА.webp',
+        src: '/assets/images/riznica_webp/BOGORODICA.webp',
         width: 1646,
         height: 1854,
         loading: "lazy",
@@ -244,7 +251,7 @@ export const horizontalna_galerija = [
         title: 'Икона Пресвете Богородице - Вождовачка црква',
     },
     {
-        src: '/assets/images/riznica_webp/БОГОРОДИЦА_КУРСКАЈА.webp',
+        src: '/assets/images/riznica_webp/BOGORODICA_KURSKAJA.webp',
         width: 2708,
         height: 3416,
         loading: "lazy",
@@ -252,7 +259,7 @@ export const horizontalna_galerija = [
         title: 'Икона Пресвете Богородице Курскаје - Вождовачка црква',
     },
     {
-        src: '/assets/images/riznica_webp/БОГОРОДИЦА_МЛЕКОПИТАТЕЛЈИЦА.webp',
+        src: '/assets/images/riznica_webp/BOGORODICA_MLEKOPITATELJNICA.webp',
         width: 1738,
         height: 2190,
         loading: "lazy",
@@ -260,7 +267,7 @@ export const horizontalna_galerija = [
         title: 'Икона Пресвете Богородице Млекопитатељице - Вождовачка црква',
     },
     {
-        src: '/assets/images/riznica_webp/СВЕТИ_ВАСИЛИЈЕ_ОСТРОШКИ.webp',
+        src: '/assets/images/riznica_webp/SVETI_VASILIJE_OSTROSKI.webp',
         width: 1858,
         height: 2100,
         loading: "lazy",
@@ -268,7 +275,7 @@ export const horizontalna_galerija = [
         title: 'Икона Светог Василија Острошког - Вождовачка црква',
     },
     {
-        src: '/assets/images/riznica_webp/ОМОФОР.webp',
+        src: '/assets/images/riznica_webp/OMOFOR.webp',
         width: 1680,
         height: 1745,
         loading: "lazy",
@@ -276,7 +283,7 @@ export const horizontalna_galerija = [
         title: 'Омофор - Вождовачка црква',
     },
     {
-        src: '/assets/images/riznica_webp/ВОЖДОВАЧКА_ЦРКВА_ЕНТЕРИЈЕР.webp',
+        src: '/assets/images/riznica_webp/VOZDOVACKA_CRKVA_ENTERIJER.webp',
         width: 1859,
         height: 1240,
         loading: "lazy",

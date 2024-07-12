@@ -12,10 +12,10 @@ $(document).ready(function () {
     });
 
 });
+document.addEventListener("DOMContentLoaded", function () {
+});
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.navbar-nav a.nav-link');
-    const menuToggle = document.getElementById('dropdown');
-    const mainMenu = document.getElementById('nav');
 
 
     window.scrollTo(0, 0);
@@ -93,11 +93,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    menuToggle.addEventListener('change', function() {
-        if (menuToggle.checked) {
-            mainMenu.classList.add('show');
-        } else {
-            mainMenu.classList.remove('show');
+    // menuToggle.addEventListener('change', function() {
+    //     if (menuToggle.checked) {
+    //         mainMenu.classList.add('show');
+    //     } else {
+    //         mainMenu.classList.remove('show');
+    //     }
+    // });
+
+
+    const nav = document.getElementById("nav");
+
+    // Function to hide the navigation
+    function hideNavigation() {
+        nav.style.display = "none";
+    }
+
+    // Click event listener for the document
+    document.addEventListener("click", function (event) {
+        const isClickInsideNav = nav.contains(event.target);
+        const isNavLink = event.target.classList.contains("nav-link");
+
+        if (!isClickInsideNav || isNavLink) {
+            hideNavigation();
         }
+    });
+
+    document.getElementById("root").addEventListener("click", function () {
+        console.log("click")
+        nav.style.display = "block";
     });
 });
