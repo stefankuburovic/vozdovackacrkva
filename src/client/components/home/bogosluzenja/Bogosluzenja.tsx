@@ -67,41 +67,56 @@ export default function Bogosluzenja() {
                                 },
                             }}
                         >
-                            <Tab label="Текућа недеља" {...a11yProps(0)} disableRipple/>
-                            <Tab label="Летње време" {...a11yProps(1)} disableRipple/>
-                            <Tab label="Зимско време" {...a11yProps(2)} disableRipple/>
+                            {/*<Tab label="Текућа недеља" {...a11yProps(0)} disableRipple/>*/}
+                            <Tab label="Летње време" {...a11yProps(0)} disableRipple/>
+                            <Tab label="Зимско време" {...a11yProps(1)} disableRipple/>
                             {/*<Tab label="Активности" {...a11yProps(3)} disableRipple/>*/}
                         </Tabs>
+                        {/*<CustomTabPanel index={0} value={value}>*/}
+                        {/*    <h3>*/}
+                        {/*        <span>Света Великомученица Марина - Огњена Марија</span>*/}
+                        {/*    </h3>*/}
+                        {/*    <h4>*/}
+                        {/*        <span>Уторак - 30.07.</span>*/}
+                        {/*    </h4>*/}
+                        {/*    <div>*/}
+                        {/*        <div className="praznicni-dani">*/}
+                        {/*            <ul>*/}
+                        {/*                <li>*/}
+                        {/*                    <p>08:00 - Св. Литургија</p>*/}
+                        {/*                </li>*/}
+                        {/*            </ul>*/}
+                        {/*        </div>*/}
+                        {/*    </div>*/}
+                        {/*    <h3>*/}
+                        {/*        <span>Илиндан</span>*/}
+                        {/*    </h3>*/}
+                        {/*    <h4>*/}
+                        {/*        <span>Четвртак - 01.08.</span>*/}
+                        {/*    </h4>*/}
+                        {/*    <div>*/}
+                        {/*        <div className="praznicni-dani">*/}
+                        {/*            <ul>*/}
+                        {/*                <li>*/}
+                        {/*                    <p>18:00 - Празнично бденије</p>*/}
+                        {/*                </li>*/}
+                        {/*            </ul>*/}
+                        {/*        </div>*/}
+                        {/*    </div>*/}
+                        {/*    <h4>*/}
+                        {/*        <span>Петак - 02.08.</span>*/}
+                        {/*    </h4>*/}
+                        {/*    <div>*/}
+                        {/*        <div className="praznicni-dani">*/}
+                        {/*            <ul>*/}
+                        {/*                <li>*/}
+                        {/*                    <p>09:00 - Св. Литургија</p>*/}
+                        {/*                </li>*/}
+                        {/*            </ul>*/}
+                        {/*        </div>*/}
+                        {/*    </div>*/}
+                        {/*</CustomTabPanel>*/}
                         <CustomTabPanel index={0} value={value}>
-                            <h3>
-                                <span>Петровдан</span>
-                            </h3>
-                            <h4>
-                                <span>Четвртак - 11.06.</span>
-                            </h4>
-                            <div>
-                                <div className="praznicni-dani">
-                                    <ul>
-                                        <li>
-                                            <p>18:00 - Празнично Бденије</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4>
-                                <span>Петак - 12.07.</span>
-                            </h4>
-                            <div>
-                                <div className="praznicni-dani">
-                                    <ul>
-                                        <li>
-                                            <p>09:00 - Св. Литургија</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </CustomTabPanel>
-                        <CustomTabPanel index={1} value={value}>
                             <div>
                                 <div>
                                     <h3>
@@ -152,7 +167,7 @@ export default function Bogosluzenja() {
                                 </div>
                             </div>
                         </CustomTabPanel>
-                        <CustomTabPanel index={2} value={value}>
+                        <CustomTabPanel index={1} value={value}>
                             <div>
                                 <h3>
                                     <span>Зимско време (Октобар - Март)</span>

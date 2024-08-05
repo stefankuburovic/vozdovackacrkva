@@ -1,3 +1,13 @@
+:root {
+  --lerp-0: 1;
+  --lerp-1: 0.5787037;
+  --lerp-2: 0.2962963;
+  --lerp-3: 0.125;
+  --lerp-4: 0.037037;
+  --lerp-5: 0.0046296;
+  --lerp-6: 0;
+}
+
 .riznica-hero {
   height: 800px;
   margin-top: -155px;
@@ -12,13 +22,80 @@
   width: 100vw;
   height: 800px;
 }
-.riznica-hero #headline {
-  position: absolute;
-}
 .riznica-hero #headline h1 {
-  background: rgba(255, 255, 255, 0.6);
-  padding: 1rem 0.5rem;
-  color: rgb(136, 0, 0);
+  position: relative;
+  bottom: 100px;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.three-d-model {
+  min-height: unset;
+}
+@media (max-width: 768px) {
+  .three-d-model {
+    padding: 20px 0;
+    margin: 0;
+  }
+}
+.three-d-model h2, .three-d-model h3 {
+  text-align: center;
+  color: white;
+  margin-bottom: 0;
+}
+.three-d-model h2 span, .three-d-model h3 span {
+  margin-bottom: 0;
+}
+.three-d-model hr {
+  background: white;
+}
+
+.riznica-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+.riznica-content h2, .riznica-content h3 {
+  text-align: center;
+  color: white;
+  margin-bottom: 0;
+}
+.riznica-content h2 span, .riznica-content h3 span {
+  margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .riznica-content h2 {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .riznica-content h3 {
+    font-size: 0.95rem;
+  }
+}
+.riznica-content hr {
+  background: white;
+}
+.riznica-content .grid-item {
+  width: 100%;
+  padding: 20px;
+}
+.riznica-content p {
+  color: white;
+}
+.riznica-content .MuiDivider-root:before, .riznica-content .MuiDivider-root:after {
+  border-top-color: rgba(255, 255, 255, 0.82);
+}
+.riznica-content .MuiDivider-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.riznica-content .MuiDivider-wrapper {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=Riznica.css.map */
