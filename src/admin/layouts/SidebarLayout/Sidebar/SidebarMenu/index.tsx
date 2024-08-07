@@ -182,6 +182,26 @@ function SidebarMenu() {
                   Богослужења
                 </Button>
               </ListItem>
+              <ListItem component="div">
+                <Button
+                    disableRipple
+                    component={RouterLink}
+                    onClick={closeSidebar}
+                    to="/vzdadmin/aktivnosti"
+                >
+                  Активности
+                </Button>
+              </ListItem>
+              <ListItem component="div">
+                <Button
+                    disableRipple
+                    component={RouterLink}
+                    onClick={closeSidebar}
+                    to="/vzdadmin/obavestenja"
+                >
+                  Obaveštenja
+                </Button>
+              </ListItem>
             </List>
           </SubMenuWrapper>
         </List>

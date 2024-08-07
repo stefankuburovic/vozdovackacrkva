@@ -16,6 +16,8 @@ const Loader = (Component: any) => (props: any) =>
 
 const Login = Loader(lazy(() => import('./content/pages/Login/Login')));
 const Bogosluzenja = Loader(lazy(() => import('./content/dashboards/Bogosluzenja')));
+const Aktivnosti = Loader(lazy(() => import('./content/dashboards/Aktivnosti')));
+const Obavestenja = Loader(lazy(() => import('./content/dashboards/Obavestenja')));
 
 // Components
 
@@ -54,6 +56,14 @@ const routes: RouteObject[] = [
       {
         path: 'bogosluzenja',
         element: <Bogosluzenja />
+      },
+      {
+        path: 'aktivnosti',
+        element: <Aktivnosti />
+      },
+      {
+        path: 'obavestenja',
+        element: <Obavestenja />
       }
     ]
   },

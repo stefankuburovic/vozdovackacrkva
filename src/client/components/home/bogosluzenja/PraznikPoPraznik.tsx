@@ -22,8 +22,7 @@ export const PraznikPoPraznik = (
         {
             !!praznik &&
             <div className="praznik">
-                <h4>{
-                    getDayName(new Date(datum_bogosluzenja as string))}, {formatDate(new Date(datum_bogosluzenja as string))} {praznik}</h4>
+                <h4 dangerouslySetInnerHTML={{__html: `${getDayName(new Date(datum_bogosluzenja as string))}, ${formatDate(new Date(datum_bogosluzenja as string))} ${praznik}`}}></h4>
 
                 <h5>{getDayName(new Date(datum_bdenija as string))}, {formatDate(new Date(datum_bdenija as string))}</h5>
                 <ul>

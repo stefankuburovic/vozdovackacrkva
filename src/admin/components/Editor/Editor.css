@@ -46,7 +46,6 @@ h1 {
 }
 
 .editor-inner {
-  padding: 10px;
   background: #fff;
   position: relative;
 }
@@ -68,9 +67,8 @@ h1 {
   overflow: hidden;
   position: absolute;
   text-overflow: ellipsis;
-  top: 40px;
-  left: 40px;
-  width: calc(100% - 60px);
+  top: 30px;
+  left: 30px;
   font-size: 15px;
   user-select: none;
   display: inline-block;
@@ -80,9 +78,6 @@ h1 {
   margin: 0;
 }
 
-.editor-placeholder h4 {
-  margin: 0;
-}
 .editor-text-bold {
   font-weight: bold;
 }

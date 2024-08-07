@@ -1,5 +1,5 @@
 import { useLexicalComposerContext } from "@lexical/react/LexicalComposerContext";
-import { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import {
   CAN_REDO_COMMAND,
   CAN_UNDO_COMMAND,
@@ -32,6 +32,7 @@ import {
   $createHeadingNode,
   $isHeadingNode
 } from "@lexical/rich-text";
+import ImageUploadPlugin from "./ImageUploadPlugin";
 
 const LowPriority = 1;
 
@@ -658,6 +659,8 @@ export default function ToolbarPlugin() {
           >
             <i className="format justify-align" />
           </button>{" "}
+
+          <ImageUploadPlugin />
         </>
       )}
     </div>

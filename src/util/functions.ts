@@ -170,7 +170,7 @@ export const upucajKalendarUBazu = (apiUrl?: string) => {
             // @ts-ignore
             for (const praznik of response.data[imeMeseca[3]]) {
                 const unosUkalendar: Praznik = {} as Praznik;
-                unosUkalendar['crveno_slovo'] = praznik.crveno_slovo && 1 || 0;
+                unosUkalendar['crveno_slovo'] = (praznik.crveno_slovo && 1) || 0;
                 unosUkalendar['praznik'] = praznik.opis;
                 unosUkalendar['stari'] = praznik.brojDanaStari;
                 unosUkalendar['novi'] = praznik.brojDana;

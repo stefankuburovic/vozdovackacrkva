@@ -24,6 +24,7 @@ import ListMaxIndentLevelPlugin from "./plugins/ListMaxIndentLevelPlugin";
 import {useLexicalComposerContext} from "@lexical/react/LexicalComposerContext";
 import { $generateNodesFromDOM } from "@lexical/html";
 import {$createParagraphNode, $getRoot} from "lexical";
+import ImageUploadPlugin from "./plugins/ImageUploadPlugin";
 function Placeholder() {
     return <div className="editor-placeholder">Унесите остале детаље о празнику  (<i>нпр. 17:00 - Додела пакетића после литургије, 18:00 - Паљење бадњака итд.</i>)</div>;
 }
