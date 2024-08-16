@@ -108,9 +108,9 @@ function DashboardBogosluzenja() {
     }, [apiUrl, bogosluzenjeUopstenoService]);
 
     const deleteData = useCallback(async () => {
-        const bogosluzenje: IBogosluzenjeUopsteno = {
-            opis: content
-        };
+        // const bogosluzenje: IBogosluzenjeUopsteno = {
+        //     opis: content
+        // };
         bogosluzenjeUopstenoService.deleteBogosluzenjeUopsteno(fetchBogosluzenjaUopstenoData, openSnackbar, bogosluzenjaUopsteno[0].id, apiUrl);
     }, [
         apiUrl,
@@ -177,7 +177,7 @@ function DashboardBogosluzenja() {
                 <title>Богослужења (Админ Панел)</title>
             </Helmet>
             <PageTitleWrapper>
-                <PageHeader/>
+                <PageHeader title='Поставите распоред богослужења за текућу недељу.'/>
             </PageTitleWrapper>
             <div className="admin-bogosluzenja-wrapper">
                 <Accordion expanded={true}>

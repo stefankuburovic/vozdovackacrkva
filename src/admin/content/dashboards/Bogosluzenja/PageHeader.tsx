@@ -1,12 +1,16 @@
 import { Typography, Grid } from '@mui/material';
 
-function PageHeader() {
+interface IPageHeader {
+    title: string;
+}
+
+function PageHeader({title}: IPageHeader) {
 
   return (
     <Grid container alignItems="center">
       <Grid item>
         <Typography variant="h3" component="h3" gutterBottom>
-          Поставите распоред богослужења за текућу недељу.
+            {title}
         </Typography>
       </Grid>
     </Grid>
