@@ -1,16 +1,8 @@
-import { useContext } from 'react';
+import {useContext} from 'react';
 
-import {
-  ListSubheader,
-  alpha,
-  Box,
-  List,
-  styled,
-  Button,
-  ListItem
-} from '@mui/material';
-import { NavLink as RouterLink } from 'react-router-dom';
-import { SidebarContext } from '../../../../contexts/SidebarContext';
+import {alpha, Box, Button, Divider, List, ListItem, ListSubheader, styled} from '@mui/material';
+import {NavLink as RouterLink} from 'react-router-dom';
+import {SidebarContext} from '../../../../contexts/SidebarContext';
 import BallotTwoToneIcon from '@mui/icons-material/BallotTwoTone';
 import BeachAccessTwoToneIcon from '@mui/icons-material/BeachAccessTwoTone';
 import EmojiEventsTwoToneIcon from '@mui/icons-material/EmojiEventsTwoTone';
@@ -22,7 +14,7 @@ import SettingsTwoToneIcon from '@mui/icons-material/SettingsTwoTone';
 import TrafficTwoToneIcon from '@mui/icons-material/TrafficTwoTone';
 
 const MenuWrapper = styled(Box)(
-  ({ theme }) => `
+    ({theme}) => `
   .MuiList-root {
     padding: ${theme.spacing(1)};
 
@@ -43,7 +35,7 @@ const MenuWrapper = styled(Box)(
 );
 
 const SubMenuWrapper = styled(Box)(
-  ({ theme }) => `
+    ({theme}) => `
     .MuiList-root {
 
       .MuiListItem-root {
@@ -136,9 +128,9 @@ const SubMenuWrapper = styled(Box)(
                 background: ${theme.colors.alpha.trueWhite[100]};
                 opacity: 0;
                 transition: ${theme.transitions.create([
-                  'transform',
-                  'opacity'
-                ])};
+        'transform',
+        'opacity'
+    ])};
                 width: 6px;
                 height: 6px;
                 transform: scale(0);
@@ -164,162 +156,222 @@ const SubMenuWrapper = styled(Box)(
 );
 
 function SidebarMenu() {
-  const { closeSidebar } = useContext(SidebarContext);
+    const {closeSidebar} = useContext(SidebarContext);
 
-  return (
-    <>
-      <MenuWrapper>
-        <List component="div">
-          <SubMenuWrapper>
-            <List component="div">
-              <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/vzdadmin/bogosluzenja"
+    return (
+        <>
+            <MenuWrapper>
+                <List component="div">
+                    <SubMenuWrapper>
+                        <Divider style={{background: 'white'}}/>
+                        <h3>Почетна страница</h3>
+                        <Divider style={{background: 'white'}}/>
+                        <List component="div">
+                            <ListItem component="div">
+                                <Button
+                                    disableRipple
+                                    component={RouterLink}
+                                    onClick={closeSidebar}
+                                    to="/vzdadmin/bogosluzenja"
+                                >
+                                    Богослужења
+                                </Button>
+                            </ListItem>
+                            <ListItem component="div">
+                                <Button
+                                    disableRipple
+                                    component={RouterLink}
+                                    onClick={closeSidebar}
+                                    to="/vzdadmin/aktivnosti"
+                                >
+                                    Активности
+                                </Button>
+                            </ListItem>
+                            <ListItem component="div">
+                                <Button
+                                    disableRipple
+                                    component={RouterLink}
+                                    onClick={closeSidebar}
+                                    to="/vzdadmin/obavestenja"
+                                >
+                                    Обавештења
+                                </Button>
+                            </ListItem>
+                            <ListItem component="div">
+                                <Button
+                                    disableRipple
+                                    component={RouterLink}
+                                    onClick={closeSidebar}
+                                    to="/vzdadmin/parohija"
+                                >
+                                    Парохија на мапи
+                                </Button>
+                            </ListItem>
+                        </List>
+                        <Divider style={{background: 'white'}}/>
+                    </SubMenuWrapper>
+
+                    <SubMenuWrapper>
+                        <h3>Ризница</h3>
+                        <Divider style={{background: 'white'}}/>
+                        <List component="div">
+                            <ListItem component="div">
+                                <Button
+                                    disableRipple
+                                    component={RouterLink}
+                                    onClick={closeSidebar}
+                                    to="/vzdadmin/ikone"
+                                >
+                                    Иконе
+                                </Button>
+                            </ListItem>
+                            <ListItem component="div">
+                                <Button
+                                    disableRipple
+                                    component={RouterLink}
+                                    onClick={closeSidebar}
+                                    to="/vzdadmin/dragocenosti"
+                                >
+                                    Црквене драгоцености
+                                </Button>
+                            </ListItem>
+                        </List>
+                        <Divider style={{background: 'white'}}/>
+                    </SubMenuWrapper>
+
+                    <SubMenuWrapper>
+                        <h3>Веронаука</h3>
+                        <Divider style={{background: 'white'}}/>
+                        <List component="div">
+                            <ListItem component="div">
+                                <Button
+                                    disableRipple
+                                    component={RouterLink}
+                                    onClick={closeSidebar}
+                                    to="/vzdadmin/veronauka"
+                                >
+                                    Садржај странице
+                                </Button>
+                            </ListItem>
+                        </List>
+                        <Divider style={{background: 'white'}}/>
+                    </SubMenuWrapper>
+                </List>
+                <List
+                    component="div"
+                    subheader={
+                        <ListSubheader component="div" disableSticky>
+                            Components
+                        </ListSubheader>
+                    }
                 >
-                  Богослужења
-                </Button>
-              </ListItem>
-              <ListItem component="div">
-                <Button
-                    disableRipple
-                    component={RouterLink}
-                    onClick={closeSidebar}
-                    to="/vzdadmin/aktivnosti"
-                >
-                  Активности
-                </Button>
-              </ListItem>
-              <ListItem component="div">
-                <Button
-                    disableRipple
-                    component={RouterLink}
-                    onClick={closeSidebar}
-                    to="/vzdadmin/obavestenja"
-                >
-                  Obaveštenja
-                </Button>
-              </ListItem>
-            </List>
-          </SubMenuWrapper>
-        </List>
-        <List
-          component="div"
-          subheader={
-            <ListSubheader component="div" disableSticky>
-              Components
-            </ListSubheader>
-          }
-        >
-          <SubMenuWrapper>
-            <List component="div">
-              <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/auth/components/buttons"
-                  startIcon={<BallotTwoToneIcon />}
-                >
-                  Buttons
-                </Button>
-              </ListItem>
-              <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/auth/components/modals"
-                  startIcon={<BeachAccessTwoToneIcon />}
-                >
-                  Modals
-                </Button>
-              </ListItem>
-              <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/auth/components/accordions"
-                  startIcon={<EmojiEventsTwoToneIcon />}
-                >
-                  Accordions
-                </Button>
-              </ListItem>
-              <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/auth/components/tabs"
-                  startIcon={<FilterVintageTwoToneIcon />}
-                >
-                  Tabs
-                </Button>
-              </ListItem>
-              <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/auth/components/badges"
-                  startIcon={<HowToVoteTwoToneIcon />}
-                >
-                  Badges
-                </Button>
-              </ListItem>
-              <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/auth/components/tooltips"
-                  startIcon={<LocalPharmacyTwoToneIcon />}
-                >
-                  Tooltips
-                </Button>
-              </ListItem>
-              <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/auth/components/avatars"
-                  startIcon={<RedeemTwoToneIcon />}
-                >
-                  Avatars
-                </Button>
-              </ListItem>
-              <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/auth/components/cards"
-                  startIcon={<SettingsTwoToneIcon />}
-                >
-                  Cards
-                </Button>
-              </ListItem>
-              <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/auth/components/forms"
-                  startIcon={<TrafficTwoToneIcon />}
-                >
-                  Forms
-                </Button>
-              </ListItem>
-            </List>
-          </SubMenuWrapper>
-        </List>
-      </MenuWrapper>
-    </>
-  );
+                    <SubMenuWrapper>
+                        <List component="div">
+                            <ListItem component="div">
+                                <Button
+                                    disableRipple
+                                    component={RouterLink}
+                                    onClick={closeSidebar}
+                                    to="/vzdadmin/components/buttons"
+                                    startIcon={<BallotTwoToneIcon/>}
+                                >
+                                    Buttons
+                                </Button>
+                            </ListItem>
+                            <ListItem component="div">
+                                <Button
+                                    disableRipple
+                                    component={RouterLink}
+                                    onClick={closeSidebar}
+                                    to="/vzdadmin/components/modals"
+                                    startIcon={<BeachAccessTwoToneIcon/>}
+                                >
+                                    Modals
+                                </Button>
+                            </ListItem>
+                            <ListItem component="div">
+                                <Button
+                                    disableRipple
+                                    component={RouterLink}
+                                    onClick={closeSidebar}
+                                    to="/vzdadmin/components/accordions"
+                                    startIcon={<EmojiEventsTwoToneIcon/>}
+                                >
+                                    Accordions
+                                </Button>
+                            </ListItem>
+                            <ListItem component="div">
+                                <Button
+                                    disableRipple
+                                    component={RouterLink}
+                                    onClick={closeSidebar}
+                                    to="/vzdadmin/components/tabs"
+                                    startIcon={<FilterVintageTwoToneIcon/>}
+                                >
+                                    Tabs
+                                </Button>
+                            </ListItem>
+                            <ListItem component="div">
+                                <Button
+                                    disableRipple
+                                    component={RouterLink}
+                                    onClick={closeSidebar}
+                                    to="/vzdadmin/components/badges"
+                                    startIcon={<HowToVoteTwoToneIcon/>}
+                                >
+                                    Badges
+                                </Button>
+                            </ListItem>
+                            <ListItem component="div">
+                                <Button
+                                    disableRipple
+                                    component={RouterLink}
+                                    onClick={closeSidebar}
+                                    to="/vzdadmin/components/tooltips"
+                                    startIcon={<LocalPharmacyTwoToneIcon/>}
+                                >
+                                    Tooltips
+                                </Button>
+                            </ListItem>
+                            <ListItem component="div">
+                                <Button
+                                    disableRipple
+                                    component={RouterLink}
+                                    onClick={closeSidebar}
+                                    to="/vzdadmin/components/avatars"
+                                    startIcon={<RedeemTwoToneIcon/>}
+                                >
+                                    Avatars
+                                </Button>
+                            </ListItem>
+                            <ListItem component="div">
+                                <Button
+                                    disableRipple
+                                    component={RouterLink}
+                                    onClick={closeSidebar}
+                                    to="/vzdadmin/components/cards"
+                                    startIcon={<SettingsTwoToneIcon/>}
+                                >
+                                    Cards
+                                </Button>
+                            </ListItem>
+                            <ListItem component="div">
+                                <Button
+                                    disableRipple
+                                    component={RouterLink}
+                                    onClick={closeSidebar}
+                                    to="/vzdadmin/components/forms"
+                                    startIcon={<TrafficTwoToneIcon/>}
+                                >
+                                    Forms
+                                </Button>
+                            </ListItem>
+                        </List>
+                    </SubMenuWrapper>
+                </List>
+            </MenuWrapper>
+        </>
+    );
 }
 
 export default SidebarMenu;

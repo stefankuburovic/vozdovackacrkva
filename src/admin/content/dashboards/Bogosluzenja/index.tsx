@@ -179,12 +179,11 @@ function DashboardBogosluzenja() {
             <PageTitleWrapper>
                 <PageHeader title='Поставите распоред богослужења за текућу недељу.'/>
             </PageTitleWrapper>
-            <div className="admin-bogosluzenja-wrapper">
+            <div>
                 <Accordion expanded={true}>
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon/>}
                         aria-controls="panel1a-content"
-                        id="panel1a-header"
                     >
                         <h2>Унесите богослужења за текућу недељу - <i>према празнику</i></h2>
                     </AccordionSummary>
@@ -210,7 +209,6 @@ function DashboardBogosluzenja() {
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon/>}
                         aria-controls="panel1a-content"
-                        id="panel1a-header"
                     >
                         <h2>Унесите богослужења за текућу недељу - <i>свеобухватно</i></h2>
                     </AccordionSummary>

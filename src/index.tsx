@@ -1,4 +1,4 @@
-import React, {lazy} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import "yet-another-react-lightbox/styles.css";
@@ -15,7 +15,6 @@ import ProtectedRoute from "./ProtectedRoute";
 import admin_router from "./admin/router";
 import client_router from "./client/router";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
-import Login from "./admin/content/pages/Login/Login";
 
 export const ApiUrlContext = React.createContext<string | undefined>('');
 
@@ -30,7 +29,9 @@ const AdminRoutes = () => {
                         <ThemeProvider>
                             <LocalizationProvider dateAdapter={AdapterDateFns}>
                                 <CssBaseline/>
-                                {content}
+                                <div className="vzdadmin">
+                                    {content}
+                                </div>
                             </LocalizationProvider>
                         </ThemeProvider>
                     </ProtectedRoute>

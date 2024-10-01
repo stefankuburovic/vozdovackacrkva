@@ -1,11 +1,8 @@
-import React, { useCallback } from 'react';
-import { useLexicalComposerContext } from '@lexical/react/LexicalComposerContext';
-import { $wrapNodeInElement } from "@lexical/utils";
-import { Button } from '@mui/material';
-import { styled } from '@mui/system';
+import React, {useCallback} from 'react';
+import {useLexicalComposerContext} from '@lexical/react/LexicalComposerContext';
+import {Button} from '@mui/material';
+import {styled} from '@mui/system';
 import {UploadFile} from "@mui/icons-material";
-import {$createParagraphNode, $insertNodes, $isRootOrShadowRoot} from "lexical";
-import {$createImageNode} from "../nodes/ImageNode";
 
 const Input = styled('input')({
     display: 'none',
@@ -53,8 +50,8 @@ const ImageUploadPlugin: React.FC = () => {
                 variant="text"
                 component="i"
                 color="inherit" startIcon={
-                <UploadFile />
-            } />
+                <UploadFile/>
+            }/>
         </label>
     );
 };
