@@ -68,28 +68,102 @@ export default function Bogosluzenja() {
                             }}
                         >
                             <Tab label="Текућа недеља" {...a11yProps(0)} disableRipple/>
-                            <Tab label="Летње време" {...a11yProps(1)} disableRipple/>
-                            <Tab label="Зимско време" {...a11yProps(2)} disableRipple/>
+                            <Tab label="Зимско време" {...a11yProps(1)} disableRipple/>
+                            <Tab label="Летње време" {...a11yProps(2)} disableRipple/>
                             {/*<Tab label="Активности" {...a11yProps(3)} disableRipple/>*/}
                         </Tabs>
                         <CustomTabPanel index={0} value={value}>
                             <h3>
-                                <span>Свети великомученик Пантелејмон</span>
+                                <span>Михољске Задушнице</span>
                             </h3>
                             <h4>
-                                <span>Петак - 09.08.</span>
+                                <span>Субота - 05.10.</span>
                             </h4>
                             <div>
                                 <div className="praznicni-dani">
                                     <ul>
                                         <li>
-                                            <p>08:00 - Св. Литургија</p>
+                                            <p><strong>08:00 - Св. Литургија</strong></p>
+                                            <div>
+                                                <span><strong>На Литургију, треба понети:</strong></span>
+                                                <ul>
+                                                    <li>
+                                                        <span>
+                                                            <i>кувано жито</i>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span>
+                                                            <i>црно вино</i>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span>
+                                                            <i>малу свећу која се поставља уз жито</i>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span>
+                                                            <i>списак имена ваших упокојених</i>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </CustomTabPanel>
                         <CustomTabPanel index={1} value={value}>
+                            <div>
+                                <h3>
+                                    <span>Зимско време (Октобар - Март)</span>
+                                </h3>
+                                <h5>
+                                    <span>Свакодневно</span>
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <p>08:00 - Јутрење</p>
+                                    </li>
+                                    <li>
+                                        <p>17:00 - Вечерња</p>
+                                    </li>
+                                </ul>
+                                <h5>
+                                    <span>Петак</span>
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <p>17:00 - Акатист Часном Крсту или Св. Василију Острошком са читањем имена за
+                                            здравље.</p>
+                                    </li>
+                                </ul>
+                                <h5>
+                                    <span>Субота</span>
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <p>08:00 - Света Литургија</p>
+                                    </li>
+                                    <li>
+                                        <p>17:00 - Бденије уочи празника</p>
+                                    </li>
+                                </ul>
+                                <h5>
+                                    <span>Недеља</span>
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <p>9:00 - Света Литургија</p>
+                                    </li>
+                                    <li>
+                                        <p>17:00 - Вечерња</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </CustomTabPanel>
+                        <CustomTabPanel index={2} value={value}>
                             <div>
                                 <div>
                                     <h3>
@@ -140,55 +214,6 @@ export default function Bogosluzenja() {
                                 </div>
                             </div>
                         </CustomTabPanel>
-                        <CustomTabPanel index={2} value={value}>
-                            <div>
-                                <h3>
-                                    <span>Зимско време (Октобар - Март)</span>
-                                </h3>
-                                <h5>
-                                    <span>Свакодневно</span>
-                                </h5>
-                                <ul>
-                                    <li>
-                                        <p>08:00 - Јутрење</p>
-                                    </li>
-                                    <li>
-                                        <p>17:00 - Вечерња</p>
-                                    </li>
-                                </ul>
-                                <h5>
-                                    <span>Петак</span>
-                                </h5>
-                                <ul>
-                                    <li>
-                                        <p>17:00 - Акатист Часном Крсту или Св. Василију Острошком са читањем имена за
-                                            здравље.</p>
-                                    </li>
-                                </ul>
-                                <h5>
-                                    <span>Субота</span>
-                                </h5>
-                                <ul>
-                                    <li>
-                                        <p>08:00 - Света Литургија</p>
-                                    </li>
-                                    <li>
-                                        <p>17:00 - Бденије уочи празника</p>
-                                    </li>
-                                </ul>
-                                <h5>
-                                    <span>Недеља</span>
-                                </h5>
-                                <ul>
-                                    <li>
-                                        <p>9:00 - Света Литургија</p>
-                                    </li>
-                                    <li>
-                                        <p>17:00 - Вечерња</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </CustomTabPanel>
                         {/*<CustomTabPanel index={3} value={value}>*/}
                         {/*    <div style={{display: "flex", alignItems: "center", justifyContent: 'center'}}>*/}
                         {/*        <div className="video" style={{maxWidth: '100%', overflow: 'hidden'}}>*/}
@@ -215,7 +240,7 @@ export default function Bogosluzenja() {
                         <span style={{fontSize: '14px'}}><i>За више информација о богослужењима и активностима цркве,
                             придурижите се нашој <a style={{fontSize: 'inherit'}}
                                                     href="https://invite.viber.com/?g2=AQB8CsQuus0jbFMoM045RUGpzeYHc7XB5NrBo%2F6eKHT%2FdHJ0dKu2IzYVydrB4RTx"
-                                                    target="_blank"><strong>вибер</strong></a> заједници</i></span>
+                                                    target="_blank" rel="noreferrer"><strong>вибер</strong></a> заједници</i></span>
                     </Box>
                 </Box>
             </div>

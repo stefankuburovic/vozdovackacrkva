@@ -1,9 +1,9 @@
 import * as React from 'react';
-import {lazy} from "react";
+import {lazy} from 'react';
 
 import './Home.scss';
 
-import {riznica_slides, slides} from "client/const/galerija/const";
+import {slides} from "client/const/galerija/const";
 
 const Hero = lazy(() => import('../../components/home/hero-swiper/Hero'));
 const Galerija = lazy(() => import('../../components/layout/galerija/Galerija'));
