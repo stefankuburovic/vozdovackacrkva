@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
-import { makeStyles } from '@mui/styles';
+import {makeStyles} from '@mui/styles';
 
 import './Obavestenja.scss';
+
 const useStyles = makeStyles(() => ({
     modal: {
         display: 'flex',
@@ -17,7 +18,9 @@ const useStyles = makeStyles(() => ({
         textAlign: 'left',
         outline: "none",
         border: "30px solid",
-        borderImage: `url('/assets/border-background.png') 60 / 30px / 0 round repeat`
+        borderImage: `url('/assets/border-background.png') 60 / 30px / 0 round repeat`,
+        display: "flex",
+        flexDirection: "column",
     },
     modalTitle: {
         marginBottom: "20px",
@@ -36,7 +39,7 @@ interface MyModalProps {
     onCTAClick: () => void;
 }
 
-const MyModal: React.FC<MyModalProps> = ({ isOpen, onClose, onCTAClick }) => {
+const MyModal: React.FC<MyModalProps> = ({isOpen, onClose, onCTAClick}) => {
     const classes = useStyles();
 
     return (
@@ -71,9 +74,11 @@ const MyModal: React.FC<MyModalProps> = ({ isOpen, onClose, onCTAClick }) => {
         >
             <div className={classes.modalContent}>
                 <h2 id="modal-title" className={classes.modalTitle}>Обавештењa и активности</h2>
-                <img src="/assets/images/aktivnosti/restuaracija_ikona.webp" alt="Restauracija Ikona"/>
+                <img src="/assets/images/uredjenjeporte.jpg"
+                     alt="Уређење порте цркве"
+                     style={{maxWidth: '500px'}}/>
                 <Button variant="text" color="info" onClick={onCTAClick} className={classes.button}>
-                Затвори
+                    Затвори
                 </Button>
             </div>
         </Modal>
@@ -81,14 +86,14 @@ const MyModal: React.FC<MyModalProps> = ({ isOpen, onClose, onCTAClick }) => {
 };
 
 const Obavestenja = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(true);
 
     useEffect(() => {
         // Check if the modal has been displayed before
         const hasModalBeenDisplayed = localStorage.getItem('hasModalApril');
 
-        if (!hasModalBeenDisplayed) {
-            setIsModalOpen(true);
+        if (hasModalBeenDisplayed) {
+            setIsModalOpen(false);
         }
     }, []);
 
@@ -105,7 +110,7 @@ const Obavestenja = () => {
 
     return (
         <div>
-            <MyModal isOpen={isModalOpen} onClose={handleCloseModal} onCTAClick={handleCTAClick} />
+            <MyModal isOpen={isModalOpen} onClose={handleCloseModal} onCTAClick={handleCTAClick}/>
         </div>
     );
 };

@@ -4,6 +4,7 @@ import {lazy} from 'react';
 import './Home.scss';
 
 import {slides} from "client/const/galerija/const";
+import Obavestenja from "../../components/layout/obavestenja/Obavestenja";
 
 const Hero = lazy(() => import('../../components/home/hero-swiper/Hero'));
 const Galerija = lazy(() => import('../../components/layout/galerija/Galerija'));
@@ -13,6 +14,9 @@ const PretragaParohija = lazy(() => import('../../components/home/pretraga-paroh
 export default function Home() {
     return (
         <>
+            <section id="obavestenja">
+                <Obavestenja/>
+            </section>
             <section id="hero">
                 <Hero/>
             </section>
